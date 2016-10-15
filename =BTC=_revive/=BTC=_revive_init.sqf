@@ -11,7 +11,7 @@ BTC_revive_time_min = 5;
 BTC_revive_time_max = 600;
 BTC_who_can_revive  = ["Man"];
 BTC_disable_respawn = 0;
-BTC_respawn_gear    = 0;
+BTC_respawn_gear    = 1;
 BTC_active_lifes    = 0;
 BTC_lifes           = 999;
 BTC_spectating      = 2;//0 = disable; 1 = units group; 2 = side units; 3 = all units
@@ -33,13 +33,13 @@ BTC_3d_distance    = 30;
 BTC_3d_icon_size   = 0.5;
 BTC_3d_icon_color  = [1,0,0,1];
 BTC_dlg_on_respawn = 1;//1 = Mobile only - 2 Leader group and mobile - 3 = Units group and mobile - 4 = All side units and mobile
-BTC_objects_actions_west = [R_Base];
+BTC_objects_actions_west = [FLG];
 BTC_objects_actions_east = [];
 BTC_objects_actions_guer = [];
 BTC_objects_actions_civ  = [];
 if (isServer) then
 {
-	BTC_vehs_mobile_west = [Hotel,supplies_1,supplies_0];//Editable - define mobile west
+	BTC_vehs_mobile_west = [];//Editable - define mobile west
 	BTC_vehs_mobile_east = [];//Editable - define mobile east
 	BTC_vehs_mobile_guer = [];//Editable - define mobile independent
 	BTC_vehs_mobile_civ  = [];//Editable - define mobile civilian

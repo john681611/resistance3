@@ -102,7 +102,7 @@ R3F_LOG_CFG_unlock_objects_timer = 0;
  * Défini si les objets déplaçable sans simulation de gravité peuvent être position en hauteur sans être contact avec le sol.
  * Les objets sans gravité correspondent à la plupart des objets de décors et de construction.
  */
-R3F_LOG_CFG_no_gravity_objects_can_be_set_in_height_over_ground = true;
+R3F_LOG_CFG_no_gravity_objects_can_be_set_in_height_over_ground = false;
 
 /**
  * LANGUAGE
@@ -235,8 +235,7 @@ R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "true";
  */
 R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 [
-	// e.g. : "MyTowingVehicleClassName1", "MyTowingVehicleClassName2"
-	"Tank","Ship_F","LandVehicle"
+	"Tank","Ship","LandVehicle"
 ];
 
 /**
@@ -245,8 +244,7 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
  */
 R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
 [
-	// e.g. : "MyTowableObjectClassName1", "MyTowableObjectClassName2"
-	"LandVehicle","Plane","Helicopter","Tank","Ship_F"
+	"LandVehicle","Plane","Helicopter","Tank","Ship"
 ];
 
 
@@ -256,7 +254,7 @@ R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
  * List of class names of helicopters which can lift objects.
  * Liste des noms de classes des hélicoptères pouvant héliporter des objets.
  */
-R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
+R3F_LOG_CFG_can_lift = 
 [
 	// e.g. : "MyLifterVehicleClassName1", "MyLifterVehicleClassName2"
 ];
@@ -265,7 +263,7 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
  * List of class names of objects which can be lifted.
  * Liste des noms de classes des objets héliportables.
  */
-R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
+R3F_LOG_CFG_can_be_lifted = 
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
 ];

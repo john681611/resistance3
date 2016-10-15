@@ -340,7 +340,7 @@ BTC_first_aid =
 	if (BTC_need_first_aid == 0) then {_cond = true;};
 	if ((_array_item_injured find "FirstAidKit" == -1) && (BTC_need_first_aid == 1)) then {_cond = false;} else {_cond = true;};
 	if (!_cond && BTC_need_first_aid == 1) then {if ((_array_item find "FirstAidKit" == -1)) then {_cond = false;} else {_cond = true;};};
-	if (!_cond) exitWith {hint "Can't revive him";};
+	if (!_cond) exitWith {hint "Cant revive him";};
 	if (BTC_need_first_aid == 1) then {if (_array_item_injured find "FirstAidKit" == -1) then {player removeItem "FirstAidKit";};};
 	player playMove "AinvPknlMstpSlayWrflDnon_medic";
 	sleep 5;

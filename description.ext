@@ -1,73 +1,40 @@
-Author = "Kinch | INFMOD : INF_Mike64";
-onLoadName = "Iron Fists Resistance";
-onLoadMission = "Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
-Respawn = 3;
-RespawnDelay = 5;
-RespawnDialog = 0;
-DisabledAI = true;
-enableDebugConsole = 1;
-loadScreen = "resistance_ingame_logo.paa";
-joinUnassigned = false; // auto assignAsCargo
-
 class Header
 {
-	gameType=COOP;
-	minPlayers=1;
-	maxPlayers=37;
+	gameType = CTI; // Game type, see 'class' columns in the table below
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 33; //max # of players the mission supports
 };
+//Mission
+Author = "INF_Mike64 Inspired by Kitch";
+onLoadName = "Resistance";
+onLoadMission = "Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
+loadScreen = "resistance_ingame_logo.paa";
 
-#include "taw_vd\dialog.hpp"
-#include "support\modules\bon_recruit_units\dialog\common.hpp"
-#include "support\modules\bon_recruit_units\dialog\recruitment.hpp"
+//respawn
+respawn = 3;
+respawnDelay = 5;
+//respawnTemplates[] = {"MenuPosition","Revive"};
+//respawnOnStart = -1;
+//respawnVehicleDelay = 30;
+//reviveDelay = 6;
+//reviveForceRespawnDelay = 3;
+//reviveBleedOutDelay = 120;
+//Cleanup stuff
+corpseManagerMode = 1;
+corpseLimit = 300;
+corpseRemovalMinTime = 3600;
+wreckManagerMode = 1;
+wreckRemovalMinTime = 3600;
+
+//Other
+DisabledAI = true;
+enableDebugConsole = 1;
+joinUnassigned = false; // auto assignAsCargo
+
 #include "R3F_LOG\desc_include.h"
-#include "=BTC=_revive\=BTC=_respawn.h"
-class Params {
-
-	// Example Parameter
-	class EmtpyLine0 {
-		title = ":: Mission Settings";
-		values[]={0,0};
-		texts[]={ "",""};
-		default = 0;
-	};
-	class PARAM_TimeOfDay
-	{
-		title = "    Time of Day";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
-		texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
-		default = 5;
-	};
-	
-	class BonMenuControl
-	{ 
-		title="	Bon AI Recruiting"; 
-		values[] = {1,0}; 
-		texts[] = {"Enabled","Disabled"}; 
-		default = 0;
-	};
-	
-	class BonRecruitLimit
-	{ 
-		title="	Bon AI Squad Size Limit"; 
-		values[] = {1,2,3,4,5,6,7,8,9,10,11,12}; 
-		texts[] = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"}; 
-		default = 4;
-	};
-	
-
-};
-
+//#include "=BTC=_revive\=BTC=_respawn.h"
+#include "CHVD\dialog.hpp"
 class CfgFunctions
 {
-
-	#include "taw_vd\CfgFunctions.hpp"
-};
-	
-class RscTitles 
-{
-	#include "gvs\stc_include_alt.hpp"
-	#include "gvs\colors_include.hpp"
-	#include "gvs\control_include.hpp"
-};
-		
+	#include "CHVD\CfgFunctions.hpp"
 };

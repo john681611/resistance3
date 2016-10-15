@@ -1,0 +1,7 @@
+EOS: http://forums.bistudio.com/showthread.php?153100-Enemy-occupation-system-%28eos%29
+CHVD:  http://www.armaholic.com/page.php?id=27390
+SHK-pos: http://www.armaholic.com/page.php?id=22316
+R3F_Log: http://www.armaholic.com/page.php?id=26159
+shk_taskmaster:
+3DMarkers:http://www.armaholic.com/forums.php?m=posts&q=30269 
+
