@@ -4,31 +4,6 @@ clearWeaponCargoGlobal  _KinchBox_Misc;
 clearItemCargoGlobal _KinchBox_Misc;
 clearBackpackCargoGlobal _KinchBox_Misc;
 
-clearweaponcargoGlobal B_ALL2;
-clearmagazinecargoGlobal B_ALL2;
-clearitemcargoGlobal B_ALL2;
-clearBackpackCargoGlobal B_ALL2;
-
-clearweaponcargoGlobal lB;
-clearmagazinecargoGlobal lB;
-clearitemcargoGlobal lB;
-clearBackpackCargoGlobal lB;
-
-clearweaponcargoGlobal lB_1;
-clearmagazinecargoGlobal lB_1;
-clearitemcargoGlobal lB_1;
-clearBackpackCargoGlobal lB_1;
-
-clearweaponcargoGlobal lB_2;
-clearmagazinecargoGlobal lB_2;
-clearitemcargoGlobal lB_2;
-clearBackpackCargoGlobal lB_2;
-
-clearweaponcargoGlobal lB_3;
-clearmagazinecargoGlobal lB_3;
-clearitemcargoGlobal lB_3;
-clearBackpackCargoGlobal lB_3;
-
 //Weapons
 _KinchBox_Misc addweaponcargoGlobal ["launch_RPG32_F",3];
 _KinchBox_Misc addweaponcargoGlobal ["arifle_TRG21_F",5];
@@ -85,8 +60,6 @@ _KinchBox_Misc additemcargoGlobal ["H_Shemag_olive",5];
 _KinchBox_Misc addBackpackCargoGlobal ["B_Kitbag_mcamo",5];
 _KinchBox_Misc addBackpackCargoGlobal ["B_AssaultPackG",5];
 _KinchBox_Misc addBackpackCargoGlobal ["B_FieldPack_oli",5];
-//_KinchBox_Misc addBackpackCargoGlobal ["B_Respawn_TentDome_F",3];
-//_KinchBox_Misc addBackpackCargoGlobal ["B_Respawn_Sleeping_bag_brown_F",5];
 _KinchBox_Misc addItemCargoGlobal ["U_BG_Guerilla3_1",5];
 _KinchBox_Misc addItemCargoGlobal ["U_BG_Guerilla1_1",5];
 _KinchBox_Misc addItemCargoGlobal ["U_BG_Guerilla2_3",5];
