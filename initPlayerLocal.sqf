@@ -1,9 +1,9 @@
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;  
+["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Tags\tags.sqf";
 cutText ["","BLACK OUT",0];
-sleep 4;
 player setPos [getmarkerpos "respawn_west" select 0,(getmarkerpos "respawn_west" select 1)-5,0];
+sleep 4;
 cutText ["","BLACK IN"];
 "Welcome to resistance" hintC [
 "Supplies are low use them wisely.",
