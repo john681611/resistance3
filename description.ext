@@ -1,38 +1,5 @@
-class Header
-{
-	gameType = CTI; // Game type, see 'class' columns in the table below
-	minPlayers = 1; //min # of players the mission supports
-	maxPlayers = 33; //max # of players the mission supports
-};
-//Mission
-Author = "INF_Mike64 Inspired by Kitch";
-onLoadName = "Resistance";
-onLoadMission = "Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
-loadScreen = "resistance_ingame_logo.paa";
-
-//respawn
-respawn = 3;
-respawnDelay = 5;
-//respawnTemplates[] = {"MenuPosition","Revive"};
-//respawnOnStart = -1;
-//respawnVehicleDelay = 30;
-//reviveDelay = 6;
-//reviveForceRespawnDelay = 3;
-//reviveBleedOutDelay = 120;
-//Cleanup stuff
-corpseManagerMode = 1;
-corpseLimit = 300;
-corpseRemovalMinTime = 3600;
-wreckManagerMode = 1;
-wreckRemovalMinTime = 3600;
-
-//Other
-DisabledAI = true;
-enableDebugConsole = 1;
-joinUnassigned = false; // auto assignAsCargo
-
 #include "R3F_LOG\desc_include.h"
-//#include "=BTC=_revive\=BTC=_respawn.h"
+
 #include "CHVD\dialog.hpp"
 class CfgFunctions
 {
