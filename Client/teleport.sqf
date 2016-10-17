@@ -21,6 +21,7 @@ private ["_Location"];
 	[getMarkerPos "respawn_west_MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "respawn_west_MHQ2"]]
  ];
 
+/*Maybe Later
 _RSPPos = [west] call BIS_fnc_getRespawnMarkers;
 {
 if (_x != "respawn_west" AND  _x != "respawn_vehicle_west" AND _x !="respawn_west_MHQ" AND _x !="respawn_west_MHQ2" AND _x != "respawn_west_Hotel") then {
@@ -30,7 +31,7 @@ _missionsData  = _missionsData + _Temp;
 };
 
 } foreach _RSPPos;
-
+*/
 
 
  disableserialization;
@@ -42,7 +43,7 @@ _missionsData  = _missionsData + _Temp;
  _images    = [];
  _overcast  = overcast;
  _isNight   = !((dayTime > 6) && (dayTime < 20));
- _scale     = 1;
+ _scale     = 0;
  _simul     = true;
 
       [
