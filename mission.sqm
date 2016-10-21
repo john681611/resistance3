@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
 		nextID=448;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21821.982,55.547821,5121.8896};
-		dir[]={-0.37131053,-0.79525656,0.47930333};
-		up[]={-0.48703423,0.60626048,0.62868488};
-		aside[]={0.79054707,-2.4680048e-008,0.6124267};
+		pos[]={6602.3623,193.88159,19996.541};
+		dir[]={-0.084079772,-0.43340191,-0.89730978};
+		up[]={-0.040434971,0.90118742,-0.43152696};
+		aside[]={-0.99567211,6.344635e-008,0.093294851};
 	};
 };
 binarizationWanted=0;
@@ -283,22 +283,8 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=2;
+						items=1;
 						class Item0
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="MenuPosition";
-							};
-						};
-						class Item1
 						{
 							class data
 							{
@@ -741,15 +727,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6595.1553,169.93925,20069.18};
-				angles[]={0.033321146,0,0.05461248};
+				position[]={6595.1548,169.93922,20069.18};
+				angles[]={0.033318337,0,0.054611351};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Teleport"",""Client\teleport.sqf""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#FF0000'>Clean Server</t>"", ""StartServerClean.sqf""];";
+				init="this addAction [""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#FF0000'>Clean Server</t>"", ""StartServerClean.sqf""];";
 				name="FLG";
 			};
 			id=32;
@@ -2260,7 +2246,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
+							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
 						};
 					};
 				};
@@ -2465,7 +2451,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];";
+							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
 						};
 					};
 				};
@@ -5173,7 +5159,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Teleport"",""Client\teleport.sqf""];";
+				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true];this addAction [""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf""];";
 				name="base2";
 			};
 			id=283;
@@ -6135,6 +6121,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				init="[C2, " \n " [""Brown"",1],  " \n " true " \n "] call BIS_fnc_initVehicle; " \n "";
 				name="C2";
 				textures="Brown";
 			};
@@ -8393,8 +8380,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6596.374,178.37503,19963.766};
-				angles[]={0.15995942,4.7318845,6.2645278};
+				position[]={6598.7583,177.99138,19965.873};
+				angles[]={0.15865479,4.7318845,6.2645216};
 			};
 			side="Empty";
 			flags=4;
@@ -8403,6 +8390,7 @@ class Mission
 			};
 			id=397;
 			type="B_Slingload_01_Repair_F";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8424,7 +8412,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item239
@@ -8432,7 +8439,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22030.066,29.259916,21023.043};
+				position[]={22030.342,29.633518,21026.082};
 				angles[]={6.1690178,0.93102849,0.090419561};
 			};
 			side="Empty";
@@ -8463,7 +8470,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item240

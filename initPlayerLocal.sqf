@@ -1,3 +1,5 @@
+tf_no_auto_long_range_radio = true;
+TF_give_personal_radio_to_regular_soldier = true;
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Tags\tags.sqf";
@@ -20,5 +22,5 @@ cutText ["","BLACK IN"];
 "Website: www.iron-fists.eu",
 "PLAY FAIR AND WITH HONOUR",
 "TASK FORCE RADIOS ARE USED ON THIS SERVER BUT NOT NEEDED"];
-C1 addAction ["Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C1"];
-C2 addAction ["Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C2"];
+C1 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C1"];
+C2 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C2"];
