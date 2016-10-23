@@ -215,7 +215,7 @@ private["_veh","_aug"];	//Import Variables
 	 _Dname = getText (configFile >> "cfgVehicles" >> _Cname >> "displayName");
 	 [[_veh,format["Get in %1 as Gunner",_Dname],"<img size='2' image='\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa'/>"],"AUG_UpdateGetInState",true,true] spawn BIS_fnc_MP;
 	 [[_veh,format["<t color='#ff0000'>Detach %1</t>",_Dname]],"AUG_UpdateState",true,true] spawn BIS_fnc_MP;
-	 _veh setVariable ["R3F_LOG_disabled", true];
+	 _aug setVariable ["R3F_LOG_disabled", true];
 };
 
 AUG_Detach = {
@@ -229,7 +229,7 @@ AUG_Detach = {
 	//Remove event Handler
 	[[_aug,"GetOut", 0],"mpRemoveEventHand",true,true]spawn BIS_fnc_MP;
 	_veh setVariable["AUG_Attached",false,true];
-	_veh setVariable ["R3F_LOG_disabled", false];
+	_aug setVariable ["R3F_LOG_disabled", false];
 };
 diag_log "Augmentation Script Loaded";
 //temp
