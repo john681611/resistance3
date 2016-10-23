@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=129;
+	toggles=1;
 	class ItemIDProvider
 	{
 		nextID=448;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6602.3623,193.88159,19996.541};
-		dir[]={-0.084079772,-0.43340191,-0.89730978};
-		up[]={-0.040434971,0.90118742,-0.43152696};
-		aside[]={-0.99567211,6.344635e-008,0.093294851};
+		pos[]={6558.6748,229.1982,20046.396};
+		dir[]={-0.023645865,-0.51299143,-0.85813791};
+		up[]={-0.01413087,0.85836571,-0.51282263};
+		aside[]={-0.99967843,4.7371941e-008,0.02754486};
 	};
 };
 binarizationWanted=0;
@@ -735,7 +735,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#FF0000'>Clean Server</t>"", ""StartServerClean.sqf""];";
+				init="act1 = this addAction [""Teleport"",""Client\teleport.sqf""];this setUserActionText [act1,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#FF0000'>Clean Server</t>"", ""StartServerClean.sqf""];";
 				name="FLG";
 			};
 			id=32;
@@ -2776,7 +2776,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="nul = [this] execVM ""Server\OffroadAUG.sqf"";  ";
 				textures="Guerilla_09";
 			};
 			id=125;
@@ -3141,7 +3140,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="nul = [this] execVM ""Server\OffroadAUG.sqf"";  ";
 			};
 			id=128;
 			type="B_G_Offroad_01_F";
@@ -4783,7 +4781,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="nul = [this] execVM ""Server\OffroadAUG.sqf"";  ";
 				textures="Guerilla_11";
 			};
 			id=278;
@@ -4971,7 +4968,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="nul = [this] execVM ""Server\OffroadAUG.sqf"";  ";
 				textures="Guerilla_05";
 			};
 			id=282;
@@ -5159,7 +5155,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true];this addAction [""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf""];";
+				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
 				name="base2";
 			};
 			id=283;

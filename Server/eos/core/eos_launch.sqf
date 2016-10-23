@@ -30,7 +30,11 @@ _CHGroups=_CHGrp select 0;
 _CHgroupSize=_CHGrp select 1;
 _CHgroupProbability=if (count _CHGrp > 2) then {_CHGrp select 2} else {100};
 
-_settings=(_this select 7);
+_BXgrp=(_this select 7);
+_BXehGroups=_BXgrp select 0;
+_BXgroupProbability=if (count _BXgrp > 1) then {_BXgrp select 1} else {100};
+
+_settings=(_this select 8);
 
 if (_HPgroupProbability > floor random 100) then {
 	if (_HPgroupSize==0) then {_HPgroupArray=[1,1]};
@@ -40,17 +44,17 @@ if (_HPgroupProbability > floor random 100) then {
 	if (_HPgroupSize==4) then {_HPgroupArray=[12,16]};
 	if (_HPgroupSize==5) then {_HPgroupArray=[16,20]};
 	}else{_HPpatrols=0;_HPgroupArray=[1,1];};
-	
-if (_PAgroupProbability > floor random 100) then {	
+
+if (_PAgroupProbability > floor random 100) then {
 	if (_PAgroupSize==0) then {_PAgroupArray=[1,1]};
 	if (_PAgroupSize==1) then {_PAgroupArray=[2,4]};
 	if (_PAgroupSize==2) then {_PAgroupArray=[4,8]};
 	if (_PAgroupSize==3) then {_PAgroupArray=[8,12]};
 	if (_PAgroupSize==4) then {_PAgroupArray=[12,16]};
 	if (_PAgroupSize==5) then {_PAgroupArray=[16,20]};
-	}else{_PApatrols=0;_PAgroupArray=[1,1];};	
+	}else{_PApatrols=0;_PAgroupArray=[1,1];};
 
-if (_LVgroupProbability > floor random 100) then {	
+if (_LVgroupProbability > floor random 100) then {
 	if (_LVgroupSize==0) then {_LVgroupArray=[0,0]};
 	if (_LVgroupSize==1) then {_LVgroupArray=[2,4]};
 	if (_LVgroupSize==2) then {_LVgroupArray=[4,8]};
@@ -74,11 +78,13 @@ if (_CHgroupProbability > floor random 100) then {
 	if (_CHgroupSize==5) then {_CHgroupArray=[16,20]};
 }else{_CHGroups=0;_CHgroupArray=[0,0]};
 
+if (_BXgroupProbability > floor random 100) then {
+}else{_BXehGroups=0;};
 {
 	_eosMarkers=server getvariable "EOSmarkers";
 	if (isnil "_eosMarkers") then {_eosMarkers=[];};
 		_eosMarkers set [count _eosMarkers,_x];
 		server setvariable ["EOSmarkers",_eosMarkers,true];
-		null = [_x,[_HPpatrols,_HPgroupArray],[_PApatrols,_PAgroupArray],[_LVehGroups,_LVgroupArray],[_AVehGroups,_SVehGroups,_CHGroups,_CHgroupArray],_settings] execVM "Server\eos\core\EOS_Core.sqf";
+		null = [_x,[_HPpatrols,_HPgroupArray],[_PApatrols,_PAgroupArray],[_LVehGroups,_LVgroupArray],[_AVehGroups,_SVehGroups,_CHGroups,_CHgroupArray,_BXehGroups],_settings] execVM "Server\eos\core\EOS_Core.sqf";
 }foreach _JIPmkr;
 };

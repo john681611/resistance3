@@ -1,5 +1,5 @@
 tf_no_auto_long_range_radio = true;
-TF_give_personal_radio_to_regular_soldier = true;
+tf_give_personal_radio_to_regular_soldier = true;
 enable_lea_addon = false;
 []execVM "R3F_LOG\init.sqf";
 enableSaving [false,false];
@@ -50,3 +50,5 @@ waitUntil {!isNull player && !isnil "Number" };
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM "Client\keep_loadout.sqf";
+[] execVM "VehicleAugmentation.sqf";
+[] execVM "outlw_magRepack\MagRepack_init_sv.sqf";

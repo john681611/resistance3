@@ -1,5 +1,5 @@
 #include "R3F_LOG\desc_include.h"
-
+#include "outlw_magRepack\MagRepack_config.hpp"
 #include "CHVD\dialog.hpp"
 class CfgFunctions
 {

@@ -1,5 +1,3 @@
-tf_no_auto_long_range_radio = true;
-TF_give_personal_radio_to_regular_soldier = true;
 ["Initialize"] call BIS_fnc_dynamicGroups;
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 ztowninit = 0;
