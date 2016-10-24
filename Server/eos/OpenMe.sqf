@@ -21,7 +21,8 @@ hostileColor="colorRed";	// Default colour when enemies active
 bastionColor="colorOrange";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=false;		// Counts killed units
-_Hostiles = [[INDEPENDENT,2],[INDEPENDENT,2],[INDEPENDENT,2],[EAST,0],[EAST,5],[EAST,6]];
+_Hostiles = [[INDEPENDENT,2],[INDEPENDENT,2],[INDEPENDENT,2],[EAST,0],[EAST,5],[EAST,6],[EAST,7]];
+
 
 waitUntil {ztowninit==1};
 {

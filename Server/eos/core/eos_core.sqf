@@ -303,14 +303,14 @@ if (_debug) then {hint "Zone Cached";};
 							if (!triggeractivated _clear) then
 							{
 								if(getmarkercolor _mkr  != hostileColor)then{
-									["TaskFailed",["","Zone Lost"]] call BIS_fnc_showNotification;
+									["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0]; 
 								};
 								_mkr setmarkercolor hostileColor;
 								_mkr setmarkerAlpha _mAH;
 								if (_debug) then { hint "Zone Lost";};
 										} else {
 											if(getmarkercolor _mkr  != VictoryColor)then{
-											["TaskSucceeded",["","Zone Captured"]] call BIS_fnc_showNotification;
+											["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
 										};
 											_mkr setmarkercolor VictoryColor;
 											_mkr setmarkerAlpha _mAN;
