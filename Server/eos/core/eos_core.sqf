@@ -194,6 +194,9 @@ sleep 0.25;
 
 								_gGroup=[_newpos,_side,_faction,11]call EOS_fnc_spawnvehicle;
 									0=[_mPos,[(_gGroup select 0)],_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
+									while{(count nearestObjects [(_gGroup select 0), ["Man","ReammoBox_F"], 1]) > 1} do {
+										0=[_mPos,[(_gGroup select 0)],_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
+									};
 										_gGrp set [count _gGrp,_gGroup];
 
 			if (_debug) then {diag_log format ["Box:%1",_counter];0= [_mkr,_counter,"Box",(getpos leader (_gGroup select 2))] call EOS_debug};
@@ -210,10 +213,13 @@ sleep 0.25;
 				_taken setTriggerActivation ["ANY","PRESENT",true];
 				_taken setTriggerStatements ["{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 5} count allUnits > 0","",""];
 _eosAct=true;
+_delay = 300;
 while {_eosAct} do
 	{
 	// IF PLAYER LEAVES THE AREA OR ZONE DEACTIVATED
-	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") exitwith
+	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") then {_delay = _delay -1;} else {_delay = 300;};
+
+		if (_delay <= 0) exitWith
 		{
 		if (_debug) then {if (!(getmarkercolor _mkr == "colorblack")) then {hint "Restarting Zone AND deleting units";}else{hint "EOS zone deactivated";};};
 //CACHE LIGHT VEHICLES
@@ -286,7 +292,7 @@ if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
 						if (!isnil "_gGrp") then
 									{
 											{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-														if (!alive _vehicle) then {_gGrp= _gGrp - 1;};
+														if (!alive _vehicle) then {_gGrps = _gGrps - 1;};
 																				if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
 											}foreach _gGrp;};
 
@@ -303,7 +309,7 @@ if (_debug) then {hint "Zone Cached";};
 							if (!triggeractivated _clear) then
 							{
 								if(getmarkercolor _mkr  != hostileColor)then{
-									["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0]; 
+									["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
 								};
 								_mkr setmarkercolor hostileColor;
 								_mkr setmarkerAlpha _mAH;
@@ -328,6 +334,6 @@ deletevehicle _clear;deletevehicle _taken;
 { if (side _x == _side) then { deletevehicle _x} } forEach list _eosActivated;
 
 if (!(getmarkercolor _mkr == "colorblack")) then {
-	null = [_mkr,[_aGrps,_aSize],[_bGrps,_bSize],[_cGrps,_cSize],[_dGrps,_eGrps,_fGrps,_gGrps,_fSize],_settings,true] execVM "Server\eos\core\eos_core.sqf";
+	null = [_mkr,[_aGrps,_aSize],[_bGrps,_bSize],[_cGrps,_cSize],[_dGrps,_eGrps,_fGrps,_fSize,_gGrps],_settings,true] execVM "Server\eos\core\eos_core.sqf";
 	}else{_Mkr setmarkeralpha 0;};
 	};

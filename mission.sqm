@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=515;
+		nextID=546;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4656.9316,312.88596,21322.313};
-		dir[]={-0.5237875,-0.53878003,0.65998548};
-		up[]={-0.33495417,0.84239966,0.42205021};
-		aside[]={0.78337306,1.7472485e-007,0.62170982};
+		pos[]={6521.5269,201.31276,20002.311};
+		dir[]={0.67541212,-0.48548895,0.55509931};
+		up[]={0.37507591,0.87423682,0.3082633};
+		aside[]={0.63494813,3.0943193e-007,-0.77256435};
 	};
 };
 binarizationWanted=0;
@@ -2691,7 +2691,7 @@ class Mission
 		class Item53
 		{
 			dataType="Marker";
-			position[]={6631.6978,184.46931,19920.289};
+			position[]={6634.4575,182.24512,19925.418};
 			name="ACavoid_3";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -2701,6 +2701,7 @@ class Mission
 			b=1200;
 			drawBorder=1;
 			id=114;
+			atlOffset=-1.3776245;
 		};
 		class Item54
 		{
@@ -8378,8 +8379,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6598.7583,177.99138,19965.873};
-				angles[]={0.15865479,4.7318845,6.2645216};
+				position[]={6598.7578,177.99138,19965.873};
+				angles[]={0.15865043,4.7318845,6.2645278};
 			};
 			side="Empty";
 			flags=4;
@@ -8388,7 +8389,6 @@ class Mission
 			};
 			id=397;
 			type="B_Slingload_01_Repair_F";
-			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8425,7 +8425,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
