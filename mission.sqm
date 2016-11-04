@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=546;
+		nextID=548;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6521.5269,201.31276,20002.311};
-		dir[]={0.67541212,-0.48548895,0.55509931};
-		up[]={0.37507591,0.87423682,0.3082633};
-		aside[]={0.63494813,3.0943193e-007,-0.77256435};
+		pos[]={21896.811,200.45273,20904.717};
+		dir[]={-0.48303437,-0.33461019,-0.80915028};
+		up[]={-0.1715156,0.9423545,-0.28731349};
+		aside[]={-0.85864395,1.9540312e-007,0.51257998};
 	};
 };
 binarizationWanted=0;
@@ -562,7 +562,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=249;
+		items=251;
 		class Item0
 		{
 			dataType="Marker";
@@ -9271,6 +9271,45 @@ class Mission
 			{
 			};
 			id=439;
+		};
+		class Item249
+		{
+			dataType="Trigger";
+			position[]={6598.2021,176.18346,19970.713};
+			class Attributes
+			{
+				condition="speed(thislist select 0) <=0";
+				onActivation="_xhandle= [(thislist select 0), thisTrigger] execVM ""x_reload.sqf"";";
+				sizeA=5;
+				sizeB=5;
+				sizeC=5;
+				timeout[]={1,1,1};
+				repeatable=1;
+				activationBy="ANY";
+				isRectangle=1;
+			};
+			id=546;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item250
+		{
+			dataType="Trigger";
+			position[]={22027.629,28.488077,21030.463};
+			angle=2.6391823;
+			class Attributes
+			{
+				condition="speed(thislist select 0) <=0";
+				onActivation="_xhandle= [(thislist select 0), thisTrigger] execVM ""x_reload.sqf"";";
+				sizeA=5;
+				sizeB=5;
+				sizeC=5;
+				timeout[]={1,1,1};
+				repeatable=1;
+				activationBy="ANY";
+				isRectangle=1;
+			};
+			id=547;
+			type="EmptyDetectorArea10x10";
 		};
 	};
 	class Connections
