@@ -5,7 +5,7 @@ _tempArray=[];
 
 // EAST CSAT FACTION
 	if (_faction==0) then {
-	_InfPool=	["O_Soldier_F","O_Soldier_GL_F","O_Soldier_LAT_F","O_medic_F","O_Soldier_AR_F","O_Soldier_TL_F","O_soldier_M_F","O_Soldier_AA_F","O_Soldier_AT_F","O_Soldier_A_F","O_Soldier_SL_F","O_officer_F","O_sniper_F","O_spotter_F","O_soldier_exp_F","O_engineer_U_F","O_HeavyGunner_F","O_Sharpshooter_F"];
+	_InfPool=	["O_Soldier_F","O_Soldier_GL_F","O_Soldier_LAT_F","O_medic_F","O_Soldier_AR_F","O_Soldier_TL_F","O_soldier_M_F","O_Soldier_AA_F","O_Soldier_AT_F","O_Soldier_A_F","O_Soldier_SL_F","O_officer_F","O_sniper_F","O_spotter_F","O_soldier_exp_F","O_engineer_F","O_HeavyGunner_F","O_Sharpshooter_F"];
 	_ArmPool=	["O_APC_Tracked_02_AA_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F"];
 	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_MRAP_02_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F","O_Truck_03_medical_F"];
 	_ACHPool=	["O_Heli_Attack_02_black_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F"];
@@ -110,7 +110,7 @@ _tempArray=[];
 
 	// EAST TANOA CSAT FACTION
 		if (_faction==7) then {
-		_InfPool=	["O_T_Soldier_F","O_T_Soldier_GL_F","O_T_Soldier_LAT_F","O_T_medic_F","O_T_Soldier_AR_F","O_T_Soldier_TL_F","O_T_soldier_M_F","O_T_Soldier_AA_F","O_T_Soldier_AT_F","O_T_Soldier_A_F","O_T_Soldier_SL_F","O_T_officer_F","O_T_sniper_F","O_T_spotter_F","O_T_soldier_exp_F","O_T_engineer_U_F"];
+		_InfPool=	["O_T_Soldier_F","O_T_Soldier_GL_F","O_T_Soldier_LAT_F","O_T_medic_F","O_T_Soldier_AR_F","O_T_Soldier_TL_F","O_T_soldier_M_F","O_T_Soldier_AA_F","O_T_Soldier_AT_F","O_T_Soldier_A_F","O_T_Soldier_SL_F","O_T_officer_F","O_T_sniper_F","O_T_spotter_F","O_T_soldier_exp_F","O_T_engineer_F"];
 		_ArmPool=	["O_T_APC_Tracked_02_AA_ghex_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F","O_T_MBT_02_cannon_ghex_F"];
 		_MotPool=	["O_T_Truck_03_covered_ghex_F","O_T_Truck_03_transport_ghex_F","O_T_MRAP_02_ghex_F","O_T_MRAP_02_gmg_ghex_F","O_T_MRAP_02_hmg_ghex_F","O_T_Truck_03_medical_ghex_F"];
 		_ACHPool=	["O_T_VTOL_02_vehicle_F"];
@@ -121,7 +121,7 @@ _tempArray=[];
 		_diverPool=	["O_T_diver_exp_F","O_T_diver_F","O_T_diver_TL_F"];
 		_crewPool=	["O_T_crew_F"];
 		_heliCrew=	["O_T_helicrew_F","O_T_helipilot_F"];
-		_boxPool = ["Box_T_East_Support_F","Box_East_T_WpsSpecial_F","C_T_supplyCrate_F","Box_T_East_WpsLaunch_F"];
+		_boxPool = ["Box_East_Support_F","Box_T_East_WpsSpecial_F","C_T_supplyCrate_F"];
 	};
 
 //TESTING
