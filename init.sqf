@@ -46,7 +46,7 @@ enableSaving [false,false];
 							shk_taskmaster: http://www.armaholic.com/page.php?id=21970"],
 	  ["Teamspeak Info","TS: 81.19.212.66<br/>Visit us at www.iron-fists.eu"]
     ]] execvm "shk_taskmaster.sqf";
-waitUntil {!isNull player && !isnil "Number" };
+waitUntil {!isNull player && !isnil "KeyNumber" };
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM "Client\keep_loadout.sqf";

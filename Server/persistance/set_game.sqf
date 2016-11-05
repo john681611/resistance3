@@ -1,0 +1,1 @@
+takenTowns  = [_this];

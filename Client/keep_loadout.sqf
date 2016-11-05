@@ -1,7 +1,7 @@
 //Launcher Array
 sleep 30;
 if !((isnil {profilenamespace getvariable "Resist_LR_loadout"}) AND (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
-if(profilenamespace getvariable "Resist_LR_Number" == Number) then {
+if(profilenamespace getvariable "Resist_LR_Number" == KeyNumber) then {
 	systemChat "Loading Gear";
 	[player,profilenamespace getvariable "Resist_LR_loadout",["ammo"]] spawn setLoadout;
 	};
@@ -16,9 +16,9 @@ _launch = ["launch_NLAW_F","launch_RPG32_F","launch_B_Titan_F","launch_I_Titan_F
             if(alive player) then {
                 loadout = [player,["ammo"]] call getLoadout;
 				profilenamespace setvariable ["Resist_LR_loadout",loadout];
-				profilenamespace setvariable ["Resist_LR_Number",Number];
+				profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
             };
             };
-    sleep 60;  
+    sleep 60;
     };
 };

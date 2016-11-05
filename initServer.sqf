@@ -2,13 +2,21 @@
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 ztowninit = 0;
 CompZone = 0;
+takenTowns = [];
 publicVariable "CompZone";
 Ztown = 0;
 publicVariable "Ztown";
-Number = 0;
-Number = RANDOM(1000);
-publicVariable "Number";
-
+if (isnil {profilenamespace getvariable "Resist_LR_Number"}) then {
+  diag_log "New Key";
+  KeyNumber = RANDOM(1000);
+} else {
+  diag_log "Saved Key";
+  KeyNumber = profilenamespace getvariable "Resist_LR_Number";
+};
+publicVariable "KeyNumber";
+getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\get_game.sqf';
+setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\set_game.sqf';
+[] execVM "Server\persistance\keep_game.sqf";
 []	execVM "Server\boxs\BoxInit.sqf";
 [] execVM "Server\z_townmgr.sqf";
 []	execVM "Server\MHQ_Marker.sqf";

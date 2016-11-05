@@ -14,6 +14,7 @@ ztowns = [];
 ztownm = [];
 ztownl = [];
 ztownc = [];
+ztownTA = [];
 ztownAll = [];
 
 {
@@ -22,49 +23,78 @@ ztownAll = [];
 
 
     _m = createMarker [format ["%1", _pos],_pos];
-	switch((_x select 0)) do
-	{
-		case "Hill":
-		{
-			_m setMarkerSize [50,50];
-			ztownt = ztownt + [_m];
-		};
+    if(!((getMarkerPos _m) in takenTowns)) then {
+    	switch((_x select 0)) do
+    	{
+    		case "Hill":
+    		{
+    			ztownt = ztownt + [_m];
+    		};
 
-		case "NameLocal":
-		{
-			_m setMarkerSize [150,150];
-			ztowns = ztowns + [_m];
-		};
-		case "NameVillage":
-		{
-			_m setMarkerSize [250,250];
-			ztownm = ztownm + [_m];
-		};
-		case "NameCity":
-		{
-			_m setMarkerSize [300,300];
-			ztownl = ztownl + [_m];
-		};
+    		case "NameLocal":
+    		{
+    			ztowns = ztowns + [_m];
+    		};
+    		case "NameVillage":
+    		{
+    			ztownm = ztownm + [_m];
+    		};
+    		case "NameCity":
+    		{
+    			ztownl = ztownl + [_m];
+    		};
 
-		case "NameCityCapital":
-		{
-			_m setMarkerSize [400,400];
-			ztownc = ztownc + [_m];
-		};
+    		case "NameCityCapital":
+    		{
+    			ztownc = ztownc + [_m];
+    		};
+    		default {
+    		}
+    	};
+      _m setMarkerColor "ColorYellow";
+    } else {
+      _m setMarkerColor "ColorGreen";
+      ztownTA = ztownTA + [_m];
+      diag_log format ["Zone Removed: %1",_x];
+    };
 
-		default {
-		_m setMarkerSize [400,400];
-		}
-	};
+    switch((_x select 0)) do
+    {
+      case "Hill":
+      {
+        _m setMarkerSize [50,50];
+      };
+
+      case "NameLocal":
+      {
+        _m setMarkerSize [150,150];
+      };
+      case "NameVillage":
+      {
+        _m setMarkerSize [250,250];
+      };
+      case "NameCity":
+      {
+        _m setMarkerSize [300,300];
+      };
+
+      case "NameCityCapital":
+      {
+        _m setMarkerSize [400,400];
+      };
+      default {
+      _m setMarkerSize [400,400];
+      }
+    };
 
 
     _m setMarkerShape "ELLIPSE";
-
     _m setMarkerBrush "Solid";
     _m setMarkerAlpha 0.5;
-    _m setMarkerColor "ColorYellow";
+
 } forEach _towns;
 
 
-ztownAll = ztownc + ztownl + ztownm + ztowns + ztownt + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
+ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
 ztowninit = 1;
+diag_log "ztown Done";
