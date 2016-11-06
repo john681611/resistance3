@@ -12,21 +12,23 @@ getbox = {
   _mags = (_data select 2) select 1;
   _items = (_data select 2) select 2;
   _backpacks = (_data select 2) select 3;
+  diag_log _weapons;
+  diag_log _mags;
   //weapons
   {
-  _box addweaponcargoGlobal [_x select 0,1];
+  _box addweaponcargoGlobal [_x,1];
   } foreach _weapons;
   //mags
   {
-  _box addmagazinecargoGlobal [_x select 0,1];
+  _box addmagazinecargoGlobal [_x,1];
   } foreach _mags;
   //items
   {
-    _box additemcargoGlobal [_x select 0,1];
+    _box additemcargoGlobal [_x,1];
   } foreach _items;
   //backpacks
   {
-    _box addBackpackCargoGlobal [_x select 0,1];
+    _box addBackpackCargoGlobal [_x,1];
   } foreach _backpacks;
 
   profilenamespace setvariable ["Resist_Box",[false,_box,[[],[],[],[]]]];
@@ -57,7 +59,7 @@ setbox = {
   _backpacks = backpackCargo _box;
   //delete box
   deleteVehicle _box;
-  profilenamespace setvariable ["Resist_Box",[true,"none",[[_weapons],[_mags],[_items],[_backpacks]]]];
+  profilenamespace setvariable ["Resist_Box",[true,"none",[_weapons,_mags,_items,_backpacks]]];
   hint "Store Box Sotred";
 };
 
