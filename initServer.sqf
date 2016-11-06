@@ -6,7 +6,7 @@ takenTowns = [];
 publicVariable "CompZone";
 Ztown = 0;
 publicVariable "Ztown";
-if (isnil {profilenamespace getvariable "Resist_LR_Number"}) then {
+if ((isnil {profilenamespace getvariable "Resist_LR_Number"}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
   diag_log "New Key";
   KeyNumber = RANDOM(1000);
 } else {
