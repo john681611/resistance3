@@ -1,5 +1,5 @@
 //Launcher Array
-sleep 30;
+sleep 1;
 if !((isnil {profilenamespace getvariable "Resist_LR_loadout"}) AND (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
 if(profilenamespace getvariable "Resist_LR_Number" == KeyNumber) then {
 	systemChat "Loading Gear";

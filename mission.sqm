@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=550;
+		nextID=552;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6544.6108,198.43872,19993.359};
-		dir[]={0.90582919,-0.41778347,0.070427932};
-		up[]={0.41655007,0.90853465,0.032386292};
-		aside[]={0.077517547,-2.6461203e-007,-0.99700427};
+		pos[]={22040.055,74.343124,21153.742};
+		dir[]={-0.22658661,-0.41213024,-0.88259602};
+		up[]={-0.10249247,0.911089,-0.39922693};
+		aside[]={-0.96867108,2.1827873e-008,0.24867974};
 	};
 };
 binarizationWanted=0;
@@ -61,13 +61,14 @@ addons[]=
 	"A3_Boat_F_Exp_Scooter_Transport_01",
 	"A3_Boat_F_Gamma_Boat_Civil_01",
 	"A3_Supplies_F_Heli_Slingload",
-	"A3_Characters_F_Exp"
+	"A3_Characters_F_Exp",
+	"A3_Structures_F_EPC_Civ_Accessories"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=25;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -233,6 +234,13 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item24
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -562,7 +570,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=251;
+		items=253;
 		class Item0
 		{
 			dataType="Marker";
@@ -9309,6 +9317,44 @@ class Mission
 			};
 			id=549;
 			type="B_G_Offroad_01_repair_F";
+		};
+		class Item251
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6601.8848,167.81529,20076.961};
+				angles[]={0,1.6958143,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this addAction [""Use Sotrage ATM"",""Client\safe_box.sqf""];this addAction [""Create New Store !<t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				name="ATM1";
+			};
+			id=550;
+			type="Land_Atm_01_F";
+			atlOffset=0.00042724609;
+		};
+		class Item252
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21961.518,29.125721,21054.912};
+				angles[]={0,3.5808046,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this addAction [""Use Sotrage ATM"",""Client\safe_box.sqf""];this addAction [""Create New Store !<t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				name="ATM2";
+			};
+			id=551;
+			type="Land_Atm_01_F";
+			atlOffset=0.55800056;
 		};
 	};
 	class Connections
