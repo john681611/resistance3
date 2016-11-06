@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22045.396,60.457203,21104.797};
-		dir[]={-0.62788075,-0.51292205,-0.58555293};
-		up[]={-0.37513801,0.85839468,-0.34984908};
-		aside[]={-0.68209451,-8.2026236e-007,0.73139346};
+		pos[]={6591.6323,178.79443,20075.455};
+		dir[]={0.64694262,-0.75785953,0.084412672};
+		up[]={0.75149274,0.65241271,0.098054223};
+		aside[]={0.12938251,-5.0233211e-008,-0.99159741};
 	};
 };
 binarizationWanted=0;
@@ -9330,7 +9330,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this addAction [""Use Sotrage ATM"",""Client\safe_box.sqf""];this addAction [""Create New Store !<t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				init="this addAction [""Get Storage Box"",""Client\safe_box.sqf""];this addAction [""Create New Store - <t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
 				name="ATM1";
 			};
 			id=550;
@@ -9349,7 +9349,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="this addAction [""Use Sotrage ATM"",""Client\safe_box.sqf""];this addAction [""Create New Store !<t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				init="this addAction [""Get Storage Box"",""Client\safe_box.sqf""];this addAction [""Create New Store - <t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
 				name="ATM2";
 			};
 			id=551;
