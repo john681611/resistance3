@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=129;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=554;
+		nextID=556;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6429.6143,361.17297,20039.572};
-		dir[]={0.65348792,-0.75107372,-0.094590552};
-		up[]={0.74332672,0.6602096,-0.10759484};
-		aside[]={-0.14326125,2.5597546e-007,-0.98973292};
+		pos[]={6661.6318,323.12198,20020.15};
+		dir[]={-0.31332967,-0.52374011,0.79216915};
+		up[]={-0.19263484,0.85187787,0.4870252};
+		aside[]={0.92990863,3.2248499e-007,0.3678101};
 	};
 };
 binarizationWanted=0;
@@ -570,7 +570,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=233;
+		items=235;
 		class Item0
 		{
 			dataType="Marker";
@@ -4664,7 +4664,7 @@ class Mission
 			fillName="Border";
 			a=100;
 			b=350;
-			angle=59.591995;
+			angle=59.591991;
 			drawBorder=1;
 			id=271;
 			atlOffset=-20.539434;
@@ -8482,6 +8482,37 @@ class Mission
 			colorName="ColorBlue";
 			id=553;
 			atlOffset=-165.66782;
+		};
+		class Item233
+		{
+			dataType="Trigger";
+			position[]={6576.1191,164.02597,20048.439};
+			class Attributes
+			{
+				name="Main_Zone";
+				sizeA=150;
+				sizeB=150;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=554;
+			type="EmptyDetector";
+		};
+		class Item234
+		{
+			dataType="Trigger";
+			position[]={21882.129,20.896835,20994.27};
+			angle=1.0465169;
+			class Attributes
+			{
+				name="Hotel_Zone";
+				sizeA=100;
+				sizeB=350;
+				activationBy="ANY";
+				isRectangle=1;
+			};
+			id=555;
+			type="EmptyDetector";
 		};
 	};
 	class Connections

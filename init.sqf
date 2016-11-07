@@ -49,6 +49,8 @@ enableSaving [false,false];
 waitUntil {!isNull player && !isnil "KeyNumber" };
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
+getContent = compile preprocessFileLineNumbers 'Server\persistance\getContent.sqf';
+setContent = compile preprocessFileLineNumbers 'Server\persistance\setContent.sqf';
 [] execVM "Client\keep_loadout.sqf";
 [] execVM "VehicleAugmentation.sqf";
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";

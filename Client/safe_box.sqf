@@ -2,35 +2,8 @@
 getbox = {
   //create box
   _box = createVehicle ["Box_NATO_Equip_F",[0,0,0], [], 0, "NONE"];
-
-  clearMagazineCargoGlobal _box;
-  clearWeaponCargoGlobal  _box;
-  clearItemCargoGlobal _box;
-  clearBackpackCargoGlobal _box;
-  _data =  profilenamespace getvariable "Resist_Box";
-  _weapons =  (_data select 2) select 0;
-  _mags = (_data select 2) select 1;
-  _items = (_data select 2) select 2;
-  _backpacks = (_data select 2) select 3;
-  diag_log _weapons;
-  diag_log _mags;
-  //weapons
-  {
-  _box addweaponcargoGlobal [_x,1];
-  } foreach _weapons;
-  //mags
-  {
-  _box addmagazinecargoGlobal [_x,1];
-  } foreach _mags;
-  //items
-  {
-    _box additemcargoGlobal [_x,1];
-  } foreach _items;
-  //backpacks
-  {
-    _box addBackpackCargoGlobal [_x,1];
-  } foreach _backpacks;
-
+  _data = ((profilenamespace getvariable "Resist_Box") select 2);
+  [_box,_data] call getContent;
   profilenamespace setvariable ["Resist_Box",[false,_box,[[],[],[],[]]]];
   _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","((ATM1 distance _target )< 5) OR ((ATM2 distance _target )< 6) ",5];
   _box setDir (getdir player);
@@ -53,13 +26,9 @@ setbox = {
     (_this select 0) removeAction (_this select 2);
   };
   //get box cargo
-  _weapons = weaponCargo _box;
-  _mags = magazineCargo _box;
-  _items = itemCargo _box;
-  _backpacks = backpackCargo _box;
+  profilenamespace setvariable ["Resist_Box",[true,"none",(_box call setContent)]];
   //delete box
   deleteVehicle _box;
-  profilenamespace setvariable ["Resist_Box",[true,"none",[_weapons,_mags,_items,_backpacks]]];
   hint "Store Box Sotred";
 };
 

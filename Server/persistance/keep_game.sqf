@@ -15,6 +15,6 @@ waitUntil {ztowninit==1};
 			profilenamespace setvariable ["Resist_SaveGame",_game];
 			profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
 			diag_log format ["$_$_$_$_Game saved ID: %1 Save: %2 ",KeyNumber, _game];
-	    sleep 6;
+	    sleep 600;
     };
 };
