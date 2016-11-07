@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=9;
 	class ItemIDProvider
 	{
 		nextID=556;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6661.6318,323.12198,20020.15};
-		dir[]={-0.31332967,-0.52374011,0.79216915};
-		up[]={-0.19263484,0.85187787,0.4870252};
-		aside[]={0.92990863,3.2248499e-007,0.3678101};
+		pos[]={6556.4375,188.85115,20002.961};
+		dir[]={-0.87757647,-0.46640673,0.111679};
+		up[]={-0.46271214,0.88453776,0.05888357};
+		aside[]={0.12625122,7.149647e-007,0.99207509};
 	};
 };
 binarizationWanted=0;
@@ -3344,10 +3344,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6585.2969,166.61819,20064.76};
-				angles[]={0,3.7674515,0};
+				position[]={6585.583,166.17857,20065.256};
+				angles[]={6.2765174,3.7674515,0.098349214};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3355,7 +3356,7 @@ class Mission
 			};
 			id=141;
 			type="Land_HBarrierWall6_F";
-			atlOffset=0.3216095;
+			atlOffset=0.049240112;
 		};
 		class Item75
 		{
@@ -3834,10 +3835,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6578.9717,166.79805,20069.508};
-				angles[]={0,3.7986181,0};
+				position[]={6578.9717,166.12425,20069.508};
+				angles[]={6.2765174,3.7986181,6.2791886};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3845,7 +3847,6 @@ class Mission
 			};
 			id=162;
 			type="Land_HBarrierWall6_F";
-			atlOffset=0.67379761;
 		};
 		class Item96
 		{
@@ -4108,9 +4109,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6579.7544,166.65767,20074.189};
+				position[]={6579.7544,166.37666,20074.189};
+				angles[]={6.253861,0,6.2791886};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -4119,7 +4122,6 @@ class Mission
 			};
 			id=182;
 			type="IG_supplyCrate_F";
-			atlOffset=0.28100586;
 			class CustomAttributes
 			{
 				class Attribute0
