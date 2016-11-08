@@ -194,8 +194,10 @@ sleep 0.25;
 
 								_gGroup=[_newpos,_side,_faction,11]call EOS_fnc_spawnvehicle;
 									0=[_mPos,[(_gGroup select 0)],_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
-									while{(count nearestObjects [(_gGroup select 0), ["Man","ReammoBox_F"], 1]) > 1} do {
+									_i = 0;
+									while{(count nearestObjects [(_gGroup select 0), ["Man","ReammoBox_F"], 1]) > 1 AND _i <= 5} do {
 										0=[_mPos,[(_gGroup select 0)],_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
+										_i = _i + 1;
 									};
 										_gGrp set [count _gGrp,_gGroup];
 
