@@ -14,7 +14,6 @@ getbox = {
 
 setbox = {
   _box = (profilenamespace getvariable "Resist_Box" select 1);
-  diag_log format ["%1 ? %2",_box, (_this select 0)];
 
   if((typeName _box) == "STRING") exitWith {
     hint "Box is no longer linked with your store";
@@ -26,10 +25,11 @@ setbox = {
     (_this select 0) removeAction (_this select 2);
   };
   //get box cargo
-  profilenamespace setvariable ["Resist_Box",[true,"none",(_box call setContent)]];
+  _content = _box call setContent;
+  profilenamespace setvariable ["Resist_Box",[true,"none",_content]];
   //delete box
   deleteVehicle _box;
-  hint "Store Box Sotred";
+  hint "Store Box Stored";
 };
 
 
