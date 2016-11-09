@@ -4,6 +4,6 @@
 "All captured AOs will drop loot somewhere within the marker,The bigger the Zone the more loot",
 "There are a few old BLUFOR bases lost to hostile SF you may be able to find some NATO equipment there",
 "To keep vehicles, boxs and other loot store it within the borders of your bases",
-(parsetext "<t color='#ff0000'>Be aware that currently attachments to weapons (including mags) and items inside uniforms/vests/backpags in a box or vehicle will not be saved and lost after server restarts</t>"),
+(parsetext "Note: saved Weapon attachments will be sotred seperatly from their weapons in after server restarts"),
 "Have fun playing! --Mike64"
 ];

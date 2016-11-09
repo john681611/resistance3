@@ -1,10 +1,10 @@
+waitUntil {!isNull player && !isnil "KeyNumber" };
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Tags\tags.sqf";
-cutText ["","BLACK OUT",0];
-player setPos [getmarkerpos "respawn_west" select 0,(getmarkerpos "respawn_west" select 1)-5,0];
-sleep 1;
-cutText ["","BLACK IN"];
+getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
+setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
+[] execVM "Client\keep_loadout.sqf";
 "Welcome to resistance" hintC [
 "Supplies are low use them wisely.",
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.",
