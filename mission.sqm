@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	class ItemIDProvider
 	{
 		nextID=568;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6569.1113,195.90134,20012.633};
-		dir[]={0.3251864,-0.66439515,0.67297131};
-		up[]={0.28906754,0.74736845,0.59822631};
-		aside[]={0.90041924,-4.8521906e-007,-0.43508855};
+		pos[]={20465.072,140.37791,20076.342};
+		dir[]={0.9391796,-0.32151973,0.12076841};
+		up[]={0.31889793,0.94690347,0.041006941};
+		aside[]={0.12754062,3.6670826e-008,-0.99184328};
 	};
 };
 binarizationWanted=0;
@@ -637,57 +637,62 @@ class Mission
 		class Item7
 		{
 			dataType="Marker";
-			position[]={17430.961,14.411267,13161.235};
+			position[]={17453.537,13.733337,13179.094};
 			name="BLU_1";
 			markerType="ELLIPSE";
 			type="Empty";
 			a=150;
 			b=150;
 			id=16;
+			atlOffset=2.9563904e-005;
 		};
 		class Item8
 		{
 			dataType="Marker";
-			position[]={8297.248,76.420174,10069.695};
+			position[]={8302.0449,-3.1520561e-015,10075.295};
 			name="BLU_3";
 			markerType="ELLIPSE";
 			type="Empty";
-			a=50;
-			b=50;
+			a=70;
+			b=70;
 			id=17;
+			atlOffset=-76.250694;
 		};
 		class Item9
 		{
 			dataType="Marker";
-			position[]={8207.4033,15.645025,10910.151};
+			position[]={8221.7402,1.1693073e+025,10930.412};
 			name="BLU_4";
 			markerType="ELLIPSE";
 			type="Empty";
-			a=100;
-			b=100;
+			a=150;
+			b=150;
 			id=18;
+			atlOffset=1.1693073e+025;
 		};
 		class Item10
 		{
 			dataType="Marker";
-			position[]={14206.943,74.045143,21214.18};
+			position[]={14180.58,-6.6028762e-012,21237.479};
 			name="BLU_5";
 			markerType="ELLIPSE";
 			type="Empty";
-			a=50;
-			b=50;
+			a=150;
+			b=150;
 			id=19;
+			atlOffset=-77.656273;
 		};
 		class Item11
 		{
 			dataType="Marker";
-			position[]={27022.658,20.837261,21502.641};
+			position[]={26999.977,21.324463,21517};
 			name="BLU_6";
 			markerType="ELLIPSE";
 			type="Empty";
 			a=150;
 			b=150;
 			id=20;
+			atlOffset=-0.20849609;
 		};
 		class Item12
 		{
@@ -703,13 +708,14 @@ class Mission
 		class Item13
 		{
 			dataType="Marker";
-			position[]={20597.404,51.392879,20111.275};
+			position[]={20658.018,0,20103.266};
 			name="BLU_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			a=50;
-			b=50;
+			a=100;
+			b=100;
 			id=22;
+			atlOffset=-48.181881;
 		};
 		class Item14
 		{
@@ -947,8 +953,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20601.271,54.260033,20107.963};
-				angles[]={0.0093350215,6.2787414,0.019996032};
+				position[]={20601.512,54.271019,20107.375};
+				angles[]={0.014664836,6.2787414,0.019996032};
 			};
 			side="Empty";
 			flags=4;
@@ -959,6 +965,7 @@ class Mission
 			};
 			id=49;
 			type="B_MRAP_01_hmg_F";
+			atlOffset=-0.00015640259;
 		};
 		class Item28
 		{

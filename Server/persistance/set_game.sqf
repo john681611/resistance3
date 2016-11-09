@@ -1,4 +1,4 @@
-takenTowns  = [(_this select 0)];
+takenTowns  = (_this select 0);
 diag_log "Loading Vehicles";
 {
   _veh = createVehicle [(_x select 0), (_x select 1), [], 0, "NONE"];

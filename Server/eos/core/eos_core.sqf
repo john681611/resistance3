@@ -152,7 +152,6 @@ sleep 0.25;
 		_newpos=[_mkr,50] call EOS_fnc_findSafePos;
 
 					_eGroup=[_newpos,_side,_faction,5]call EOS_fnc_spawnvehicle;
-					0=[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
 						0=[(_eGroup select 2),"STAskill"] call eos_fnc_grouphandlers;
 							_eGrp set [count _eGrp,_eGroup];
 

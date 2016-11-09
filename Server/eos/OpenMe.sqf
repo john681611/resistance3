@@ -21,7 +21,7 @@ hostileColor="colorRed";	// Default colour when enemies active
 bastionColor="colorOrange";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=false;		// Counts killed units
-_Hostiles = [[INDEPENDENT,2],[INDEPENDENT,2],[INDEPENDENT,2],[EAST,0],[EAST,5],[EAST,6],[EAST,7]];
+_Hostiles = [[INDEPENDENT,2],[INDEPENDENT,2],[INDEPENDENT,2],[EAST,0],[EAST,5],[EAST,7]];
 
 
 waitUntil {ztowninit==1};
@@ -51,13 +51,21 @@ _sel = _Hostiles select floor random count _Hostiles;
 [[_x],[10,3],[6,3],[8,2],[4],[4],[3,2],[16],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownc;
 
+customZone = {
+   _m = ((_this select 0) select 0);
+   if(!((getMarkerPos _m) in takenTowns)) then {
+    _this call EOS_Spawn;
+      } else {
+        _m setMarkerColor "colorGreen";
+      };
+ };
 //Custom Locations
 
-[["BLU"],[5,2],[4,2],[4,1],[2],[4],[1,1,20],[4],[6,0,600,EAST,FALSE]] call EOS_Spawn;
-[["BLU_1"],[3,2],[3,1],[2,2,75],[1,50],[3],[0,0],[3],[6,0,500,EAST,FALSE]] call EOS_Spawn;
-[["BLU_2"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
-[["BLU_3"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
-[["BLU_4"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
-[["BLU_5"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
-[["BLU_6"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
-[["BLU_7"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;
+[["BLU"],[5,2],[4,2],[4,1],[2],[4],[1,1,20],[4],[6,0,600,EAST,FALSE]] call customZone;
+[["BLU_1"],[3,2],[3,1],[2,2,75],[1,50],[3],[0,0],[3],[6,0,500,EAST,FALSE]] call customZone;
+[["BLU_2"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
+[["BLU_3"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
+[["BLU_4"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
+[["BLU_5"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,500,EAST,FALSE]] call customZone;
+[["BLU_6"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
+[["BLU_7"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;

@@ -15,7 +15,7 @@ _vehicle =  [
 _save = [[],[]];
     {
         if (getMarkerColor _x == "colorGreen") then {
-					(_save select 0) append (getMarkerPos _x);
+					(_save select 0) append [(getMarkerPos _x)];
 				};
     } forEach ztownAll;
 
