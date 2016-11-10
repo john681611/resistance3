@@ -16,7 +16,9 @@ _containersAndContent = (_data select 3);
   _box additemcargoGlobal [(_x select 1),1];
   _box additemcargoGlobal [(_x select 2),1];
   _box additemcargoGlobal [(_x select 3),1];
-  _box addMagazineAmmoCargo [((_x select 4) select 0),1,((_x select 4) select 1)];
+  if(count (_x select 4) > 0) then {
+     _box addMagazineAmmoCargo [((_x select 4) select 0),1,((_x select 4) select 1)];
+   };
   _box additemcargoGlobal [(_x select 5),1];
 } foreach _weapons;
 //mags

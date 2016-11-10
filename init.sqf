@@ -1,3 +1,5 @@
+["TF_no_auto_long_range_radio", true, true,"mission"] call CBA_settings_fnc_set;
+["TF_give_personal_radio_to_regular_soldier", true, true,"mission"] call CBA_settings_fnc_set;
 enable_lea_addon = false;
 []execVM "R3F_LOG\init.sqf";
 enableSaving [false,false];

@@ -37,7 +37,7 @@ _missionsData  = _missionsData + _Temp;
  disableserialization;
 
  _parentDisplay = [] call bis_fnc_displayMission;
- _mapCenter     = getmarkerpos "respawn_west_MHQ";
+ _mapCenter     = getmarkerpos "MHQ";
  _ORBAT         = [];
  _markers   = [];
  _images    = [];
