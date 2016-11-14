@@ -7,16 +7,14 @@ publicVariable "CompZone";
 Ztown = 0;
 publicVariable "Ztown";
 if ((isnil {profilenamespace getvariable "Resist_LR_Number"}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
-  diag_log "New Key";
   KeyNumber = RANDOM(1000);
 } else {
-  diag_log "Saved Key";
   KeyNumber = profilenamespace getvariable "Resist_LR_Number";
 };
 publicVariable "KeyNumber";
-getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\get_game.sqf';
-setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\set_game.sqf';
-[] execVM "Server\persistance\keep_game.sqf";
+getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_game.sqf';
+setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
+[] execVM "Server\persistance\game\keep_game.sqf";
 []	execVM "Server\boxs\BoxInit.sqf";
 [] execVM "Server\z_townmgr.sqf";
 []	execVM "Server\MHQ_Marker.sqf";

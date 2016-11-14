@@ -5,13 +5,10 @@ _vehicle =  [
   (getdir _this),
   (getDammage _this),
   (Fuel _this),
-  (_this call setContent)
+  (_this call getContent)
   ];
-  diag_log "Saving Vehicle";
-  diag_log _vehicle;
   _vehicle
 };
-
 _save = [[],[]];
     {
         if (getMarkerColor _x == "colorGreen") then {

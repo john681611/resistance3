@@ -55,7 +55,6 @@ ztownAll = [];
     } else {
       _m setMarkerColor "ColorGreen";
       ztownTA = ztownTA + [_m];
-      diag_log format ["Zone Removed: %1",_x];
     };
 
     switch((_x select 0)) do
@@ -97,4 +96,3 @@ ztownAll = [];
 
 ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
 ztowninit = 1;
-diag_log "ztown Done";

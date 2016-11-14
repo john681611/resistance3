@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	class ItemIDProvider
 	{
 		nextID=568;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6569.3979,213.44604,19971.533};
-		dir[]={0.219409,-0.62607151,0.74826205};
-		up[]={0.17616232,0.77976489,0.60077566};
-		aside[]={0.95959699,5.8207661e-011,-0.28137761};
+		pos[]={6565.5918,203.9315,19932.354};
+		dir[]={0.16420549,-0.4354957,0.88512832};
+		up[]={0.079439811,0.90017354,0.42821479};
+		aside[]={0.98325849,2.2004679e-007,-0.18240796};
 	};
 };
 binarizationWanted=0;
@@ -2776,19 +2776,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6531.4175,174.18262,19992.893};
-				angles[]={0.082478598,2.3860044,6.2645216};
+				position[]={6531.418,174.18265,19992.893};
+				angles[]={0.08248426,2.3860044,6.2645278};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
+				name="MO2";
 				textures="Guerilla_09";
 			};
 			id=125;
 			type="B_G_Offroad_01_F";
-			atlOffset=-0.019042969;
+			atlOffset=-0.019012451;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3000,6 +3001,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
+				name="MAO2";
 			};
 			id=126;
 			type="B_G_Offroad_01_armed_F";
@@ -3130,6 +3132,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
+				name="MAO";
 			};
 			id=127;
 			type="B_G_Offroad_01_armed_F";
@@ -3140,18 +3143,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6572.3281,176.22932,19990.039};
-				angles[]={0.045302324,2.3620937,0.025330193};
+				position[]={6572.3286,176.22948,19990.039};
+				angles[]={0.045308746,2.3620937,0.025324726};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
+				name="MO";
 			};
 			id=128;
 			type="B_G_Offroad_01_F";
-			atlOffset=-0.15814209;
+			atlOffset=-0.15800476;
 		};
 		class Item64
 		{
@@ -3407,7 +3411,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="Weapons_box";
+				name="MWB";
 			};
 			id=144;
 			type="Box_FIA_Wps_F";
@@ -3450,7 +3454,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="Misc_Box";
+				name="MMB";
 			};
 			id=145;
 			type="Box_FIA_Support_F";
@@ -3755,7 +3759,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="Ammo_Box";
+				name="MAMB";
 			};
 			id=160;
 			type="Box_FIA_Ammo_F";
@@ -3798,7 +3802,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="Attach_box";
+				name="MAB";
 			};
 			id=161;
 			type="Box_FIA_Support_F";
@@ -4115,7 +4119,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="clothes_box";
+				name="MCB";
 			};
 			id=182;
 			type="IG_supplyCrate_F";
@@ -4426,144 +4430,152 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6555.6064,176.61264,19978.594};
-				angles[]={0.18067399,1.5501194,6.2778478};
+				position[]={6555.6069,176.61305,19978.594};
+				angles[]={0.18067649,1.5501142,6.2778444};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MT2";
 			};
 			id=203;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-0.013412476;
+			atlOffset=-0.013000488;
 		};
 		class Item126
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6563.3838,176.90433,19978.463};
-				angles[]={0.12730829,1.4573145,6.2645216};
+				position[]={6563.3838,176.9044,19978.463};
+				angles[]={0.12730432,1.457315,6.2645278};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MT";
 			};
 			id=204;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-0.0030822754;
+			atlOffset=-0.0030059814;
 		};
 		class Item127
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6547.0913,176.44774,19978.084};
-				angles[]={0.21655147,1.5144011,0.033321146};
+				position[]={6547.0913,176.44803,19978.084};
+				angles[]={0.21654299,1.5144047,0.033318337};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MT3";
 			};
 			id=205;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-0.027267456;
+			atlOffset=-0.026977539;
 		};
 		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6534.5332,175.3855,19982.504};
-				angles[]={0.091741994,2.272871,0.02666023};
+				position[]={6534.5337,175.38579,19982.504};
+				angles[]={0.091734506,2.2728724,0.026668631};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MFT";
 			};
 			id=206;
 			type="B_G_Van_01_fuel_F";
-			atlOffset=-0.005279541;
+			atlOffset=-0.0050048828;
 		};
 		class Item129
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6570.876,176.79599,19978.646};
-				angles[]={0.075855196,0.68424511,6.2525272};
+				position[]={6570.876,176.79565,19978.646};
+				angles[]={0.075852014,0.68423885,6.2525201};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MQ";
 			};
 			id=207;
 			type="B_G_Quadbike_01_F";
-			atlOffset=-0.001663208;
+			atlOffset=-0.0019989014;
 		};
 		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6573.6299,176.83981,19978.064};
-				angles[]={0.023993526,0.68424511,0.021328852};
+				position[]={6573.6304,176.84001,19978.064};
+				angles[]={0.023998277,0.68423885,0.021327924};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MQ2";
 			};
 			id=208;
 			type="B_G_Quadbike_01_F";
-			atlOffset=-0.0011901855;
+			atlOffset=-0.0010070801;
 		};
 		class Item131
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6577.0825,176.91443,19978.025};
-				angles[]={0.023993526,0.68424511,0.021328852};
+				position[]={6577.0825,176.91457,19978.025};
+				angles[]={0.023998277,0.68423885,0.021327924};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MQ3";
 			};
 			id=209;
 			type="B_G_Quadbike_01_F";
-			atlOffset=-0.0011444092;
+			atlOffset=-0.0010070801;
 		};
 		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6580.7329,176.93402,19977.598};
-				angles[]={0,0.68424511,0.018660666};
+				position[]={6580.7329,176.93393,19977.598};
+				angles[]={0,0.68423885,0.018657569};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.2;
+				name="MQ4";
 			};
 			id=210;
 			type="B_G_Quadbike_01_F";
-			atlOffset=-0.0028991699;
+			atlOffset=-0.0029907227;
 		};
 		class Item133
 		{
@@ -6048,6 +6060,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				name="MJ2";
 				textures="Olive";
 			};
 			id=360;
@@ -6151,6 +6164,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				name="MJ";
 				textures="Olive";
 			};
 			id=361;
@@ -8207,6 +8221,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="  ";
+				name="MSO";
 			};
 			id=549;
 			type="B_G_Offroad_01_repair_F";

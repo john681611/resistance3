@@ -47,7 +47,7 @@ enableSaving [false,false];
 	  ["Teamspeak Info","TS: 81.19.212.66<br/>Visit us at www.iron-fists.eu"]
     ]] execvm "shk_taskmaster.sqf";
 waitUntil {!isNull player && !isnil "KeyNumber" };
-getContent = compile preprocessFileLineNumbers 'Server\persistance\getContent.sqf';
-setContent = compile preprocessFileLineNumbers 'Server\persistance\setContent.sqf';
+getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
+setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
 [] execVM "VehicleAugmentation.sqf";
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
