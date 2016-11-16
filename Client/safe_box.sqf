@@ -4,7 +4,7 @@ getbox = {
   _box = createVehicle ["Box_NATO_Equip_F",[0,0,0], [], 0, "NONE"];
   _data = ((profilenamespace getvariable "Resist_Box") select 2);
   [_box,_data] call setContent;
-  profilenamespace setvariable ["Resist_Box",[false,_box,[[],[],[],[]]]];
+  profilenamespace setvariable ["Resist_Box",[false,_box,[[],[],[],[]]], false];
   _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","((ATM1 distance _target )< 5) OR ((ATM2 distance _target )< 6) ",5];
   _box setDir (getdir player);
   _box setpos (player modelToWorld [0,1.5,1]);
@@ -26,7 +26,7 @@ setbox = {
   };
   //get box cargo
   _content = _box call getContent;
-  profilenamespace setvariable ["Resist_Box",[true,"none",_content]];
+  profilenamespace setvariable ["Resist_Box",[true,"none",_content], false];
   //delete box
   deleteVehicle _box;
   hint "Store Box Stored";
@@ -35,12 +35,12 @@ setbox = {
 
 if !((isnil {profilenamespace getvariable "Resist_Box"}) OR (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
   if(profilenamespace getvariable "Resist_LR_Number" != KeyNumber) then {
-    profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
-    profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+    profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]], false];
+    profilenamespace setvariable ["Resist_LR_Number",KeyNumber, false];
 	};
 } else {
-  profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
-  profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+  profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]], false];
+  profilenamespace setvariable ["Resist_LR_Number",KeyNumber, false];
 };
 if(((profilenamespace getvariable "Resist_Box") select 0))then{
   [] spawn getbox;

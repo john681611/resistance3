@@ -57,6 +57,7 @@ customZone = {
     _this call EOS_Spawn;
       } else {
         _m setMarkerColor "colorGreen";
+        _m setMarkerAlpha 0.5;
       };
  };
 //Custom Locations

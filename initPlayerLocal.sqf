@@ -1,10 +1,4 @@
 waitUntil {!isNull player && !isnil "KeyNumber" };
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
-[] execVM "Client\Player_Marker.sqf";
-[] execVM "Client\Tags\tags.sqf";
-getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
-setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
-[] execVM "Client\keep_loadout.sqf";
 "Welcome to resistance" hintC [
 "Supplies are low use them wisely.",
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.",
@@ -40,3 +34,11 @@ Ground Vehicles: 40 <br/>
 Aircaft: 50 <br/>
 Emergency: 66 <br/>
 "]];
+["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+[] execVM "Client\Player_Marker.sqf";
+[] execVM "Client\Tags\tags.sqf";
+getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
+setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
+getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
+setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
+[] execVM "Client\keep_loadout.sqf";

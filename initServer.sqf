@@ -12,6 +12,8 @@ if ((isnil {profilenamespace getvariable "Resist_LR_Number"}) OR (("NEWGAME" cal
   KeyNumber = profilenamespace getvariable "Resist_LR_Number";
 };
 publicVariable "KeyNumber";
+getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
+setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
 getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_game.sqf';
 setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
 [] execVM "Server\persistance\game\keep_game.sqf";

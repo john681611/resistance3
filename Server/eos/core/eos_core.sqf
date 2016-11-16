@@ -215,14 +215,22 @@ sleep 0.25;
 				_taken setTriggerStatements ["{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 5} count allUnits > 0","",""];
 _eosAct=true;
 _delay = 300;
-while {_eosAct} do
-	{
+while {_eosAct} do {
 	// IF PLAYER LEAVES THE AREA OR ZONE DEACTIVATED
-	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") then {_delay = _delay -1;} else {_delay = 300;};
+	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") then {
+		_delay = _delay -5;
+	} else {
+		_delay = 300;
+	};
 
-		if (_delay <= 0) exitWith
-		{
-		if (_debug) then {if (!(getmarkercolor _mkr == "colorblack")) then {hint "Restarting Zone AND deleting units";}else{hint "EOS zone deactivated";};};
+	if (_delay <= 0) then	{
+		if (_debug) then {
+			if (!(getmarkercolor _mkr == "colorblack")) then {
+				hint "Restarting Zone AND deleting units";
+			} else {
+				hint "EOS zone deactivated";
+			};
+		};
 //CACHE LIGHT VEHICLES
 	if (!isnil "_cGrp") then
 				{
@@ -232,9 +240,9 @@ while {_eosAct} do
 														if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
 																			{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
 						}foreach _cGrp;
-if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
+	if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
 
-// CACHE ARMOURED VEHICLES
+	// CACHE ARMOURED VEHICLES
 		if (!isnil "_dGrp") then
 				{
 						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
@@ -243,14 +251,15 @@ if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
 														if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
 																			{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
 						}foreach _dGrp;
-if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
+		if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
 
 // CACHE PATROL INFANTRY
-	if (!isnil "_bGrp") then
-				{		_n=0;
-						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["PA%1",_n];
-	if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-						_eosActivated setvariable [_cacheGrp,_units];
+		if (!isnil "_bGrp") then {
+				_n=0;
+						{	_n=_n+1;_units={alive _x} count units _x;
+						_cacheGrp=format ["PA%1",_n];
+		if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
+						_eosActivated setvariable [_cacheGrp,_units, false];
 						{deleteVehicle _x} foreach units _x;deleteGroup _x;
 						}foreach _bGrp;
 				};
@@ -260,7 +269,7 @@ if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
 				{		_n=0;
 						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["HP%1",_n];
 	if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-						_eosActivated setvariable [_cacheGrp,_units];
+						_eosActivated setvariable [_cacheGrp,_units, false];
 						{deleteVehicle _x} foreach units _x;deleteGroup _x;
 						}foreach _aGrp;
 				};
@@ -326,9 +335,9 @@ if (_debug) then {hint "Zone Cached";};
 				sleep 1;
 				};
 // PLAYER LEFT ZONE
-_eosAct=false;
+			_eosAct=false;
 			};
-			sleep 0.5;
+			sleep 5;
 			};
 
 deletevehicle _clear;deletevehicle _taken;
