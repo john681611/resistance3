@@ -17,7 +17,6 @@ setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setCo
 getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_game.sqf';
 setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
 [] execVM "Server\persistance\game\keep_game.sqf";
-[]	execVM "Server\boxs\BoxInit.sqf";
 [] execVM "Server\z_townmgr.sqf";
 []	execVM "Server\MHQ_Marker.sqf";
 waitUntil {ztowninit==1};

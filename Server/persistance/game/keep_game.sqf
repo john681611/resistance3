@@ -1,3 +1,4 @@
+if (!isServer) exitWith {};
 if !((isnil {profilenamespace getvariable "Resist_SaveGame"}) AND (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
 if(profilenamespace getvariable "Resist_LR_Number" == KeyNumber) then {
 	diag_log "Loading Game";
@@ -10,8 +11,8 @@ sleep 600;
     while{true} do {
 //saving done here
 			_game = call getSaveGame;
-			profilenamespace setvariable ["Resist_SaveGame",_game, false];
-			profilenamespace setvariable ["Resist_LR_Number",KeyNumber, false];
+			profilenamespace setvariable ["Resist_SaveGame",_game];
+			profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
 	    sleep 600;
     };
 };

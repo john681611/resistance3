@@ -16,8 +16,8 @@ _launch = ["launch_NLAW_F","launch_RPG32_F","launch_B_Titan_F","launch_I_Titan_F
         if(!(_weaponClass in _launch)) then {
             if(alive player) then {
                 loadout = [player,["ammo"]] call getLoadout;
-				profilenamespace setvariable ["Resist_LR_loadout",loadout, false];
-				profilenamespace setvariable ["Resist_LR_Number",KeyNumber, false];
+				profilenamespace setvariable ["Resist_LR_loadout",loadout];
+				profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
             };
             };
     sleep 60;
