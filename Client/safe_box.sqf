@@ -27,6 +27,9 @@ setbox = {
   //get box cargo
   _content = _box call getContent;
   profilenamespace setvariable ["Resist_Box",[true,"none",_content]];
+  //Save Players Kit to stop duplication
+  profilenamespace setvariable ["Resist_LR_loadout",loadout];
+  profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
   //delete box
   deleteVehicle _box;
   hint "Store Box Stored";
