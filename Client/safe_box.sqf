@@ -28,6 +28,7 @@ setbox = {
   _content = _box call getContent;
   profilenamespace setvariable ["Resist_Box",[true,"none",_content]];
   //Save Players Kit to stop duplication
+  loadout = [player,["ammo"]] call getLoadout;
   profilenamespace setvariable ["Resist_LR_loadout",loadout];
   profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
   //delete box
@@ -35,18 +36,30 @@ setbox = {
   hint "Store Box Stored";
 };
 
-
-if !((isnil {profilenamespace getvariable "Resist_Box"}) OR (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
-  if(profilenamespace getvariable "Resist_LR_Number" != KeyNumber) then {
+tryGetBox = {
+  if !((isnil {profilenamespace getvariable "Resist_Box"}) OR (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
+    if(profilenamespace getvariable "Resist_LR_Number" != KeyNumber) then {
+      profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
+      profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+  	};
+  } else {
     profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
     profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
-	};
-} else {
-  profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
-  profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+  };
+  if(((profilenamespace getvariable "Resist_Box") select 0))then{
+    [] spawn getbox;
+  }else{
+   hint "No store found! return your box or create a new store";
+  };
 };
-if(((profilenamespace getvariable "Resist_Box") select 0))then{
-  [] spawn getbox;
-}else{
- hint "No store found! return your box or create a new store";
+
+resetBox = {
+   _result = ["Are you sure? <br/> <t color='#ff0000'>Any Saved Gear will be lost</t>
+", "Confirm", true, true] call BIS_fnc_guiMessage;
+
+   if(_result) then {
+     profilenamespace setvariable ["Resist_Box",[true,"none",[[],[],[],[]]]];
+     profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+     hint 'Box Reset'
+   };
 };

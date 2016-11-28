@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6595.2642,170.07243,20080.203};
-		dir[]={0.74819148,-0.64535254,0.1541234};
-		up[]={0.63208699,0.76387912,0.13020654};
-		aside[]={0.20176244,-1.0695658e-008,-0.97944593};
+		pos[]={6594.7925,180.34016,20054.604};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -741,7 +741,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="act1 = this addAction [""Teleport"",""Client\teleport.sqf""];this setUserActionText [act1,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#FF0000'>Clean Server</t>"", ""StartServerClean.sqf""];";
+				init="act1 = this addAction [""Teleport"",""Client\teleport.sqf""];this setUserActionText [act1,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf""];";
 				name="FLG";
 			};
 			id=32;
@@ -8023,7 +8023,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",""Client\safe_box.sqf""];this addAction [""Create New Store - <t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",{[] spawn tryGetBox;}];this addAction [""Create New Store - <t color='#ff0000'>Overwrites old store</t>"",{[] spawn resetBox;}];";
 				name="ATM1";
 			};
 			id=550;
@@ -8042,7 +8042,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",""Client\safe_box.sqf""];this addAction [""Create New Store - <t color='#FF0000'>Overwrites old store</t>"",{profilenamespace setvariable [""Resist_Box"",[true,""none"",[[],[],[],[]]]]; hint ""New Store Created"";}];";
+				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",{[] spawn tryGetBox;}];this addAction [""Create New Store - <t color='#ff0000'>Overwrites old store</t>"",{[] spawn resetBox;}];";
 				name="ATM2";
 			};
 			id=551;

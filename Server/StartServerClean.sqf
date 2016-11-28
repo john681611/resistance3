@@ -22,13 +22,11 @@ publicVariable "ServerClean";
 
 if (_uid in _AllowedUid) then {
 	hintsilent "Authorised!";
-	ServerClean = 1;
-	publicVariable "ServerClean";
-	SystemChat format ["Server cleaning. Server FPS: = %1. Groups: %2. Dead: %3", ServerFPS, groupNum, deadNum];
-	waitUntil {ServerCleaned == 1};
-	SystemChat format ["Server cleaned. Server FPS: = %1. Groups: %2. Dead: %3", ServerFPS, groupNum, deadNum];
-	ServerCleaned = 0;
-	publicVariable "ServerCleaned";
+	_result = ["Are you sure? <br/> <t color='#ff0000'>This will delete eveything left on the ground.</t>", "Confirm", true, true] call BIS_fnc_guiMessage;
+
+	if(_result) then {
+		[[], cleanServer, false, false, true] call BIS_fnc_MP;
+	};
 } else {
 	hintsilent "Not Authorised!";
 ;}

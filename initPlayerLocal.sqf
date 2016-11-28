@@ -41,4 +41,5 @@ getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getCo
 setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
+[] execVM 'Client\safe_box.sqf';
 [] execVM "Client\keep_loadout.sqf";
