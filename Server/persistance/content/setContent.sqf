@@ -17,7 +17,9 @@ TAG_fnc_baseWeapon = {
 
 	while {isClass (_cfg >> "LinkedItems") } do {
 		_parent = configName (inheritsFrom (_cfg));
-		_cfg = _baseCfg >> _parent;
+		_cfgTemp = _baseCfg >> _parent;
+		if(getNumber(_cfgTemp >> "Scope") == 0) exitWith {};
+		_cfg = _cfgTemp;
 	};
 
 	configName _cfg
