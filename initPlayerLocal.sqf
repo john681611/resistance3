@@ -1,4 +1,30 @@
-waitUntil {!isNull player && !isnil "KeyNumber" };
+waitUntil {!isNull player && !isnil "KeyNumber"};
+//Loadouts
+if (isnil {profilenamespace getvariable "Resist_loadout"}) then {
+  profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
+} else {
+  if((typeName ((profilenamespace getvariable "Resist_loadout") select 0)) == "SCALAR") then {
+    if(((profilenamespace getvariable "Resist_loadout") select 0) != KeyNumber) then {
+      profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
+    };
+  } else {
+    profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
+  };
+};
+//Box
+if (isnil {profilenamespace getvariable "Resist_Box"}) then {
+  profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
+} else {
+  if((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR") then {
+    if(((profilenamespace getvariable "Resist_Box") select 0) != KeyNumber) then {
+      profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
+    };
+  }else{
+    profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
+  };
+
+};
+
 "Welcome to resistance" hintC [
 "Supplies are low use them wisely.",
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.",
@@ -45,7 +71,6 @@ setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM "Client\keep_loadout.sqf";
 player addEventHandler ["Respawn", {
   loadout = [player,["ammo"]] call getLoadout;
-  profilenamespace setvariable ["Resist_LR_loadout",loadout];
-  profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+  profilenamespace setvariable ["Resist_loadout",[KeyNumber,loadout]];
   systemChat "Gear Saved";
   }];

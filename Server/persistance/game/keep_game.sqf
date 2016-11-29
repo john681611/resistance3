@@ -1,18 +1,16 @@
 if (!isServer) exitWith {};
-if !((isnil {profilenamespace getvariable "Resist_SaveGame"}) AND (isnil {profilenamespace getvariable "Resist_LR_Number"})) then {
-if(profilenamespace getvariable "Resist_LR_Number" == KeyNumber) then {
-	diag_log "Loading Game";
-	profilenamespace getvariable "Resist_SaveGame" call setSaveGame;
-	};
+	_data = profilenamespace getvariable "Resist_SaveGame";
+if((typeName (_data select 1)) == "ARRAY") then {
+	(_data select 1) call setSaveGame;
+	diag_log "Loaded Game";
 };
 waitUntil {ztowninit==1};
-sleep 6;
 [] spawn {
+	_sleepTime = 6;
+	sleep _sleepTime;
     while{true} do {
-//saving done here
 			_game = call getSaveGame;
-			profilenamespace setvariable ["Resist_SaveGame",_game];
-			profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
-	    sleep 6;
+			profilenamespace setvariable ["Resist_SaveGame",[KeyNumber,_game]];
+	    sleep _sleepTime;
     };
 };

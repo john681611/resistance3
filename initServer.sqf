@@ -1,3 +1,4 @@
+
 ["Initialize"] call BIS_fnc_dynamicGroups;
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 ztowninit = 0;
@@ -6,10 +7,12 @@ takenTowns = [];
 publicVariable "CompZone";
 Ztown = 0;
 publicVariable "Ztown";
-if ((isnil {profilenamespace getvariable "Resist_LR_Number"}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
+if ((isnil {profilenamespace getvariable "Resist_SaveGame"}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
   KeyNumber = RANDOM(1000);
+  profilenamespace setvariable ["Resist_SaveGame",[KeyNumber,"new"]];
 } else {
-  KeyNumber = profilenamespace getvariable "Resist_LR_Number";
+  _data = profilenamespace getvariable "Resist_SaveGame";
+  KeyNumber = (_data select 0);
 };
 publicVariable "KeyNumber";
 getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
