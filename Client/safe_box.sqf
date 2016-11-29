@@ -31,6 +31,7 @@ setbox = {
   loadout = [player,["ammo"]] call getLoadout;
   profilenamespace setvariable ["Resist_LR_loadout",loadout];
   profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
+  systemChat "Gear Saved";
   //delete box
   deleteVehicle _box;
   hint "Store Box Stored";
