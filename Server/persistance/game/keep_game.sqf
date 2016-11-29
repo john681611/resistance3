@@ -6,13 +6,13 @@ if(profilenamespace getvariable "Resist_LR_Number" == KeyNumber) then {
 	};
 };
 waitUntil {ztowninit==1};
-sleep 600;
+sleep 6;
 [] spawn {
     while{true} do {
 //saving done here
 			_game = call getSaveGame;
 			profilenamespace setvariable ["Resist_SaveGame",_game];
 			profilenamespace setvariable ["Resist_LR_Number",KeyNumber];
-	    sleep 600;
+	    sleep 6;
     };
 };

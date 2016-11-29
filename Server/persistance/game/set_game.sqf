@@ -7,3 +7,8 @@ takenTowns  = (_this select 0);
   [_veh,(_x select 5)] call setContent;
   _veh setVariable ["ResistVeh", true, false];
 } foreach (_this select 1);
+
+C1 setpos (((_this select 2) select 0) select 0);
+C1 setdir (((_this select 2) select 0) select 1);
+C2 setpos (((_this select 2) select 1) select 0);
+C2 setdir (((_this select 2) select 1) select 1);

@@ -9,7 +9,7 @@ _vehicle =  [
   ];
   _vehicle
 };
-_save = [[],[]];
+_save = [[],[],[]];
     {
         if (getMarkerColor _x == "colorGreen") then {
 					(_save select 0) append [(getMarkerPos _x)];
@@ -27,4 +27,8 @@ _save = [[],[]];
         (_save select 1) append [(_x call getVehicleData)];
       };
     } forEach list Hotel_Zone;
+    {
+        (_save select 2) append [[(getpos _x),(getdir _x)]];
+    } forEach [C1,C2];
+
 _save
