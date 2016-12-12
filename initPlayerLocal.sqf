@@ -62,6 +62,7 @@ Emergency: 66 <br/>
 "]];
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
+[] execVM "Client\Revive_marker.sqf";
 [] execVM "Client\Tags\tags.sqf";
 getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
 setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
