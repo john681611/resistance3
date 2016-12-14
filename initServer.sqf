@@ -21,7 +21,8 @@ getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_gam
 setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
 [] execVM "Server\persistance\game\keep_game.sqf";
 [] execVM "Server\z_townmgr.sqf";
-[]	execVM "Server\MHQ_Marker.sqf";
+[] execVM "Server\MHQ_Marker.sqf";
+[] execVM "Server\VehicleMarker.sqf";
 waitUntil {ztowninit==1};
 []	execVM "Server\eos\OpenMe.sqf";
 []	execVM "Server\cleanupAuto.sqf";
