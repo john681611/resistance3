@@ -68,7 +68,7 @@
     ///////////////////////////////////////////////////////
     // loop
     ///////////////////////////////////////////////////////
-    /*sleep 1;
+    sleep 1;
 
     _markers = [];
     while {true} do
@@ -97,16 +97,16 @@
                 _side = (_x getVariable ["mdhBRIMside",east]);
                 if (side player getFriend _side > 0.5 && {alive _x} && {(lifeState _x) == "INCAPACITATED"}) then
                 {
-                    _marker = createMarkerLocal ["mdhBRIMmarker_" + format["%1",_forEachIndex], position _x];
+                    /*_marker = createMarkerLocal ["mdhBRIMmarker_" + format["%1",_forEachIndex], position _x];
                     _markers pushBack _marker;
                     _marker setMarkerShapeLocal "ICON";
                     _marker setMarkerTypeLocal "hd_dot";
                     _marker setMarkerTextLocal ("(Uncon) " + name _x);
-                    _marker setMarkerColorLocal "ColorBLUE";
+                    _marker setMarkerColorLocal "ColorBLUE";*/
                 };
             };
         } forEach allPlayers;
 
         sleep (5 + random 1);
     };
-};*/
+};
