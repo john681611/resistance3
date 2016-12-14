@@ -27,7 +27,7 @@
                         '<br/>Bohemia Revive Icon Marker is a mod, created by Moerderhoschi for Arma III, to add an icon and Mapmarker to unconscious players. '
                       + 'If you have any question you can contact me at the official Bohemia Interactive Forum: forums.bistudio.com<br/>'
                       + '<br/>'
-                      + '<img image="a3\ui_f\data\revive\medikit_ca.paa"/>'
+                      + '<img image="a3\ui_f\data\IGUI\Cfg\Revive\overlayIcons\u75_ca.paa"/>'
                       + '<br/>'
                       + '<br/>'
                       + 'Credits and Thanks:<br/>'
@@ -58,7 +58,7 @@
                     {
                         _pos = getPosATLVisual _x;
                         _pos set [2, (_pos select 2) + 1 + (_dist * 0.05)];
-                        drawIcon3D ["a3\ui_f\data\revive\medikit_ca.paa", [1,0,0,1 - (_dist / 200)], _pos, 1, 1, 0, "(Uncon) " + name _x, 1, 0.032 - (_dist / 9000), "RobotoCondensed"];
+                        drawIcon3D ["a3\ui_f\data\IGUI\Cfg\Revive\overlayIcons\u75_ca.paa", [1,0,0,1 - (_dist / 200)], _pos, 1, 1, 0, "(Uncon) " + name _x, 1, 0.032 - (_dist / 9000), "RobotoCondensed"];
                     }
                 }
             } forEach allPlayers;
