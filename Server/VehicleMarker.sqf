@@ -16,7 +16,7 @@ vehicleMarker = {
         } else {
           _players = _players + ", " + (name _x);
         };
-      } 
+      }; 
     } foreach allplayers;
     if(_noPlayers) exitwith {}; //no players bail!
     _marker setMarkerText format ['%1 (%2)',_players, getText (configFile >>  "CfgVehicles" >> (typeOf _vehicle) >> "displayName")];
