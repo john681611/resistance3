@@ -1,29 +1,27 @@
 waitUntil {!isNull player && !isnil "KeyNumber"};
-//Loadouts
-if (isnil {profilenamespace getvariable "Resist_loadout"}) then {
-  profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
-} else {
-  if((typeName ((profilenamespace getvariable "Resist_loadout") select 0)) == "SCALAR") then {
-    if(((profilenamespace getvariable "Resist_loadout") select 0) != KeyNumber) then {
-      profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
+//Local save's
+//is nil?
+_saveTestsPass  = false;
+//missing?
+if (!(isnil {profilenamespace getvariable "Resist_loadout"}) AND !(isnil {profilenamespace getvariable "Resist_Box"}) ) then {
+//Array?
+  if(((typeName (profilenamespace getvariable "Resist_loadout")) == "ARRAY") AND ((typeName (profilenamespace getvariable "Resist_Box")) == "ARRAY")) then {
+//Number?
+    if(((typeName ((profilenamespace getvariable "Resist_loadout") select 0)) == "SCALAR") AND ((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR")) then {
+//Key?
+      if((((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber) AND (((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber)) then {
+        _saveTestsPass = true;
+      };
     };
-  } else {
-    profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
   };
 };
-//Box
-if (isnil {profilenamespace getvariable "Resist_Box"}) then {
-  profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
-} else {
-  if((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR") then {
-    if(((profilenamespace getvariable "Resist_Box") select 0) != KeyNumber) then {
-      profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
-    };
-  }else{
-    profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
-  };
 
+if (!_saveTestsPass) then {
+  diag_log 'Resetting player Data';
+  profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
+  profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
 };
+
 C1 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C1"];
 C2 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C2"];
 
