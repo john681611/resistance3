@@ -3,7 +3,7 @@
 "Giallustio - Logistics",
 "BangaBob - Enemy Occupation System (EOS)",
 "Shuko - Taskmaster Script & SHK Pos",
-"IRON-FISTS - Testing and ideas"
+"IRON-FISTS - Testing and ideas",
 "This server, for running the mission",
 "You, for playing!"
 ];
