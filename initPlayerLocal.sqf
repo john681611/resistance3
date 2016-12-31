@@ -44,7 +44,6 @@ Ground Vehicles: 40 <br/>
 Aircaft: 50 <br/>
 Emergency: 66 <br/>
 "]];
-[] execVM "Server\Info Boards\WelcomeMessage.sqf";
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Revive_marker.sqf";
@@ -60,3 +59,4 @@ player addEventHandler ["Respawn", {
   profilenamespace setvariable ["Resist_loadout",[KeyNumber,loadout]];
   systemChat "Gear Saved";
   }];
+[] execVM "Server\Info Boards\WelcomeMessage.sqf";

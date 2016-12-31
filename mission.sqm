@@ -5683,7 +5683,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Brief"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
+				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
 				name="Isig2";
 			};
 			id=335;
@@ -7050,7 +7050,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Brief"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
+				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
 				name="Isig2_1";
 			};
 			id=372;

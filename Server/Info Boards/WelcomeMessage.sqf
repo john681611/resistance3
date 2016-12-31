@@ -3,7 +3,7 @@
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.",
 "All you have is what you start with only the starter vehicles respawn when destroyed.",
 "Teleport is available at the flag.",
-"Excess Gear can be stored at the storage Terminals (looks like ATM's at base)"
+"Excess Gear can be stored at the storage Terminals (looks like ATM's at base)",
 "Check the 'Mission Brief' for more information.",
 "",
 "Please follow the server rules:",

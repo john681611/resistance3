@@ -3,7 +3,7 @@
 "Your goal is to capture your island back.",
 "Each AO has ammo/weapon/gear supplies stored within the buildings, the bigger the zone the more to find.",
 "When zones clear be carefull as there may be stragglers out to get you.",
-"Your rewards are what you salvage so knock vehicles out and repair where possible."
+"Your rewards are what you salvage so knock vehicles out and repair where possible.",
 "There are a few old BLUFOR bases lost to hostile SF you may be able to find some NATO equipment there.",
 "To keep vehicles, boxs and other loot store it within the borders of your bases (blue bordered areas).",
 "Note: saved Weapon attachments will be stored seperatly from their weapons in after server restarts",
