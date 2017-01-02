@@ -1,4 +1,5 @@
 waitUntil {!isNull player && !isnil "KeyNumber"};
+waitUntil {isTouchingGround player};
 //Local save's
 //is nil?
 _saveTestsPass  = false;
