@@ -1,5 +1,7 @@
+addMissionEventHandler ["PreloadFinished", {preloadFinished = true;}];
 waitUntil {!isNull player && !isnil "KeyNumber"};
 waitUntil {isTouchingGround player};
+waitUntil {!isNil "preloadFinished"};
 //Local save's
 //is nil?
 _saveTestsPass  = false;

@@ -1,8 +1,8 @@
 //Launcher Array
-systemChat "Loading Gear";
-sleep 10;
+
 _data = profilenamespace getvariable "Resist_loadout";
 if ((typeName (_data select 1)) == "ARRAY") then {
+	systemChat "Loading Gear";
 	[player,(_data select 1),["ammo"]] call setLoadout;
 	systemChat "Gear Loaded";
 };
