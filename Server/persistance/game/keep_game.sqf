@@ -6,7 +6,7 @@ if((typeName (_data select 1)) == "ARRAY") then {
 };
 waitUntil {ztowninit==1};
 [] spawn {
-	_sleepTime = 6;
+	_sleepTime = 60;
 	sleep _sleepTime;
     while{true} do {
 			_game = call getSaveGame;
