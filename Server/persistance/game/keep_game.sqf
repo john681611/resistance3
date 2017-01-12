@@ -11,6 +11,7 @@ waitUntil {ztowninit==1};
     while{true} do {
 			_game = call getSaveGame;
 			profilenamespace setvariable ["Resist_SaveGame",[KeyNumber,_game]];
+			saveProfileNamespace;
 	    sleep _sleepTime;
     };
 };
