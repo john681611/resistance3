@@ -1,6 +1,6 @@
 postData = {
 	_output = format ["Server cleaning. Server FPS: = %1. Groups: %2. Dead: %3", str diag_fps, count allgroups, count alldead];
-	SystemChat _output;
+	[_output, "SystemChat", true, false, true] call BIS_fnc_MP;
 	diag_log _output;
 };
 cleanServer = {
