@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	class ItemIDProvider
 	{
 		nextID=614;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6590.3174,168.64996,20064.521};
-		dir[]={0.8174578,-0.41145995,0.40318975};
-		up[]={0.36905661,0.91140205,0.18202886};
-		aside[]={0.44236875,2.4586916e-007,-0.89688623};
+		pos[]={22000.135,31.960886,21054.777};
+		dir[]={0.74233544,-0.5091306,0.43557996};
+		up[]={0.43912026,0.86068797,0.25766262};
+		aside[]={0.50608176,3.7194695e-008,-0.86248785};
 	};
 };
 binarizationWanted=0;
@@ -725,8 +725,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6595.1548,169.93922,20069.18};
-				angles[]={0.033318337,0,0.054611351};
+				position[]={6595.1143,169.91978,20069.697};
+				angles[]={0.033321146,0,0.05461248};
 			};
 			side="Empty";
 			flags=4;
@@ -738,6 +738,7 @@ class Mission
 			};
 			id=32;
 			type="Flag_FIA_F";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item16
 		{
@@ -4972,8 +4973,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22003.188,32.627068,21056.146};
-				angles[]={6.2671809,4.712389,0.045308746};
+				position[]={22003.217,32.630257,21056.268};
+				angles[]={6.2671871,4.712389,0.045302324};
 			};
 			side="Empty";
 			flags=4;
@@ -4985,7 +4986,7 @@ class Mission
 			};
 			id=283;
 			type="Flag_FIA_F";
-			atlOffset=0.013998032;
+			atlOffset=0.013925552;
 		};
 		class Item142
 		{
