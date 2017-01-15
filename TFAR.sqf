@@ -6,7 +6,7 @@ if ((isClass (configFile >> "CfgPatches" >> "task_force_radio")) AND (("TFAR" ca
 
 	//Channel and Password
 	tf_radio_channel_name = "Resistance";
-	tf_radio_channel_password = "";
+	tf_radio_channel_password = "12345";
 
 	//Settings
 	["TF_no_auto_long_range_radio", true, true, "mission"] call CBA_settings_fnc_set;
