@@ -47,6 +47,14 @@ if (!_cache) then {
 		_eosActivated setTriggerTimeout [1, 1, 1, true];
 		_eosActivated setTriggerStatements [_actCond,"",""];
 
+//For zone Debugging
+		/*_m = createMarker [format ["%1-1", _mPos],_mPos];
+		_m setMarkerSize [(_distance+_mkrX),(_distance+_mkrY)];
+		_m setMarkerColor "ColorBlue";
+		_m setMarkerShape "ELLIPSE";
+    _m setMarkerBrush "Border";
+    _m setMarkerAlpha 0.5;*/
+
 			server setvariable [_trig,_eosActivated];
 					}else{
 				_eosActivated=server getvariable _trig;
