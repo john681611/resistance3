@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22000.135,31.960886,21054.777};
-		dir[]={0.74233544,-0.5091306,0.43557996};
-		up[]={0.43912026,0.86068797,0.25766262};
-		aside[]={0.50608176,3.7194695e-008,-0.86248785};
+		pos[]={6589.4448,171.27304,20065.877};
+		dir[]={0.75642568,-0.60185498,0.25611857};
+		up[]={0.57006723,0.79860324,0.19301905};
+		aside[]={0.32070634,-5.4715201e-009,-0.94718176};
 	};
 };
 binarizationWanted=0;
@@ -4022,8 +4022,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6594.5508,166.95372,20070.27};
-				angles[]={0.0053232545,1.0747039,0.054611351};
+				position[]={6594.3481,166.92747,20070.865};
+				angles[]={0.0053265258,1.0747039,0.05461248};
 			};
 			side="Empty";
 			flags=4;
@@ -4035,7 +4035,7 @@ class Mission
 			};
 			id=181;
 			type="SignAd_Sponsor_F";
-			atlOffset=0.011993408;
+			atlOffset=1.5258789e-005;
 		};
 		class Item106
 		{
@@ -5656,8 +5656,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22002.953,29.693628,21057.143};
-				angles[]={6.2671809,0.81252056,0.045308746};
+				position[]={22002.588,29.685041,21057.65};
+				angles[]={6.2671871,0.81252056,0.045302324};
 			};
 			side="Empty";
 			flags=4;
@@ -5669,15 +5669,15 @@ class Mission
 			};
 			id=333;
 			type="SignAd_Sponsor_F";
-			atlOffset=0.010997772;
+			atlOffset=0.010896683;
 		};
 		class Item179
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22004.004,29.707468,21055.029};
-				angles[]={6.2671809,1.3765062,0.045308746};
+				position[]={22004.109,29.70335,21054.488};
+				angles[]={6.2671871,1.3765062,0.045302324};
 			};
 			side="Empty";
 			flags=4;
@@ -5689,7 +5689,7 @@ class Mission
 			};
 			id=335;
 			type="SignAd_Sponsor_F";
-			atlOffset=0.010997772;
+			atlOffset=0.010822296;
 		};
 		class Item180
 		{
@@ -7043,8 +7043,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6595.4868,167.06326,20067.932};
-				angles[]={0.033318337,1.3765062,0.054611351};
+				position[]={6595.561,167.08386,20067.436};
+				angles[]={0.033321146,1.3765062,0.05461248};
 			};
 			side="Empty";
 			flags=4;
@@ -7056,6 +7056,7 @@ class Mission
 			};
 			id=372;
 			type="SignAd_Sponsor_F";
+			atlOffset=1.5258789e-005;
 		};
 		class Item204
 		{

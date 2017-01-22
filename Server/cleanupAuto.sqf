@@ -11,6 +11,7 @@ cleanServer = {
 	{deleteVehicle _x;} count (allMissionObjects "GroundWeaponHolder");
 	{deleteVehicle _x;} count (allMissionObjects "WeaponHolderSimulated");
 	{if ((count units _x) == 0) then {deleteGroup _x;};} count allGroups;
+	sleep 10;
 	[] call postData;
 };
 publicVariable "cleanServer";
