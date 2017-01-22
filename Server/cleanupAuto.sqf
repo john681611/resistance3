@@ -1,5 +1,5 @@
 postData = {
-	_output = format ["Server cleaning. Server FPS: = %1. Groups: %2. Dead: %3", str diag_fps, count allgroups, count alldead];
+	_output = format ["Cleaning Process. Server FPS: = %1. Groups: %2. Dead: %3", str diag_fps, count allgroups, count alldead];
 	[_output, "SystemChat", true, false, true] call BIS_fnc_MP;
 	diag_log _output;
 };
@@ -20,6 +20,6 @@ while {true} do {
 	sleep 3600;
 	Playercount = Count playableUnits;
 	if (Playercount == 0) then {
-		[] call cleanServer;
+		[] spawn cleanServer;
 	};
 };
