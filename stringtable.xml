@@ -45,7 +45,7 @@
             <Original>Close</Original>
             <Russian>Закрыть</Russian>
             <German>Schließen</German>
-        </Key>
+        </Key>        
         <Key ID="STR_chvd_disabled">
             <Original>Disabled</Original>
             <Russian>Отключена</Russian>
@@ -82,4 +82,4 @@
             <German>Sehr Hoch</German>
         </Key>
     </package>
-	</Project>
+</Project>
