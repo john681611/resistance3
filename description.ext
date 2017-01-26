@@ -16,7 +16,7 @@ class Params
 		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
                // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
 	};
-
+	
 	class TFAR
 	{
 		title = "Use TFAR settings Script"; // Param name visible in the list

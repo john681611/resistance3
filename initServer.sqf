@@ -3,15 +3,17 @@
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 ztowninit = 0;
 CompZone = 0;
+saveName = "";//ENTER CUSTOM SERVER NAME HERE
+publicVariable "saveName";
 takenTowns = [];
 publicVariable "CompZone";
 Ztown = 0;
 publicVariable "Ztown";
-if ((isnil {profilenamespace getvariable "Resist_SaveGame"}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
+if ((isnil {profilenamespace getvariable (format["Resist_SaveGame%1",savename])}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
   KeyNumber = RANDOM(1000);
-  profilenamespace setvariable ["Resist_SaveGame",[KeyNumber,"new"]];
+  profilenamespace setvariable [(format["Resist_SaveGame%1",savename]),[KeyNumber,"new"]];
 } else {
-  _data = profilenamespace getvariable "Resist_SaveGame";
+  _data = profilenamespace getvariable (format["Resist_SaveGame%1",savename]);
   KeyNumber = (_data select 0);
 };
 publicVariable "KeyNumber";

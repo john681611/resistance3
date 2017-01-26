@@ -1,18 +1,18 @@
 addMissionEventHandler ["PreloadFinished", {preloadFinished = true;}];
-waitUntil {!isNull player && !isnil "KeyNumber"};
+waitUntil {!isNull player && !isnil "KeyNumber" && !isnil "saveName"};
 waitUntil {isTouchingGround player};
 waitUntil {!isNil "preloadFinished"};
 //Local save's
 //is nil?
 _saveTestsPass  = false;
 //missing?
-if (!(isnil {profilenamespace getvariable "Resist_loadout"}) AND !(isnil {profilenamespace getvariable "Resist_Box"}) ) then {
+if (!(isnil {profilenamespace getvariable (format["Resist_loadout%1",savename])}) AND !(isnil {profilenamespace getvariable "Resist_Box"}) ) then {
 //Array?
-  if(((typeName (profilenamespace getvariable "Resist_loadout")) == "ARRAY") AND ((typeName (profilenamespace getvariable "Resist_Box")) == "ARRAY")) then {
+  if(((typeName (profilenamespace getvariable (format["Resist_loadout%1",savename]))) == "ARRAY") AND ((typeName (profilenamespace getvariable "Resist_Box")) == "ARRAY")) then {
 //Number?
-    if(((typeName ((profilenamespace getvariable "Resist_loadout") select 0)) == "SCALAR") AND ((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR")) then {
+    if(((typeName ((profilenamespace getvariable (format["Resist_loadout%1",savename])) select 0)) == "SCALAR") AND ((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR")) then {
 //Key?
-      if((((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber) AND (((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber)) then {
+      if((((profilenamespace getvariable (format["Resist_loadout%1",savename])) select 0) == KeyNumber) AND (((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber)) then {
         _saveTestsPass = true;
       };
     };
@@ -21,8 +21,8 @@ if (!(isnil {profilenamespace getvariable "Resist_loadout"}) AND !(isnil {profil
 
 if (!_saveTestsPass) then {
   diag_log 'Resetting player Data';
-  profilenamespace setvariable ["Resist_loadout",[KeyNumber,"new"]];
-  profilenamespace setvariable ["Resist_Box",[KeyNumber,[true,"none",[[],[],[],[]]]]];
+  profilenamespace setvariable [(format["Resist_loadout%1",savename]),[KeyNumber,"new"]];
+  profilenamespace setvariable [(format["Resist_Box%1",savename]),[KeyNumber,[true,"none",[[],[],[],[]]]]];
 };
 
 C1 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Client\teleport.sqf",nil,1.5,true,true,"","alive C1"];
@@ -57,7 +57,7 @@ setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM "Client\keep_loadout.sqf";
 player addEventHandler ["Respawn", {
   loadout = [player,["ammo"]] call getLoadout;
-  profilenamespace setvariable ["Resist_loadout",[KeyNumber,loadout]];
+  profilenamespace setvariable [(format["Resist_loadout%1",savename]),[KeyNumber,loadout]];
   systemChat "Gear Saved";
   }];
 [] execVM "Server\Info Boards\WelcomeMessage.sqf";
