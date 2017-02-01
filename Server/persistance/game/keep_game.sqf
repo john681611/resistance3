@@ -1,5 +1,5 @@
 if (!isServer) exitWith {};
-	_data = profilenamespace getvariable "Resist_SaveGame";
+	_data = profilenamespace getvariable format["Resist_SaveGame%1",savename];
 if((typeName (_data select 1)) == "ARRAY") then {
 	(_data select 1) call setSaveGame;
 	diag_log "Loaded Game";
@@ -10,7 +10,7 @@ waitUntil {ztowninit==1};
 	sleep _sleepTime;
     while{true} do {
 			_game = call getSaveGame;
-			profilenamespace setvariable ["Resist_SaveGame",[KeyNumber,_game]];
+			profilenamespace setvariable [format["Resist_SaveGame%1",savename],[KeyNumber,_game]];
 			saveProfileNamespace;
 	    sleep _sleepTime;
     };
