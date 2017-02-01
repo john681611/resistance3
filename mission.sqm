@@ -6817,10 +6817,7 @@ class Mission
 			};
 			id=367;
 			type="C_Scooter_Transport_01_F";
-<<<<<<< HEAD
 			atlOffset=6.0443192;
-=======
->>>>>>> Inital Marker Setup TANOA
 		};
 		class Item199
 		{

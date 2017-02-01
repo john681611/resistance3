@@ -4,8 +4,6 @@ _towns=[];
  {
 _text =  getText (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "type");
 _pos = getArray (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "position");
-/*diag_log format ["%1 == %2",(_pos select 1) toFixed 20, (_blacklist select 1) toFixed 20];
-diag_log (((_pos select 1) toFixed 0) == ((_blacklist select 1) toFixed 0));*/
 if(!(_pos in _blacklist)) then {
   _towns = _towns + [[_text,_pos]];
 }else{
