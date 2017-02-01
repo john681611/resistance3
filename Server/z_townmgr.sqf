@@ -2,8 +2,8 @@ if (!isServer) exitWith {};
 _blacklist = [6405.69,12365.6,0];
 _towns=[];
  {
-_text =  getText (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "type");
-_pos = getArray (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "position");
+_text =  getText (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "type");
+_pos = getArray (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "position");
 /*diag_log format ["%1 == %2",(_pos select 1) toFixed 20, (_blacklist select 1) toFixed 20];
 diag_log (((_pos select 1) toFixed 0) == ((_blacklist select 1) toFixed 0));*/
 if(!(_pos in _blacklist)) then {
@@ -13,7 +13,7 @@ if(!(_pos in _blacklist)) then {
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Altis" >> "Names"));
+ } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Tanoa" >> "Names"));
 
 
 ztownt = [];
