@@ -4,7 +4,7 @@ getbox = {
   _box = createVehicle ["Box_NATO_Equip_F",[0,0,0], [], 0, "NONE"];
   _data = (((profilenamespace getvariable (format["Resist_Box%1",savename])) select 1)select 2);
   [_box,_data] call setContent;
-  profilenamespace setvariable ["Resist_Box",[KeyNumber,[false,_box,[[],[],[],[]]]]];
+  profilenamespace setvariable [format["Resist_Box%1",savename],[KeyNumber,[false,_box,[[],[],[],[]]]]];
   _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","((ATM1 distance _target )< 5) OR ((ATM2 distance _target )< 6) ",5];
   _box setDir (getdir player);
   _box setpos (player modelToWorld [0,1.5,1]);
