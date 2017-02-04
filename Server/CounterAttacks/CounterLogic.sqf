@@ -19,17 +19,15 @@ NearestMarker = {
 		};
 	} foreach ztownAll;
 	_return = [_marker,_distance];
+	_return
 };
 
 CounterAttack = {
 	private ["_marker","_zones","_attackerHealth"];
 	_result = (getMarkerPos (_this select 0)) call NearestMarker;
 	_marker = _result select 0;
-	if(_marker == "")exitWith {_attackerHealth = 0;};
-	_marker setMarkerColor "ColorOrange";
-	_attackerHealth = (_this select 1);
-	_attackerHealth = [_attackerHealth,_marker,1000,(((_result select 1)*8.9408)+60)] call simulateZone;//TODO: Figure out better zone trigger distance
-	diag_log _attackerHealth;
+	if(_marker == "")exitWith {};
+	_attackerHealth = [(_this select 1),_marker,1000,(((_result select 1)*8.9408)+60)] call simulateZone;//TODO: Figure out better zone trigger distance 
 	if(_attackerHealth > 0) then {
 		[_marker,_attackerHealth] spawn CounterAttack;
 	};
