@@ -22,26 +22,14 @@ NearestMarker = {
 };
 
 CounterAttack = {
-	private ["_marker","_zones"];
-	_marker = _this call NearestMarker;
+	private ["_marker","_zones","_attackerHealth"];
+	_marker = (getMarkerPos (_this select 0)) call NearestMarker;
+	if(_marker == "")exitWith {_attackerHealth = 0;};
 	_marker setMarkerColor "ColorOrange";
-	//TODO: RUN SIMULATION
-	//waitUntil { getmarkercolor _marker == "colorRed" || getmarkercolor _marker == "colorGreen"};
-	//Temp
-	sleep 10;
-	_marker setMarkerColor "colorRed";
-	//Temp
-	_zones = true;
-	while {_zones} do {
-		sleep 1;
-		_marker = (getMarkerPos _marker) call NearestMarker;
-		if(_marker == "")exitWith {_zones = true;};
-		_marker setMarkerColor "ColorOrange";
-		//TODO: RUN SIMULATION
-		//waitUntil { getmarkercolor _marker == "colorRed" || getmarkercolor _marker == "colorGreen"};
-		//Temp
-		sleep 10;
-		_marker setMarkerColor "colorRed";
-		//Temp
+	_attackerHealth = (_this select 1);
+	_attackerHealth = [_attackerHealth,_marker,1000,10] call simulateZone;//TODO: Figure out better zone trigger and travel times
+	diag_log _attackerHealth;
+	if(_attackerHealth > 0) then {
+		[_marker,_attackerHealth] spawn CounterAttack;
 	};
 };
