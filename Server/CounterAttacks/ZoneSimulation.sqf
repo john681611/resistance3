@@ -41,7 +41,7 @@ simulateZone = {
       };
     };
   };
-    sleep 300;
+    sleep 120;
   };
   if(_team2 <= 0) then {
     _mkr setMarkerColor "colorRed";

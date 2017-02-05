@@ -1,3 +1,4 @@
+//Finds the nearest marker
 NearestMarker = {
 	private ["_start","_distance","_marker","_tempDis"];
 	_start = _this;
@@ -22,6 +23,7 @@ NearestMarker = {
 	_return
 };
 
+//Base counter attack loop
 CounterAttack = {
 	private ["_marker","_zones","_attackerHealth"];
 	_result = (getMarkerPos (_this select 0)) call NearestMarker;
@@ -33,10 +35,22 @@ CounterAttack = {
 	};
 };
 
+//Main starting process Call this to start.
 counterProcess = {
-	private ["_pos","_marker","_force"];
-	//Find Position!?!?!?!?
-	_pos = (getpos player); //FOR NOW
+	private ["_pos","_marker","_force","_result","_zones","_zone"];
+	_zones = [];
+ {
+	    if(markerColor _x == "colorRed") then {
+				_result = (getMarkerPos _x) call NearestMarker;
+				if ((_result select 1) < 2000) then {
+					_zones pushBack _x;
+				};
+			};
+	} forEach ztownAll;
+
+	_zone =  (selectRandom _zones);
+	_pos = [(getMarkerPos _zone), (((getMarkerSize _zone)select 0)+100), 900, 25, 0, 20, 0] call BIS_fnc_findSafePos;
+	_pos = [_pos select 0, _pos select 1,0];
 	[_pos, 100] call spawnBase;
 	_marker  =  createMarker [format["%1BS",_pos], _pos];
 	_marker setMarkerSize [150,150];
@@ -45,5 +59,5 @@ counterProcess = {
 	_marker setMarkerBrush "Solid";
 	_marker setMarkerAlpha 0.5;
 	[[_marker],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call EOS_Spawn;//Generic for now
-	[_marker,((floor random 10)*100)] spawn CounterAttack;
+	[_marker,((floor random [1,3,9])*100)] spawn CounterAttack;
 };
