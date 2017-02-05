@@ -36,20 +36,30 @@ CounterAttack = {
 };
 
 //Main starting process Call this to start.
+UsedSpots = [];
 counterProcess = {
 	private ["_pos","_marker","_force","_result","_zones","_zone"];
 	_zones = [];
  {
 	    if(markerColor _x == "colorRed") then {
 				_result = (getMarkerPos _x) call NearestMarker;
-				if ((_result select 1) < 2000) then {
+				if ((_result select 1) < 3000) then {
 					_zones pushBack _x;
 				};
 			};
 	} forEach ztownAll;
-
-	_zone =  (selectRandom _zones);
-	_pos = [(getMarkerPos _zone), (((getMarkerSize _zone)select 0)+100), 900, 25, 0, 20, 0] call BIS_fnc_findSafePos;
+	_i = 3 // attempts
+	while {_i > 0} do {
+		_zone =  (selectRandom _zones);
+		_pos = [(getMarkerPos _zone), (((getMarkerSize _zone)select 0)+50), 800, 25, 0, 20, 0] call BIS_fnc_findSafePos;
+		if(_pos in UsedSpots) then {
+			_i = _i - 1;
+		} else {
+			_i = -1;
+		};
+	};
+	if(_pos in UsedSpots) exitWith {}; //No spaces left
+	UsedSpots pushBack _pos;
 	_pos = [_pos select 0, _pos select 1,0];
 	[_pos, 100] call spawnBase;
 	_marker  =  createMarker [format["%1BS",_pos], _pos];
