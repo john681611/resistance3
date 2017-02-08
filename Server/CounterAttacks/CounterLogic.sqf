@@ -48,7 +48,7 @@ counterProcess = {
 				};
 			};
 	} forEach ztownAll;
-	_i = 3 // attempts
+	_i = 3; // attempts
 	while {_i > 0} do {
 		_zone =  (selectRandom _zones);
 		_pos = [(getMarkerPos _zone), (((getMarkerSize _zone)select 0)+50), 800, 25, 0, 20, 0] call BIS_fnc_findSafePos;
