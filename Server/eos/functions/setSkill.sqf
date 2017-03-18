@@ -4,3 +4,4 @@ _grp=(_this select 0);
 	if (EOS_KILLCOUNTER) then {_unit addEventHandler ["killed", "null=[] execVM ""eos\functions\EOS_KillCounter.sqf"""]};
 	// ADD CUSTOM SCRIPTS TO UNIT HERE
 } forEach (units _grp);
+_grp enableDynamicSimulation true;
