@@ -61,7 +61,7 @@ ztownAll = [];
     {
       case "Hill":
       {
-        _m setMarkerSize [50,50];
+        _m setMarkerSize [100,100];
       };
 
       case "NameLocal":

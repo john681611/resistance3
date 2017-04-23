@@ -104,7 +104,7 @@ if (_debug) then {diag_log (format ["Spawned House Patrol: %1",_counter]);0= [_m
 					if (_debug)then{diag_log format ["ID:%1,restore - %2",_cacheGrp,_units];};
 						};
 							if (_bMin > 0) then {
-									_pos = [_mkr,true] call SHK_pos;
+								  _pos=[_mkr,50] call EOS_fnc_findSafePos;
 									_bGroup=[_pos,_bSize,_faction,_side] call EOS_fnc_spawngroup;
 										0 = [_bGroup,_mkr] call EOS_fnc_taskpatrol;
 										_bGrp set [count _bGrp,_bGroup];
