@@ -81,7 +81,7 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 							if (_debug)then{diag_log format ["ID:%1,restore - %2",_cacheGrp,_units];};
 							};
 								if (_aMin > 0) then {
-										_aGroup=[_mPos,_aSize,_faction,_side] call EOS_fnc_spawngroup;
+										_aGroup=[_mPos,_aSize,_faction,_side,false] call EOS_fnc_spawngroup;
 										if (!surfaceiswater _mPos) then {
 											0=[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
 												}else{
@@ -105,7 +105,7 @@ if (_debug) then {diag_log (format ["Spawned House Patrol: %1",_counter]);0= [_m
 						};
 							if (_bMin > 0) then {
 								  _pos=[_mkr,50] call EOS_fnc_findSafePos;
-									_bGroup=[_pos,_bSize,_faction,_side] call EOS_fnc_spawngroup;
+									_bGroup=[_pos,_bSize,_faction,_side,true] call EOS_fnc_spawngroup;
 										0 = [_bGroup,_mkr] call EOS_fnc_taskpatrol;
 										_bGrp set [count _bGrp,_bGroup];
 

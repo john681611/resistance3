@@ -133,6 +133,7 @@ if isserver then {
   private ["_taken","_ind","_pos","_dir"];
   _taken = [];
   {
+    _found = false;
     while {count _taken < count _bpos} do {
       switch _prio do {
         case 0: { _ind = floor(random count _bpos) }; // random
@@ -140,6 +141,7 @@ if isserver then {
         case 2: { _ind = count _bpos - count _taken - 1 }; // roof first
       };
       if !(_ind in _taken) exitwith {
+        _found =true;
         _taken set [count _taken,_ind];
         _pos = _bpos select _ind;
         _dir = ((_pos select 0) - (_opos select 0)) atan2 ((_pos select 1) - (_opos select 1));
@@ -149,6 +151,9 @@ if isserver then {
         if _disableMove then { doStop _x; };
         if _stance then { _x setunitpos "UP" };
       };
+    };
+    if(!_found) then {
+      [_x] call eos_fnc_rockFix;
     };
   } foreach _men;
 

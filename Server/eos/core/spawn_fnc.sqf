@@ -4,6 +4,7 @@ eos_fnc_spawnvehicle=compile preprocessfilelinenumbers "Server\eos\functions\eos
 eos_fnc_grouphandlers=compile preprocessfilelinenumbers "Server\eos\functions\setSkill.sqf";
 eos_fnc_findsafepos=compile preprocessfilelinenumbers "Server\eos\functions\findSafePos.sqf";
 eos_fnc_spawngroup= compile preprocessfile "Server\eos\functions\infantry_fnc.sqf";
+eos_fnc_rockFix = compile preprocessfile "Server\eos\functions\rockfix.sqf";
 eos_fnc_setcargo = compile preprocessfile "Server\eos\functions\cargo_fnc.sqf";
 eos_fnc_taskpatrol= compile preprocessfile "Server\eos\functions\shk_patrol.sqf";
 call compile preprocessfile "Server\SHK_pos\shk_pos_init.sqf";

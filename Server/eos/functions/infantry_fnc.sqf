@@ -20,6 +20,9 @@ _grpSize=_r+_grpMin;
 for "_x" from 1 to _grpSize do {
 		_unitType=_pool select (floor(random(count _pool)));
 		_unit = _grp createUnit [_unitType, _pos, [], 6, "FORM"];
+	if(_this select 4) then {
+			[_unit] call eos_fnc_rockFix
+		};
 	};
 
 
