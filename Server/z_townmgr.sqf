@@ -1,10 +1,16 @@
 if (!isServer) exitWith {};
-
+_blacklist = [6405.69,12365.6,0];
 _towns=[];
  {
 _text =  getText (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "type");
 _pos = getArray (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "position");
-_towns = _towns + [[_text,_pos]];
+
+if(!(_pos in _blacklist)) then {
+  _towns = _towns + [[_text,_pos]];
+}else{
+  diag_log "Location Blacklisted";
+  diag_log _pos;
+};
 
  } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Altis" >> "Names"));
 
@@ -20,6 +26,9 @@ ztownAll = [];
 {
     _pos = (_x select 1);
 
+    if(!(_pos isFlatEmpty  [-1, -1, -1, -1, 2, false] isEqualTo [])) then {
+          _pos = [_pos] call BIS_fnc_findSafePos;
+        };
 
 
     _m = createMarker [format ["%1", _pos],_pos];
