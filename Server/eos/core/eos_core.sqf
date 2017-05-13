@@ -321,7 +321,6 @@ if (_debug) then {hint "Zone Cached";};
 			{ // IF ZONE CAPTURED BEGIN CHECKING FOR ENEMIES
 				_cGrps=0;_aGrps=0;_bGrps=0;_dGrps=0;_eGrps=0;_fGrps=0;_gGrps=0;
 				//Count Zone as clear and increase cleared count
-				[]	execVM "Server\Zone_Complete.sqf";
 				while {triggeractivated _eosActivated AND !(getmarkercolor _mkr == "colorblack")} do
 						{
 							if (!triggeractivated _clear) then
@@ -335,6 +334,10 @@ if (_debug) then {hint "Zone Cached";};
 										} else {
 											if(getmarkercolor _mkr  != VictoryColor)then{
 											["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
+											[]	execVM "Server\Zone_Complete.sqf";
+											if((random 1) > 0.75) then {
+												call counterProcess;
+											};
 										};
 											_mkr setmarkercolor VictoryColor;
 											_mkr setmarkerAlpha _mAN;
