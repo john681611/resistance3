@@ -1,4 +1,4 @@
-version=53;
+version=52;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=615;
+		nextID=614;
 	};
 	class MarkerIDProvider
 	{
@@ -72,169 +72,162 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item5
 		{
 			className="A3_Armor_F_EPC";
 			name="Arma 3 Win Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircrafts";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item7
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircrafts";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item8
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item10
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item11
 		{
 			className="A3_Weapons_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item12
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item13
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item14
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item15
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item16
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item17
 		{
 			className="A3_Boat_F_Gamma";
 			name="Arma 3 - Boats and Submersibles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item18
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item19
 		{
 			className="A3_Boat_F_Exp";
 			name="Arma 3 Apex - Boats and Submersibles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item20
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item21
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
 		class Item22
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="http://www.arma3.com";
 		};
-	};
-};
-class DynamicSimulation
-{
-	class EnableRadiuses
-	{
-		Group=700;
 	};
 };
 randomSeed=11149701;
@@ -256,7 +249,6 @@ class ScenarioData
 	wreckManagerMode=3;
 	wreckLimit=50;
 	wreckRemovalMinTime=3600;
-	wreckRemovalMaxTime=3600;
 	corpseManagerMode=3;
 	corpseLimit=300;
 	corpseRemovalMinTime=3600;
@@ -740,7 +732,6 @@ class Mission
 				skill=0.60000002;
 				init="act1 = this addAction [""Teleport"",""Client\teleport.sqf""];this setUserActionText [act1,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf""];";
 				name="FLG";
-				dynamicSimulation=1;
 			};
 			id=32;
 			type="Flag_FIA_F";
@@ -759,7 +750,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=38;
 			type="B_MRAP_01_F";
@@ -778,7 +768,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=39;
 			type="B_MRAP_01_gmg_F";
@@ -797,7 +786,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=40;
 			type="B_MRAP_01_hmg_F";
@@ -816,7 +804,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=41;
 			type="B_MRAP_01_F";
@@ -835,7 +822,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=42;
 			type="B_MRAP_01_gmg_F";
@@ -854,7 +840,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=43;
 			type="B_MRAP_01_hmg_F";
@@ -873,7 +858,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=44;
 			type="B_MRAP_01_F";
@@ -892,7 +876,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=45;
 			type="B_MRAP_01_gmg_F";
@@ -911,7 +894,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=46;
 			type="B_MRAP_01_hmg_F";
@@ -930,7 +912,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=47;
 			type="B_MRAP_01_F";
@@ -949,7 +930,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=48;
 			type="B_MRAP_01_gmg_F";
@@ -968,7 +948,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=49;
 			type="B_MRAP_01_hmg_F";
@@ -988,7 +967,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=50;
 			type="B_Truck_01_medical_F";
@@ -1007,7 +985,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=51;
 			type="B_Truck_01_Repair_F";
@@ -1027,7 +1004,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=52;
 			type="B_Truck_01_ammo_F";
@@ -1046,7 +1022,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.10412887;
-				dynamicSimulation=1;
 			};
 			id=53;
 			type="B_APC_Tracked_01_CRV_F";
@@ -1065,7 +1040,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=54;
 			type="B_Truck_01_medical_F";
@@ -1085,7 +1059,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=55;
 			type="B_Truck_01_Repair_F";
@@ -1105,7 +1078,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=56;
 			type="B_Truck_01_ammo_F";
@@ -1125,7 +1097,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.10412887;
-				dynamicSimulation=1;
 			};
 			id=57;
 			type="B_APC_Tracked_01_CRV_F";
@@ -1143,7 +1114,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=58;
 			type="B_APC_Tracked_01_rcws_F";
@@ -1162,7 +1132,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=59;
 			type="B_APC_Tracked_01_AA_F";
@@ -1181,7 +1150,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=60;
 			type="B_APC_Wheeled_01_cannon_F";
@@ -1200,7 +1168,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.10412887;
-				dynamicSimulation=1;
 			};
 			id=61;
 			type="B_MBT_01_TUSK_F";
@@ -1219,7 +1186,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.75277358;
-				dynamicSimulation=1;
 			};
 			id=62;
 			type="B_Heli_Light_01_F";
@@ -1238,7 +1204,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.25388247;
-				dynamicSimulation=1;
 			};
 			id=63;
 			type="B_Heli_Light_01_armed_F";
@@ -1257,7 +1222,6 @@ class Mission
 			{
 				skill=0.60000002;
 				presence=0.50135225;
-				dynamicSimulation=1;
 			};
 			id=64;
 			type="B_Heli_Transport_01_F";
@@ -1724,7 +1688,6 @@ class Mission
 			};
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=69;
 		};
@@ -2200,7 +2163,6 @@ class Mission
 			};
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=82;
 		};
@@ -2722,7 +2684,6 @@ class Mission
 				skill=0.60000002;
 				name="MO2";
 				textures="Guerilla_09";
-				dynamicSimulation=1;
 			};
 			id=125;
 			type="B_G_Offroad_01_F";
@@ -2937,7 +2898,6 @@ class Mission
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
 				name="MAO2";
-				dynamicSimulation=1;
 			};
 			id=126;
 			type="B_G_Offroad_01_armed_F";
@@ -3069,7 +3029,6 @@ class Mission
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
 				name="MAO";
-				dynamicSimulation=1;
 			};
 			id=127;
 			type="B_G_Offroad_01_armed_F";
@@ -3088,7 +3047,6 @@ class Mission
 			{
 				skill=0.60000002;
 				name="MO";
-				dynamicSimulation=1;
 			};
 			id=128;
 			type="B_G_Offroad_01_F";
@@ -3107,7 +3065,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=130;
 			type="Land_ClutterCutter_large_F";
@@ -3126,7 +3083,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=132;
 			type="Land_HBarrierWall6_F";
@@ -3145,7 +3101,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=133;
 			type="Land_HBarrierWall6_F";
@@ -3164,7 +3119,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=134;
 			type="Land_HBarrierWall6_F";
@@ -3183,7 +3137,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=135;
 			type="Land_HBarrierWall6_F";
@@ -3203,7 +3156,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=136;
 			type="Land_HBarrierWall6_F";
@@ -3223,7 +3175,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=137;
 			type="Land_HBarrierWall6_F";
@@ -3243,7 +3194,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=138;
 			type="Land_HBarrierWall6_F";
@@ -3263,7 +3213,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=139;
 			type="Land_HBarrierWall6_F";
@@ -3282,7 +3231,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=140;
 			type="Land_HBarrierWall6_F";
@@ -3302,7 +3250,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=141;
 			type="Land_HBarrierWall6_F";
@@ -3322,7 +3269,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=142;
 			type="Land_HBarrierWall6_F";
@@ -3341,7 +3287,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false; ";
-				dynamicSimulation=1;
 			};
 			id=143;
 			type="Land_BagBunker_Tower_F";
@@ -3362,7 +3307,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MWB";
-				dynamicSimulation=1;
 			};
 			id=144;
 			type="Box_FIA_Wps_F";
@@ -3406,7 +3350,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MMB";
-				dynamicSimulation=1;
 			};
 			id=145;
 			type="Box_FIA_Support_F";
@@ -3449,7 +3392,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=146;
 			type="Land_HBarrierWall6_F";
@@ -3468,7 +3410,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=147;
 			type="Land_HBarrierWall6_F";
@@ -3487,7 +3428,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=148;
 			type="Land_HBarrierWall6_F";
@@ -3506,7 +3446,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=149;
 			type="Land_HBarrierWall6_F";
@@ -3525,7 +3464,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=150;
 			type="Land_HBarrierWall6_F";
@@ -3543,7 +3481,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=151;
 			type="Land_HBarrierWall6_F";
@@ -3563,7 +3500,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=152;
 			type="Land_HBarrierWall6_F";
@@ -3582,7 +3518,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=153;
 			type="Land_HBarrierWall6_F";
@@ -3601,7 +3536,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=154;
 			type="Land_HBarrierWall6_F";
@@ -3620,7 +3554,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=155;
 			type="Land_HBarrierWall6_F";
@@ -3640,7 +3573,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=156;
 			type="Land_HBarrierWall6_F";
@@ -3660,7 +3592,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=157;
 			type="Land_HBarrierWall6_F";
@@ -3679,7 +3610,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=158;
 			type="Land_HBarrierWall6_F";
@@ -3698,7 +3628,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=159;
 			type="Land_HBarrierWall6_F";
@@ -3719,7 +3648,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAMB";
-				dynamicSimulation=1;
 			};
 			id=160;
 			type="Box_FIA_Ammo_F";
@@ -3762,7 +3690,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAB";
-				dynamicSimulation=1;
 			};
 			id=161;
 			type="Box_FIA_Support_F";
@@ -3804,7 +3731,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=162;
 			type="Land_HBarrierWall6_F";
@@ -3823,7 +3749,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;  ";
-				dynamicSimulation=1;
 			};
 			id=163;
 			type="Land_BagBunker_Tower_F";
@@ -3842,7 +3767,6 @@ class Mission
 			{
 				skill=0.60000002;
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=164;
 			type="Land_HBarrierWall6_F";
@@ -3861,7 +3785,6 @@ class Mission
 			{
 				skill=0.60000002;
 				name="R_Base";
-				dynamicSimulation=1;
 			};
 			id=167;
 			type="Land_ClutterCutter_large_F";
@@ -3880,7 +3803,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=168;
 			type="Land_Camping_Light_F";
@@ -3896,7 +3818,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=169;
 			type="Land_Camping_Light_F";
@@ -3913,7 +3834,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=170;
 			type="Land_Camping_Light_F";
@@ -3930,7 +3850,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=171;
 			type="Land_Camping_Light_F";
@@ -3949,7 +3868,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=173;
 			type="Land_Camping_Light_F";
@@ -3968,7 +3886,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=174;
 			type="Land_Camping_Light_F";
@@ -3984,7 +3901,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=175;
 			type="Land_Camping_Light_F";
@@ -4003,7 +3919,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=176;
 			type="Land_Camping_Light_F";
@@ -4019,7 +3934,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=177;
 			type="Land_Camping_Light_F";
@@ -4036,7 +3950,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=178;
 			type="Land_Camping_Light_F";
@@ -4056,7 +3969,6 @@ class Mission
 				skill=0.60000002;
 				init="this addEventHandler [""HandleDamage"", {false}]; this setObjectTexture [0,""Server\Images\IronFistsBadge.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true]; ";
 				name="Tsig1";
-				dynamicSimulation=1;
 			};
 			id=181;
 			type="SignAd_Sponsor_F";
@@ -4075,7 +3987,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=183;
 			type="Land_ClutterCutter_large_F";
@@ -4092,7 +4003,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=184;
 			type="CamoNet_INDP_open_F";
@@ -4132,7 +4042,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=185;
 			type="Land_HelipadSquare_F";
@@ -4149,7 +4058,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=186;
 			type="Land_Camping_Light_F";
@@ -4168,7 +4076,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=188;
 			type="B_G_Mortar_01_F";
@@ -4187,7 +4094,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=189;
 			type="I_GMG_01_high_F";
@@ -4206,7 +4112,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=190;
 			type="I_HMG_01_high_F";
@@ -4224,7 +4129,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=191;
 			type="B_HMG_01_high_F";
@@ -4243,7 +4147,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false; this enablesimulation false";
 				name="AirSupplies";
-				dynamicSimulation=1;
 			};
 			id=192;
 			type="Land_Cargo20_military_green_F";
@@ -4262,7 +4165,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=193;
 			type="CamoNet_INDP_open_F";
@@ -4281,7 +4183,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=194;
 			type="CamoNet_INDP_open_F";
@@ -4298,7 +4199,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=195;
 			type="Land_HelipadCircle_F";
@@ -4317,7 +4217,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=199;
 			type="Land_Camping_Light_F";
@@ -4334,7 +4233,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=200;
 			type="Land_Camping_Light_F";
@@ -4353,7 +4251,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MT2";
-				dynamicSimulation=1;
 			};
 			id=203;
 			type="B_G_Van_01_transport_F";
@@ -4372,7 +4269,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MT";
-				dynamicSimulation=1;
 			};
 			id=204;
 			type="B_G_Van_01_transport_F";
@@ -4391,7 +4287,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MT3";
-				dynamicSimulation=1;
 			};
 			id=205;
 			type="B_G_Van_01_transport_F";
@@ -4411,7 +4306,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MFT";
-				dynamicSimulation=1;
 			};
 			id=206;
 			type="B_G_Van_01_fuel_F";
@@ -4429,7 +4323,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MQ";
-				dynamicSimulation=1;
 			};
 			id=207;
 			type="B_G_Quadbike_01_F";
@@ -4448,7 +4341,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MQ2";
-				dynamicSimulation=1;
 			};
 			id=208;
 			type="B_G_Quadbike_01_F";
@@ -4467,7 +4359,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MQ3";
-				dynamicSimulation=1;
 			};
 			id=209;
 			type="B_G_Quadbike_01_F";
@@ -4486,7 +4377,6 @@ class Mission
 			{
 				skill=0.2;
 				name="MQ4";
-				dynamicSimulation=1;
 			};
 			id=210;
 			type="B_G_Quadbike_01_F";
@@ -4630,7 +4520,6 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Guerilla_11";
-				dynamicSimulation=1;
 			};
 			id=278;
 			type="B_G_Offroad_01_F";
@@ -4818,7 +4707,6 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Guerilla_05";
-				dynamicSimulation=1;
 			};
 			id=282;
 			type="B_G_Offroad_01_F";
@@ -5007,7 +4895,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
 				name="base2";
-				dynamicSimulation=1;
 			};
 			id=283;
 			type="Flag_FIA_F";
@@ -5027,7 +4914,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;";
 				createAsSimpleObject=1;
-				dynamicSimulation=1;
 			};
 			id=286;
 			type="Land_PaperBox_closed_F";
@@ -5046,7 +4932,6 @@ class Mission
 			{
 				skill=0.60000002;
 				name="Hotel";
-				dynamicSimulation=1;
 			};
 			id=288;
 			type="Land_ClutterCutter_large_F";
@@ -5064,7 +4949,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=289;
 			type="Land_Camping_Light_F";
@@ -5082,7 +4966,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=290;
 			type="Land_Camping_Light_F";
@@ -5100,7 +4983,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=291;
 			type="Land_Camping_Light_F";
@@ -5118,7 +5000,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=292;
 			type="Land_Camping_Light_F";
@@ -5137,7 +5018,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=293;
 			type="Land_Camping_Light_F";
@@ -5153,7 +5033,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=294;
 			type="Land_Camping_Light_F";
@@ -5170,7 +5049,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=295;
 			type="Land_Camping_Light_F";
@@ -5187,7 +5065,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=296;
 			type="Land_Camping_Light_F";
@@ -5204,7 +5081,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=297;
 			type="Land_Camping_Light_F";
@@ -5224,7 +5100,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=300;
 			type="CamoNet_INDP_open_F";
@@ -5266,7 +5141,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=301;
 			type="Land_HelipadSquare_F";
@@ -5282,7 +5156,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=302;
 			type="Land_Camping_Light_F";
@@ -5302,7 +5175,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction [""Recruit Units"",""support\modules\bon_recruit_units\open_dialog.sqf""]; this setvectorUp [0, 0, 1]";
-				dynamicSimulation=1;
 			};
 			id=303;
 			type="Land_Noticeboard_F";
@@ -5320,7 +5192,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=304;
 			type="B_G_Mortar_01_F";
@@ -5338,7 +5209,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=305;
 			type="I_GMG_01_high_F";
@@ -5357,7 +5227,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=306;
 			type="I_HMG_01_high_F";
@@ -5375,7 +5244,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=307;
 			type="B_HMG_01_high_F";
@@ -5395,7 +5263,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false; ";
 				name="AirSupplies_1";
-				dynamicSimulation=1;
 			};
 			id=308;
 			type="Land_Cargo20_military_green_F";
@@ -5415,7 +5282,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=309;
 			type="CamoNet_INDP_open_F";
@@ -5435,7 +5301,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false;";
-				dynamicSimulation=1;
 			};
 			id=310;
 			type="CamoNet_INDP_open_F";
@@ -5452,7 +5317,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=311;
 			type="Land_HelipadCircle_F";
@@ -5471,7 +5335,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=312;
 			type="Land_Camping_Light_F";
@@ -5490,7 +5353,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=313;
 			type="Land_Camping_Light_F";
@@ -5508,7 +5370,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=314;
 			type="Land_Camping_Light_F";
@@ -5527,7 +5388,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=315;
 			type="Land_Camping_Light_F";
@@ -5545,7 +5405,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=316;
 			type="Land_Camping_Light_F";
@@ -5564,7 +5423,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=317;
 			type="Land_Camping_Light_F";
@@ -5582,7 +5440,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=318;
 			type="Land_Camping_Light_F";
@@ -5600,7 +5457,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=319;
 			type="Land_Camping_Light_F";
@@ -5619,7 +5475,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=320;
 			type="B_G_Boat_Transport_01_F";
@@ -5637,7 +5492,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=321;
 			type="B_G_Boat_Transport_01_F";
@@ -5655,7 +5509,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=325;
 			type="Land_Camping_Light_F";
@@ -5673,7 +5526,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=326;
 			type="Land_Camping_Light_F";
@@ -5691,7 +5543,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=327;
 			type="Land_Camping_Light_F";
@@ -5712,7 +5563,6 @@ class Mission
 				skill=0.60000002;
 				init="this addEventHandler [""HandleDamage"", {false}]; this setObjectTexture [0,""Server\Images\IronFistsBadge.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];";
 				name="Tsig2";
-				dynamicSimulation=1;
 			};
 			id=333;
 			type="SignAd_Sponsor_F";
@@ -5732,7 +5582,6 @@ class Mission
 				skill=0.60000002;
 				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
 				name="Isig2";
-				dynamicSimulation=1;
 			};
 			id=335;
 			type="SignAd_Sponsor_F";
@@ -5751,7 +5600,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=337;
 			type="Land_Camping_Light_F";
@@ -5769,7 +5617,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=338;
 			type="Land_Camping_Light_F";
@@ -5787,7 +5634,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=339;
 			type="B_G_Van_01_transport_F";
@@ -5805,7 +5651,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=340;
 			type="B_G_Van_01_transport_F";
@@ -5823,7 +5668,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=341;
 			type="B_G_Van_01_transport_F";
@@ -5841,7 +5685,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=342;
 			type="C_Offroad_01_repair_F";
@@ -5859,7 +5702,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=343;
 			type="B_G_Van_01_fuel_F";
@@ -5877,7 +5719,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=344;
 			type="B_G_Quadbike_01_F";
@@ -5896,7 +5737,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=345;
 			type="B_G_Quadbike_01_F";
@@ -5914,7 +5754,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=346;
 			type="B_G_Quadbike_01_F";
@@ -5933,7 +5772,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.2;
-				dynamicSimulation=1;
 			};
 			id=347;
 			type="B_G_Quadbike_01_F";
@@ -5954,7 +5792,6 @@ class Mission
 				init="[C2, " \n " [""Brown"",1],  " \n " true " \n "] call BIS_fnc_initVehicle; " \n "";
 				name="C2";
 				textures="Brown";
-				dynamicSimulation=1;
 			};
 			id=359;
 			type="I_C_Offroad_02_unarmed_F";
@@ -5973,7 +5810,6 @@ class Mission
 				skill=0.60000002;
 				name="MJ2";
 				textures="Olive";
-				dynamicSimulation=1;
 			};
 			id=360;
 			type="I_C_Offroad_02_unarmed_F";
@@ -6077,7 +5913,6 @@ class Mission
 				skill=0.60000002;
 				name="MJ";
 				textures="Olive";
-				dynamicSimulation=1;
 			};
 			id=361;
 			type="I_C_Offroad_02_unarmed_F";
@@ -6795,7 +6630,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=366;
 			type="C_Boat_Transport_02_F";
@@ -6813,7 +6647,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=367;
 			type="C_Scooter_Transport_01_F";
@@ -6831,7 +6664,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				dynamicSimulation=1;
 			};
 			id=368;
 			type="C_Boat_Civil_01_F";
@@ -6851,7 +6683,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init=" ";
-				dynamicSimulation=1;
 			};
 			id=369;
 			type="I_C_Offroad_02_unarmed_F";
@@ -6870,7 +6701,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="  ";
-				dynamicSimulation=1;
 			};
 			id=370;
 			type="I_C_Offroad_02_unarmed_F";
@@ -6891,7 +6721,6 @@ class Mission
 				name="C1";
 				description="MHQ";
 				textures="Guerilla_06";
-				dynamicSimulation=1;
 			};
 			id=371;
 			type="B_G_Offroad_01_F";
@@ -7106,7 +6935,6 @@ class Mission
 				skill=0.60000002;
 				init="this addEventHandler [""HandleDamage"", {false}];  this setObjectTexture [0,""Server\Images\whatisresistance.paa""]; this setvectorUp [0, 0, 1]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];";
 				name="Isig2_1";
-				dynamicSimulation=1;
 			};
 			id=372;
 			type="SignAd_Sponsor_F";
@@ -7330,7 +7158,6 @@ class Mission
 			{
 				init="C2_Flag attachTo [C2,[-0.6,-1,-2]];";
 				name="C2_Flag";
-				dynamicSimulation=1;
 			};
 			id=395;
 			type="Flag_FIA_F";
@@ -7371,7 +7198,6 @@ class Mission
 			{
 				init="C1_Flag attachTo [C1,[-0.6,-2.4,-2]];";
 				name="C1_Flag";
-				dynamicSimulation=1;
 			};
 			id=396;
 			type="Flag_FIA_F";
@@ -7410,7 +7236,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=397;
 			type="B_Slingload_01_Repair_F";
@@ -7451,7 +7276,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				disableSimulation=1;
 			};
 			id=398;
 			type="B_Slingload_01_Repair_F";
@@ -7493,7 +7318,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
-				dynamicSimulation=1;
 			};
 			id=399;
 			type="B_G_Offroad_01_armed_F";
@@ -7624,7 +7448,6 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this setObjectTexture [0,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""]; this setObjectTexture [1,""\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa""];";
-				dynamicSimulation=1;
 			};
 			id=400;
 			type="B_G_Offroad_01_armed_F";
@@ -7850,7 +7673,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="Ammo_Box_1";
-				dynamicSimulation=1;
 			};
 			id=405;
 			type="Box_FIA_Ammo_F";
@@ -7893,7 +7715,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="Attach_box_1";
-				dynamicSimulation=1;
 			};
 			id=407;
 			type="Box_FIA_Support_F";
@@ -7936,7 +7757,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="Misc_Box_1";
-				dynamicSimulation=1;
 			};
 			id=408;
 			type="Box_FIA_Support_F";
@@ -8021,7 +7841,6 @@ class Mission
 				skill=0.60000002;
 				init="  ";
 				name="MSO";
-				dynamicSimulation=1;
 			};
 			id=549;
 			type="B_G_Offroad_01_repair_F";
@@ -8040,7 +7859,6 @@ class Mission
 			{
 				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",{[] spawn tryGetBox;}];this addAction [""Create New Store - <t color='#ff0000'>Overwrites old store</t>"",{[] spawn resetBox;}];";
 				name="ATM1";
-				dynamicSimulation=1;
 			};
 			id=550;
 			type="Land_Atm_01_F";
@@ -8060,7 +7878,6 @@ class Mission
 			{
 				init="this addAction [""Usage Informaton"",""Server\Info Boards\StoreInfo.sqf""];this addAction [""Get Storage Box"",{[] spawn tryGetBox;}];this addAction [""Create New Store - <t color='#ff0000'>Overwrites old store</t>"",{[] spawn resetBox;}];";
 				name="ATM2";
-				dynamicSimulation=1;
 			};
 			id=551;
 			type="Land_Atm_01_F";
@@ -8592,7 +8409,6 @@ class Mission
 			};
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=556;
 		};
@@ -8611,7 +8427,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MWB_1";
-				dynamicSimulation=1;
 			};
 			id=575;
 			type="Box_FIA_Wps_F";
@@ -8652,7 +8467,6 @@ class Mission
 			class Attributes
 			{
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				dynamicSimulation=1;
 			};
 			id=577;
 			type="Box_NATO_Uniforms_F";
@@ -8695,7 +8509,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB_2";
-				dynamicSimulation=1;
 			};
 			id=578;
 			type="Box_NATO_Uniforms_F";
@@ -8738,7 +8551,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB_1";
-				dynamicSimulation=1;
 			};
 			id=579;
 			type="Box_NATO_Uniforms_F";
@@ -8781,7 +8593,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB";
-				dynamicSimulation=1;
 			};
 			id=580;
 			type="Box_NATO_Uniforms_F";
@@ -8824,7 +8635,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB_3";
-				dynamicSimulation=1;
 			};
 			id=581;
 			type="Box_NATO_Uniforms_F";
@@ -8865,7 +8675,6 @@ class Mission
 			class Attributes
 			{
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				dynamicSimulation=1;
 			};
 			id=582;
 			type="Box_NATO_Uniforms_F";
@@ -8908,7 +8717,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB_4";
-				dynamicSimulation=1;
 			};
 			id=583;
 			type="Box_NATO_Uniforms_F";
@@ -8951,7 +8759,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MCB_5";
-				dynamicSimulation=1;
 			};
 			id=584;
 			type="Box_NATO_Uniforms_F";

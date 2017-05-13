@@ -2,8 +2,9 @@ if (!isServer) exitWith {};
 _blacklist = [6405.69,12365.6,0];
 _towns=[];
  {
-_text =  getText (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "type");
-_pos = getArray (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "position");
+
+_text =  getText (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "type");
+_pos = getArray (configfile >> "CfgWorlds" >> "Tanoa" >> "Names">> (configName _x) >> "position");
 
 if(!(_pos in _blacklist)) then {
   _towns = _towns + [[_text,_pos]];
@@ -12,7 +13,7 @@ if(!(_pos in _blacklist)) then {
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Altis" >> "Names"));
+ } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Tanoa" >> "Names"));
 
 
 ztownt = [];
@@ -20,6 +21,7 @@ ztowns = [];
 ztownm = [];
 ztownl = [];
 ztownc = [];
+ztowna = [];
 ztownTA = [];
 ztownAll = [];
 
@@ -57,7 +59,11 @@ ztownAll = [];
     		{
     			ztownc = ztownc + [_m];
     		};
+        case "Airport":{
+          ztowna = ztowna + [_m];
+        };
     		default {
+          systemChat (_x select 0);
     		}
     	};
       _m setMarkerColor "ColorYellow";
@@ -90,6 +96,9 @@ ztownAll = [];
       {
         _m setMarkerSize [400,400];
       };
+      case "Airport":{
+        _m setMarkerSize [300,300];
+      };
       default {
       _m setMarkerSize [400,400];
       }
@@ -103,5 +112,5 @@ ztownAll = [];
 } forEach _towns;
 
 
-ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
+ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ztowna + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
 ztowninit = 1;
