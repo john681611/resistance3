@@ -6817,7 +6817,6 @@ class Mission
 			};
 			id=367;
 			type="C_Scooter_Transport_01_F";
-			atlOffset=6.0443192;
 		};
 		class Item199
 		{
