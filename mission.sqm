@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1624.4478,20.734459,12032.529};
-		dir[]={-0.51116765,-0.50024861,-0.69893032};
-		up[]={-0.29531339,0.86587369,-0.40378839};
-		aside[]={-0.80718023,1.0116491e-007,0.59033817};
+		pos[]={7029.3433,216.48047,9719.0254};
+		dir[]={0.98114073,-0.16823171,0.095370434};
+		up[]={0.16744807,0.98574942,0.016276628};
+		aside[]={0.096750163,2.3195753e-008,-0.9953289};
 	};
 };
 binarizationWanted=0;
@@ -540,8 +540,8 @@ class Mission
 		year=2035;
 		month=6;
 		day=24;
-		hour=3;
-		minute=-27;
+		hour=8;
+		minute=-26;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -2797,7 +2797,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
+				init="call{this allowdamage false;  this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];}";
 				name="base2";
 			};
 			id=283;
@@ -7020,11 +7020,53 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=697;
 			type="Weapon_LMG_03_F";
 			atlOffset=0.9356842;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 		class Item152
 		{
@@ -7037,11 +7079,34 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=698;
 			type="Weapon_srifle_GM6_ghex_F";
 			atlOffset=18.598999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item153
 		{
