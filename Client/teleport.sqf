@@ -5,7 +5,7 @@ to_Base =
 private ["_Location"];
  _Location = _this select 0;
     _unit = player;
-    _unit setpos (_Location findEmptyPosition [5,80]);
+    _unit setpos (_Location findEmptyPosition [2,80]);
     _unit setDamage 0;
     _unit setFatigue 0;
     _unit allowDamage false;
@@ -16,7 +16,7 @@ private ["_Location"];
 
  _missionsData  = [
   [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
-  [getMarkerPos "respawn_west_Hotel",to_Base,"Camp","To Camp","","",1,[getMarkerPos "respawn_west_Hotel"]],
+  [getMarkerPos "respawn_camp",to_Base,"Camp","To Camp","","",1,[getMarkerPos "respawn_camp"]],
 	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]],
 	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]]
  ];
