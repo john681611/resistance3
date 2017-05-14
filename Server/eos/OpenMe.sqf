@@ -67,11 +67,11 @@ customZone = {
  };
 //Custom Locations
 
-[["BLU"],[5,2],[4,2],[4,1],[2],[4],[1,1,20],[4],[6,0,600,EAST,FALSE]] call customZone;
+/*[["BLU"],[5,2],[4,2],[4,1],[2],[4],[1,1,20],[4],[6,0,600,EAST,FALSE]] call customZone;
 [["BLU_1"],[3,2],[3,1],[2,2,75],[1,50],[3],[0,0],[3],[6,0,500,EAST,FALSE]] call customZone;
 [["BLU_2"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
 [["BLU_3"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
 [["BLU_4"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
 [["BLU_5"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,500,EAST,FALSE]] call customZone;
 [["BLU_6"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
-[["BLU_7"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;
+[["BLU_7"],[2,1],[2,1],[1,0,50],[0],[2],[0,0],[2],[6,0,400,EAST,FALSE]] call customZone;*/
