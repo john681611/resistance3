@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=615;
+		nextID=617;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6425.4766,342.35672,20069.867};
-		dir[]={0.48803756,-0.84531868,-0.21778986};
-		up[]={0.7719205,0.53429949,-0.34447482};
-		aside[]={-0.40756375,3.2567186e-006,-0.91327935};
+		pos[]={5054.0654,126.41589,16146.398};
+		dir[]={0.41180766,-0.54780459,-0.72824079};
+		up[]={0.2696484,0.83660406,-0.47684646};
+		aside[]={-0.87047017,-1.7684943e-007,-0.49223658};
 	};
 };
 binarizationWanted=0;
@@ -5093,7 +5093,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowdamage false;  this setFlagTexture ""Server\Images\inf_logo.paa""; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
+				init="this allowdamage false; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
 				name="base2";
 				dynamicSimulation=1;
 			};
