@@ -6,10 +6,13 @@ getbox = {
   [_box,_data] call setContent;
   profilenamespace setvariable [format["Resist_Box%1",savename],[KeyNumber,[false,_box,[[],[],[],[]]]]];
   _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","((ATM1 distance _target )< 5) OR ((ATM2 distance _target )< 6) ",5];
-  _box setDir (getdir player);
+  _box setDir (getdir player) + 90;
+  _box disableCollisionWith player;
   _box setpos (player modelToWorld [0,1.5,1]);
   [_box] call R3F_LOG_FNCT_objet_deplacer;
   hint "Store Box Deployed";
+  sleep 5;
+  _box enableCollisionWith vehicle player;
 };
 
 setbox = {
