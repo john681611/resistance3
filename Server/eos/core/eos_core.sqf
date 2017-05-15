@@ -323,26 +323,26 @@ if (_debug) then {hint "Zone Cached";};
 				//Count Zone as clear and increase cleared count
 				while {triggeractivated _eosActivated AND !(getmarkercolor _mkr == "colorblack")} do
 						{
-							if (!triggeractivated _clear) then
-							{
+							if (!triggeractivated _clear) then {
 								if(getmarkercolor _mkr  != hostileColor)then{
-									["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
+									//Count Zone as clear and increase cleared count
+										["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
+										_mkr setmarkercolor hostileColor;
+										_mkr setmarkerAlpha _mAH;
+										if (_debug) then { hint "Zone Lost";};
+									};
+							} else {
+								if(getmarkercolor _mkr  != VictoryColor)then{
+									["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
+									[]	execVM "Server\Zone_Complete.sqf";
+									if((random 1) > 0.75) then {
+										//call counterProcess;
+									};
+									_mkr setmarkercolor VictoryColor;
+									_mkr setmarkerAlpha _mAN;
+									if (_debug) then { hint "Zone Captured";};
 								};
-								_mkr setmarkercolor hostileColor;
-								_mkr setmarkerAlpha _mAH;
-								if (_debug) then { hint "Zone Lost";};
-										} else {
-											if(getmarkercolor _mkr  != VictoryColor)then{
-											["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
-											[]	execVM "Server\Zone_Complete.sqf";
-											if((random 1) > 0.75) then {
-												call counterProcess;
-											};
-										};
-											_mkr setmarkercolor VictoryColor;
-											_mkr setmarkerAlpha _mAN;
-											if (_debug) then { hint "Zone Captured";};
-											};
+						};
 				sleep 1;
 				};
 // PLAYER LEFT ZONE
