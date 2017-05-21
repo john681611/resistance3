@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1588.2391,7.1066089,11971.95};
-		dir[]={0.61942881,-0.46762887,0.63076007};
-		up[]={0.32770056,0.88385868,0.33369327};
-		aside[]={0.71356523,1.7462298e-006,-0.70074308};
+		pos[]={1852.795,102.91723,12180.961};
+		dir[]={-0.5651294,-0.38587785,-0.72935492};
+		up[]={-0.23640107,0.92247748,-0.30509859};
+		aside[]={-0.79056764,1.3780082e-006,0.61255318};
 	};
 };
 binarizationWanted=0;
@@ -354,7 +354,7 @@ class CustomAttributes
 		};
 		class Attribute3
 		{
-			property="ReviveRequiredItemsFakConsumed";
+			property="ReviveMedicSpeedMultiplier";
 			expression="false";
 			class Value
 			{
@@ -364,10 +364,10 @@ class CustomAttributes
 					{
 						type[]=
 						{
-							"BOOL"
+							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -392,25 +392,6 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="ReviveMedicSpeedMultiplier";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=2;
-				};
-			};
-		};
-		class Attribute6
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -428,7 +409,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute7
+		class Attribute6
 		{
 			property="ReviveForceRespawnDelay";
 			expression="false";
@@ -447,7 +428,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute8
+		class Attribute7
 		{
 			property="ReviveBleedOutDelay";
 			expression="false";
@@ -466,7 +447,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute9
+		class Attribute8
 		{
 			property="ReviveDelay";
 			expression="false";
@@ -485,7 +466,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute10
+		class Attribute9
 		{
 			property="ReviveUnconsciousStateMode";
 			expression="false";
@@ -504,7 +485,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute11
+		class Attribute10
 		{
 			property="ReviveRequiredItems";
 			expression="false";
@@ -523,7 +504,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=12;
+		nAttributes=11;
 	};
 	class Category1
 	{
@@ -761,7 +742,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1592.9004,1.3956288,11981.641};
-						angles[]={-0,0.28004724,0};
+						angles[]={0,0.28004724,0};
 					};
 					side="West";
 					class Attributes
@@ -843,7 +824,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1589.473,1.4771491,11975.39};
-						angles[]={-0,0.3242017,0};
+						angles[]={0,0.3242017,0};
 					};
 					side="West";
 					flags=4;
@@ -926,7 +907,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1592.167,1.3570827,11977.22};
-						angles[]={-0,6.1557326,0};
+						angles[]={0,6.1557326,0};
 					};
 					side="West";
 					class Attributes
@@ -1049,7 +1030,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1595.9989,1.4222819,11981.42};
-						angles[]={-0,6.2705421,0};
+						angles[]={0,6.2705421,0};
 					};
 					side="West";
 					class Attributes
@@ -1090,7 +1071,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1593.0056,1.3924872,11979.582};
-						angles[]={-0,0.24303591,0};
+						angles[]={0,0.24303591,0};
 					};
 					side="West";
 					class Attributes
@@ -8905,7 +8886,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1615.6198,3.2964015,11993.413};
-				angles[]={-0,3.6833756,-0};
+				angles[]={0,3.6833756,0};
 			};
 			side="Empty";
 			flags=4;
