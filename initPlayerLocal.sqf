@@ -31,7 +31,7 @@ C2 addAction ["<img size='2' image='Server\Images\Teleport.paa' />Teleport","Cli
 player createDiarySubject ["TeamSpeak & TFAR","TeamSpeak & TFAR"];
 player createDiaryRecord ["TeamSpeak & TFAR", ["TeamSpeak & TFAR","We highly Reccomend using Teamspeak and the TFAR mod <br/>
 TS server: ts3.iron-fists.eu OR 81.19.212.66 <br/>
-Channle: Arma 3 Liberation Server/BLUFOR <br/>
+Channle: Arma 3 Resistance Server/BLUFOR <br/>
 <br/>
 TFAR Frequencies
 Short range: <br/>
