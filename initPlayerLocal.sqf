@@ -1,18 +1,18 @@
 addMissionEventHandler ["PreloadFinished", {preloadFinished = true;}];
-waitUntil {!isNull player && !isnil "KeyNumber" && !isnil "saveName"};
-waitUntil {isTouchingGround player};
-waitUntil {!isNil "preloadFinished"};
+waitUntil {!isNull player && !isnil "KeyNumber" && !isnil "saveName" && isTouchingGround player && !isNil "preloadFinished"};
 //Local save's
 //is nil?
 _saveTestsPass  = false;
 //missing?
-if (!(isnil {profilenamespace getvariable (format["Resist_loadout%1",savename])}) AND !(isnil {profilenamespace getvariable "Resist_Box"}) ) then {
+if (!(isnil {profilenamespace getvariable (format["Resist_loadout%1",savename])}) AND !(isnil {profilenamespace getvariable (format["Resist_Box%1",savename])})) then {
+  _Rbox = profilenamespace getvariable (format["Resist_loadout%1",savename]);
+  _RLoad =  profilenamespace getvariable (format["Resist_Box%1",savename]);
 //Array?
-  if(((typeName (profilenamespace getvariable (format["Resist_loadout%1",savename]))) == "ARRAY") AND ((typeName (profilenamespace getvariable "Resist_Box")) == "ARRAY")) then {
+  if((typeName _RLoad == "ARRAY") AND (typeName _Rbox == "ARRAY")) then {
 //Number?
-    if(((typeName ((profilenamespace getvariable (format["Resist_loadout%1",savename])) select 0)) == "SCALAR") AND ((typeName ((profilenamespace getvariable "Resist_Box") select 0)) == "SCALAR")) then {
+    if((typeName (_RLoad select 0) == "SCALAR") AND (typeName  (_Rbox select 0) == "SCALAR")) then {
 //Key?
-      if((((profilenamespace getvariable (format["Resist_loadout%1",savename])) select 0) == KeyNumber) AND (((profilenamespace getvariable "Resist_loadout") select 0) == KeyNumber)) then {
+      if((_RLoad select 0 == KeyNumber) AND ( _Rbox select 0 == KeyNumber)) then {
         _saveTestsPass = true;
       };
     };
@@ -54,10 +54,10 @@ setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setCo
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM 'Client\safe_box.sqf';
-[] execVM "Client\keep_loadout.sqf";
 player addEventHandler ["Respawn", {
   loadout = [player,["ammo"]] call getLoadout;
   profilenamespace setvariable [(format["Resist_loadout%1",savename]),[KeyNumber,loadout]];
   systemChat "Gear Saved";
   }];
 [] execVM "Server\Info Boards\WelcomeMessage.sqf";
+[] execVM "Client\keep_loadout.sqf";
