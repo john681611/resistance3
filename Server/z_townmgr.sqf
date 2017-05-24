@@ -22,7 +22,8 @@ ztownc = [];
 ztowna = [];
 ztownTA = [];
 ztownAll = [];
-
+//Extra areas
+_towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1,7336.12,21.7828]]];
 {
     _pos = (_x select 1);
 

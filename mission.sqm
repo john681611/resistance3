@@ -535,7 +535,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance V3.3RC1";
+		briefingName="Resistance V3.25RC1";
 		overviewText="Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
 		resistanceWest=0;
 		resistanceEast=1;
