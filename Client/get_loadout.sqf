@@ -3,29 +3,29 @@
 	AUTHOR: aeroson
 	NAME: get_loadout.sqf
 	VERSION: 3.4
-	
+
 	DOWNLOAD & PARTICIPATE:
 	https://github.com/aeroson/a3-loadout
 	http://forums.bistudio.com/showthread.php?148577-GET-SET-Loadout-(saves-and-loads-pretty-much-everything)
-	
+
 	DESCRIPTION:
 	I guarantee backwards compatibility.
 	These scripts allows you set/get (load/save)all of the unit's gear, including:
 	uniform, vest, backpack, contents of it, all quiped items, all three weapons with their attachments, currently loaded magazines and number of ammo in magazines.
 	All this while preserving order of items.
-	Useful for saving/loading loadouts. 
+	Useful for saving/loading loadouts.
 	Ideal for revive scripts where you have to set exactly the same loadout to newly created unit.
 	Uses workaround with placeholders to add vest/backpack items, so items stay where you put them.
-	
+
 	PARAMETER(S):
 	0 : target unit
-	1 : (optional) array of options, default [] : 
+	1 : (optional) array of options, default [] :
 		"ammo" will save ammo count of partially emptied magazines
 		"repetitive" intended for repetitive use, will not use selectWeapon, means no visible effect on solder, but will not save magazines of assigned items such as laser designator batteries
-	
+
 	RETURNS:
 	Array : array of strings/arrays containing target unit's loadout, to be used by fnc_set_loadout.sqf
-	
+
 	addAction support:
 	Saves player's loadout into global var loadout
 
@@ -34,6 +34,21 @@
 private ["_target","_options","_saveMagsAmmo","_isRepetitive","_isOnFoot","_currentWeapon","_currentMode","_isFlashlightOn","_isIRLaserOn","_magazinesAmmo","_loadedMagazines","_saveWeaponMagazines","_getMagsAmmo","_backPackItems","_assignedItems","_data"];
 
 _options = [];
+
+fnc_baseWeapon = {
+	_weapon = _this;
+	_baseCfg = (configFile >> "cfgWeapons");
+	_cfg = _baseCfg >> _weapon;
+
+	while {isClass (_cfg >> "LinkedItems") } do {
+		_parent = configName (inheritsFrom (_cfg));
+		_cfgTemp = _baseCfg >> _parent;
+		if(getNumber(_cfgTemp >> "Scope") == 0) exitWith {};
+		_cfg = _cfgTemp;
+	};
+
+	configName _cfg
+};
 
 // addAction support
 if(count _this < 4) then {
@@ -46,11 +61,11 @@ if(count _this < 4) then {
 } else {
 	_target = player;
 };
- 
+
 _saveMagsAmmo = "ammo" in _options;
 _isRepetitive = "repetitive" in _options;
 _isOnFoot = vehicle _target == _target;
-         
+
 _currentWeapon = "";
 _currentMode = "";
 _isFlashlightOn = false;
@@ -67,7 +82,7 @@ if(_isOnFoot) then {
 } else {
 	_currentWeapon = currentWeapon _target;
 };
-	
+
 
 _loadedMagazines=[];
 
@@ -75,21 +90,21 @@ _loadedMagazines=[];
 _saveWeaponMagazines = {
 	private ["_weapon","_magazines","_muzzles","_saveMagazine"];
 	_weapon = _this select 0;
-	_magazines = []; 	
+	_magazines = [];
 
-	_saveMagazine = { // find, save and eat mag for _weapon		
+	_saveMagazine = { // find, save and eat mag for _weapon
 		private ["_weapon","_magazine","_ammo"];
 		_weapon = _this select 0;
 		_magazine = "";
 		_ammo = 0;
-		{ 			
+		{
 			if((_x select 4)==_weapon) then {
-				_magazine = _x select 0;				
+				_magazine = _x select 0;
 				_ammo = _x select 1;
 				_x = -1;
 			};
 		} forEach _magazinesAmmo;
-		_magazinesAmmo = _magazinesAmmo - [-1];	
+		_magazinesAmmo = _magazinesAmmo - [-1];
 		if(_magazine!="") then {
 			if(_saveMagsAmmo) then {
 				_magazines set [count _magazines, [_magazine, _ammo]];
@@ -97,17 +112,17 @@ _saveWeaponMagazines = {
 				_magazines set [count _magazines, _magazine];
 			};
 		};
-	};	
+	};
 
 	if(_weapon != "") then {
 		[_weapon] call _saveMagazine;
 		_muzzles = configFile>>"CfgWeapons">>_weapon>>"muzzles";
-		if(isArray(_muzzles)) then { 	
+		if(isArray(_muzzles)) then {
 			{ // add one mag for each muzzle
-				if (_x != "this") then {					
-					[_x] call _saveMagazine;			
+				if (_x != "this") then {
+					[_x] call _saveMagazine;
 				};
-			} forEach getArray(_muzzles);		
+			} forEach getArray(_muzzles);
 		};
 	};
 
@@ -126,7 +141,7 @@ if(_saveMagsAmmo) then {
 	// check if input array contains magazine, if it does, find it add ammo count
 	_getMagsAmmo = {
 		private ["_items","_location","_item","_itemIndex"];
-		_items = _this select 0;		
+		_items = _this select 0;
 		_location = _this select 1;
 		{
 			_item = _x;
@@ -134,14 +149,14 @@ if(_saveMagsAmmo) then {
 			{
 				if((_x select 4)==_location && (_x select 0)==_item) then {
 					_items set[_itemIndex, [_item, _x select 1]];
-					_x = -1;					
+					_x = -1;
 				};
 			} forEach _magazinesAmmo;
-			_magazinesAmmo = _magazinesAmmo - [-1];	
+			_magazinesAmmo = _magazinesAmmo - [-1];
 		} forEach _items;
 		_items;
 	};
-	
+
 };
 
 // get backpack items
@@ -151,7 +166,7 @@ _backpacks = [];
 	for "_i" from 1 to ((_cargo select 1) select _foreachindex) do {
 		_backpacks set [count _backpacks, _x];
 	};
-} foreach (_cargo select 0);	
+} foreach (_cargo select 0);
 _backPackItems = (backpackitems _target) + _backpacks;
 
 // get assigned items, headgear and goggles is not part of assignedItems
@@ -173,7 +188,7 @@ if((_goggles != "") && !(_goggles in _assignedItems)) then {
 // get magazines of everything else except weapons, most likely assigned items
 // only ["Uniform","Vest","Backpack"] locations remain, weapon locations have already been eaten
 _magazines = [];
-{	
+{
 	if(_x select 2) then {
 		if(_saveMagsAmmo) then {
 			_magazines set[count _magazines, [_x select 0, _x select 1]];
@@ -183,7 +198,7 @@ _magazines = [];
 		_x = -1;
 	};
 } forEach _magazinesAmmo;
-_magazinesAmmo = _magazinesAmmo - [-1];	
+_magazinesAmmo = _magazinesAmmo - [-1];
 _loadedMagazines set [3, _magazines];
 */
 
@@ -206,7 +221,7 @@ if(!_isRepetitive) then {
 				} else {
 					_magazines set[count _magazines, _magazine];
 				};
-			};	
+			};
 		};
 	} forEach _assignedItems;
 	_loadedMagazines set [3, _magazines];
@@ -229,14 +244,14 @@ if(!_isRepetitive) then {
 					_target action ["IRLaserOn"];
 				} else {
 					_target action ["IRLaserOff"];
-				};	
+				};
 			};
 		} else {
 			_currentMode = "";
 		};
 		if(_currentMode == "") then {
 			if(_currentWeapon=="") then {
-				_target action ["SWITCHWEAPON", _target, _target, 0];			
+				_target action ["SWITCHWEAPON", _target, _target, 0];
 			} else {
 				_target selectWeapon _currentWeapon;
 			};
@@ -244,17 +259,17 @@ if(!_isRepetitive) then {
 	};
 };
 
-   
+
 _data = [
 	_assignedItems, //0 []
 
-	primaryWeapon _target, //1 ""
+	(primaryWeapon _target) call fnc_baseWeapon, //1 ""
 	primaryWeaponItems _target, //2 []
 
-	handgunWeapon _target, //3 ""
+	(handgunWeapon _target) call fnc_baseWeapon, //3 ""
 	handgunItems _target, //4 []
 
-	secondaryWeapon _target, //5 ""
+	(secondaryWeapon _target) call fnc_baseWeapon, //5 ""
 	secondaryWeaponItems _target, //6 []
 
 	uniform _target, //7 ""
@@ -267,14 +282,14 @@ _data = [
 	[_backPackItems, "Backpack"] call _getMagsAmmo, //12
 
 	_loadedMagazines, //13 (optional) [[primary mags],[handgun mags],[secondary mags],[other mags]]
-	_currentWeapon, //14 (optional) ""
+	(_currentWeapon) call fnc_baseWeapon, //14 (optional) ""
 	_currentMode //15 (optional) ""
 	 //16
 ];
 // addAction support
 if(count _this < 4) then {
 	_data;
-} else {  
+} else {
 	loadout = _data;
 	//playSound3D ["A3\Sounds_F\sfx\ZoomOut.wav", _target];
-};   
+};
