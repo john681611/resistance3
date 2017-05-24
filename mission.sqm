@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={5054.0654,126.41589,16146.398};
-		dir[]={0.41180766,-0.54780459,-0.72824079};
-		up[]={0.2696484,0.83660406,-0.47684646};
-		aside[]={-0.87047017,-1.7684943e-007,-0.49223658};
+		dir[]={-0.67159849,-0.38135916,-0.63524532};
+		up[]={-0.27705899,0.92442524,-0.26206201};
+		aside[]={-0.68717939,-1.2572855e-007,0.72650325};
 	};
 };
 binarizationWanted=0;
@@ -342,7 +342,7 @@ class CustomAttributes
 		};
 		class Attribute3
 		{
-			property="ReviveRequiredItemsFakConsumed";
+			property="ReviveMedicSpeedMultiplier";
 			expression="false";
 			class Value
 			{
@@ -352,10 +352,10 @@ class CustomAttributes
 					{
 						type[]=
 						{
-							"BOOL"
+							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -380,25 +380,6 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="ReviveMedicSpeedMultiplier";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=2;
-				};
-			};
-		};
-		class Attribute6
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -416,7 +397,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute7
+		class Attribute6
 		{
 			property="ReviveForceRespawnDelay";
 			expression="false";
@@ -435,7 +416,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute8
+		class Attribute7
 		{
 			property="ReviveBleedOutDelay";
 			expression="false";
@@ -454,7 +435,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute9
+		class Attribute8
 		{
 			property="ReviveDelay";
 			expression="false";
@@ -473,7 +454,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute10
+		class Attribute9
 		{
 			property="ReviveUnconsciousStateMode";
 			expression="false";
@@ -492,7 +473,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute11
+		class Attribute10
 		{
 			property="ReviveRequiredItems";
 			expression="false";
@@ -511,7 +492,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=12;
+		nAttributes=11;
 	};
 	class Category1
 	{
@@ -542,7 +523,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance V3.3RC1";
+		briefingName="Resistance V3.25RC1";
 		overviewText="Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
 		resistanceWest=0;
 		resistanceEast=1;
@@ -1229,6 +1210,7 @@ class Mission
 			};
 			id=62;
 			type="B_Heli_Light_01_F";
+			atlOffset=-0.37891674;
 		};
 		class Item41
 		{
@@ -1248,6 +1230,7 @@ class Mission
 			};
 			id=63;
 			type="B_Heli_Light_01_armed_F";
+			atlOffset=-0.37892151;
 		};
 		class Item42
 		{
@@ -1267,6 +1250,7 @@ class Mission
 			};
 			id=64;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item43
 		{
