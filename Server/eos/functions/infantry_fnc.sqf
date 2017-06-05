@@ -16,9 +16,8 @@ _grpSize=_r+_grpMin;
 	if (surfaceiswater _pos) then {_pool=[_faction,1] call eos_fnc_getunitpool;}else{_pool=[_faction,0] call eos_fnc_getunitpool;};
 
 	_grp=createGroup _side;
-
 for "_x" from 1 to _grpSize do {
-		_unitType=_pool select (floor(random(count _pool)));
+		_unitType=_pool select (floor random[0,(count _pool),0]);
 		_unit = _grp createUnit [_unitType, _pos, [], 6, "FORM"];
 	if(_this select 4) then {
 			[_unit] call eos_fnc_rockFix

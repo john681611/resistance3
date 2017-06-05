@@ -5,14 +5,14 @@ _tempArray=[];
 
 // EAST CSAT FACTION
 	if (_faction==0) then {
-	_InfPool=	["O_Soldier_F","O_Soldier_GL_F","O_Soldier_LAT_F","O_medic_F","O_Soldier_AR_F","O_Soldier_TL_F","O_soldier_M_F","O_Soldier_AA_F","O_Soldier_AT_F","O_Soldier_A_F","O_Soldier_SL_F","O_officer_F","O_sniper_F","O_spotter_F","O_soldier_exp_F","O_engineer_F","O_HeavyGunner_F","O_Sharpshooter_F"];
-	_ArmPool=	["O_APC_Tracked_02_AA_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F"];
-	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_MRAP_02_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F","O_Truck_03_medical_F"];
-	_ACHPool=	["O_Heli_Attack_02_black_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F"];
-	_CHPool=	["O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F","O_Heli_Transport_04_bench_F"];
+	_InfPool=	["O_Soldier_F","O_Soldier_GL_F","O_Soldier_LAT_F","O_medic_F","O_Soldier_AR_F","O_Soldier_TL_F","O_soldier_M_F","O_Soldier_AA_F","O_Soldier_AT_F","O_Soldier_A_F","O_Soldier_SL_F","O_soldier_exp_F","O_engineer_F","O_HeavyGunner_F","O_Sharpshooter_F","O_officer_F","O_sniper_F","O_spotter_F"];
+	_ArmPool=	["O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F","O_MBT_02_arty_F"];
+	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_Truck_03_medical_F","O_MRAP_02_F","O_MRAP_02_hmg_F","O_MRAP_02_gmg_F"];
+	_ACHPool=	["O_Heli_Attack_02_black_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F","O_Plane_Fighter_02_F"];
+	_CHPool=	["O_Heli_Light_02_unarmed_F","O_Heli_Transport_04_bench_F","O_Heli_Light_02_F"];
 	_uavPool=	["O_UAV_01_F","O_UAV_02_CAS_F","O_UGV_01_rcws_F"];
-	_stPool=	["O_Mortar_01_F","O_HMG_01_high_F","O_GMG_01_F"];
-	_shipPool=	["O_Boat_Armed_01_hmg_F","O_Boat_Transport_01_F"];
+	_stPool=	["O_HMG_01_high_F","O_GMG_01_F","O_Mortar_01_F"];
+	_shipPool=	["O_Boat_Transport_01_F","O_Boat_Armed_01_hmg_F"];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
 	_crewPool=	["O_crew_F"];
 	_heliCrew=	["O_helicrew_F","O_helipilot_F"];
@@ -36,12 +36,12 @@ _tempArray=[];
 // INDEPENDENT AAF FACTION
 	if (_faction==2) then {
 	_InfPool=	["I_Soldier_F","I_Soldier_GL_F","I_Soldier_AR_F","I_medic_F","I_Soldier_LAT_F","I_Soldier_TL_F","I_Soldier_AT_F","I_Soldier_AA_F","I_Soldier_SL_F","I_Soldier_M_F","I_Soldier_repair_F","I_Soldier_exp_F","I_officer_F","I_Spotter_F","I_Sniper_F"];
-	_ArmPool=	["I_APC_Wheeled_03_cannon_F","I_MBT_03_cannon_F","I_APC_tracked_03_cannon_F"];
-	_MotPool=	["I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_Truck_02_medical_F","I_Truck_02_ammo_F","I_Truck_02_fuel_F","I_Truck_02_box_F"];
+	_ArmPool=	["I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F"];
+	_MotPool=	["I_Truck_02_covered_F","I_Truck_02_transport_F","I_Truck_02_medical_F","I_Truck_02_ammo_F","I_Truck_02_fuel_F","I_Truck_02_box_F","I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F"];
 	_ACHPool=	["I_Heli_light_03_F","I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F"];
-	_CHPool=	["I_Heli_Transport_02_F","I_Heli_light_03_unarmed_F"];
+	_CHPool=	["I_Heli_light_03_unarmed_F","I_Heli_Transport_02_F"];
 	_uavPool=	["I_UAV_01_F","I_UAV_02_CAS_F","I_UGV_01_rcws_F"];
-	_stPool=	["I_Mortar_01_F","I_HMG_01_high_F","I_GMG_01_high_F"];
+	_stPool=	["I_HMG_01_high_F","I_GMG_01_high_F","I_Mortar_01_F"];
 	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
 	_crewPool=	["I_crew_F"];
@@ -79,8 +79,8 @@ _tempArray=[];
 // EAST CSAT URBAN UNITS
 	if (_faction==5) then {
 	_InfPool=	["O_soldierU_F","O_SoldierU_GL_F","O_soldierU_LAT_F","O_soldierU_AR_F","O_soldierU_medic_F","O_soldierU_TL_F","O_soldierU_AT_F","O_soldierU_AA_F","O_SoldierU_SL_F","O_soldierU_M_F","O_Urban_HeavyGunner_F","O_Urban_Sharpshooter_F"];
-	_ArmPool=	["O_APC_Tracked_02_AA_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F"];
-	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_MRAP_02_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F","O_Truck_03_medical_F","O_Truck_03_ammo_F","O_Truck_03_fuel_F","O_Truck_03_box_F"];
+	_ArmPool=	["O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F"];
+	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_Truck_03_medical_F","O_Truck_03_ammo_F","O_Truck_03_fuel_F","O_Truck_03_box_F","O_MRAP_02_F","O_MRAP_02_hmg_F","O_MRAP_02_gmg_F"];
 	_ACHPool=	["O_Heli_Attack_02_black_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F"];
 	_CHPool=	["O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F"];
 	_uavPool=	["O_UAV_01_F","O_UAV_02_CAS_F","O_UGV_01_rcws_F"];
@@ -95,7 +95,7 @@ _tempArray=[];
 // EAST CSAT SPECOPS UNITS
 	if (_faction==6) then {
 	_InfPool=	["O_recon_F","O_recon_LAT_F","O_recon_M_F","O_recon_medic_F","O_recon_TL_F","O_recon_JTAC_F","O_recon_exp_F","O_Pathfinder_F","O_V_Soldier_Exp_hex_F","O_V_Soldier_hex_F","O_V_Soldier_JTAC_hex_F","O_V_Soldier_LAT_hex_F","O_V_Soldier_M_hex_F","O_V_Soldier_Medic_hex_F","O_V_Soldier_TL_hex_F","O_V_Soldier_Viper_hex_F"];
-	_ArmPool=	["O_APC_Tracked_02_AA_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F"];
+	_ArmPool=	["O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F"];
 	_MotPool=	["O_Truck_03_covered_F","O_Truck_03_transport_F","O_LSV_02_armed_F","O_LSV_02_unarmed_F","O_Truck_03_medical_F","O_Truck_03_ammo_F","O_Truck_03_fuel_F","O_Truck_03_box_F"];
 	_ACHPool=	["O_Heli_Attack_02_black_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F"];
 	_CHPool=	["O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F"];
@@ -110,14 +110,14 @@ _tempArray=[];
 
 	// EAST TANOA CSAT FACTION
 		if (_faction==7) then {
-		_InfPool=	["O_T_Soldier_F","O_T_Soldier_GL_F","O_T_Soldier_LAT_F","O_T_medic_F","O_T_Soldier_AR_F","O_T_Soldier_TL_F","O_T_soldier_M_F","O_T_Soldier_AA_F","O_T_Soldier_AT_F","O_T_Soldier_A_F","O_T_Soldier_SL_F","O_T_officer_F","O_T_sniper_F","O_T_spotter_F","O_T_soldier_exp_F","O_T_engineer_F"];
-		_ArmPool=	["O_T_APC_Tracked_02_AA_ghex_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F","O_T_MBT_02_cannon_ghex_F"];
-		_MotPool=	["O_T_Truck_03_covered_ghex_F","O_T_Truck_03_transport_ghex_F","O_T_MRAP_02_ghex_F","O_T_MRAP_02_gmg_ghex_F","O_T_MRAP_02_hmg_ghex_F","O_T_Truck_03_medical_ghex_F"];
+		_InfPool=	["O_T_Soldier_F","O_T_Soldier_GL_F","O_T_Soldier_LAT_F","O_T_medic_F","O_T_Soldier_AR_F","O_T_Soldier_TL_F","O_T_soldier_M_F","O_T_Soldier_AA_F","O_T_Soldier_AT_F","O_T_Soldier_A_F","O_T_Soldier_SL_F","O_T_soldier_exp_F","O_T_engineer_F","O_T_officer_F","O_T_sniper_F","O_T_spotter_F"];
+		_ArmPool=	["O_T_APC_Wheeled_02_rcws_ghex_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_APC_Tracked_02_AA_ghex_F","O_T_MBT_02_cannon_ghex_F","O_T_MBT_02_arty_ghex_F"];
+		_MotPool=	["O_T_Truck_03_covered_ghex_F","O_T_Truck_03_transport_ghex_F","O_T_Truck_03_medical_ghex_F","O_T_Truck_03_ammo_ghex_F","O_T_Truck_03_fuel_ghex_F","O_T_Truck_03_repair_ghex_F","O_T_LSV_02_unarmed_F","O_T_LSV_02_armed_F","O_T_MRAP_02_ghex_F","O_T_MRAP_02_hmg_ghex_F","O_T_MRAP_02_gmg_ghex_F"];
 		_ACHPool=	["O_T_VTOL_02_vehicle_F"];
 		_CHPool=	["O_T_VTOL_02_infantry_F"];
 		_uavPool=	["O_T_UAV_04_CAS_F","O_T_UGV_01_rcws_F"];
-		_stPool=	["O_Mortar_01_F","O_HMG_01_high_F","O_GMG_01_F"];
-		_shipPool=	["O_Boat_Armed_01_hmg_F","O_Boat_Transport_01_F"];
+		_stPool=	["O_HMG_01_high_F","O_GMG_01_F","O_Mortar_01_F"];
+		_shipPool=	["O_Boat_Transport_01_F","O_Boat_Armed_01_hmg_F"];
 		_diverPool=	["O_T_diver_exp_F","O_T_diver_F","O_T_diver_TL_F"];
 		_crewPool=	["O_T_crew_F"];
 		_heliCrew=	["O_T_helicrew_F","O_T_helipilot_F"];
@@ -140,17 +140,20 @@ _tempArray=[];
 
 ////////////////////////////////////////////////////////////////////////////////////////
 if (_type==0) then {
-		for "_i" from 0 to 5 do{
-		_unit=_InfPool select (floor(random(count _InfPool)));
-		_tempArray set [count _tempArray,_unit];};
-						};
+	_tempArray = _InfPool;
+	reverse _tempArray;
+};
 
-if (_type==1) then {_tempArray=_diverPool};
+if (_type==1) then {
+	_tempArray=_diverPool;
+	reverse _tempArray;
+};
 
 
 // CREATE ARMOUR & CREW
 if (_type==2) then {
-				_tempUnit=_ArmPool select (floor(random(count _ArmPool)));
+	 			reverse _ArmPool;
+				_tempUnit=_ArmPool select (floor random[0,(count _ArmPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_crewPool select (floor(random(count _crewPool)));
 				_temparray set [count _temparray,_crew];
@@ -158,7 +161,8 @@ if (_type==2) then {
 
 // CREATE ATTACK CHOPPER & CREW
 if (_type==3) then {
-				_tempUnit=_ACHPool select (floor(random(count _ACHPool)));
+				reverse _ACHPool;
+				_tempUnit=_ACHPool select (floor random[0,(count _ACHPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_heliCrew select (floor(random(count _heliCrew)));
 				_temparray set [count _temparray,_crew];
@@ -166,7 +170,8 @@ if (_type==3) then {
 
 // CREATE TRANSPORT CHOPPER & CREW
 if (_type==4) then {
-				_tempUnit=_CHPool select (floor(random(count _CHPool)));
+				reverse _CHPool;
+				_tempUnit=_CHPool select (floor random[0,(count _CHPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_heliCrew select (floor(random(count _heliCrew)));
 				_temparray set [count _temparray,_crew];
@@ -174,7 +179,8 @@ if (_type==4) then {
 
 // CREATE STATIC & CREW
 if (_type==5) then {
-				_tempUnit=_stPool select (floor(random(count _stPool)));
+				reverse _stPool;
+				_tempUnit=_stPool select (floor random[0,(count _stPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_crewPool select (floor(random(count _crewPool)));
 				_temparray set [count _temparray,_crew];
@@ -184,7 +190,8 @@ if (_type==6) then {_tempArray=_uavPool select (floor(random(count _uavPool)));}
 
 // CREATE TRANSPORT & CREW
 if (_type==7) then {
-				_tempUnit=_MotPool select (floor(random(count _MotPool)));
+				reverse _MotPool;
+				_tempUnit=_MotPool select (floor random[0,(count _MotPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_crewPool select (floor(random(count _crewPool)));
 				_temparray set [count _temparray,_crew];
@@ -192,7 +199,8 @@ if (_type==7) then {
 
 // CREATE BOAT & DIVER CREW
 if (_type==8) then {
-				_tempUnit=_shipPool select (floor(random(count _shipPool)));
+				reverse _shipPool;
+				_tempUnit=_shipPool select (floor random[0,(count _shipPool),0]);
 				_temparray set [count _temparray,_tempUnit];
 				_crew=_diverPool select (floor(random(count _diverPool)));
 				_temparray set [count _temparray,_crew];
@@ -200,18 +208,14 @@ if (_type==8) then {
 
 // CREATE CARGO
 if (_type==9) then {
-		for "_i" from 0 to 4 do{
-			_unit=_InfPool select (floor(random(count _InfPool)));
-			_temparray set [count _temparray,_unit];
-							};
+			_temparray = _InfPool;
+			 reverse _temparray;
 };
 
 // CREATE DIVER CARGO
 if (_type==10) then {
-		for "_i" from 0 to 4 do{
-			_unit=_diverPool select (floor(random(count _diverPool)));
-			_temparray set [count _temparray,_unit];
-							};
+	_temparray = _diverPool;
+	 reverse _temparray;
 };
 
 if (_type==11) then {
