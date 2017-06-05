@@ -18,7 +18,8 @@ private ["_Location"];
   [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
   [getMarkerPos "respawn_camp",to_Base,"Camp","To Camp","","",1,[getMarkerPos "respawn_camp"]],
 	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]],
-	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]]
+	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]],
+  [getMarkerPos "MHQ3",to_Base,"RHIB MHQ","To RHIB MHQ","","",1,[getMarkerPos "MHQ3"]]
  ];
 
 /*Maybe Later
