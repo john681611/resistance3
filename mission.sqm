@@ -51,7 +51,6 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Civ_Camping",
-	"cba_xeh",
 	"A3_Structures_F_EPA_Civ_Constructions",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Exp_Military_Fortifications",
@@ -9111,7 +9110,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11841.446,6.9499998,13077.481};
-				angles[]={-0,4.056962,0};
+				angles[]={0,4.056962,0};
 			};
 			id=787;
 			type="ModuleRespawnVehicle_F";
@@ -9316,7 +9315,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11838.787,10.556761,13064.87};
-				angles[]={-0,0.26907367,0};
+				angles[]={0,0.26907367,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9334,7 +9333,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6970.4775,5.7695317,7189.397};
-				angles[]={-0,5.2309561,0};
+				angles[]={0,5.2309561,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9352,7 +9351,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6950.5151,2.6601563,7250.4971};
-				angles[]={-0,2.7356586,0};
+				angles[]={0,2.7356586,0};
 			};
 			id=790;
 			type="ModuleRespawnVehicle_F";
@@ -9611,7 +9610,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11746.275,4.8700104,3145.1423};
-				angles[]={-0,1.211534,0};
+				angles[]={0,1.211534,0};
 			};
 			id=800;
 			type="ModuleRespawnVehicle_F";
@@ -9817,7 +9816,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11723.275,5.4849811,3176.4756};
-				angles[]={0,3.7068365,-0};
+				angles[]={0,3.7068365,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9835,7 +9834,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11784.876,6.4009886,3132.3679};
-				angles[]={0,3.7569928,-0};
+				angles[]={0,3.7569928,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9870,7 +9869,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2159.22,12.95,3461.4392};
-				angles[]={-0,2.7356586,0};
+				angles[]={0,2.7356586,0};
 			};
 			id=809;
 			type="ModuleRespawnVehicle_F";
@@ -10093,7 +10092,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2217.5767,13.449949,13389.075};
-				angles[]={-0,6.2552466,0};
+				angles[]={0,6.2552466,0};
 			};
 			id=812;
 			type="ModuleRespawnVehicle_F";
