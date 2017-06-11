@@ -30,30 +30,12 @@ _cache= if (count _this > 6) then {_this select 6} else {false};
 _trig=format ["EOSTrigger%1",_mkr];
 
 if (!_cache) then {
-	if ismultiplayer then {
-			if (_heightLimit) then
-			{_actCond="{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 50} count playableunits > 0";
-							}else
-							{_actCond="{vehicle _x in thisList && isplayer _x} count playableunits > 0";
-		};}else{
-			if (_heightLimit) then
-						{_actCond="{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 50} count allUnits > 0";
-								}else
-									{_actCond="{vehicle _x in thisList && isplayer _x} count allUnits > 0";};};
-
 		_eosActivated = createTrigger ["EmptyDetector",_mPos];
-		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE];
-		_eosActivated setTriggerActivation ["ANY","PRESENT",true];
+		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE,50];
+		_eosActivated setTriggerActivation ["ANYPLAYER","PRESENT",true];
 		_eosActivated setTriggerTimeout [1, 1, 1, true];
-		_eosActivated setTriggerStatements [_actCond,"",""];
+		_eosActivated setTriggerStatements ["this", "", ""];
 
-//For zone Debugging
-		/*_m = createMarker [format ["%1-1", _mPos],_mPos];
-		_m setMarkerSize [(_distance+_mkrX),(_distance+_mkrY)];
-		_m setMarkerColor "ColorBlue";
-		_m setMarkerShape "ELLIPSE";
-    _m setMarkerBrush "Border";
-    _m setMarkerAlpha 0.5;*/
 
 			server setvariable [_trig,_eosActivated];
 					}else{
