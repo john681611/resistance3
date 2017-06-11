@@ -196,123 +196,107 @@ sleep 0.25;
 
 //SPAWN ALT TRIGGERS
 			_clear = createTrigger ["EmptyDetector",_mPos];
-			_clear setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE];
+			_clear setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE,50];
 			_clear setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
 			_clear setTriggerStatements ["count thislist <= 3 AND ('LandVehicle' countType thislist)-('StaticWeapon' countType thislist) == 0","",""];
-				_taken = createTrigger ["EmptyDetector",_mPos];
-				_taken setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE];
-				_taken setTriggerActivation ["ANY","PRESENT",true];
-				_taken setTriggerStatements ["{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 5} count allUnits > 0","",""];
-_eosAct=true;
-_delay = 300;
+			_eosAct=true;
+			_delay = 5;
 while {_eosAct} do {
 	// IF PLAYER LEAVES THE AREA OR ZONE DEACTIVATED
-	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") then {
+	if (!triggeractivated _eosActivated) then {
 		_delay = _delay -5;
 	} else {
-		_delay = 300;
+		_delay = 5;
 	};
 
 	if (_delay <= 0) then	{
-		if (_debug) then {
-			if (!(getmarkercolor _mkr == "colorblack")) then {
-				hint "Restarting Zone AND deleting units";
-			} else {
-				hint "EOS zone deactivated";
-			};
-		};
-//CACHE LIGHT VEHICLES
-	if (!isnil "_cGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then { _cGrps= _cGrps - 1;};
-												{deleteVehicle _x} forEach (_crew);
-														if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																			{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _cGrp;
-	if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
-
-	// CACHE ARMOURED VEHICLES
-		if (!isnil "_dGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_dGrps= _dGrps - 1;};
-												{deleteVehicle _x} forEach (_crew);
-														if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																			{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _dGrp;
-		if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
-
-// CACHE PATROL INFANTRY
-		if (!isnil "_bGrp") then {
-				_n=0;
-						{	_n=_n+1;_units={alive _x} count units _x;
-						_cacheGrp=format ["PA%1",_n];
-		if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-						_eosActivated setvariable [_cacheGrp,_units, false];
-						{deleteVehicle _x} foreach units _x;deleteGroup _x;
-						}foreach _bGrp;
-				};
-
-// CACHE HOUSE INFANTRY
-	if (!isnil "_aGrp") then
-				{		_n=0;
-						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["HP%1",_n];
-	if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-						_eosActivated setvariable [_cacheGrp,_units, false];
-						{deleteVehicle _x} foreach units _x;deleteGroup _x;
-						}foreach _aGrp;
-				};
-
-// CACHE MORTARS
-	if (!isnil "_eGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
-														{deleteVehicle _x} forEach (_crew);
-															if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _eGrp;};
-
-// CACHE HELICOPTER TRANSPORT
-	if (!isnil "_fGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2; _cargoGrp = _x select 3;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_fGrps= _fGrps - 1;};
-														{deleteVehicle _x} forEach (_crew);
+	//CACHE LIGHT VEHICLES
+		if (!isnil "_cGrp") then
+					{
+							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
+										if (!alive _vehicle || {!alive _x} foreach _crew) then { _cGrps= _cGrps - 1;};
+													{deleteVehicle _x} forEach (_crew);
 															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-																	if (!isnil "_cargoGrp") then {
-																	{deleteVehicle _x} foreach units _cargoGrp;deleteGroup _cargoGrp;};
+																				{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+							}foreach _cGrp;
+		if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
 
-						}foreach _fGrp;};
+		// CACHE ARMOURED VEHICLES
+			if (!isnil "_dGrp") then
+					{
+							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
+										if (!alive _vehicle || {!alive _x} foreach _crew) then {_dGrps= _dGrps - 1;};
+													{deleteVehicle _x} forEach (_crew);
+															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+																				{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+							}foreach _dGrp;
+			if (_debug) then {diag_log format ["ID:c%1",_dGrps];};};
+
+	// CACHE PATROL INFANTRY
+			if (!isnil "_bGrp") then {
+					_n=0;
+							{	_n=_n+1;_units={alive _x} count units _x;
+							_cacheGrp=format ["PA%1",_n];
+			if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
+							_eosActivated setvariable [_cacheGrp,_units, false];
+							{deleteVehicle _x} foreach units _x;deleteGroup _x;
+							}foreach _bGrp;
+					};
+
+	// CACHE HOUSE INFANTRY
+		if (!isnil "_aGrp") then
+					{		_n=0;
+							{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["HP%1",_n];
+		if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
+							_eosActivated setvariable [_cacheGrp,_units, false];
+							{deleteVehicle _x} foreach units _x;deleteGroup _x;
+							}foreach _aGrp;
+					};
+
+	// CACHE MORTARS
+		if (!isnil "_eGrp") then
+					{
+							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
+										if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
+															{deleteVehicle _x} forEach (_crew);
+																if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
+																		{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+							}foreach _eGrp;};
+
+	// CACHE HELICOPTER TRANSPORT
+		if (!isnil "_fGrp") then
+					{
+							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2; _cargoGrp = _x select 3;
+										if (!alive _vehicle || {!alive _x} foreach _crew) then {_fGrps= _fGrps - 1;};
+															{deleteVehicle _x} forEach (_crew);
+																if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+																		{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+																		if (!isnil "_cargoGrp") then {
+																		{deleteVehicle _x} foreach units _cargoGrp;deleteGroup _cargoGrp;};
+
+							}foreach _fGrp;};
 
 
-// CACHE BOX
-						if (!isnil "_gGrp") then
-									{
-											{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-														if (!alive _vehicle) then {_gGrps = _gGrps - 1;};
-																				if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
-											}foreach _gGrp;};
+	// CACHE BOX
+							if (!isnil "_gGrp") then
+										{
+												{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
+															if (!alive _vehicle) then {_gGrps = _gGrps - 1;};
+																					if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
+												}foreach _gGrp;};
 
-_eosAct=false;
-if (_debug) then {hint "Zone Cached";};
+	_eosAct=false;
 };
-	if (triggeractivated _clear and triggeractivated _taken and !_civZone)exitwith
-			{ // IF ZONE CAPTURED BEGIN CHECKING FOR ENEMIES
+	if (triggeractivated _clear && !_civZone)exitwith {
 				_cGrps=0;_aGrps=0;_bGrps=0;_dGrps=0;_eGrps=0;_fGrps=0;_gGrps=0;
 				//Count Zone as clear and increase cleared count
-				while {triggeractivated _eosActivated AND !(getmarkercolor _mkr == "colorblack")} do
+				while {triggeractivated _eosActivated} do
 						{
-							if (!triggeractivated _clear) then {
-								if(getmarkercolor _mkr  != hostileColor)then{
+							if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
 									//Count Zone as clear and increase cleared count
 										["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
 										_mkr setmarkercolor hostileColor;
 										_mkr setmarkerAlpha _mAH;
-										if (_debug) then { hint "Zone Lost";};
-									};
 							} else {
 								if(getmarkercolor _mkr  != VictoryColor)then{
 									["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
@@ -322,7 +306,6 @@ if (_debug) then {hint "Zone Cached";};
 									};
 									_mkr setmarkercolor VictoryColor;
 									_mkr setmarkerAlpha _mAN;
-									if (_debug) then { hint "Zone Captured";};
 								};
 						};
 				sleep 1;
@@ -333,7 +316,7 @@ if (_debug) then {hint "Zone Cached";};
 			sleep 5;
 			};
 
-deletevehicle _clear;deletevehicle _taken;
+deletevehicle _clear;
 { if (side _x == _side) then { deletevehicle _x} } forEach list _eosActivated;
 
 if (!(getmarkercolor _mkr == "colorblack")) then {
