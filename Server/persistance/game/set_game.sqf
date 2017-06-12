@@ -12,3 +12,5 @@ C1 setpos (((_this select 2) select 0) select 0);
 C1 setdir (((_this select 2) select 0) select 1);
 C2 setpos (((_this select 2) select 1) select 0);
 C2 setdir (((_this select 2) select 1) select 1);
+C3 setpos (((_this select 2) select 2) select 0);
+C3 setdir (((_this select 2) select 2) select 1);
