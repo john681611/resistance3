@@ -200,13 +200,13 @@ sleep 0.25;
 			_clear setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
 			_clear setTriggerStatements ["count thislist <= 3 AND ('LandVehicle' countType thislist)-('StaticWeapon' countType thislist) == 0","",""];
 			_eosAct=true;
-			_delay = 5;
+			_delay = 300;
 while {_eosAct} do {
 	// IF PLAYER LEAVES THE AREA OR ZONE DEACTIVATED
 	if (!triggeractivated _eosActivated) then {
 		_delay = _delay -5;
 	} else {
-		_delay = 5;
+		_delay = 300;
 	};
 
 	if (_delay <= 0) then	{
