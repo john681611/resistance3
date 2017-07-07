@@ -28,22 +28,22 @@ waitUntil {ztowninit==1};
 {
 _sel = _Hostiles select floor random count _Hostiles;
 //null=[["M1"],[HOUSE GROUPS,SIZE OF GROUPS,PROBABILITY],[PATROL GROUPS,SIZE OF GROUPS,PROBABILITY],[LIGHT VEHICLES,SIZE OF CARGO,PROBABILITY],[ARMOURED VEHICLES,PROBABILITY], [STATIC VEHICLES,PROBABILITY],[HELICOPTERS,SIZE OF HELICOPTER CARGO,PROBABILITY],[FACTION,MARKERTYPE,DISTANCE,SIDE,HEIGHTLIMIT,DEBUG]] call EOS_Spawn;
-[[_x],[2,1],[2,1],[1,0,50],[0],[0],[0,0],[1],[(_sel select 1),0,400,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[2,1],[2,1],[1,0,50],[0],[0],[0,0],[1],[(_sel select 1),0,200,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownt;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[3,2],[3,1],[2,2,75],[0,0],[0],[0,0],[2],[(_sel select 1),0,500,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[3,2],[3,1],[2,2,75],[0,0],[0],[0,0],[2],[(_sel select 1),0,300,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztowns;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[5,2],[4,2],[4,1],[1],[2],[1,1,20],[4],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[5,2],[4,2],[4,1],[1],[2],[1,1,20],[4],[(_sel select 1),0,400,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownm;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[8],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[8],[(_sel select 1),0,500,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownl;
 {
 _sel = _Hostiles select floor random count _Hostiles;
@@ -53,7 +53,7 @@ _sel = _Hostiles select floor random count _Hostiles;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[10,3],[6,3],[8,2],[4],[4],[3,2],[16],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[10,3],[6,3],[8,2],[4],[4],[3,2],[16],[(_sel select 1),0,700,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownc;
 
 customZone = {
