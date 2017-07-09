@@ -3,7 +3,7 @@
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 ztowninit = 0;
 CompZone = 0;
-saveName = "";//ENTER CUSTOM SERVER NAME HERE
+saveName = "Malden";//ENTER CUSTOM SERVER NAME HERE
 publicVariable "saveName";
 takenTowns = [];
 publicVariable "CompZone";

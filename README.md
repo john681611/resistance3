@@ -6,14 +6,14 @@ A persistent Capture the island Pub sever mission for Arma 3
 
 ## Why would I like it
 Like being a armed hobo like in those survival games? Do you also like team play and fighting a whole island of well armed troops?
-Then this may be for your chance to go from poorly armed resistance group to a disturbingly well armed load of hobos taking back Altis from the CSAT and AAF.
+Then this may be for your chance to go from poorly armed resistance group to a disturbingly well armed load of hobos taking back Malden from the CSAT and AAF.
 
 ## What you need?
 Just arma 3
 Though if you want there is support for Task force Arrowhead Radio (TFAR)
 
 ## Server Admin stuff
-This mission as current is persistant mission so its best to set the server up to run persistantly: 
+This mission as current is persistant mission so its best to set the server up to run persistantly:
 See [BIS WIki](https://community.bistudio.com/wiki/server.cfg) for info.
 
 Once all zones are taken the mission ends the next time you start the mission you will have a clean mission.
@@ -35,7 +35,5 @@ There are two player local saves. Their storage box and their loadout.
 At the moment the server saves using a generic name not unique to the server. This means players will loose their data if they play on a different server. A fix for this is planned.
 
 ## Where Can I find more information
-The boards by the plag in mission will give you some critical information. 
+The boards by the plag in mission will give you some critical information.
 Otherwise the main form is here [Wiki](https://github.com/john681611/co_36_resistance3.Altis/wiki)
-
-

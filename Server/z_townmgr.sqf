@@ -2,8 +2,8 @@ if (!isServer) exitWith {};
 _blacklist = [6405.69,12365.6,0];
 _towns=[];
  {
-_text =  getText (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "type");
-_pos = getArray (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "position");
+_text =  getText (configfile >> "CfgWorlds" >> "Malden" >> "Names">> (configName _x) >> "type");
+_pos = getArray (configfile >> "CfgWorlds" >> "Malden" >> "Names">> (configName _x) >> "position");
 /*diag_log format ["%1 == %2",(_pos select 1) toFixed 20, (_blacklist select 1) toFixed 20];
 diag_log (((_pos select 1) toFixed 0) == ((_blacklist select 1) toFixed 0));*/
 if(!(_pos in _blacklist)) then {
@@ -13,7 +13,7 @@ if(!(_pos in _blacklist)) then {
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Altis" >> "Names"));
+ } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter' AND getText (_x >> 'type') != 'VegetationBroadleaf' AND getText (_x >> 'type') != 'VegetationVineyard' AND getText (_x >> 'type') != 'ViewPoint'" configClasses (configfile >> "CfgWorlds" >> "Malden" >> "Names"));
 
 
 ztownt = [];
@@ -25,7 +25,7 @@ ztownTA = [];
 ztowna = [];
 ztownAll = [];
 //Extra areas
-_towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1,7336.12,21.7828]]];
+_towns = _towns + [["Airport",[8064.88,9743.97,0.00142097]]] + [["NameVillage",[8431.8,3813.95,0.00143909]]] + [["NameCity",[6094.51,10757.3,0.00144196]]] + [["NameLocal",[9357.88,3805.19,0.00143909]]];
 {
     _pos = (_x select 1);
 
