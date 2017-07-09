@@ -33,7 +33,7 @@ if (!_cache) then {
 		_eosActivated = createTrigger ["EmptyDetector",_mPos];
 		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE,50];
 		_eosActivated setTriggerActivation ["ANYPLAYER","PRESENT",true];
-		_eosActivated setTriggerTimeout [5, 5, 5, true];
+		_eosActivated setTriggerTimeout [1, 1, 1, true];
 		_eosActivated setTriggerStatements ["this", "", ""];
 
 
