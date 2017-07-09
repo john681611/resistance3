@@ -2559,6 +2559,7 @@ class Mission
 			};
 			id=204;
 			type="B_G_Van_01_transport_F";
+			atlOffset=-0.0017299652;
 		};
 		class Item28
 		{
@@ -2577,6 +2578,7 @@ class Mission
 			};
 			id=206;
 			type="B_G_Van_01_fuel_F";
+			atlOffset=-0.0046882629;
 		};
 		class Item29
 		{
@@ -2894,6 +2896,7 @@ class Mission
 			};
 			id=343;
 			type="B_G_Van_01_fuel_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item49
 		{
@@ -3487,7 +3490,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5159.9023,24.762333,1206.8552};
-				angles[]={-0,4.8228598,6.2751918};
+				angles[]={0,4.8228598,6.2751918};
 			};
 			side="Empty";
 			flags=4;
@@ -4460,6 +4463,7 @@ class Mission
 			};
 			id=549;
 			type="B_G_Offroad_01_repair_F";
+			atlOffset=-0.0051651001;
 		};
 		class Item67
 		{
