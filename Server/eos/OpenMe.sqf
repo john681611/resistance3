@@ -38,22 +38,22 @@ _sel = _Hostiles select floor random count _Hostiles;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[5,2],[4,2],[4,1],[1],[2],[1,1,20],[4],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[5,2],[4,2],[4,1],[1],[2],[1,1,20],[3],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownm;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[8],[(_sel select 1),0,700,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[4],[(_sel select 1),0,700,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownl;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[8],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[8,3],[8,2],[6,1],[2],[3],[2,1,40],[6],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztowna;
 
 {
 _sel = _Hostiles select floor random count _Hostiles;
-[[_x],[10,3],[6,3],[8,2],[4],[4],[3,2],[16],[(_sel select 1),0,900,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[10,3],[6,3],[8,2],[4],[4],[3,2],[8],[(_sel select 1),0,900,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownc;
 
 customZone = {
