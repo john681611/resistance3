@@ -29,6 +29,6 @@ _save = [[],[],[]];
     } forEach list Hotel_Zone;
     {
         (_save select 2) append [[(getpos _x),(getdir _x)]];
-    } forEach [C1,C2];
+    } forEach [C1,C2,C3];
 
 _save
