@@ -16,7 +16,7 @@ _tempArray=[];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
 	_crewPool=	["O_crew_F"];
 	_heliCrew=	["O_helicrew_F","O_helipilot_F"];
-	_boxPool = ["Box_East_Support_F","Box_East_WpsSpecial_F","O_supplyCrate_F"];
+	_boxPool = ["Box_East_Support_F","Box_East_WpsSpecial_F","O_supplyCrate_F","Box_East_WpsLaunch_F","Box_East_Wps_F","Box_CSAT_Equip_F","Box_NATO_Wps_F","Box_NATO_WpsSpecial_F","Box_NATO_WpsLaunch_F","Box_NATO_Support_F","C_supplyCrate_F","B_supplyCrate_F"];
 };
 // WEST NATO FACTION
 	if (_faction==1) then {
@@ -46,7 +46,7 @@ _tempArray=[];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
 	_crewPool=	["I_crew_F"];
 	_heliCrew=	["I_helicrew_F","I_helipilot_F"];
-	_boxPool = ["Box_IND_Support_F","Box_IND_WpsSpecial_F","I_supplyCrate_F","Box_Syndicate_Wps_F","Box_Syndicate_WpsLaunch_F","Box_GEN_Equip_F"];
+	_boxPool = ["Box_IND_Support_F","Box_IND_WpsSpecial_F","I_supplyCrate_F","Box_IND_Wps_F","Box_AAF_Equip_F","Box_Syndicate_Wps_F","Box_Syndicate_WpsLaunch_F","Box_GEN_Equip_F","Box_NATO_Wps_F","Box_NATO_WpsSpecial_F","Box_NATO_WpsLaunch_F","Box_NATO_Support_F","C_supplyCrate_F","B_supplyCrate_F"];
 };
 // CIVILIAN
 	if (_faction==3) then {
@@ -89,7 +89,7 @@ _tempArray=[];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
 	_crewPool=	["O_crew_F"];
 	_heliCrew=	["O_helicrew_F","O_helipilot_F"];
-	_boxPool = ["Box_East_WpsLaunch_F","Box_East_WpsSpecial_F"];
+	_boxPool = ["Box_East_Support_F","Box_East_WpsSpecial_F","O_supplyCrate_F","Box_East_WpsLaunch_F","Box_East_Wps_F","Box_CSAT_Equip_F","Box_T_NATO_Wps_F","Box_T_NATO_WpsSpecial_F","Box_NATO_Equip_F","C_T_supplyCrate_F","Box_NATO_Uniforms_F"];
 	};
 
 // EAST CSAT SPECOPS UNITS
@@ -105,7 +105,7 @@ _tempArray=[];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
 	_crewPool=	["O_crew_F"];
 	_heliCrew=	["O_helicrew_F","O_helipilot_F"];
-	_boxPool = ["Box_NATO_Wps_F","Box_NATO_WpsSpecial_F","Box_NATO_WpsLaunch_F","C_supplyCrate_F","Box_NATO_Uniforms_F"];
+	_boxPool = ["Box_NATO_Wps_F","Box_T_NATO_Wps_F","Box_NATO_WpsSpecial_F","Box_T_NATO_WpsSpecial_F","Box_NATO_WpsLaunch_F","Box_NATO_Equip_F","Box_NATO_Support_F","C_supplyCrate_F","C_T_supplyCrate_F","B_supplyCrate_F","Box_NATO_Uniforms_F"];
 	};
 
 	// EAST TANOA CSAT FACTION
@@ -121,7 +121,7 @@ _tempArray=[];
 		_diverPool=	["O_T_diver_exp_F","O_T_diver_F","O_T_diver_TL_F"];
 		_crewPool=	["O_T_crew_F"];
 		_heliCrew=	["O_T_helicrew_F","O_T_helipilot_F"];
-		_boxPool = ["Box_East_Support_F","Box_T_East_WpsSpecial_F","C_T_supplyCrate_F"];
+		_boxPool = ["Box_T_East_WpsSpecial_F","Box_T_East_Wps_F","Box_East_Support_F","O_supplyCrate_F","Box_East_WpsLaunch_F","Box_CSAT_Equip_F","Box_T_NATO_Wps_F","Box_T_NATO_WpsSpecial_F","Box_NATO_Equip_F","C_T_supplyCrate_F","Box_NATO_Uniforms_F"];
 	};
 
 //TESTING
