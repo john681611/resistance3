@@ -60,13 +60,14 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_01",
 	"A3_Supplies_F_Heli_Slingload",
 	"A3_Structures_F_EPC_Civ_Accessories",
+	"A3_Structures_F_Argo",
 	"A3_Supplies_F_Exp_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=24;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -223,6 +224,13 @@ class AddonsMetaData
 		};
 		class Item22
 		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item23
+		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
@@ -232,9 +240,17 @@ class AddonsMetaData
 };
 class DynamicSimulation
 {
+	saturateByObjectDistance=0;
 	class EnableRadiuses
 	{
-		Group=700;
+		Prop=1500;
+		EmptyVehicle=1500;
+		Vehicle=2000;
+		Group=1500;
+	};
+	class EnableRadiuseCoefs
+	{
+		IsMoving=1.5;
 	};
 };
 randomSeed=11149701;
@@ -257,9 +273,10 @@ class ScenarioData
 	wreckLimit=50;
 	wreckRemovalMinTime=3600;
 	wreckRemovalMaxTime=3600;
-	corpseManagerMode=3;
+	corpseManagerMode=1;
 	corpseLimit=300;
 	corpseRemovalMinTime=3600;
+	minPlayerDistance=500;
 };
 class CustomAttributes
 {
@@ -523,7 +540,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance V3.27";
+		briefingName="Resistance V3.28";
 		overviewText="Resistance - The FIA resistance group attempts to liberate Altis from a CSAT occupation force.";
 		resistanceWest=0;
 		resistanceEast=1;
