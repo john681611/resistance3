@@ -5,6 +5,7 @@
 "Teleport is available at the flag.",
 "Excess Gear can be stored at the storage Terminals (looks like ATM's at base)",
 "Check the 'Mission Brief' for more information.",
+"For performance Dynamic simulation is on ranging from 1.5k to 3k, damage is done but it will not take affect untill activation.",
 "",
 "Please follow the server rules:",
 "1: No WEAPON or UNIFORM mods, please make sure to use standard equipment.",
