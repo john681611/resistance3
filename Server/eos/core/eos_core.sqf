@@ -308,7 +308,7 @@ while {_eosAct} do {
 									_mkr setmarkerAlpha _mAN;
 								};
 						};
-				sleep 1;
+				sleep 10;
 				};
 // PLAYER LEFT ZONE
 			_eosAct=false;
