@@ -17,7 +17,7 @@ _grpSize=_r+_grpMin;
 
 	_grp=createGroup _side;
 for "_x" from 1 to _grpSize do {
-		_unitType=_pool select (floor random[0,(count _pool),0]);
+		_unitType= selectRandomWeighted _pool;
 		_unit = _grp createUnit [_unitType, _pos, [], 6, "FORM"];
 	if(_this select 4) then {
 			[_unit] call eos_fnc_rockFix

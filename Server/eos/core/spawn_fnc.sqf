@@ -9,7 +9,9 @@ eos_fnc_setcargo = compile preprocessfile "Server\eos\functions\cargo_fnc.sqf";
 eos_fnc_taskpatrol= compile preprocessfile "Server\eos\functions\shk_patrol.sqf";
 call compile preprocessfile "Server\SHK_pos\shk_pos_init.sqf";
 shk_fnc_fillhouse = compile preprocessFileLineNumbers "Server\eos\Functions\SHK_buildingpos.sqf";
+eos_fnc_setCrewedUnit = compile preprocessfilelinenumbers "Server\eos\Functions\setCrewedUnit.sqf";
 eos_fnc_getunitpool= compile preprocessfilelinenumbers "Server\eos\UnitPools.sqf";
+
 
 EOS_Deactivate = {
 	private ["_mkr"];
