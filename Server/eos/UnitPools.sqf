@@ -52,7 +52,7 @@ switch (_faction) do {
 		_crewPool=	["I_crew_F",.5];
 		_heliCrew=	["I_helicrew_F",.5,"I_helipilot_F",.5];
 		_boxPool = ["Box_IND_Ammo_F",.7,"Box_IND_Support_F",.2,"Box_IND_WpsSpecial_F",.3,"I_supplyCrate_F",.2,"Box_IND_Wps_F",.5,"Box_AAF_Equip_F",.2,
-		"Box_Syndicate_Ammo_F",.4,"Box_Syndicate_Wps_F",.3,"Box_Syndicate_WpsLaunch_F",.5,"Box_GEN_Equip_F",.3,"Box_NATO_Wps_F",.2,"Box_NATO_WpsSpecial_F",.1,"Box_NATO_WpsLaunch_F",.2,
+		"Box_NATO_Wps_F",.2,"Box_NATO_WpsSpecial_F",.1,"Box_NATO_WpsLaunch_F",.2,
 		"Box_NATO_Support_F",.1,"C_supplyCrate_F",.1,"B_supplyCrate_F",.1];
 	};
 	// CIVILIAN
@@ -69,19 +69,20 @@ switch (_faction) do {
 		_crewPool=	["C_man_1",.5];
 		_heliCrew=	["C_man_1",.5,"C_man_1",.5];
 	};
-	// WEST FIA FACTION
+	// INDEPENDENT SYNDIKAT FACTION
 	case 4 : {
 		_InfPool=	["B_G_engineer_F",.5,"B_G_medic_F",.5,"B_G_officer_F",.5,"B_G_Soldier_A_F",.5,"B_G_Soldier_AR_F",.5,"B_G_Soldier_exp_F",.5,"B_G_Soldier_F",.5,"B_G_Soldier_GL_F",.5,"B_G_Soldier_LAT_F",.5,"B_G_Soldier_lite_F",.5,"B_G_Soldier_M_F",.5,"B_G_Soldier_SL_F",.5,"B_G_Soldier_TL_F",.5];
-		_ArmPool=	[];
-		_MotPool=	["B_G_Offroad_01_F",.5,"B_G_Offroad_01_armed_F",.5,"B_G_Van_01_transport_F",.5,"B_G_Van_01_fuel_F",.5];
-		_ACHPool=	[];
-		_CHPool=	[];
+		_ArmPool=	["I_G_Offroad_01_armed_F",0.5];
+		_MotPool=	["I_G_Offroad_01_repair_F",.3,"I_C_Offroad_02_unarmed_F",.5,"I_C_Van_01_transport_F",.5,"I_C_Van_02_vehicle_F",.5,"I_C_Van_02_transport_F",.5];
+		_ACHPool=	["I_C_Heli_Light_01_civil_F",.5,"I_C_Plane_Civil_01_F",.3];
+		_CHPool=	["I_C_Heli_Light_01_civil_F",.5];
 		_uavPool=	[];
 		_stPool=	["B_G_Mortar_01_F",.5];
-		_shipPool=	["B_G_Boat_Transport_01_F",.5];
-		_diverPool=	[];
-		_crewPool=	[];
-		_heliCrew=	[];
+		_shipPool=	["I_C_Boat_Transport_02_F",.5,"I_C_Boat_Transport_01_F",.5];
+		_diverPool=	["I_C_Soldier_Bandit_7_F",.5];
+		_crewPool=	["I_C_Soldier_Para_7_F",.5];
+		_heliCrew=	["I_C_Helipilot_F",.5,"I_C_Pilot_F",.5];
+		_boxPool = ["Box_Syndicate_Ammo_F",.4,"Box_Syndicate_Wps_F",.3,"Box_Syndicate_WpsLaunch_F",.5,"Box_GEN_Equip_F",.3];
 	};
 	// EAST CSAT URBAN UNITS
 	case 5 : {
