@@ -5,7 +5,7 @@ to_Base =
 private ["_Location"];
  _Location = _this select 0;
     _unit = player;
-    _unit setpos (_Location findEmptyPosition [5,80]);
+    _unit setpos (_Location findEmptyPosition [2,80]);
     _unit setDamage 0;
     _unit setFatigue 0;
     _unit allowDamage false;
@@ -13,27 +13,25 @@ private ["_Location"];
     _unit allowDamage true;
  };
 
-
+ to_Boat =
+  {
+ private ["_vehicle"];
+  _vehicle = _this select 9 select 0;
+     _unit = player;
+     _unit moveinAny _vehicle;
+     _unit setDamage 0;
+     _unit setFatigue 0;
+     _unit allowDamage false;
+     sleep 5;
+     _unit allowDamage true;
+  };
  _missionsData  = [
-  [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
-  [getMarkerPos "respawn_west_Hotel",to_Base,"Hotel Base","To Hotel Base","","",1,[getMarkerPos "respawn_west_Hotel"]],
-	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]],
-	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]]
+  [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[]],
+  [getMarkerPos "respawn_camp",to_Base,"Lighthouse","To Lighthouse","","",1,[]],
+	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[]],
+	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[]],
+  [getMarkerPos "MHQ3",to_Boat,"RHIB MHQ","To RHIB MHQ","","",1,[C3]]
  ];
-
-/*Maybe Later
-_RSPPos = [west] call BIS_fnc_getRespawnMarkers;
-{
-if (_x != "respawn_west" AND  _x != "respawn_vehicle_west" AND _x !="respawn_west_MHQ" AND _x !="respawn_west_MHQ2" AND _x != "respawn_west_Hotel") then {
-_pos = getMarkerPos _x;
-_Temp =  [[_pos,to_Base,"Camp","To Camp","","",1,[_pos]]];
-_missionsData  = _missionsData + _Temp;
-};
-
-} foreach _RSPPos;
-*/
-
-
  disableserialization;
 
  _parentDisplay = [] call bis_fnc_displayMission;
