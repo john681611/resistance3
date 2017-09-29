@@ -10,6 +10,8 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	_vehPositions=[(_vehicleType select 0)] call BIS_fnc_vehicleRoles;
 	_vehicle = createVehicle [(_vehicleType select 0), _position, [], 0, _special];
 	_vehicle setVariable ["ResistVeh", true, false];
+	_vehicle triggerDynamicSimulation false;
+  _vehicle enableDynamicSimulation true;
 
 _vehCrew=[];
 
