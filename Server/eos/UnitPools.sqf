@@ -71,7 +71,7 @@ switch (_faction) do {
 	};
 	// INDEPENDENT SYNDIKAT FACTION
 	case 4 : {
-		_InfPool=	["B_G_engineer_F",.5,"B_G_medic_F",.5,"B_G_officer_F",.5,"B_G_Soldier_A_F",.5,"B_G_Soldier_AR_F",.5,"B_G_Soldier_exp_F",.5,"B_G_Soldier_F",.5,"B_G_Soldier_GL_F",.5,"B_G_Soldier_LAT_F",.5,"B_G_Soldier_lite_F",.5,"B_G_Soldier_M_F",.5,"B_G_Soldier_SL_F",.5,"B_G_Soldier_TL_F",.5];
+		_InfPool=	["I_C_Soldier_Para_8_F",.5,"I_C_Soldier_Bandit_1_F",.5,"I_C_Soldier_Bandit_7_F",.5,"I_C_Soldier_Bandit_3_F",.5,"I_C_Soldier_Para_4_F",.5,"I_C_Soldier_Bandit_8_F",.5,"I_C_Soldier_Para_1_F",.5,"I_C_Soldier_Para_6_F",.5,"I_C_Soldier_Para_5_F",.5,"I_C_Soldier_Bandit_2_F",.5,"I_C_Soldier_Bandit_4_F",.5,"I_C_Helipilot_F",.5,"I_C_Soldier_Para_3_F",.5];
 		_ArmPool=	["I_G_Offroad_01_armed_F",0.5];
 		_MotPool=	["I_G_Offroad_01_repair_F",.3,"I_C_Offroad_02_unarmed_F",.5,"I_C_Van_01_transport_F",.5,"I_C_Van_02_vehicle_F",.5,"I_C_Van_02_transport_F",.5];
 		_ACHPool=	["I_C_Heli_Light_01_civil_F",.5,"I_C_Plane_Civil_01_F",.3];
