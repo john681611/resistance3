@@ -10,8 +10,6 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	_vehPositions=[(_vehicleType select 0)] call BIS_fnc_vehicleRoles;
 	_vehicle = createVehicle [(_vehicleType select 0), _position, [], 0, _special];
 	_vehicle setVariable ["ResistVeh", true, false];
-	_vehicle triggerDynamicSimulation false;
-  _vehicle enableDynamicSimulation true;
 
 _vehCrew=[];
 
@@ -21,6 +19,8 @@ _vehCrew=[];
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
 			_unit assignAsDriver _vehicle;
 			_unit moveInDriver _vehicle;
+			_unit triggerDynamicSimulation false;
+			_unit enableDynamicSimulation true;
 			_vehCrew set [count _vehCrew,_unit];
 			};
 
@@ -28,6 +28,8 @@ _vehCrew=[];
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
 			_unit assignAsGunner _vehicle;
 			_unit MoveInTurret [_vehicle,_currentPosition select 1];
+			_unit triggerDynamicSimulation false;
+			_unit enableDynamicSimulation true;
 			_vehCrew set [count _vehCrew,_unit];
 			};
 
