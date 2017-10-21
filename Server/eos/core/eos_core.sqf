@@ -214,7 +214,7 @@ while {sleep 5; _eosAct} do {
 							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
 										if (!alive _vehicle || {!alive _x} foreach _crew) then { _cGrps= _cGrps - 1;};
 													{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+															if (!(vehicle player == _vehicle) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
 																				{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
 							}foreach _cGrp;
 		if (_debug) then {diag_log format ["ID:c%1",_cGrps];};};
@@ -224,7 +224,7 @@ while {sleep 5; _eosAct} do {
 							{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
 										if (!alive _vehicle || {!alive _x} foreach _crew) then {_dGrps= _dGrps - 1;};
 													{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+															if (!(vehicle player == _vehicle) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
 																				{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
 							}foreach _dGrp;
 			if (_debug) then {diag_log format ["ID:c%1",_dGrps];
@@ -271,7 +271,7 @@ while {sleep 5; _eosAct} do {
 				_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2; _cargoGrp = _x select 3;
 				if (!alive _vehicle || {!alive _x} foreach _crew) then {_fGrps= _fGrps - 1;};
 				{deleteVehicle _x} forEach (_crew);
-				if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+				if (!(vehicle player == _vehicle) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
 				{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
 				if (!isnil "_cargoGrp") then {{deleteVehicle _x} foreach units _cargoGrp;deleteGroup _cargoGrp;};
 			}foreach _fGrp;
