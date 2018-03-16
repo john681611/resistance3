@@ -72,7 +72,7 @@ switch (_faction) do {
 	// INDEPENDENT SYNDIKAT FACTION
 	case 4 : {
 		_InfPool=	["I_C_Soldier_Para_8_F",.5,"I_C_Soldier_Bandit_1_F",.5,"I_C_Soldier_Bandit_7_F",.5,"I_C_Soldier_Bandit_3_F",.5,"I_C_Soldier_Para_4_F",.5,"I_C_Soldier_Bandit_8_F",.5,"I_C_Soldier_Para_1_F",.5,"I_C_Soldier_Para_6_F",.5,"I_C_Soldier_Para_5_F",.5,"I_C_Soldier_Bandit_2_F",.5,"I_C_Soldier_Bandit_4_F",.5,"I_C_Helipilot_F",.5,"I_C_Soldier_Para_3_F",.5];
-		_ArmPool=	["I_G_Offroad_01_armed_F",0.5];
+		_ArmPool=	["I_G_Offroad_01_armed_F",.5];
 		_MotPool=	["I_G_Offroad_01_repair_F",.3,"I_C_Offroad_02_unarmed_F",.5,"I_C_Van_01_transport_F",.5,"I_C_Van_02_vehicle_F",.5,"I_C_Van_02_transport_F",.5,"I_G_Offroad_01_AT_F",.3,"I_C_Offroad_02_AT_F",.3,"I_C_Offroad_02_LMG_F",.5];
 		_ACHPool=	["I_C_Heli_Light_01_civil_F",.5,"I_C_Plane_Civil_01_F",.3];
 		_CHPool=	["I_C_Heli_Light_01_civil_F",.5];
@@ -136,7 +136,7 @@ switch (_faction) do {
 		_diverPool=	["O_T_diver_exp_F",.3,"O_T_diver_F",.7,"O_T_diver_TL_F",.3];
 		_crewPool=	["O_T_crew_F",.5];
 		_heliCrew=	["O_T_helicrew_F",.5,"O_T_helipilot_F",.5];
-		_boxPool = ["Box_T_East_Ammo_F",.7,"Box_T_East_WpsSpecial_F",.3,"Box_T_East_Wps_F",.5,"Box_East_Support_F",.2,"O_supplyCrate_F",2,"Box_East_WpsLaunch_F",.6,"Box_CSAT_Equip_F",.2,
+		_boxPool = ["Box_T_East_Ammo_F",.7,"Box_T_East_WpsSpecial_F",.3,"Box_T_East_Wps_F",.5,"Box_East_Support_F",.2,"O_supplyCrate_F",.2,"Box_East_WpsLaunch_F",.6,"Box_CSAT_Equip_F",.2,
 		"Box_T_NATO_Wps_F",.2,"Box_T_NATO_WpsSpecial_F",.1,"Box_NATO_Equip_F",.1,"C_T_supplyCrate_F",.1,"Box_NATO_Uniforms_F",.1];
 	};
 
