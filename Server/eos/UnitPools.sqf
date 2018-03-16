@@ -7,8 +7,8 @@ switch (_faction) do {
 	// EAST CSAT FACTION
 	case 0 :{
 		_InfPool=	["O_Soldier_F",.7,"O_Soldier_GL_F",.4,"O_Soldier_LAT_F",.4,"O_medic_F",.5,"O_Soldier_AR_F",.4,"O_Soldier_TL_F",.3,"O_soldier_M_F",.2,"O_Soldier_AA_F",.2,
-		"O_Soldier_AT_F",.3,"O_Soldier_A_F",.2,"O_Soldier_SL_F",.2,"O_soldier_exp_F",.3,"O_engineer_F",.3,"O_HeavyGunner_F",.2,"O_Sharpshooter_F",.2,"O_officer_F",.1,"O_sniper_F",.1,"O_spotter_F",.1,"O_soldier_mine_F",.1];
-		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.8,"O_APC_Tracked_02_cannon_F",.4,"O_APC_Tracked_02_AA_F",.2,"O_MBT_02_cannon_F",.3,"O_MBT_02_arty_F",.3];
+		"O_Soldier_AT_F",.3,"O_Soldier_HAT_F",.3,"O_Soldier_A_F",.2,"O_Soldier_SL_F",.2,"O_soldier_exp_F",.3,"O_engineer_F",.3,"O_HeavyGunner_F",.2,"O_Sharpshooter_F",.2,"O_officer_F",.1,"O_sniper_F",.1,"O_spotter_F",.1,"O_soldier_mine_F",.1];
+		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.8,"O_APC_Tracked_02_cannon_F",.4,"O_APC_Tracked_02_AA_F",.2,"O_MBT_02_cannon_F",.3,"O_MBT_04_cannon_F",.3,"O_MBT_02_arty_F",.3,"O_MBT_04_command_F",.2];
 		_MotPool=	["O_Truck_03_covered_F",.3,"O_Truck_03_transport_F",.3,"O_Truck_03_medical_F",.3,"O_MRAP_02_F",.5,"O_MRAP_02_hmg_F",.6,"O_MRAP_02_gmg_F",.4];
 		_ACHPool=	["O_Heli_Attack_02_black_F",.5,"O_Heli_Attack_02_F",.5,"O_Plane_CAS_02_F",.5,"O_Plane_Fighter_02_F",.3];
 		_CHPool=	["O_Heli_Light_02_unarmed_F",.7,"O_Heli_Transport_04_bench_F",.5,"O_Heli_Light_02_F",.3];
@@ -38,11 +38,11 @@ switch (_faction) do {
 	};
 	// INDEPENDENT AAF FACTION
 	case 2 :{
-		_InfPool=	["I_Soldier_F",.7,"I_Soldier_GL_F",.4,"I_Soldier_AR_F",.4,"I_medic_F",.5,"I_Soldier_LAT_F",.4,"I_Soldier_TL_F",.3,"I_Soldier_AT_F",.3,"I_Soldier_AA_F",.2,"I_Soldier_SL_F",.2,"I_Soldier_M_F",.2,
+		_InfPool=	["I_Soldier_F",.7,"I_Soldier_GL_F",.4,"I_Soldier_AR_F",.4,"I_medic_F",.5,"I_Soldier_LAT_F",.4,"I_Soldier_LAT2_F",.4,"I_Soldier_TL_F",.3,"I_Soldier_AT_F",.3,"I_Soldier_AA_F",.2,"I_Soldier_SL_F",.2,"I_Soldier_M_F",.2,
 		"I_Soldier_repair_F",.3,"I_Soldier_exp_F",.3,"I_officer_F",.1,"I_Spotter_F",.1,"I_Sniper_F",.1,"I_soldier_mine_F",.1];
-		_ArmPool=	["I_APC_Wheeled_03_cannon_F",.7,"I_APC_tracked_03_cannon_F",.3,"I_MBT_03_cannon_F",.3];
+		_ArmPool=	["I_APC_Wheeled_03_cannon_F",.5,"I_APC_tracked_03_cannon_F",.3,"I_MBT_03_cannon_F",.3,"I_LT_01_AA_F",.5,"I_LT_01_AT_F",.5,"I_LT_01_scout_F",.4,"I_LT_01_cannon_F",.3];
 		_MotPool=	["I_Truck_02_covered_F",.3,"I_Truck_02_transport_F",.3,"I_Truck_02_medical_F",.3,"I_Truck_02_ammo_F",.2,"I_Truck_02_fuel_F",.2,
-		"I_Truck_02_box_F",.1,"I_MRAP_03_F",.3,"I_MRAP_03_gmg_F",.4,"I_MRAP_03_hmg_F",.6];
+		"I_Truck_02_box_F",.1,"I_MRAP_03_F",.3,"I_MRAP_03_gmg_F",.4,"I_MRAP_03_hmg_F",.6,"I_Truck_02_MRL_F",.2];
 		_ACHPool=	["I_Heli_light_03_F",.7,"I_Plane_Fighter_04_Cluster_F",.3,"I_Plane_Fighter_03_CAS_F",.5];
 		_CHPool=	["I_Heli_light_03_unarmed_F",.7,"I_Heli_Transport_02_F",.3];
 		_uavPool=	["I_UAV_01_F",.7,"I_UAV_02_CAS_F",.3,"I_UGV_01_rcws_F",.5];
@@ -73,7 +73,7 @@ switch (_faction) do {
 	case 4 : {
 		_InfPool=	["I_C_Soldier_Para_8_F",.5,"I_C_Soldier_Bandit_1_F",.5,"I_C_Soldier_Bandit_7_F",.5,"I_C_Soldier_Bandit_3_F",.5,"I_C_Soldier_Para_4_F",.5,"I_C_Soldier_Bandit_8_F",.5,"I_C_Soldier_Para_1_F",.5,"I_C_Soldier_Para_6_F",.5,"I_C_Soldier_Para_5_F",.5,"I_C_Soldier_Bandit_2_F",.5,"I_C_Soldier_Bandit_4_F",.5,"I_C_Helipilot_F",.5,"I_C_Soldier_Para_3_F",.5];
 		_ArmPool=	["I_G_Offroad_01_armed_F",0.5];
-		_MotPool=	["I_G_Offroad_01_repair_F",.3,"I_C_Offroad_02_unarmed_F",.5,"I_C_Van_01_transport_F",.5,"I_C_Van_02_vehicle_F",.5,"I_C_Van_02_transport_F",.5];
+		_MotPool=	["I_G_Offroad_01_repair_F",.3,"I_C_Offroad_02_unarmed_F",.5,"I_C_Van_01_transport_F",.5,"I_C_Van_02_vehicle_F",.5,"I_C_Van_02_transport_F",.5,"I_G_Offroad_01_AT_F",.3,"I_C_Offroad_02_AT_F",.3,"I_C_Offroad_02_LMG_F",.5];
 		_ACHPool=	["I_C_Heli_Light_01_civil_F",.5,"I_C_Plane_Civil_01_F",.3];
 		_CHPool=	["I_C_Heli_Light_01_civil_F",.5];
 		_uavPool=	[];
@@ -88,7 +88,7 @@ switch (_faction) do {
 	case 5 : {
 		_InfPool=	["O_soldierU_F",.7,"O_SoldierU_GL_F",.4,"O_soldierU_LAT_F",.4,"O_soldierU_AR_F",.4,"O_soldierU_medic_F",.5,"O_soldierU_TL_F",.3,"O_soldierU_AT_F",.3,"O_soldierU_AA_F",.3,
 		"O_SoldierU_SL_F",.2,"O_soldierU_M_F",.2,"O_Urban_HeavyGunner_F",.2,"O_Urban_Sharpshooter_F",.2];
-		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.8,"O_APC_Tracked_02_cannon_F",.3,"O_APC_Tracked_02_AA_F",.2,"O_MBT_02_cannon_F",.3,"O_MBT_02_arty_F",.3];
+		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.8,"O_APC_Tracked_02_cannon_F",.3,"O_APC_Tracked_02_AA_F",.2,"O_MBT_02_cannon_F",.3,"O_MBT_04_cannon_F",.3,"O_MBT_02_arty_F",.3,"O_MBT_04_command_F",.2];
 		_MotPool=	["O_Truck_03_covered_F",.3,"O_Truck_03_transport_F",.3,"O_Truck_03_medical_F",.2,"O_Truck_03_ammo_F",.2,"O_Truck_03_fuel_F",.2,"O_Truck_03_box_F",.1,"O_MRAP_02_F",.3,
 		"O_MRAP_02_hmg_F",.6,"O_MRAP_02_gmg_F",.3];
 		_ACHPool=	["O_Heli_Attack_02_black_F",.5,"O_Heli_Attack_02_F",.5,"O_Plane_CAS_02_F",.3];
@@ -107,8 +107,8 @@ switch (_faction) do {
 	case 6 :{
 		_InfPool=	["O_recon_F",.5,"O_recon_LAT_F",.3,"O_recon_M_F",.2,"O_recon_medic_F",.5,"O_recon_TL_F",.3,"O_recon_JTAC_F",.2,"O_recon_exp_F",.3,"O_Pathfinder_F",.1,"O_V_Soldier_Exp_hex_F",.2,
 		"O_V_Soldier_hex_F",.2,"O_V_Soldier_JTAC_hex_F",.1,"O_V_Soldier_LAT_hex_F",.2,"O_V_Soldier_M_hex_F",.1,"O_V_Soldier_Medic_hex_F",.2,"O_V_Soldier_TL_hex_F",.1,"O_V_Soldier_Viper_hex_F",.2];
-		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.7,"O_APC_Tracked_02_cannon_F",.3,"O_APC_Tracked_02_AA_F",.1,"O_MBT_02_cannon_F",.3];
-		_MotPool=	["O_Truck_03_covered_F",.2,"O_Truck_03_transport_F",.2,"O_LSV_02_armed_F",.5,"O_LSV_02_unarmed_F",.5,"O_Truck_03_medical_F",.2,"O_Truck_03_ammo_F",.2,"O_Truck_03_fuel_F",.2,"O_Truck_03_box_F",.2];
+		_ArmPool=	["O_APC_Wheeled_02_rcws_F",.7,"O_APC_Tracked_02_cannon_F",.3,"O_APC_Tracked_02_AA_F",.1,"O_MBT_02_cannon_F",.3,"O_MBT_04_cannon_F",.3,"O_MBT_02_arty_F",.3,"O_MBT_04_command_F",.2];
+		_MotPool=	["O_Truck_03_covered_F",.2,"O_Truck_03_transport_F",.2,"O_LSV_02_armed_F",.5,"O_LSV_02_unarmed_F",.5,"O_LSV_02_AT_F",.3,"O_Truck_03_medical_F",.2,"O_Truck_03_ammo_F",.2,"O_Truck_03_fuel_F",.2,"O_Truck_03_box_F",.2];
 		_ACHPool=	["O_Heli_Attack_02_black_F",.5,"O_Heli_Attack_02_F",.5,"O_Plane_CAS_02_F",.3];
 		_CHPool=	["O_Heli_Light_02_F",.5,"O_Heli_Light_02_unarmed_F",.5];
 		_uavPool=	["O_UAV_01_F",.7,"O_UAV_02_CAS_F",.3,"O_UGV_01_rcws_F",.3];
@@ -124,8 +124,8 @@ switch (_faction) do {
 	// EAST TANOA CSAT FACTION
 	case 7 :{
 		_InfPool=	["O_T_Soldier_F",.7,"O_T_Soldier_GL_F",.4,"O_T_Soldier_LAT_F",.4,"O_T_medic_F",.5,"O_T_Soldier_AR_F",.4,"O_T_Soldier_TL_F",.3,"O_T_soldier_M_F",.2,"O_T_Soldier_AA_F",.3,
-		"O_T_Soldier_AT_F",.3,"O_T_Soldier_A_F",.2,"O_T_Soldier_SL_F",.2,"O_T_soldier_exp_F",.3,"O_T_engineer_F",.3,"O_T_officer_F",.1,"O_T_sniper_F",.1,"O_T_spotter_F",.1,"O_T_soldier_mine_F",.1];
-		_ArmPool=	["O_T_APC_Wheeled_02_rcws_ghex_F",.7,"O_T_APC_Tracked_02_cannon_ghex_F",.3,"O_T_APC_Tracked_02_AA_ghex_F",.1,"O_T_MBT_02_cannon_ghex_F",.2,"O_T_MBT_02_arty_ghex_F",.2];
+		"O_T_Soldier_AT_F",.3,"O_T_Soldier_HAT_F",.3,"O_T_Soldier_A_F",.2,"O_T_Soldier_SL_F",.2,"O_T_soldier_exp_F",.3,"O_T_engineer_F",.3,"O_T_officer_F",.1,"O_T_sniper_F",.1,"O_T_spotter_F",.1,"O_T_soldier_mine_F",.1];
+		_ArmPool=	["O_T_APC_Wheeled_02_rcws_ghex_F",.7,"O_T_APC_Tracked_02_cannon_ghex_F",.3,"O_T_APC_Tracked_02_AA_ghex_F",.1,"O_T_MBT_02_cannon_ghex_F",.2,"O_T_MBT_04_cannon_F",.2,"O_T_MBT_02_arty_ghex_F",.2,"O_T_MBT_04_command_F",.1];
 		_MotPool=	["O_T_Truck_03_covered_ghex_F",.3,"O_T_Truck_03_transport_ghex_F",.3,"O_T_Truck_03_medical_ghex_F",.3,"O_T_Truck_03_ammo_ghex_F",.3,
 		"O_T_Truck_03_fuel_ghex_F",.3,"O_T_Truck_03_repair_ghex_F",.3,"O_T_LSV_02_unarmed_F",.5,"O_T_LSV_02_armed_F",.7,"O_T_MRAP_02_ghex_F",.5,"O_T_MRAP_02_hmg_ghex_F",.6,"O_T_MRAP_02_gmg_ghex_F",.4];
 		_ACHPool=	["O_T_VTOL_02_vehicle_F",.5];
