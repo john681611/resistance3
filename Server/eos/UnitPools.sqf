@@ -99,7 +99,7 @@ switch (_faction) do {
 		_diverPool=	["O_diver_exp_F",.3,"O_diver_F",.7,"O_diver_TL_F",.3];
 		_crewPool=	["O_crew_F",.5];
 		_heliCrew=	["O_helicrew_F",.5,"O_helipilot_F",.5];
-		_boxPool = ["Box_East_Ammo_F",.7,"Box_East_Support_F",.2,"Box_East_WpsSpecial_F",35,"O_supplyCrate_F",.2,"Box_East_WpsLaunch_F",.6,"Box_East_Wps_F",.5,"Box_CSAT_Equip_F",.2,
+		_boxPool = ["Box_East_Ammo_F",.7,"Box_East_Support_F",.2,"Box_East_WpsSpecial_F",.3,"O_supplyCrate_F",.2,"Box_East_WpsLaunch_F",.6,"Box_East_Wps_F",.5,"Box_CSAT_Equip_F",.2,
 		"Box_T_NATO_Wps_F",.2,"Box_T_NATO_WpsSpecial_F",.1,"Box_NATO_Equip_F",.1,"C_T_supplyCrate_F",.1,"Box_NATO_Uniforms_F",.1];
 	};
 
