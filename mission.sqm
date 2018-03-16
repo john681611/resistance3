@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=630;
+		nextID=632;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6581.939,186.81461,19982.221};
-		dir[]={-0.84104103,-0.53306848,0.092422433};
-		up[]={-0.52989668,0.8460598,0.058231469};
-		aside[]={0.10923648,-3.814348e-007,0.99404269};
+		pos[]={14261.074,20.500681,13020.274};
+		dir[]={-0.79341674,-0.56157124,0.23479931};
+		up[]={-0.53848797,0.82742715,0.15935719};
+		aside[]={0.28376988,-2.2555469e-008,0.95889372};
 	};
 };
 binarizationWanted=0;
@@ -62,13 +62,14 @@ addons[]=
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Soft_F_Orange_Van_02"
+	"A3_Soft_F_Orange_Van_02",
+	"A3_Armor_F_Tank_AFV_Wheeled_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -241,6 +242,13 @@ class AddonsMetaData
 		{
 			className="A3_Soft_F_Orange";
 			name="Arma 3 Orange - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item25
+		{
+			className="A3_Armor_F_Tank";
+			name="Arma 3 Tank - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -568,7 +576,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=229;
+		items=231;
 		class Item0
 		{
 			dataType="Marker";
@@ -1191,7 +1199,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20909.809,17.922209,19303.627};
+				position[]={20908.127,17.977367,19302.945};
 				angles[]={0.0013372133,2.0054526,0.013332055};
 			};
 			side="Empty";
@@ -1204,15 +1212,15 @@ class Mission
 			};
 			id=60;
 			type="B_APC_Wheeled_01_cannon_F";
-			atlOffset=-0.076675415;
+			atlOffset=-1.5258789e-005;
 		};
 		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20906.215,17.941284,19296.043};
-				angles[]={6.2791886,2.0054526,0.015998369};
+				position[]={20905.547,18.127285,19298.783};
+				angles[]={6.2818484,2.0054526,0.015998369};
 			};
 			side="Empty";
 			flags=4;
@@ -1224,7 +1232,6 @@ class Mission
 			};
 			id=61;
 			type="B_MBT_01_TUSK_F";
-			atlOffset=-0.189188;
 		};
 		class Item40
 		{
@@ -8601,6 +8608,46 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item229
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8284.1162,77.379135,10104.987};
+				angles[]={0.2012385,2.5310256,0.043971907};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=630;
+			type="B_AFV_Wheeled_01_cannon_F";
+			atlOffset=0.0001373291;
+		};
+		class Item230
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14245.148,6.8756785,13023.246};
+				angles[]={0.050623242,1.5755775,6.253861};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=631;
+			type="B_AFV_Wheeled_01_up_cannon_F";
+			atlOffset=9.5844269e-005;
 		};
 	};
 	class Connections
