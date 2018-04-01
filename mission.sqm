@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22021.096,55.469852,21082.611};
-		dir[]={0.40770721,-0.75731045,-0.51015627};
-		up[]={0.47279313,0.6530531,-0.59159738};
-		aside[]={-0.78118169,1.2107193e-007,-0.62430525};
+		pos[]={22000.416,56.287544,21045.848};
+		dir[]={0.35809141,-0.60466611,0.71144605};
+		up[]={0.27185306,0.79647821,0.54010987};
+		aside[]={0.89323801,4.8195943e-008,-0.44959134};
 	};
 };
 binarizationWanted=0;
@@ -60,7 +60,6 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_01",
 	"A3_Supplies_F_Heli_Slingload",
 	"A3_Structures_F_EPC_Civ_Accessories",
-	"A3_Structures_F_Argo",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Soft_F_Orange_Van_02"
@@ -69,7 +68,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=25;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -226,26 +225,19 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="A3_Structures_F_Argo";
-			name="Arma 3 Malden - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item23
-		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item24
 		{
 			className="A3_Soft_F_Orange";
 			name="Arma 3 Orange - Unarmored Land Vehicles";
@@ -819,6 +811,7 @@ class Mission
 			};
 			id=40;
 			type="B_MRAP_01_hmg_F";
+			atlOffset=0.00018310547;
 		};
 		class Item19
 		{
@@ -878,6 +871,7 @@ class Mission
 			};
 			id=43;
 			type="B_MRAP_01_hmg_F";
+			atlOffset=0.00018310547;
 		};
 		class Item22
 		{
@@ -936,6 +930,7 @@ class Mission
 			};
 			id=46;
 			type="B_MRAP_01_hmg_F";
+			atlOffset=0.00018358231;
 		};
 		class Item25
 		{
@@ -993,7 +988,7 @@ class Mission
 			};
 			id=49;
 			type="B_MRAP_01_hmg_F";
-			atlOffset=-0.00015640259;
+			atlOffset=2.6702881e-005;
 		};
 		class Item28
 		{
@@ -3388,7 +3383,7 @@ class Mission
 			};
 			id=143;
 			type="Land_BagBunker_Tower_F";
-			atlOffset=0.099380493;
+			atlOffset=0.10116577;
 		};
 		class Item73
 		{
@@ -3864,7 +3859,7 @@ class Mission
 			};
 			id=163;
 			type="Land_BagBunker_Tower_F";
-			atlOffset=-1.5258789e-005;
+			atlOffset=0.0017700195;
 		};
 		class Item93
 		{
@@ -4425,7 +4420,7 @@ class Mission
 			};
 			id=204;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-0.0030059814;
+			atlOffset=-0.0028839111;
 		};
 		class Item121
 		{
@@ -4445,7 +4440,7 @@ class Mission
 			};
 			id=206;
 			type="B_G_Van_01_fuel_F";
-			atlOffset=-0.0050048828;
+			atlOffset=-0.0043182373;
 		};
 		class Item122
 		{
@@ -5035,8 +5030,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22003.217,32.630257,21056.268};
-				angles[]={6.2671871,4.712389,0.045302324};
+				position[]={22003.217,32.630329,21056.268};
+				angles[]={6.2671809,4.712389,0.045308746};
 			};
 			side="Empty";
 			flags=4;
@@ -5044,12 +5039,12 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
-				name="base2";
+				name="FLG2";
 				dynamicSimulation=1;
 			};
 			id=283;
 			type="Flag_FIA_F";
-			atlOffset=0.013925552;
+			atlOffset=0.013998032;
 		};
 		class Item140
 		{
@@ -5846,7 +5841,7 @@ class Mission
 			};
 			id=340;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-0.00045967102;
+			atlOffset=-0.0012207031;
 		};
 		class Item181
 		{
@@ -5884,7 +5879,7 @@ class Mission
 			};
 			id=343;
 			type="B_G_Van_01_fuel_F";
-			atlOffset=0.012296677;
+			atlOffset=0.012987137;
 		};
 		class Item183
 		{
@@ -9235,7 +9230,7 @@ class Mission
 			};
 			id=620;
 			type="B_G_Van_02_vehicle_F";
-			atlOffset=0.00051879883;
+			atlOffset=-0.0014190674;
 		};
 		class Item234
 		{
@@ -9274,7 +9269,7 @@ class Mission
 			};
 			id=622;
 			type="B_G_Van_02_vehicle_F";
-			atlOffset=-5.531311e-005;
+			atlOffset=-0.00010681152;
 		};
 		class Item236
 		{
@@ -9293,7 +9288,7 @@ class Mission
 			};
 			id=623;
 			type="B_G_Van_02_transport_F";
-			atlOffset=-5.531311e-005;
+			atlOffset=-0.00054550171;
 		};
 	};
 	class Connections
