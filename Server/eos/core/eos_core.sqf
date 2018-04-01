@@ -1,5 +1,5 @@
 if (!isServer) exitWith {};
-private ["_newpos","_cargoType","_vehType","_dGrp","_gGrp","_gGrps","_mkrAgl","_side","_bGroup","_civZone","_fGrp","_fSize","_fGrps","_eGrp","_eGrps","_dGrps","_aMin","_aSize","_aGrps","_aGrp","_bMin","_units","_bSize","_bGrps","_bGrp","_trig","_cache","_grp","_crew","_vehicle","_actCond","_mAN","_mAH","_distance","_mA","_settings","_cGrp","_cSize","_cGrps","_taken","_clear","_enemyFaction","_faction","_n","_eosAct","_eosActivated","_debug","_mkr","_mPos","_mkrX","_mkrY"];
+private ["_newpos","_cargoType","_vehType","_dGrp","_gGrp","_gGrps","_mkrAgl","_side","_bGroup","_civZone","_fGrp","_fSize","_fGrps","_eGrp","_eGrps","_dGrps","_aMin","_aSize","_aGrps","_aGrp","_bMin","_units","_bSize","_bGrps","_bGrp","_trig","_cache","_grp","_crew","_vehicle","_actCond","_mAN","_mAH","_distance","_mA","_settings","_cGrp","_cSize","_cGrps","_taken","_clear","_enemyFaction","_faction","_n","_eosAct","_eosActivated","_debug","_mkr","_mPos","_mkrX","_mkrY","_delay"];
 
 _mkr=(_this select 0);_mPos=markerpos(_this select 0);
 _mkrX=getMarkerSize _mkr select 0;
@@ -287,21 +287,22 @@ while {sleep 5; _eosAct} do {
 		};
 		_eosAct=false;
 		_mkr setmarkerAlpha _mAN;
-	};
-	if (triggeractivated _clear && !_civZone && getmarkercolor _mkr  != VictoryColor) then {
-		_cGrps=0;_aGrps=0;_bGrps=0;_dGrps=0;_eGrps=0;_fGrps=0;_gGrps=0;
-		//Count Zone as clear and increase cleared count
-		["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
-		[]	execVM "Server\Zone_Complete.sqf";
-		if((random 1) > 0.75) then {
-			//call counterProcess;
-		};
-		_mkr setmarkercolor VictoryColor;
 	} else {
-		if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
-			["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
-			_mkr setmarkercolor hostileColor;
-			_mkr setmarkerAlpha _mAH;
+		if (triggeractivated _clear && !_civZone && getmarkercolor _mkr  != VictoryColor && (count (allPlayers inAreaArray _eosActivated) > 0)) then {
+			_cGrps=0;_aGrps=0;_bGrps=0;_dGrps=0;_eGrps=0;_fGrps=0;_gGrps=0;
+			//Count Zone as clear and increase cleared count
+			["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
+			[]	execVM "Server\Zone_Complete.sqf";
+			if((random 1) > 0.75) then {
+				//call counterProcess;
+			};
+			_mkr setmarkercolor VictoryColor;
+		} else {
+			if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
+				["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
+				_mkr setmarkercolor hostileColor;
+				_mkr setmarkerAlpha _mAH;
+			};
 		};
 	};
 };
