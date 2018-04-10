@@ -1,4 +1,17 @@
+_caller = _this select 0;
 
+_pairing = [[FLG,C1],[FLG2,C2]];
+
+_selected = {
+  _idx = _x find _caller;
+  if(_idx != -1) exitWith {
+    if(_idx == 1) then {
+      _x select 0
+    } else {
+      _x select 1
+    };
+  };
+} forEach _pairing;
 
 to_Base =
  {
@@ -21,23 +34,11 @@ private ["_Location"];
 	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]]
  ];
 
-/*Maybe Later
-_RSPPos = [west] call BIS_fnc_getRespawnMarkers;
-{
-if (_x != "respawn_west" AND  _x != "respawn_vehicle_west" AND _x !="respawn_west_MHQ" AND _x !="respawn_west_MHQ2" AND _x != "respawn_west_Hotel") then {
-_pos = getMarkerPos _x;
-_Temp =  [[_pos,to_Base,"Camp","To Camp","","",1,[_pos]]];
-_missionsData  = _missionsData + _Temp;
-};
-
-} foreach _RSPPos;
-*/
-
 
  disableserialization;
 
  _parentDisplay = [] call bis_fnc_displayMission;
- _mapCenter     = getmarkerpos "MHQ";
+ _mapCenter     = getpos _selected;
  _ORBAT         = [];
  _markers   = [];
  _images    = [];
