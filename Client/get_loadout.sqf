@@ -72,7 +72,6 @@ _isFlashlightOn = false;
 _isIRLaserOn = false;
 
 _magazinesAmmo = magazinesAmmoFull _target;
-diag_log _magazinesAmmo;
 
 // save weapon mode and muzzle
 if(_isOnFoot) then {
