@@ -72,6 +72,7 @@ _isFlashlightOn = false;
 _isIRLaserOn = false;
 
 _magazinesAmmo = magazinesAmmoFull _target;
+diag_log _magazinesAmmo;
 
 // save weapon mode and muzzle
 if(_isOnFoot) then {
@@ -147,12 +148,11 @@ if(_saveMagsAmmo) then {
 			_item = _x;
 			_itemIndex = _forEachIndex;
 			{
-				if((_x select 4)==_location && (_x select 0)==_item) then {
+				if((_x select 4)==_location && (_x select 0)==_item) exitWith {
 					_items set[_itemIndex, [_item, _x select 1]];
-					_x = -1;
+					_magazinesAmmo deleteAt _forEachIndex;
 				};
 			} forEach _magazinesAmmo;
-			_magazinesAmmo = _magazinesAmmo - [-1];
 		} forEach _items;
 		_items;
 	};
