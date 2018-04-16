@@ -28,9 +28,6 @@ setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_gam
 waitUntil {ztowninit==1};
 []	execVM "Server\eos\OpenMe.sqf";
 []	execVM "Server\cleanupAuto.sqf";
-[] execVM "Server\CounterAttacks\BaseSpawner.sqf";
-[] execVM "Server\CounterAttacks\ZoneSimulation.sqf";
-[] execVM "Server\CounterAttacks\CounterLogic.sqf";
 
  //Fog limiter
  while {true} do
