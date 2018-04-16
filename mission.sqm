@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21970.344,34.754887,21067.398};
-		dir[]={0.24261504,-0.83112067,0.5003863};
-		up[]={0.36259925,0.55608851,0.74785125};
-		aside[]={0.89981431,-2.3661414e-008,-0.43627864};
+		pos[]={21984.514,37.826328,21045.564};
+		dir[]={0.80572021,-0.45708966,0.37670675};
+		up[]={0.4140763,0.88941246,0.19359796};
+		aside[]={0.42354122,4.8863876e-007,-0.90588808};
 	};
 };
 binarizationWanted=0;
@@ -1240,6 +1240,7 @@ class Mission
 			};
 			id=61;
 			type="B_MBT_01_TUSK_F";
+			atlOffset=-8.5830688e-006;
 		};
 		class Item40
 		{
@@ -4266,8 +4267,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22003.217,32.630257,21056.268};
-				angles[]={6.2671871,4.712389,0.045302324};
+				position[]={22003.217,32.630329,21056.268};
+				angles[]={6.2671809,4.712389,0.045308746};
 			};
 			side="Empty";
 			flags=4;
@@ -4275,12 +4276,12 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowdamage false; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
-				name="base2";
+				name="FLG2";
 				dynamicSimulation=1;
 			};
 			id=283;
 			type="Flag_FIA_F";
-			atlOffset=0.013925552;
+			atlOffset=0.013998032;
 		};
 		class Item133
 		{
@@ -5088,6 +5089,7 @@ class Mission
 				angles[]={6.2551923,5.677259,0.053282689};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.2;
@@ -5095,7 +5097,7 @@ class Mission
 			};
 			id=342;
 			type="C_Offroad_01_repair_F";
-			atlOffset=1.4687691;
+			atlOffset=0.00041389465;
 		};
 		class Item175
 		{
@@ -5853,6 +5855,7 @@ class Mission
 				angles[]={0.15084881,3.1040332,6.2765183};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -5863,7 +5866,7 @@ class Mission
 			};
 			id=371;
 			type="B_G_Offroad_01_F";
-			atlOffset=1.4315338;
+			atlOffset=-0.050994873;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8694,6 +8697,7 @@ class Mission
 			};
 			id=632;
 			type="B_G_Soldier_LAT2_F";
+			atlOffset=4.7683716e-007;
 		};
 	};
 	class Connections
