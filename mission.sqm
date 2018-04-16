@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6617.5088,180.64941,19975.152};
-		dir[]={-0.88702554,-0.37379971,-0.2710436};
-		up[]={-0.35748574,0.92750776,-0.10923482};
-		aside[]={-0.29222715,1.6298145e-007,0.95635092};
+		pos[]={6597.8286,190.84937,20054.543};
+		dir[]={0.00032792924,-0.74939245,0.66213226};
+		up[]={0.00037135978,0.66212296,0.74939418};
+		aside[]={1.0000035,1.4667376e-007,-0.00049525767};
 	};
 };
 binarizationWanted=0;
@@ -763,21 +763,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6595.1143,169.91978,20069.697};
-				angles[]={0.033321146,0,0.05461248};
+				position[]={6595.1138,169.91978,20069.697};
+				angles[]={0.033318337,0,0.054611351};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="act1 = this addAction [""Teleport"",""Client\teleport.sqf""];this setUserActionText [act1,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf""];";
+				init="call{this execVM 'Client\teleport_action.sqf';this setVariable [""R3F_LOG_disabled"", true];this allowDamage false; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf"",nil, 0, true, true, '', ""true"", 5];}";
 				name="FLG";
 				dynamicSimulation=1;
 			};
 			id=32;
 			type="Flag_FIA_F";
-			atlOffset=-3.0517578e-005;
 		};
 		class Item16
 		{
@@ -2324,7 +2323,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
+							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive _target && speed _target < 3"",10]],""addAction""] call BIS_fnc_MP;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
 						};
 					};
 				};
@@ -2529,7 +2528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive C1""]],""addAction""] call BIS_fnc_MP;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
+							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive _target && speed _target < 3"",10]],""addAction""] call BIS_fnc_MP;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
 						};
 					};
 				};
@@ -4203,7 +4202,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowdamage false; this setVariable [""R3F_LOG_disabled"", true]; act = this addAction [""Teleport"",""Client\teleport.sqf""]; this setUserActionText [act,""Teleport"",""<img size='2' image='Server\Images\Teleport.paa'/>""];";
+				init="call{this allowdamage false; this setVariable [""R3F_LOG_disabled"", true]; this execVM 'Client\teleport_action.sqf';}";
 				name="FLG2";
 				dynamicSimulation=1;
 			};
