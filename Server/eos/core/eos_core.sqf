@@ -293,9 +293,6 @@ while {sleep 5; _eosAct} do {
 			//Count Zone as clear and increase cleared count
 			["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
 			[]	execVM "Server\Zone_Complete.sqf";
-			if((random 1) > 0.75) then {
-				//call counterProcess;
-			};
 			_mkr setmarkercolor VictoryColor;
 		} else {
 			if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
