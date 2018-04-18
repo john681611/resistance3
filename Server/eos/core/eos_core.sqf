@@ -31,7 +31,7 @@ _trig=format ["EOSTrigger%1",_mkr];
 
 if (!_cache) then {
 		_eosActivated = createTrigger ["EmptyDetector",_mPos, false];
-		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE,50];
+		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE,150];
 		_eosActivated setTriggerActivation ["ANY","PRESENT",true];
 
 
