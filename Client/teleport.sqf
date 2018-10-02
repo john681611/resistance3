@@ -29,7 +29,7 @@ private ["_Location"];
 
  _missionsData  = [
   [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
-	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]],
+	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]]
  ];
 
 
