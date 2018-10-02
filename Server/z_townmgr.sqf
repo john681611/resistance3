@@ -2,10 +2,8 @@ if (!isServer) exitWith {};
 _blacklist = [6405.69,12365.6,0];
 _towns=[];
  {
-_text =  getText (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "type");
-_pos = getArray (configfile >> "CfgWorlds" >> "Altis" >> "Names">> (configName _x) >> "position");
-/*diag_log format ["%1 == %2",(_pos select 1) toFixed 20, (_blacklist select 1) toFixed 20];
-diag_log (((_pos select 1) toFixed 0) == ((_blacklist select 1) toFixed 0));*/
+_text =  getText (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names">> (configName _x) >> "type");
+_pos = getArray (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names">> (configName _x) >> "position");
 if(!(_pos in _blacklist)) then {
   _towns = _towns + [[_text,_pos]];
 }else{
@@ -13,7 +11,7 @@ if(!(_pos in _blacklist)) then {
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "Altis" >> "Names"));
+ } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names"));
 
 
 ztownt = [];
@@ -25,7 +23,7 @@ ztownTA = [];
 ztowna = [];
 ztownAll = [];
 //Extra areas
-_towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1,7336.12,21.7828]]];
+_towns = _towns;
 {
     _pos = (_x select 1);
 
@@ -64,7 +62,7 @@ _towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1
           ztowna = ztowna + [_m];
         };
     		default {
-    		}
+    		};
     	};
       _m setMarkerColor "ColorYellow";
     } else {
@@ -101,7 +99,7 @@ _towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1
       };
       default {
       _m setMarkerSize [400,400];
-      }
+      };
     };
 
 
@@ -112,5 +110,5 @@ _towns = _towns + [["Airport",[9193.06,21568.6,16.4977]]] + [["Airport",[21025.1
 } forEach _towns;
 
 
-ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ztowna + ["BLU","BLU_1","BLU_2","BLU_3","BLU_4","BLU_5","BLU_6","BLU_7"];
+ztownAll = ztownTA + ztownc + ztownl + ztownm + ztowns + ztownt + ztowna;
 ztowninit = 1;

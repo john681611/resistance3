@@ -1,6 +1,6 @@
 _caller = _this select 0;
 
-_pairing = [[FLG,C1],[FLG2,C2]];
+_pairing = [[FLG,C1]];
 
 _selected = {
   _idx = _x find _caller;
@@ -29,9 +29,7 @@ private ["_Location"];
 
  _missionsData  = [
   [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
-  [getMarkerPos "respawn_west_Hotel",to_Base,"Hotel Base","To Hotel Base","","",1,[getMarkerPos "respawn_west_Hotel"]],
 	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]],
-	[getMarkerPos "MHQ2",to_Base,"Jeep MHQ","To Jeep MHQ","","",1,[getMarkerPos "MHQ2"]]
  ];
 
 

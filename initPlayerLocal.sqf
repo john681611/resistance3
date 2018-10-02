@@ -26,7 +26,6 @@ if (!_saveTestsPass) then {
 };
 
 C1 execVM 'Client\teleport_action.sqf';
-C2 execVM 'Client\teleport_action.sqf';
 
 player createDiarySubject ["TeamSpeak & TFAR","TeamSpeak & TFAR"];
 player createDiaryRecord ["TeamSpeak & TFAR", ["TeamSpeak & TFAR","We highly Reccomend using Teamspeak and the TFAR mod <br/>
