@@ -25,7 +25,9 @@ if (!_saveTestsPass) then {
   profilenamespace setvariable [(format["Resist_Box%1",savename]),[KeyNumber,[true,"none",[[],[],[],[]]]]];
 };
 
-C1 execVM 'Client\teleport_action.sqf';
+{
+  (_x select 1) execVM 'Client\teleport_action.sqf';
+} forEach MHQs;
 
 player createDiarySubject ["TeamSpeak & TFAR","TeamSpeak & TFAR"];
 player createDiaryRecord ["TeamSpeak & TFAR", ["TeamSpeak & TFAR","We highly Reccomend using Teamspeak and the TFAR mod <br/>

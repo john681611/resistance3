@@ -1,7 +1,7 @@
 if (!isServer) exitWith {};
 _blacklist = [];
 _towns=[];
-_mapConfig = (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names");
+_mapConfig = (configfile >> "CfgWorlds" >> mapConfigName >> "Names");
  {
 _text =  getText (_mapConfig >> (configName _x) >> "type");
 _pos = getArray (_mapConfig >> (configName _x) >> "position");

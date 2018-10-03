@@ -17,13 +17,16 @@ _save = [[],[],[]];
     } forEach ztownAll;
 
     {
-      if(!(isnil {_x getvariable "ResistVeh"})) then {
-        (_save select 1) append [(_x call getVehicleData)];
-      };
-    } forEach list Main_Zone;
+      {
+        if(!(isnil {_x getvariable "ResistVeh"})) then {
+          (_save select 1) append [(_x call getVehicleData)];
+        };
+      } forEach list (_x select 1);
+    } forEach Bases;
    
     {
-        (_save select 2) append [[(getpos _x),(getdir _x)]];
-    } forEach [C1];
+      _mhq = (_x select 1);
+        (_save select 2) append [[(getpos _mhq),(getdir _mhq)]];
+    } forEach MHQs;
 
 _save

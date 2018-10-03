@@ -1,6 +1,5 @@
 _caller = _this select 0;
 
-_pairing = [[FLG,C1]];
 
 _selected = {
   _idx = _x find _caller;
@@ -11,7 +10,7 @@ _selected = {
       _x select 1
     };
   };
-} forEach _pairing;
+} forEach MHQs;
 
 to_Base =
  {
@@ -27,10 +26,19 @@ private ["_Location"];
  };
 
 
- _missionsData  = [
-  [getMarkerPos "respawn_west",to_Base,"Main Base","To the main base","","",1,[getMarkerPos "respawn_west"]],
-	[getMarkerPos "MHQ",to_Base,"Offroad MHQ","To Offroad MHQ","","",1,[getMarkerPos "MHQ"]]
- ];
+ _missionsData = [];
+
+  {
+     _marker = _x select 0;
+     _name = _x select 2;
+    _missionsData append [[getMarkerPos  _marker,to_Base,_name,_name,"","",1,[getMarkerPos _marker]]];
+ } forEach Bases;
+
+ {
+    _marker =   _x select 2;
+    _displayName =  getText (configFile >>  "CfgVehicles" >>(typeOf (_x select 1)) >> "displayName");
+   _missionsData append [[getMarkerPos _marker,to_Base,_displayName,_displayName,"","",1,[getMarkerPos _marker]]];
+ } forEach MHQs;
 
 
  disableserialization;

@@ -1,14 +1,23 @@
+//config
+//ServerSide Only
+mapConfigName = "WL_Rosche";
+//Both
+saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
+MHQs =[[FLG, C1,"MHQ"]]; //[base flag ,vehicle , marker, name]
+Bases =[['respawn_west', Main_Zone, "Main Base"]]; //[marker, trigger, name]
+/////////////////////////////////////
+ztowninit = 0;
+Ztown = 0;
+CompZone = 0;
+takenTowns = [];
+publicVariable "saveName";
+publicVariable "Ztown";
+publicVariable "CompZone";
+publicVariable "MHQs";
+publicVariable "Bases";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
-ztowninit = 0;
-CompZone = 0;
-saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
-publicVariable "saveName";
-takenTowns = [];
-publicVariable "CompZone";
-Ztown = 0;
-publicVariable "Ztown";
 if ((isnil {profilenamespace getvariable (format["Resist_SaveGame%1",savename])}) OR (("NEWGAME" call BIS_fnc_getParamValue) == 1)) then {
   KeyNumber = RANDOM(1000);
   profilenamespace setvariable [(format["Resist_SaveGame%1",savename]),[KeyNumber,"new"]];

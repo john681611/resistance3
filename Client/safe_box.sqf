@@ -5,7 +5,7 @@ getbox = {
   _data = (((profilenamespace getvariable (format["Resist_Box%1",savename])) select 1)select 2);
   [_box,_data] call setContent;
   profilenamespace setvariable [format["Resist_Box%1",savename],[KeyNumber,[false,_box,[[],[],[],[]]]]];
-  _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","(ATM1 distance _target)< 5",5];
+  _box addaction ["Return Box", {_this spawn setbox;},[],1.5,false,false,"","((nearestObject [getPos _target,'Land_Atm_01_F'])  distance _target)< 5",5];
   _box setDir (getdir player) + 90;
   _box disableCollisionWith player;
   _box setpos (player modelToWorld [0,1.5,1]);
