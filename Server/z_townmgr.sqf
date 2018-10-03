@@ -1,17 +1,18 @@
 if (!isServer) exitWith {};
-_blacklist = [6405.69,12365.6,0];
+_blacklist = [];
 _towns=[];
+_mapConfig = (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names");
  {
-_text =  getText (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names">> (configName _x) >> "type");
-_pos = getArray (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names">> (configName _x) >> "position");
+_text =  getText (_mapConfig >> (configName _x) >> "type");
+_pos = getArray (_mapConfig >> (configName _x) >> "position");
 if(!(_pos in _blacklist)) then {
-  _towns = _towns + [[_text,_pos]];
+  _towns = _towns + [[_text,(nearestBuilding _pos)]];
 }else{
   diag_log "Location Blacklisted";
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') != 'NameMarine' AND getText (_x >> 'type') != 'CityCenter'" configClasses (configfile >> "CfgWorlds" >> "WL_Rosche" >> "Names"));
+ } forEach ("getText (_x >> 'type') in ['Hill','NameLocal','NameVillage','NameCity','NameCityCapital','Airport']" configClasses (_mapConfig));
 
 
 ztownt = [];
@@ -26,10 +27,6 @@ ztownAll = [];
 _towns = _towns;
 {
     _pos = (_x select 1);
-
-    if(!(_pos isFlatEmpty  [-1, -1, -1, -1, 2, false] isEqualTo [])) then {
-          _pos = [_pos] call BIS_fnc_findSafePos;
-        };
 
 
     _m = createMarker [format ["%1", _pos],_pos];
@@ -106,7 +103,6 @@ _towns = _towns;
     _m setMarkerShape "ELLIPSE";
     _m setMarkerBrush "Solid";
     _m setMarkerAlpha 0.5;
-
 } forEach _towns;
 
 
