@@ -1,6 +1,4 @@
 //config
-//ServerSide Only
-mapConfigName = "WL_Rosche";
 //Both
 saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"]]; //[base flag ,vehicle , marker, name]
