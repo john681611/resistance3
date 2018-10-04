@@ -4,7 +4,7 @@ mapConfigName = "WL_Rosche";
 //Both
 saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"]]; //[base flag ,vehicle , marker, name]
-Bases =[['respawn_west', Main_Zone, "Main Base"]]; //[marker, trigger, name]
+Bases =[['respawn_guerrila', Main_Zone, "Main Base"]]; //[marker, trigger, name]
 /////////////////////////////////////
 ztowninit = 0;
 Ztown = 0;
