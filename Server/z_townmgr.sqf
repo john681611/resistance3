@@ -6,13 +6,14 @@ _mapConfig = (configfile >> "CfgWorlds" >> worldName >> "Names");
 _text =  getText (_mapConfig >> (configName _x) >> "type");
 _pos = getArray (_mapConfig >> (configName _x) >> "position");
 if(!(_pos in _blacklist)) then {
-  _towns = _towns + [[_text,(nearestBuilding _pos)]];
+  if(!(_text in ['Hill','VegetationFir'])) then {_pos = nearestBuilding _pos;};
+  _towns = _towns + [[_text,_pos]];
 }else{
   diag_log "Location Blacklisted";
   diag_log _pos;
 };
 
- } forEach ("getText (_x >> 'type') in ['Hill','NameLocal','NameVillage','NameCity','NameCityCapital','Airport']" configClasses (_mapConfig));
+ } forEach ("getText (_x >> 'type') in ['Hill','VegetationFir','NameLocal','NameVillage','NameCity','NameCityCapital','Airport']" configClasses (_mapConfig));
 
 
 ztownt = [];
@@ -33,6 +34,7 @@ _towns = _towns;
     if(!((getMarkerPos _m) in takenTowns)) then {
     	switch((_x select 0)) do
     	{
+        case "VegetationFir";
     		case "Hill":
     		{
     			ztownt = ztownt + [_m];
@@ -69,6 +71,7 @@ _towns = _towns;
 
     switch((_x select 0)) do
     {
+      case "VegetationFir";
       case "Hill":
       {
         _m setMarkerSize [100,100];
