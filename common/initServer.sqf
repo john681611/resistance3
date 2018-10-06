@@ -1,18 +1,12 @@
-//config
-//Both
-saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
-MHQs =[[FLG, C1,"MHQ"]]; //[base flag ,vehicle , marker, name]
-Bases =[['respawn_west', Main_Zone, "Main Base"]]; //[marker, trigger, name]
-/////////////////////////////////////
+[] execVM "config/basic.sqf";
 ztowninit = 0;
 Ztown = 0;
 CompZone = 0;
 takenTowns = [];
-publicVariable "saveName";
+
 publicVariable "Ztown";
 publicVariable "CompZone";
-publicVariable "MHQs";
-publicVariable "Bases";
+
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
 addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
@@ -33,7 +27,7 @@ setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_gam
 [] execVM "Server\MHQ_Marker.sqf";
 [] execVM "Server\VehicleMarker.sqf";
 waitUntil {ztowninit==1};
-[]	execVM "Server\eos\OpenMe.sqf";
+[]	execVM "Server\eos\zoneConfig.sqf";
 []	execVM "Server\cleanupAuto.sqf";
 
  //Fog limiter

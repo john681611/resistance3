@@ -1,17 +1,18 @@
 if (!isServer) exitWith {};
-_blacklist = [];
 _towns=[];
 _mapConfig = (configfile >> "CfgWorlds" >> worldName >> "Names");
  {
-_text =  getText (_mapConfig >> (configName _x) >> "type");
-_pos = getArray (_mapConfig >> (configName _x) >> "position");
-if(!(_pos in _blacklist)) then {
-  if(!(_text in ['Hill','VegetationFir'])) then {_pos = nearestBuilding _pos;};
-  _towns = _towns + [[_text,_pos]];
-}else{
-  diag_log "Location Blacklisted";
-  diag_log _pos;
-};
+  _name = getText (_mapConfig >> (configName _x) >> "name");
+  _text =  getText (_mapConfig >> (configName _x) >> "type");
+  _pos = getArray (_mapConfig >> (configName _x) >> "position");
+
+  if(!(_name in blacklistLocations)) then {
+    if(!(_text in ['Hill','VegetationFir'])) then {_pos = nearestBuilding _pos;};
+    _towns = _towns + [[_text,_pos]];
+  }else{
+    diag_log "Location Blacklisted";
+    diag_log _name;
+  };
 
  } forEach ("getText (_x >> 'type') in ['Hill','VegetationFir','NameLocal','NameVillage','NameCity','NameCityCapital','Airport']" configClasses (_mapConfig));
 
