@@ -1,0 +1,75 @@
+#include "R3F_LOG\desc_include.h"
+#include "outlw_magRepack\MagRepack_config.hpp"
+#include "CHVD\dialog.hpp"
+
+briefingName="Resistance V3.4.0";
+overviewText="Resistance, gather what you can to take back your land";
+author="INF_Mike64 Inspired by Kitch";
+onLoadMission="Resistance, gather what you can to take back your land";
+loadScreen="resistance_ingame_logo.paa";
+disabledAI=1;
+enableDebugConsole=1;
+
+respawn=3;
+respawnDelay=5;
+respawnVehicleDelay=30.000002;
+
+reviveMode=2;
+reviveUnconsciousStateMode=1;
+reviveRequiredItems=2;
+reviveDelay=10;
+reviveForceRespawnDelay=3;
+reviveBleedOutDelay=300;
+reviveMedicSpeedMultiplier=2;
+reviveRequiredTrait=0;
+
+wreckManagerMode=3;
+wreckLimit=50;
+wreckRemovalMinTime=3600;
+wreckRemovalMaxTime=3600;
+corpseManagerMode=1;
+corpseLimit=300;
+corpseRemovalMinTime=3600;
+minPlayerDistance=500;
+
+class Header
+{
+	gameType="CTI";
+	minPlayers=1;
+	maxPlayers=33;
+};
+
+class CfgFunctions
+{
+	#include "CHVD\CfgFunctions.hpp"
+};
+
+class Params
+{
+	class NEWGAME
+	{
+		title = "New Game - WARNING all progress will be lost!"; // Param name visible in the list
+		values[] = {false,true}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"False","True"}; // Description of each selectable item
+		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
+               // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+	};
+
+	class TFAR
+	{
+		title = "Use TFAR settings Script"; // Param name visible in the list
+		values[] = {false,true}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"False","True"}; // Description of each selectable item
+		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
+							 // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+	};
+
+	class TelePortR3F
+	{
+		title = "Allow Teleporting holding box"; // Param name visible in the list
+		values[] = {false,true}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"False","True"}; // Description of each selectable item
+		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
+							 // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+	};
+};

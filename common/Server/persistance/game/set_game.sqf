@@ -8,7 +8,10 @@ takenTowns  = (_this select 0);
   _veh setVariable ["ResistVeh", true, false];
 } foreach (_this select 1);
 
-C1 setpos (((_this select 2) select 0) select 0);
-C1 setdir (((_this select 2) select 0) select 1);
-C2 setpos (((_this select 2) select 1) select 0);
-C2 setdir (((_this select 2) select 1) select 1);
+_index  = 0;
+{
+  _mhq = (_x select 1);
+  _mhq setpos (((_this select 2) select _index) select 0);
+  _mhq setdir (((_this select 2) select _index) select 1);
+  _index = _index + 1;
+} forEach MHQs;
