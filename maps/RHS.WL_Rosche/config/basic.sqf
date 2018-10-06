@@ -1,7 +1,7 @@
 //server
 blacklistLocations = ["Tuvanaka"];
 //Both
-saveName = "Rocsh";//ENTER CUSTOM SERVER NAME HERE
+saveName = "RocshRHS";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"]]; //[base flag ,vehicle , marker, name]
 Bases =[['respawn_west', Main_Zone, "Main Base"]]; //[marker, trigger, name]
 /////////////////////////////////////
