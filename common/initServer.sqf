@@ -1,4 +1,4 @@
-[] execVM "config/basic.sqf";
+[] call compile preprocessFileLineNumbers "config\basic.sqf";
 ztowninit = 0;
 Ztown = 0;
 CompZone = 0;
