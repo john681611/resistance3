@@ -6,9 +6,9 @@ print('removing built')
 for f in listdir('./maps'):
     map = (getcwd()+'\\maps\\'+f)
     built = (getcwd()+'\\built\\co_36_resistance3'+f)
-    copy_tree(map, built)
     commonFile = (getcwd()+'\\common')
     copy_tree(commonFile, built)
+    copy_tree(map, built)
     print('built:'+ built)
 print('done!')
     
