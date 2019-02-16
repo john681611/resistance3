@@ -1437,7 +1437,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive _target && speed _target < 3"",10]],""addAction""] call BIS_fnc_MP;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
+							value="[(_this select 0),0] call respawnMHQ;C1_Flag attachTo [(_this select 0),[-0.6,-2.4,-2]];";
 						};
 					};
 				};
@@ -1642,7 +1642,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[(_this select 0),[""<img size='2' image='Server\Images\Teleport.paa' />Teleport"",""Client\teleport.sqf"",nil,1.5,true,true,"""",""alive _target && speed _target < 3"",10]],""addAction""] call BIS_fnc_MP;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
+							value="[(_this select 0),1] call respawnMHQ;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
 						};
 					};
 				};
@@ -4442,7 +4442,6 @@ class Mission
 			class Attributes
 			{
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				disableSimulation=1;
 			};
 			id=577;
 			type="Box_NATO_Uniforms_F";
@@ -9443,7 +9442,6 @@ class Mission
 			class Attributes
 			{
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				disableSimulation=1;
 			};
 			id=999;
 			type="Box_NATO_Uniforms_F";

@@ -22,9 +22,11 @@ getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getCo
 setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
 getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_game.sqf';
 setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
+respawnMHQ = compile preprocessFileLineNumbers 'Server\mhq\respawn.sqf';
+
 [] execVM "Server\persistance\game\keep_game.sqf";
 [] execVM "Server\z_townmgr.sqf";
-[] execVM "Server\MHQ_Marker.sqf";
+[] execVM "Server\mhq\marker.sqf";
 [] execVM "Server\VehicleMarker.sqf";
 waitUntil {ztowninit==1};
 []	execVM "Server\eos\zoneConfig.sqf";
