@@ -9978,7 +9978,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7042.6011,211.96153,9717.6377};
-				angles[]={-0,0.2599152,0};
+				angles[]={0,0.2599152,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10039,7 +10039,7 @@ class Mission
 			name="Tele_4";
 			text="Tele-porta-loo";
 			type="flag_FIA";
-			angle=280.38104;
+			angle=280.38101;
 			id=865;
 			atlOffset=2.6067963;
 		};
@@ -10257,7 +10257,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7041.769,212.37143,9715.9141};
-				angles[]={-0,2.3555319,0};
+				angles[]={0,2.3555319,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10434,8 +10434,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7043.8081,212.4053,9719.1045};
-				angles[]={-0,5.2693768,0};
+				position[]={7043.8081,212.4053,9719.1035};
+				angles[]={0,5.2693758,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10444,7 +10444,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAB_2";
-				disableSimulation=1;
 			};
 			id=872;
 			type="B_CargoNet_01_ammo_F";
@@ -10508,7 +10507,7 @@ class Mission
 			};
 			id=873;
 			type="Box_NATO_Uniforms_F";
-			atlOffset=-2.3841858e-007;
+			atlOffset=-0.0004093647;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10559,7 +10558,7 @@ class Mission
 			name="Tele_5";
 			text="Tele-porta-loo";
 			type="flag_FIA";
-			angle=66.288429;
+			angle=66.288422;
 			id=874;
 			atlOffset=2.6074653;
 		};
@@ -10684,7 +10683,7 @@ class Mission
 			};
 			id=877;
 			type="Land_FieldToilet_F";
-			atlOffset=-0.010499954;
+			atlOffset=-0.010592222;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10789,6 +10788,7 @@ class Mission
 			};
 			id=878;
 			type="Land_Noticeboard_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10957,8 +10957,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1714.672,4.4567118,12087.703};
-				angles[]={6.256525,1.5327554,0.02399601};
+				position[]={1714.6722,4.4567375,12087.703};
+				angles[]={6.2565165,1.5327481,0.023998277};
 			};
 			side="Empty";
 			flags=4;
@@ -10967,7 +10967,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAB_3";
-				disableSimulation=1;
 			};
 			id=881;
 			type="B_CargoNet_01_ammo_F";

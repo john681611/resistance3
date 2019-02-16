@@ -9505,7 +9505,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAB_1";
-				disableSimulation=1;
 			};
 			id=1005;
 			type="B_CargoNet_01_ammo_F";
@@ -9567,7 +9566,6 @@ class Mission
 				skill=0.60000002;
 				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
 				name="MAB_2";
-				disableSimulation=1;
 			};
 			id=1006;
 			type="B_CargoNet_01_ammo_F";
