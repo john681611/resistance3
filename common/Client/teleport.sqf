@@ -1,6 +1,6 @@
 _caller = _this select 0;
 
-if((["TelePortR3F", 0] call BIS_fnc_getParamValue == 0) && isForcedWalk player) exitWith {hint "Teleporting with boxes is disabled";};
+if((["TelePortR3F", 0] call BIS_fnc_getParamValue == 0) && isForcedWalk player && (count allPlayers) > 5) exitWith {hint "Teleporting with boxes is disabled.";};
 
 _selected = {
   _idx = _x find _caller;
