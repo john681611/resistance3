@@ -174,6 +174,7 @@ sleep 0.25;
 			};
 
 			//SPAWN BOXS
+				_boxMarkers = [];
 				for "_counter" from 1 to _gGrps do {
 					if (surfaceiswater _mPos) exitwith {};
 					if (isNil "_gGrp") then {_gGrp=[];};
@@ -186,6 +187,12 @@ sleep 0.25;
 										0=[_mPos,[(_gGroup select 0)],_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
 										_i = _i + 1;
 									};
+										_bpos = getPos (_gGroup select 0);
+										_bm = createMarker [format ["%1", _bpos ],_bpos];
+										_bm setMarkerShape "ICON";
+										_bm setMarkerType "mil_triangle";
+										_bm setMarkerAlpha 0;
+										_boxMarkers set [count _boxMarkers,_bm];
 										_gGrp set [count _gGrp,_gGroup];
 
 			if (_debug) then {diag_log format ["Box:%1",_counter];0= [_mkr,_counter,"Box",(getpos leader (_gGroup select 2))] call EOS_debug};
@@ -294,17 +301,26 @@ while {sleep 5; _eosAct} do {
 			["TaskSucceeded",["","Zone Captured"]] remoteExec ["BIS_fnc_showNotification", 0];
 			[]	execVM "Server\Zone_Complete.sqf";
 			_mkr setmarkercolor VictoryColor;
+			{
+				_x setMarkerAlpha 1;
+			} forEach _boxMarkers;
 		} else {
 			if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
 				["TaskFailed",["","Zone Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
 				_mkr setmarkercolor hostileColor;
 				_mkr setmarkerAlpha _mAH;
+				{
+					_x setMarkerAlpha 0;
+				} forEach _boxMarkers;
 			};
 		};
 	};
 };
 
 deletevehicle _clear;
+{
+	deleteMarker _x;
+} forEach _boxMarkers;
 { if (side _x == _side) then { deletevehicle _x} } forEach list _eosActivated;
 
 if (!(getmarkercolor _mkr == "colorblack")) then {
