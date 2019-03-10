@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5170.2637,38.681168,1217.2603};
-		dir[]={-0.25154778,-0.67417717,-0.69441557};
-		up[]={-0.22961582,0.73856807,-0.6338709};
-		aside[]={-0.94021422,-5.326001e-008,0.34058678};
+		pos[]={5178.4131,38.681168,1205.204};
+		dir[]={-0.89259189,-0.43757498,0.10873797};
+		up[]={-0.43437064,0.899176,0.052917141};
+		aside[]={0.12093037,-6.7753717e-008,0.99266899};
 	};
 };
 binarizationWanted=0;
@@ -1396,8 +1396,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5176.543,25.124657,1238.675};
-				angles[]={5.834374,4.4316006,6.2823472};
+				position[]={5130.3247,23.282467,1207.9198};
+				angles[]={6.2368193,4.4316006,6.26159};
 			};
 			id=94;
 			type="ModuleRespawnVehicle_F";
@@ -2082,8 +2082,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5150.0527,25.208359,1202.3325};
-				angles[]={6.2647886,5.2225237,0.010398259};
+				position[]={5137.4678,25.019997,1202.051};
+				angles[]={6.2368193,5.2225237,6.26159};
 			};
 			side="Empty";
 			flags=4;
@@ -3009,8 +3009,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5159.9023,24.762333,1206.8552};
-				angles[]={0,4.8228598,6.2751918};
+				position[]={5129.3384,24.508804,1204.7635};
+				angles[]={6.1621795,4.9504828,0.053548392};
 			};
 			side="Empty";
 			flags=4;
@@ -3225,8 +3225,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5156.4058,23.165577,1205.3783};
-				angles[]={6.2647886,0,0.010398259};
+				position[]={5134.7676,23.083441,1205.6987};
+				angles[]={6.2368193,0,6.26159};
 			};
 			id=393;
 			type="ModuleRespawnVehicle_F";
@@ -4514,7 +4514,7 @@ class Mission
 			};
 			id=622;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=3.7820678;
+			atlOffset=3.7812614;
 		};
 		class Item60
 		{
@@ -4531,7 +4531,7 @@ class Mission
 			};
 			id=623;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=4.4877458;
+			atlOffset=4.4869394;
 		};
 		class Item61
 		{
