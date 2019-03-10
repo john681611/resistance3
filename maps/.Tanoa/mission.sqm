@@ -47,7 +47,6 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Civ_Camping",
-	"cba_xeh",
 	"A3_Structures_F_EPA_Civ_Constructions",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Exp_Military_Fortifications",
@@ -10036,7 +10035,7 @@ class Mission
 			dataType="Marker";
 			position[]={7041.1309,214.40854,9715.2168};
 			name="Tele_4";
-			text="Tele-porta-loo";
+			text="Turdis";
 			type="flag_FIA";
 			angle=280.38101;
 			id=865;
@@ -10554,7 +10553,7 @@ class Mission
 			dataType="Marker";
 			position[]={1714.7024,6.4748764,12092.45};
 			name="Tele_5";
-			text="Tele-porta-loo";
+			text="Turdis";
 			type="flag_FIA";
 			angle=66.288422;
 			id=874;

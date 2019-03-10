@@ -7789,7 +7789,7 @@ class Mission
 			dataType="Marker";
 			position[]={5162.7046,25.778999,1199.5785};
 			name="Tele_3";
-			text="Tele-porta-loo";
+			text="Turdis";
 			type="flag_FIA";
 			id=927;
 			atlOffset=2.6355515;
@@ -8186,7 +8186,7 @@ class Mission
 			dataType="Marker";
 			position[]={6793.1265,24.183153,11434.073};
 			name="Tele_4";
-			text="Tele-porta-loo";
+			text="Turdis";
 			type="flag_FIA";
 			angle=70.496773;
 			id=984;

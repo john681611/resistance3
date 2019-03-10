@@ -2,7 +2,7 @@
 "Supplies are low use them wisely.",
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.",
 "All you have is what you start with only the starter vehicles respawn when destroyed. Store Captured Supplies and Vehicles at base.",
-"Teleport is available at the Tele-porta-loo.",
+"Teleport is available at the Turdis (portaloo).",
 "Excess Gear can be stored at the storage Terminals (looks like ATM's at base)",
 "Tansport boxes to base by vehicle (Teleporting with Boxes allowed when player count low).",
 "Check the 'Mission Brief' for more information.",
