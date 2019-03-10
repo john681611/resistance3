@@ -288,7 +288,9 @@ class AddonsMetaData
 randomSeed=11149701;
 class ScenarioData
 {
-	author="Mike64";
+	author="INF_Mike64 Inspired by Kitch";
+	onLoadMission="Resistance, gather what you can to take back your land";
+	loadScreen="resistance_ingame_logo.paa";
 };
 class Mission
 {
