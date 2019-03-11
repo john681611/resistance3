@@ -9142,7 +9142,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this execVM 'Client\teleport_action.sqf';this setVariable [""R3F_LOG_disabled"", true]; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf""];}";
+				init="call{this execVM 'Client\teleport_action.sqf';this setVariable [""R3F_LOG_disabled"", true]; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf"", nil, 0, true, true, """", """", 2];}";
 				name="FLG";
 				disableSimulation=1;
 			};
@@ -9678,7 +9678,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this execVM 'Client\teleport_action.sqf';this setVariable [""R3F_LOG_disabled"", true]; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf""];}";
+				init="call{this execVM 'Client\teleport_action.sqf';this setVariable [""R3F_LOG_disabled"", true]; this addAction [""<t color='#ff0000'>Clean Server</t>"", ""Server\StartServerClean.sqf"", nil, 0, true, true, """", """", 2];}";
 				name="FLG2";
 				disableSimulation=1;
 			};
