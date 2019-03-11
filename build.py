@@ -5,7 +5,7 @@ rmtree(getcwd()+ '\\built')
 print('removing built')
 for f in listdir('./maps'):
     map = (getcwd()+'\\maps\\'+f)
-    built = (getcwd()+'\\built\\co_36_resistance3'+f)
+    built = (getcwd()+'\\built\\co_36_resistance3-4-1'+f)
     commonFile = (getcwd()+'\\common')
     copy_tree(commonFile, built)
     copy_tree(map, built)
