@@ -17,6 +17,7 @@ _vehCrew=[];
 	_currentPosition=_x;
 	if (_currentPosition select 0 == "driver")then {
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
+			[_unit] join _grp;
 			_unit assignAsDriver _vehicle;
 			_unit moveInDriver _vehicle;
 			_unit triggerDynamicSimulation false;
@@ -26,6 +27,7 @@ _vehCrew=[];
 
 	if (_currentPosition select 0 == "turret")then {
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
+			[_unit] join _grp;
 			_unit assignAsGunner _vehicle;
 			_unit MoveInTurret [_vehicle,_currentPosition select 1];
 			_unit triggerDynamicSimulation false;
