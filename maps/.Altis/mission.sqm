@@ -336,7 +336,7 @@ class Mission
 	{
         briefingName="Resistance";
 		resistanceWest=0;
-		resistanceEast=1;
+		resistanceEast=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;

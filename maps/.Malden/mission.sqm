@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5178.25,44.921196,1209.707};
-		dir[]={0.17798248,-0.73356205,0.65591913};
-		up[]={0.19210583,0.67961419,0.70796698};
-		aside[]={0.96511102,-1.4413672e-008,-0.26188132};
+		pos[]={6245.0947,395.26883,4778.0493};
+		dir[]={0.44106513,-0.4265644,0.78966105};
+		up[]={0.20802122,0.90444249,0.37243018};
+		aside[]={0.87306952,-3.8393773e-007,-0.48765275};
 	};
 };
 binarizationWanted=0;
@@ -285,12 +285,27 @@ class AddonsMetaData
 		};
 	};
 };
+class DynamicSimulation
+{
+	saturateByObjectDistance=0;
+	class EnableRadiuses
+	{
+		EmptyVehicle=500;
+		Vehicle=1000;
+		Group=1000;
+	};
+	class EnableRadiuseCoefs
+	{
+		IsMoving=1;
+	};
+};
 randomSeed=11149701;
 class ScenarioData
 {
 	author="INF_Mike64 Inspired by Kitch";
 	onLoadMission="Resistance, gather what you can to take back your land";
 	loadScreen="resistance_ingame_logo.paa";
+	wreckRemovalMaxTime=3600;
 };
 class Mission
 {
@@ -299,7 +314,6 @@ class Mission
 	{
 		briefingName="Resistance";
 		resistanceWest=0;
-		resistanceEast=1;
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -1176,7 +1190,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5161.5254,23.139235,1201.4106};
-						angles[]={-0,3.7367227,6.2751918};
+						angles[]={0,3.7367227,6.2751918};
 					};
 					side="West";
 					flags=4;
