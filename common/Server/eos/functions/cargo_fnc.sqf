@@ -29,8 +29,8 @@ private ["_cargoPool","_emptySeats","_vehicle","_debug","_grp","_grpSize"];
 						if (_debug) then {hint format ["Seats Filled : %1",_grpSize];};
 
 						for "_x" from 1 to _grpSize do {
-								_unit= selectRandomWeighted _cargoPool;
-								_unit=_unit createUnit [GETPOS _vehicle, _grp];
+								_selectedUnit= selectRandomWeighted _cargoPool;
+								_unit= _grp createUnit [ _selectedUnit, GETPOS _vehicle,  [], 0, "CARGO"];
 								[_unit] join _grp;
 								};
 
