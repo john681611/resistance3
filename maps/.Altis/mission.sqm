@@ -358,7 +358,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={6600.5391,-1.1139128e-027,20040.721};
-			name="MHQ";
+			name="respawn_west_MHQ";
 			text="Offroad MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -516,7 +516,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={6600.5391,-2.0132237e-015,20037.492};
-			name="MHQ2";
+			name="respawn_west_MHQ2";
 			text="Jeep MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";

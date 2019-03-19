@@ -366,7 +366,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={1965.4583,17.732584,12077.264};
-			name="MHQ";
+			name="respawn_west_MHQ";
 			text="Offroad MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -425,7 +425,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={1965.4583,17.403973,12074.035};
-			name="MHQ2";
+			name="respawn_west_MHQ2";
 			text="Jeep MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -2147,7 +2147,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={7037.8701,0,9719.6914};
-			name="respawn_camp";
+			name="respawn_west_camp";
 			text="Camp";
 			type="Empty";
 			id=266;
@@ -8647,7 +8647,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={1964.9384,0.76074219,12068.904};
-			name="MHQ3";
+			name="respawn_west_MHQ3";
 			text="RHIB MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";

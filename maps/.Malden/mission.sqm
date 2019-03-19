@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1028;
+		nextID=1029;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6245.0947,395.26883,4778.0493};
-		dir[]={0.44106513,-0.4265644,0.78966105};
-		up[]={0.20802122,0.90444249,0.37243018};
-		aside[]={0.87306952,-3.8393773e-007,-0.48765275};
+		pos[]={8015.3442,55.417038,9656.6807};
+		dir[]={0.15881722,-0.64395452,0.74840021};
+		up[]={0.13367648,0.76506323,0.62992859};
+		aside[]={0.97821772,-2.7343049e-008,-0.20758672};
 	};
 };
 binarizationWanted=0;
@@ -336,7 +336,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={5383.6226,17.492664,1337.5302};
-			name="MHQ";
+			name="respawn_west_MHQ";
 			text="Offroad MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -396,7 +396,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={5383.6226,18.844284,1334.3016};
-			name="MHQ2";
+			name="respawn_west_MHQ2";
 			text="Jeep MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -2375,7 +2375,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={6797.1733,21.574095,11432.61};
-			name="respawn_camp";
+			name="respawn_west_camp";
 			text="Camp";
 			type="Empty";
 			id=266;
@@ -4429,18 +4429,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5162.1328,23.276878,1193.5989};
-				angles[]={6.247201,1.6495281,0.010398259};
+				position[]={5162.1328,23.277269,1193.599};
+				angles[]={6.2471962,1.6495281,0.010402163};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
+				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true]; this setVehicleLock ""LOCKED"";";
 			};
 			id=577;
 			type="Box_NATO_Uniforms_F";
-			atlOffset=-0.00038909912;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5166,7 +5165,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={5383.1025,5.1493068,1329.1708};
-			name="MHQ3";
+			name="respawn_west_MHQ3";
 			text="RHIB MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
@@ -5704,18 +5703,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8013.5898,34.015873,9687.1719};
-				angles[]={0.0023920804,6.2270193,6.2816033};
+				position[]={8013.5898,34.015965,9687.1719};
+				angles[]={0.0023911009,6.2270207,6.2815971};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 				dynamicSimulation=1;
 			};
 			id=838;
 			type="I_Heli_Transport_02_F";
-			atlOffset=-0.024089813;
+			atlOffset=-0.02399826;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5733,7 +5733,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -8843,7 +8843,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
+				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true]; this setVehicleLock ""LOCKED"";";
 			};
 			id=999;
 			type="Box_NATO_Uniforms_F";
@@ -8891,67 +8891,6 @@ class Mission
 			};
 		};
 		class Item127
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6792.7959,22.392492,11430.069};
-				angles[]={0.049567349,1.488696,0.01839577};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
-				name="MAB_1";
-			};
-			id=1005;
-			type="B_CargoNet_01_ammo_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""G_Lady_Blue"",""G_Lowprofile"",""H_Cap_marshal"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_gry"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_Cap_headphones"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""G_Spectacles"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""H_StrawHat"",""H_StrawHat_dark"",""G_Tactical_Clear"",""G_Tactical_Black"",""G_Spectacles_Tinted"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""U_C_HunterBody_grn"",""U_B_survival_uniform"",""U_I_G_Story_Protagonist_F"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""V_Rangemaster_belt"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_I_G_resistanceLeader_F""],[]],[[""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_rgr"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_mcamo"",""B_Kitbag_sgg"",""B_Kitbag_tan"",""B_Messenger_Black_F"",""B_Messenger_Gray_F"",""B_TacticalPack_blk"",""B_TacticalPack_rgr""],[]]],true]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9013,7 +8952,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item129
+		class Item128
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -9218,7 +9157,7 @@ class Mission
 				nAttributes=10;
 			};
 		};
-		class Item130
+		class Item129
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9236,7 +9175,7 @@ class Mission
 			type="B_APC_Tracked_01_CRV_F";
 			atlOffset=-0.0032806396;
 		};
-		class Item131
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9255,7 +9194,7 @@ class Mission
 			type="Land_Atm_01_F";
 			atlOffset=0.16100121;
 		};
-		class Item132
+		class Item131
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9270,7 +9209,7 @@ class Mission
 			id=1021;
 			type="Land_PedestrianCrossing_01_8m_10str_F";
 		};
-		class Item133
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9286,7 +9225,7 @@ class Mission
 			id=1022;
 			type="Land_PedestrianCrossing_01_8m_10str_F";
 		};
-		class Item134
+		class Item133
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9303,7 +9242,7 @@ class Mission
 			type="Land_PedestrianCrossing_01_8m_10str_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item135
+		class Item134
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -9359,7 +9298,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item136
+		class Item135
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9396,6 +9335,67 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item136
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6793.0376,22.432665,11429.349};
+				angles[]={0.049559005,0.37580428,0.018396867};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this allowdamage false;this setVariable [""R3F_LOG_disabled"", true];";
+				name="MAB_3";
+			};
+			id=1028;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_TRG20_F"",""arifle_TRG21_F"",""arifle_TRG21_GL_F"",""LMG_Mk200_F"",""arifle_AKM_F"",""arifle_AKS_F"",""launch_RPG7_F"",""launch_MRAWS_green_rail_F""],[5,2,2,2,2,6,2,5]],[[""200Rnd_65x39_cased_Box"",""30Rnd_556x45_Stanag"",""HandGrenade"",""MiniGrenade"",""1Rnd_HE_Grenade_shell"",""Chemlight_blue"",""SmokeShell"",""SmokeShellGreen"",""APERSTripMine_Wire_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""30Rnd_545x39_Mag_Green_F"",""30Rnd_762x39_Mag_Green_F"",""RPG7_F"",""MRAWS_HE_F"",""MRAWS_HEAT_F""],[8,10,10,10,3,5,6,6,4,2,2,10,20,8,2,4]],[[""Binocular"",""MineDetector"",""acc_flashlight"",""optic_ACO_grn"",""optic_MRCO"",""optic_Arco_blk_F"",""bipod_01_F_khk"",""optic_DMS"",""acc_pointer_IR"",""optic_KHS_old"",""optic_Holosight_blk_F"",""FirstAidKit"",""ItemCompass"",""ItemGPS"",""Medikit"",""ToolKit""],[20,5,10,10,4,2,5,1,10,4,10,50,10,2,5,5]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
