@@ -13,5 +13,6 @@ _index  = 0;
   _mhq = (_x select 1);
   _mhq setpos (((_this select 2) select _index) select 0);
   _mhq setdir (((_this select 2) select _index) select 1);
+  [_mhq,(((_this select 2) select _index) select 2)] call setContent;
   _index = _index + 1;
 } forEach MHQs;
