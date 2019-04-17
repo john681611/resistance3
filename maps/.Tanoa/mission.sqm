@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=882;
+		nextID=888;
 	};
 	class MarkerIDProvider
 	{
@@ -47,6 +47,7 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Civ_Camping",
+	"cba_xeh",
 	"A3_Structures_F_EPA_Civ_Constructions",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Exp_Military_Fortifications",
@@ -341,9 +342,8 @@ class Mission
 {
 	class Intel
 	{
-        briefingName="Resistance";
+		briefingName="Resistance";
 		resistanceWest=0;
-		resistanceEast=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -361,7 +361,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=244;
+		items=250;
 		class Item0
 		{
 			dataType="Marker";
@@ -4313,7 +4313,7 @@ class Mission
 			};
 			id=622;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=3.9971485;
+			atlOffset=3.9963419;
 		};
 		class Item68
 		{
@@ -4330,7 +4330,7 @@ class Mission
 			};
 			id=623;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=3.9850163;
+			atlOffset=3.98421;
 		};
 		class Item69
 		{
@@ -10558,7 +10558,7 @@ class Mission
 			name="Tele_5";
 			text="Turdis";
 			type="flag_FIA";
-			angle=66.288422;
+			angle=66.288414;
 			id=874;
 			atlOffset=2.6074653;
 		};
@@ -11012,6 +11012,99 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item244
+		{
+			dataType="Trigger";
+			position[]={1162.6992,-14.519531,11831.47};
+			class Attributes
+			{
+				name="MHQ_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=882;
+			type="EmptyDetector";
+			atlOffset=5.8250008;
+		};
+		class Item245
+		{
+			dataType="Marker";
+			position[]={1164.6836,14.841463,11830.612};
+			name="MHQ_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=883;
+			atlOffset=35.364155;
+		};
+		class Item246
+		{
+			dataType="Trigger";
+			position[]={1159.4751,-16.016945,11803.996};
+			class Attributes
+			{
+				name="MHQ3_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=884;
+			type="EmptyDetector";
+			atlOffset=5.8254757;
+		};
+		class Item247
+		{
+			dataType="Marker";
+			position[]={1163.8315,10.876066,11805.989};
+			name="MHQ3_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=885;
+			atlOffset=32.462841;
+		};
+		class Item248
+		{
+			dataType="Trigger";
+			position[]={1160.8169,-16.119495,11782.32};
+			class Attributes
+			{
+				name="MHQ2_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=886;
+			type="EmptyDetector";
+			atlOffset=5.8245564;
+		};
+		class Item249
+		{
+			dataType="Marker";
+			position[]={1161.6689,13.170069,11782.597};
+			name="MHQ2_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=887;
+			atlOffset=35.18718;
 		};
 	};
 	class Connections

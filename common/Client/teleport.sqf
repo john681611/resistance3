@@ -34,7 +34,7 @@ private ["_Location"];
  } forEach Bases;
 
  {
-    _marker =   _x select 2;
+    _marker =  format["respawn_west_%1",_x select 2];
     _displayName =  getText (configFile >>  "CfgVehicles" >>(typeOf (_x select 1)) >> "displayName");
    _missionsData append [[getMarkerPos _marker,to_Base,_displayName,_displayName,"","",1,[getMarkerPos _marker]]];
  } forEach MHQs;

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=738;
+		nextID=744;
 	};
 	class MarkerIDProvider
 	{
@@ -334,9 +334,8 @@ class Mission
 {
 	class Intel
 	{
-        briefingName="Resistance";
+		briefingName="Resistance";
 		resistanceWest=0;
-		resistanceEast=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -353,7 +352,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=245;
+		items=249;
 		class Item0
 		{
 			dataType="Marker";
@@ -9024,7 +9023,7 @@ class Mission
 			name="Tele_5";
 			text="Turdis";
 			type="flag_FIA";
-			angle=162.82193;
+			angle=162.82191;
 			id=696;
 			atlOffset=2.8728638;
 		};
@@ -12544,6 +12543,7 @@ class Mission
 			};
 			id=734;
 			type="B_Heli_Transport_03_F";
+			atlOffset=0.00063896179;
 		};
 		class Item243
 		{
@@ -12765,7 +12765,68 @@ class Mission
 			};
 			id=737;
 			type="C_IDAP_Heli_Transport_02_F";
-			atlOffset=1.9073486e-006;
+		};
+		class Item245
+		{
+			dataType="Trigger";
+			position[]={13798.676,-116.64429,9372.7588};
+			class Attributes
+			{
+				name="MHQ_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=738;
+			type="EmptyDetector";
+			atlOffset=5.8249969;
+		};
+		class Item246
+		{
+			dataType="Marker";
+			position[]={13800.66,-86.858063,9371.9014};
+			name="MHQ_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=739;
+			atlOffset=35.364151;
+		};
+		class Item247
+		{
+			dataType="Trigger";
+			position[]={13795.452,-120.33463,9345.2852};
+			class Attributes
+			{
+				name="MHQ3_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=740;
+			type="EmptyDetector";
+			atlOffset=5.8254776;
+		};
+		class Item248
+		{
+			dataType="Marker";
+			position[]={13799.809,-93.641815,9347.2783};
+			name="MHQ3_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=741;
+			atlOffset=32.462845;
 		};
 	};
 	class Connections

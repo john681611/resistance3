@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=1029;
+		nextID=1035;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8015.3442,55.417038,9656.6807};
+		pos[]={8012.1167,70.260002,9643.6318};
 		dir[]={0.15881722,-0.64395452,0.74840021};
 		up[]={0.13367648,0.76506323,0.62992859};
 		aside[]={0.97821772,-2.7343049e-008,-0.20758672};
@@ -331,7 +331,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=137;
+		items=143;
 		class Item0
 		{
 			dataType="Marker";
@@ -415,8 +415,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5165.5835,23.004448,1197.3656};
-						angles[]={6.2799835,3.7364919,6.2448058};
+						position[]={5165.4707,23.01737,1201.1525};
+						angles[]={-0,3.7364919,6.2448058};
 					};
 					side="West";
 					flags=6;
@@ -429,7 +429,6 @@ class Mission
 					};
 					id=70;
 					type="B_G_officer_F";
-					atlOffset=3.8146973e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -874,7 +873,6 @@ class Mission
 			{
 			};
 			id=69;
-			atlOffset=3.8146973e-006;
 		};
 		class Item8
 		{
@@ -9397,6 +9395,99 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item137
+		{
+			dataType="Trigger";
+			position[]={5509.0698,-20.377302,1266.1062};
+			class Attributes
+			{
+				name="MHQ_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=1029;
+			type="EmptyDetector";
+			atlOffset=5.8250008;
+		};
+		class Item138
+		{
+			dataType="Marker";
+			position[]={5511.0542,8.7950191,1265.2494};
+			name="MHQ_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBlue";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1030;
+			atlOffset=35.364296;
+		};
+		class Item139
+		{
+			dataType="Trigger";
+			position[]={5505.8457,-18.658588,1238.6333};
+			class Attributes
+			{
+				name="MHQ3_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=1031;
+			type="EmptyDetector";
+			atlOffset=5.8254757;
+		};
+		class Item140
+		{
+			dataType="Marker";
+			position[]={5510.2017,7.3770943,1240.6259};
+			name="MHQ3_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBlue";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1032;
+			atlOffset=32.462921;
+		};
+		class Item141
+		{
+			dataType="Trigger";
+			position[]={5507.1875,-10.560163,1216.9573};
+			class Attributes
+			{
+				name="MHQ2_zone";
+				sizeA=100;
+				sizeB=100;
+				activationBy="ANY";
+				isServerOnly=1;
+			};
+			id=1033;
+			type="EmptyDetector";
+			atlOffset=5.8245554;
+		};
+		class Item142
+		{
+			dataType="Marker";
+			position[]={5509.1729,19.103399,1216.1002};
+			name="MHQ2_zone_marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBlue";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1034;
+			atlOffset=35.364429;
 		};
 	};
 	class Connections
