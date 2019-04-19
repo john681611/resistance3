@@ -30,6 +30,7 @@ respawnMHQ = compile preprocessFileLineNumbers 'Server\mhq\respawn.sqf';
 [] execVM "Server\z_townmgr.sqf";
 [] execVM "Server\mhq\marker.sqf";
 [] execVM "Server\VehicleMarker.sqf";
+[] execVM "Server\fn_advancedTowingInit.sqf";
 waitUntil {ztowninit==1};
 []	execVM "Server\eos\zoneConfig.sqf";
 []	execVM "Server\cleanupAuto.sqf";
