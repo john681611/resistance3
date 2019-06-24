@@ -27,9 +27,6 @@ _wp1 setWaypointStatements ["true", "(vehicle this) LAND 'GET IN';"];
 						if (_debug) then {hint "Transport unloaded";};	
 						0 = [_cargoGrp,_mkr] call eos_fnc_taskpatrol;
 						
-_wp2 = _grp addWaypoint [[0,0,0], 0];  
-_wp2 setWaypointSpeed "FULL";  
-_wp2 setWaypointType "MOVE";
-_wp2 setWaypointStatements ["true", "{deleteVehicle _x} forEach crew (vehicle this) + [vehicle this];"];  
+[_grp, getMarkerPos _mkr, getMarkerSize _mkr select 0, 0, 1, 0] call CBA_fnc_taskDefend;
 
 deletevehicle _pad;
