@@ -2,7 +2,7 @@
 #include "outlw_magRepack\MagRepack_config.hpp"
 #include "CHVD\dialog.hpp"
 
-briefingName = "Resistance 3.5.0";
+briefingName = "Resistance 3.5.1";
 onLoadName = "Resistance";
 overviewText = "Resistance, gather what you can to take back your land";
 author = "INF_Mike64 Inspired by Kitch";
