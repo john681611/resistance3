@@ -59,6 +59,7 @@ This is not designed to be done on every map more on whats been requested. (Note
 1. Open mission file in editor.
 1. Add `ACE TFAR` to suitable names
 1. Add `_ACE_TFAR` to save name variable in config/basic.sqf
+1. ./description remove revive config values
 1. initPlayerLocal.sqf disable `Revive_marker`,`BIS_fnc_dynamicGroups`
 1. init.sqf disable `MagRepack_init_sv`
 1. initServer.sqf disable BIS_fnc_dynamicGroups
@@ -66,3 +67,6 @@ This is not designed to be done on every map more on whats been requested. (Note
 
 ### Editor
 1. Load mission up in game editor
+1. Add medical/Radio/earplugs items to arsernal boxes
+1. Set ACE cargo size -1
+1. Load settings from Bootcamp
