@@ -16,7 +16,9 @@ Hostiles = [
 saveName = "Enoch";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"],[FLG2,C2,"MHQ2"]];
 Bases =[['respawn_west', Main_Zone, "Factory"],['respawn_west_camp', Hotel_Zone,'Military Base']]; //[marker, trigger, name]
+MasterBoxes = [[mb, mz], [mb2,mz2]];//[box,zone]
 /////////////////////////////////////
 publicVariable "MHQs";
 publicVariable "Bases";
+publicVariable "MasterBoxes";
 publicVariable "saveName";

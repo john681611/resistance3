@@ -1,5 +1,5 @@
 //server
-blacklistLocations = [""];
+blacklistLocations = ["];
 Hostiles = [
 	[INDEPENDENT,2],.6,
 	[INDEPENDENT,4],.4,
@@ -16,7 +16,9 @@ Hostiles = [
 saveName = "Altis";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"],[FLG2,C2,"MHQ2"]]; //[base flag ,vehicle , marker, name]
 Bases =[['respawn_west', Main_Zone, "Main Base"], ['respawn_west_Hotel',Hotel_Zone, 'Hotel Base']]; //[marker, trigger, name]
+MasterBoxes = [[mb, mz], [mb2,mz2]];//[box,zone]
 /////////////////////////////////////
 publicVariable "MHQs";
 publicVariable "Bases";
+publicVariable "MasterBoxes";
 publicVariable "saveName";
