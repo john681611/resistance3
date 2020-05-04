@@ -3,6 +3,7 @@
 "Giallustio - Logistics",
 "BangaBob - Enemy Occupation System (EOS)",
 "Shuko - Taskmaster Script & SHK Pos",
+"phronk - Addon-Free ArmA Radio",
 "lsd - ZEC used for bases",
 "IRON-FISTS - Testing and ideas",
 "This server, for running the mission",
