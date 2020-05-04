@@ -29,6 +29,26 @@ if (!_saveTestsPass) then {
   (_x select 1) execVM 'Client\teleport_action.sqf';
 } forEach MHQs;
 
+{
+  [
+    (_x select 0),
+    "Send to Masterbox",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa",
+    "true",
+    "true",
+    {},
+    {},
+    {(_this select 3) call sendToMasterBox; },
+    {},
+    _x,
+    10,
+    nil,
+    false, 
+    false
+  ] call BIS_fnc_holdActionAdd;
+} forEach MasterBoxes;
+
 player createDiarySubject ["TeamSpeak & TFAR","TeamSpeak & TFAR"];
 player createDiaryRecord ["TeamSpeak & TFAR", ["TeamSpeak & TFAR","We highly Reccomend using Teamspeak and the TFAR mod <br/>
 TS server: ts3.iron-fists.eu OR 81.19.212.66 <br/>
@@ -52,6 +72,7 @@ Emergency: 66 <br/>
 [] execVM "Client\Tags\tags.sqf";
 getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
 setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
+sendToMasterBox = compile preprocessFileLineNumbers 'Client\sendToMasterBox.sqf';
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM 'Client\safe_box.sqf';
