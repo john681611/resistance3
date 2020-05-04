@@ -1,10 +1,11 @@
-private ["_box","_weapons","_mags","_containers","_containersAndContent","_items","_weapon","_data"];
-_box = (_this select 0);
-_data = (_this select 1);
-clearMagazineCargoGlobal _box;
-clearWeaponCargoGlobal  _box;
-clearItemCargoGlobal _box;
-clearBackpackCargoGlobal _box;
+private ["_box","_weapons","_mags","_containers","_containersAndContent","_items","_weapon","_data", "_clear"];
+params ["_box", "_data", ["_clear", true]];
+if(_clear) then {
+  clearMagazineCargoGlobal _box;
+  clearWeaponCargoGlobal  _box;
+  clearItemCargoGlobal _box;
+  clearBackpackCargoGlobal _box;
+};
 _weapons =  (_data select 0);
 _mags = (_data select 1);
 _items = (_data select 2);
