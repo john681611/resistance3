@@ -1,6 +1,17 @@
 #include "R3F_LOG\desc_include.h"
 #include "outlw_magRepack\MagRepack_config.hpp"
 #include "CHVD\dialog.hpp"
+#include "AFAR\ui\defines.hpp"
+#include "AFAR\ui\dialogs.hpp"
+
+class CfgTitles {
+#include "AFAR\ui\titles.hpp"
+};
+
+class CfgSounds {
+#include "AFAR\f\SFX.hpp"
+sounds[]={};
+};
 
 briefingName = "Resistance 3.5.2";
 onLoadName = "Resistance";
