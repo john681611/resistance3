@@ -49,23 +49,46 @@ if (!_saveTestsPass) then {
   ] call BIS_fnc_holdActionAdd;
 } forEach MasterBoxes;
 
-player createDiarySubject ["TeamSpeak & TFAR","TeamSpeak & TFAR"];
-player createDiaryRecord ["TeamSpeak & TFAR", ["TeamSpeak & TFAR","We highly Reccomend using Teamspeak and the TFAR mod <br/>
-TS server: ts3.iron-fists.eu OR 81.19.212.66 <br/>
-Channle: Arma 3 Resistance Server/BLUFOR <br/>
+
+player createDiaryRecord ["Diary", ["Welcome to resistance",
+"Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.<br/>
+All you have is what you start with only the starter vehicles respawn when destroyed. Secure vehicles and equipment by bringing it back to a base.<br/>
+Teleport is available at the Turdis (portaloo).<br/>
+Addon Free Radio is running as well as mag repacking on CTRL + R<br/>
+Boxes in the white circle can be transerred to the 'MasterBox'(netted box) vehicle content can to<br/>
+The game saves your gear though extra personal Gear can be stored at the storage Terminals (looks like ATM's at base)<br/>
+Tansport boxes to base by vehicle (Teleporting with Boxes allowed when player count low).<br/>
+For performance Dynamic simulation is on ranging from 1.5k to 3k, damage is done but it will not take affect untill activation.<br/>
 <br/>
-TFAR Frequencies
-Short range: <br/>
-Alpha/Normal: 100 <br/>
-Bravo Squad: 200 <br/>
-Charlie Squad 300 (not used by INF atm) <br/>
-Emergency: 66 <br/>
-<br/>
-Long range: <br/>
-Ground Vehicles: 40 <br/>
-Aircaft: 50 <br/>
-Emergency: 66 <br/>
-"]];
+Please follow the server rules:<br/>
+1: No Teamkilling<br/>
+2: Respect Each other<br/>
+Failing to abide by the above will result in your immediate removal from the server.<br/>
+Website: www.iron-fists.co.uk TS: ts3.iron-fists.co.uk<br/>
+PLAY FAIR AND WITH HONOUR"]];
+player createDiaryRecord ["Diary", ["About Resistance",
+"Resistance is a co-op mission about teamwork. Instead of being given everything in the toybox you have a limited amount of resources with which to complete your mission.<br/>
+Your goal is to capture your island back.<br/>
+Each AO has ammo/weapon/gear supplies stored within the buildings, the bigger the zone the more to find.<br/>
+When zones clear be carefull as there may be stragglers out to get you.<br/>
+Your rewards are what you salvage so knock vehicles out and repair where possible.<br/>
+There are a few old BLUFOR bases marked in red hashing you may be able to find some NATO equipment there, but they are mined.<br/>
+To keep vehicles, boxs and other loot store it within the borders of your bases (blue bordered areas). Boxes Stored in vehicles will not be saved so make sure to remove them.<br/>
+Warning: Content of vehicles and boxs provided at the bases will be lost on server restart<br/>
+Have fun playing! --Mike64"]];
+
+player createDiaryRecord ["Diary", ["Mission Credits",
+"The author of this mission would like to thank the following people for their contributions to Resistance:<br/>
+Giallustio - Logistics<br/>
+BangaBob - Enemy Occupation System (EOS)<br/>
+Shuko - Taskmaster Script & SHK Pos<br/>
+phronk - Addon-Free ArmA Radio<br/>
+lsd - ZEC used for bases<br/>
+IRON-FISTS - Testing and ideas<br/>
+This server, for running the mission<br/>
+You, for playing!"
+]];
+
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Revive_marker.sqf";

@@ -371,7 +371,7 @@ class Mission
 			dataType="Marker";
 			position[]={14931.899,-0.089939453,14333.387};
 			name="TS";
-			text="TS: ts3.iron-fists.eu";
+			text="TS: ts3.iron-fists.co.uk";
 			type="mil_warning";
 			id=11;
 			atlOffset=57.074978;
@@ -381,7 +381,7 @@ class Mission
 			dataType="Marker";
 			position[]={14927.146,-1.5061563e-005,14428.231};
 			name="web";
-			text="Site: www.iron-fists.eu";
+			text="Site: www.iron-fists.co.uk";
 			type="mil_warning";
 			id=12;
 			atlOffset=53.514755;
@@ -8972,7 +8972,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{this addEventHandler [""HandleDamage"", {false}]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];}";
+				init="call{this addEventHandler [""HandleDamage"", {false}]; this setVariable [""R3F_LOG_disabled"", true];}";
 				name="Isig2_1";
 				disableSimulation=1;
 			};
@@ -9450,7 +9450,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{this addEventHandler [""HandleDamage"", {false}]; this setVariable [""R3F_LOG_disabled"", true];this addAction [""Welcome Message"",""Server\Info Boards\WelcomeMessage.sqf""];this addAction [""Mission Rules"",""Server\Info Boards\missionrules.sqf""];this addAction [""Server Rules"",""Server\Info Boards\serverrules.sqf""];this addAction [""Credits"",""Server\Info Boards\creditsboard.sqf""];}";
+				init="call{this addEventHandler [""HandleDamage"", {false}]; this setVariable [""R3F_LOG_disabled"", true];}";
 				name="Isig2_2";
 				disableSimulation=1;
 			};
