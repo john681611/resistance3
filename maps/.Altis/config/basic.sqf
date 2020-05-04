@@ -1,5 +1,5 @@
 //server
-blacklistLocations = ["];
+blacklistLocations = [""];
 Hostiles = [
 	[INDEPENDENT,2],.6,
 	[INDEPENDENT,4],.4,
