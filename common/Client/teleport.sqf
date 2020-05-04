@@ -16,12 +16,27 @@ _selected = {
 to_Base =
  {
 private ["_Location"];
- _Location = _this select 0;
+    _Location = _this select 0;
     _unit = player;
     _unit setpos (_Location findEmptyPosition [0,80, "Man"]);
     _unit allowDamage false;
     sleep 5;
     _unit allowDamage true;
+ };
+
+ to_MHQ =
+ {
+  _veh = (_this select 9) select 0;
+  _unit = player;
+  if(_veh emptyPositions "driver" > 0) then {
+    _unit moveInDriver _veh;
+  } else {
+    if(_veh emptyPositions "cargo" > 0) then {
+      _unit moveInCargo _veh;
+    } else {
+      hint "MHQ has no free positions.";
+    };
+  }
  };
 
 
@@ -36,7 +51,7 @@ private ["_Location"];
  {
     _marker =  format["respawn_west_%1",_x select 2];
     _displayName =  getText (configFile >>  "CfgVehicles" >>(typeOf (_x select 1)) >> "displayName");
-   _missionsData append [[getMarkerPos _marker,to_Base,_displayName,_displayName,"","",1,[getMarkerPos _marker]]];
+    _missionsData append [[getMarkerPos _marker,to_MHQ,_displayName,_displayName,"","",1,[_x select 1]]];
  } forEach MHQs;
 
 
