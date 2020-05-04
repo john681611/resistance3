@@ -16,3 +16,9 @@ _index  = 0;
   [_mhq,(((_this select 2) select _index) select 2)] call setContent;
   _index = _index + 1;
 } forEach MHQs;
+
+_index  = 0;
+{
+  [(_x select 0),((_this select 3) select _index)] call setContent;
+  _index = _index + 1;
+} forEach MasterBoxes;

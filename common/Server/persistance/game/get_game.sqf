@@ -1,4 +1,4 @@
-_save = [[],[],[]];
+_save = [[],[],[],[]];
 
 getVehicleData = {
 _vehicle =  [
@@ -43,5 +43,10 @@ getMHQZone = {
     (_save select 2) append [[(getpos _mhq),(getdir _mhq), (_mhq call getContent)]];
     _x call getMHQZone;
 } forEach MHQs;
+
+{
+  (_save select 3) append [((_x select 0) call getContent)];
+} forEach MasterBoxes;
+
 
 _save
