@@ -39,10 +39,10 @@ if (!_saveTestsPass) then {
     "true",
     {},
     {},
-    {(_this select 3) call sendToMasterBox; },
+    {(_this select 3) remoteExecCall ["sendToMasterBox", 2]; },
     {},
     _x,
-    10,
+    6,
     nil,
     false, 
     false
@@ -95,7 +95,6 @@ You, for playing!"
 [] execVM "Client\Tags\tags.sqf";
 getContent = compile preprocessFileLineNumbers 'Server\persistance\content\getContent.sqf';
 setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setContent.sqf';
-sendToMasterBox = compile preprocessFileLineNumbers 'Client\sendToMasterBox.sqf';
 getLoadout = compile preprocessFileLineNumbers 'Client\get_loadout.sqf';
 setLoadout = compile preprocessFileLineNumbers 'Client\set_loadout.sqf';
 [] execVM 'Client\safe_box.sqf';

@@ -24,6 +24,7 @@ setContent = compile preprocessFileLineNumbers 'Server\persistance\content\setCo
 getSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\get_game.sqf';
 setSaveGame = compile preprocessFileLineNumbers 'Server\persistance\game\set_game.sqf';
 respawnMHQ = compile preprocessFileLineNumbers 'Server\mhq\respawn.sqf';
+sendToMasterBox = compile preprocessFileLineNumbers 'Server\sendToMasterBox.sqf';
 
 
 [] execVM "Server\persistance\game\keep_game.sqf";
