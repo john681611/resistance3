@@ -17,19 +17,19 @@
 
 *///CONFIGURATIONS:
 //CHANNEL PERMISSIONS		~		[TEXT,VOIP]	~ 						!!!Use all lower-case letters!!!
-r_sideCH=false;//Enable Side Channel										>> Default: false
+r_sideCH=true;//Enable Side Channel										>> Default: false
 r_sCH=[true,true];//Side Channel ~ Chat/Voice  						>> Default: [true,true]
 r_cCH=[true,true];//Command Channel ~ Chat/Voice  				>> Default: [true,true]
-r_grCH=[false,true];//Group Channel ~ Chat/Voice					>> Default: [false,true]
+r_grCH=[true,true];//Group Channel ~ Chat/Voice					>> Default: [false,true]
 r_vCH=[true,true];//Vehicle Channel ~ Chat/Voice					>> Default: [true,true]
-r_dCH=[false,true];//Direct Channel ~ Chat/Voice						>> Default: [false,true]
-r_mCH=[false,true];//Air Channel ~ Chat/Voice  						>> Default: [false,true]
+r_dCH=[true,true];//Direct Channel ~ Chat/Voice						>> Default: [false,true]
+r_mCH=[true,true];//Air Channel ~ Chat/Voice  						>> Default: [false,true]
 r_mCHName="Air channel";//Name of the custom channel		>> Default: "Air Channel"
 r_mCHShort="(Air)";//Shown by player name in Air channel	>> Default: "(Air)"
 r_RTOBP=[];//Add to list of backpacks RTO checks for				>> Default: []
 
 r_alertOn=true;//Talking alerts nearby enemies						>> Default: true
-r_chOn=false;//Toggle channel switching keybinds					>> Default: true
+r_chOn=true;//Toggle channel switching keybinds					>> Default: true
 
 //DEFAULT COSMETICS
 r_3DR=true;//3D radio pop-up when talking								>> Default: true
