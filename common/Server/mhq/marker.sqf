@@ -4,7 +4,7 @@ call {while {true} do
         {
             {
                 _pos =  getPos (_x select 1);
-                if(_pos isEqualTo  [0,0,0]) then {
+                if((_pos select 0) < 5 and (_pos select 1) < 5) then {
                     _pos = (getMarkerPos format["respawn_west_%1",(_x select 2)]);
                     (_x select 1) setPos _pos;
                 }
