@@ -4,6 +4,10 @@ call {while {true} do
         {
             {
                 _pos =  getPos (_x select 1);
+                if(_pos isEqualTo  [0,0,0]) then {
+                    _pos = (getMarkerPos format["respawn_west_%1",(_x select 2)]);
+                    (_x select 1) setPos _pos;
+                }
                 _zoneMarker = format["%1_zone_marker",(_x select 2)];
                 format["respawn_west_%1",(_x select 2)] setMarkerPos _pos;
                 _zoneMarker setMarkerPos _pos;
