@@ -15,9 +15,6 @@ _tempArray = [];
 #include "..\Server\eos\UnitPools\nato_sf.sqf";
 #include "..\Server\eos\UnitPools\nato.sqf";
 #include "..\Server\eos\UnitPools\synd.sqf";
-diag_log "FUCK";
-diag_log csat_InfPool;
-diag_log 'SHIT';
 switch (_faction)
 	do {
 	// EAST CSAT FACTION
