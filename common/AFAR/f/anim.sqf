@@ -1,1 +1,0 @@
-if(r_Anim)then{if(cameraView=="GUNNER")exitWith{};if(isNull objectParent r_p&&lifeState r_p!="INCAPACITATED")then{r_p playAction"HandSignalRadio"}}
