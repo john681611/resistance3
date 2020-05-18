@@ -53,13 +53,6 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 // SPAWN HOUSE PATROLS
 	for "_counter" from 1 to _aGrps do {
 	if (isnil "_aGrp") then {_aGrp=[];};
-		if (_cache) then {
-				_cacheGrp=format ["HP%1",_counter];
-				_units=_eosActivated getvariable _cacheGrp;
-						_aSize=[_units,_units];
-						_aMin=_aSize select 0;
-							if (_debug)then{diag_log format ["ID:%1,restore - %2",_cacheGrp,_units];};
-							};
 								if (_aMin > 0) then {
 										_aGroup=[_mPos,_aSize,_faction,_side,false] call EOS_fnc_spawngroup;
 										if (!surfaceiswater _mPos) then {
@@ -76,13 +69,6 @@ if (_debug) then {diag_log (format ["Spawned House Patrol: %1",_counter]);0= [_m
 // SPAWN PATROLS
 	for "_counter" from 1 to _bGrps do {
 	if (isnil "_bGrp") then {_bGrp=[];};
-		if (_cache) then {
-				_cacheGrp=format ["PA%1",_counter];
-				_units=_eosActivated getvariable _cacheGrp;
-					_bSize=[_units,_units];
-					_bMin=_bSize select 0;
-					if (_debug)then{diag_log format ["ID:%1,restore - %2",_cacheGrp,_units];};
-						};
 							if (_bMin > 0) then {
 								  _pos=[_mkr,50] call EOS_fnc_findSafePos;
 									_bGroup=[_pos,_bSize,_faction,_side,true] call EOS_fnc_spawngroup;
@@ -242,10 +228,6 @@ while {sleep 5; _eosAct} do {
 			if (!isnil "_bGrp") then {
 				_n=0;
 				{
-					_n=_n+1;_units={alive _x} count units _x;
-					_cacheGrp=format ["PA%1",_n];
-					if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-					_eosActivated setvariable [_cacheGrp,_units, false];
 					{deleteVehicle _x} foreach units _x;deleteGroup _x;
 				}foreach _bGrp;
 			};
@@ -254,9 +236,6 @@ while {sleep 5; _eosAct} do {
 		if (!isnil "_aGrp") then {
 			_n=0;
 			{
-				_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["HP%1",_n];
-				if (_debug) then{diag_log format ["ID:%1,cache - %2",_cacheGrp,_units];};
-				_eosActivated setvariable [_cacheGrp,_units, false];
 				{deleteVehicle _x} foreach units _x;deleteGroup _x;
 			}foreach _aGrp;
 		};
