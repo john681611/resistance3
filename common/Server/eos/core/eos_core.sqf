@@ -226,17 +226,19 @@ while {sleep 5; _eosAct} do {
 
 	// CACHE PATROL INFANTRY
 			if (!isnil "_bGrp") then {
-				_n=0;
 				{
-					{deleteVehicle _x} foreach units _x;deleteGroup _x;
+					if ({!alive _x} foreach units _x) then {_bGrps= _bGrps - 1;};
+					{deleteVehicle _x} foreach units _x;
+					deleteGroup _x;
 				}foreach _bGrp;
 			};
 
 	// CACHE HOUSE INFANTRY
 		if (!isnil "_aGrp") then {
-			_n=0;
 			{
-				{deleteVehicle _x} foreach units _x;deleteGroup _x;
+				if ({!alive _x} foreach units _x) then {_aGrps= _aGrps - 1;};
+				{deleteVehicle _x} foreach units _x;
+				deleteGroup _x;
 			}foreach _aGrp;
 		};
 
