@@ -72,7 +72,6 @@ ldf_heliCrew = [
 	"I_E_Helipilot_F", .5
 ];
 ldf_boxPool = [
-	"Box_EAF_Ammo_F", .5,
 	"Box_EAF_Wps_F", .5,
 	"Box_EAF_Equip_F", .5,
 	"Box_EAF_AmmoOrd_F", .5,
@@ -80,5 +79,6 @@ ldf_boxPool = [
 	"Box_EAF_WpsSpecial_F", .1,
 	"I_EAF_supplyCrate_F", .2,
 	"Box_EAF_Support_F", .2,
+	"Box_EAF_AmmoVeh_F",.2,
 	"I_E_CargoNet_01_ammo_F", .1
 ];

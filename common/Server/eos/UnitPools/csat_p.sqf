@@ -72,9 +72,9 @@ csat_p_heliCrew = [
 	"O_T_helipilot_F", .5
 ];
 csat_p_boxPool = [
-	"Box_T_East_Ammo_F", .7,
 	"Box_T_East_WpsSpecial_F", .3,
 	"Box_T_East_Wps_F", .5,
 	"Box_East_Support_F", .2,
+	"Box_East_AmmoVeh_F",.2,
 	"O_supplyCrate_F", .2
 ];

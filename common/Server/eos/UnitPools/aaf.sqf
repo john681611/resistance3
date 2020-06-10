@@ -75,10 +75,10 @@ aaf_heliCrew = [
 	"I_helipilot_F", .5
 ];
 aaf_boxPool = [
-	"Box_IND_Ammo_F", .7,
 	"Box_IND_Support_F", .2,
 	"Box_IND_WpsSpecial_F", .3,
 	"I_supplyCrate_F", .2,
 	"Box_IND_Wps_F", .5,
+	"Box_IND_AmmoVeh_F",.2,
 	"Box_AAF_Equip_F", .2
 ];

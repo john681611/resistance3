@@ -80,10 +80,10 @@ nato_p_heliCrew = [
 	"B_T_helipilot_F", .5
 ];
 nato_p_boxPool = [
-	"Box_T_NATO_Ammo_F", .3,
 	"Box_T_NATO_Wps_F", .2,
 	"Box_T_NATO_WpsSpecial_F", .1,
 	"Box_NATO_WpsLaunch_F", .2,
 	"Box_NATO_Support_F", .1,
+	"Box_NATO_AmmoVeh_F", /.2
 	"B_supplyCrate_F", .1
 ];
