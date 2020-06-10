@@ -7454,7 +7454,7 @@ class Mission
 				name="mb";
 			};
 			id=1038;
-			type="B_CargoNet_01_ammo_F";
+			type="VirtualReammoBox_F";
 			atlOffset=-5.3405762e-005;
 			class CustomAttributes
 			{
@@ -7548,7 +7548,7 @@ class Mission
 				name="mb2";
 			};
 			id=1041;
-			type="B_CargoNet_01_ammo_F";
+			type="VirtualReammoBox_F";
 			class CustomAttributes
 			{
 				class Attribute0

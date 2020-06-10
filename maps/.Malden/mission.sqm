@@ -9259,7 +9259,7 @@ class Mission
 				name="mb";
 			};
 			id=1035;
-			type="B_CargoNet_01_ammo_F";
+			type="VirtualReammoBox_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9351,7 +9351,7 @@ class Mission
 				name="mb2";
 			};
 			id=1038;
-			type="B_CargoNet_01_ammo_F";
+			type="VirtualReammoBox_F";
 			class CustomAttributes
 			{
 				class Attribute0
