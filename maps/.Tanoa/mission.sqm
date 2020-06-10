@@ -335,7 +335,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance";
+		briefingName="Resistance 3.5.4";
 		resistanceWest=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
