@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21991.928,41.498875,21064.57};
-		dir[]={-0.41298571,-0.68188703,-0.60374415};
-		up[]={-0.38499245,0.73144352,-0.56282032};
-		aside[]={-0.82538313,-2.0962034e-008,0.56459677};
+		pos[]={21991.617,41.498875,21080.186};
+		dir[]={0.050448075,-0.7635783,-0.64378268};
+		up[]={0.059654035,0.64568305,-0.76126742};
+		aside[]={-0.99696732,3.8935104e-007,-0.078123219};
 	};
 };
 binarizationWanted=0;
@@ -51,7 +51,6 @@ addons[]=
 	"A3_Soft_F_Quadbike_01",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Boat_F_Gamma_Boat_Transport_01",
-	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Boat_F_Exp_Boat_Transport_02",
 	"A3_Boat_F_Exp_Scooter_Transport_01",
 	"A3_Boat_F_Gamma_Boat_Civil_01",
@@ -60,6 +59,7 @@ addons[]=
 	"A3_Characters_F_Tank",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Soft_F_Orange_Van_02",
+	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Armor_F_Tank_AFV_Wheeled_01",
 	"A3_Structures_F_Tank_Military_RepairDepot",
 	"A3_Supplies_F_Heli_Slingload",
@@ -69,7 +69,7 @@ addons[]=
 	"A3_Structures_F_Civ_Camping",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Orange_Humanitarian_Flags",
-	"A3_Supplies_F_Heli_CargoNets",
+	"A3_Missions_F_Oldman",
 	"A3_Air_F_EPC_Plane_CAS_02",
 	"A3_Air_F_EPB_Heli_Light_03",
 	"A3_Air_F_Heli_Light_02",
@@ -80,7 +80,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -272,26 +272,33 @@ class AddonsMetaData
 		};
 		class Item27
 		{
+			className="A3_Missions_F_Oldman";
+			name="Arma 3 Oldman - Playable Content";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item28
+		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Air_F_EPB";
 			name="Arma 3 Adapt Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Air_F_Heli";
 			name="Arma 3 Helicopters - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Air_F_Orange";
 			name="Arma 3 Orange - Aircraft";
@@ -508,7 +515,7 @@ class Mission
 			dataType="Marker";
 			position[]={6600.5391,-2.0132237e-015,20037.492};
 			name="respawn_west_MHQ2";
-			text="Jeep MHQ";
+			text="Truck MHQ";
 			type="respawn_motor";
 			colorName="ColorWEST";
 			id=24;
@@ -2237,7 +2244,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[(_this select 0),1] call respawnMHQ;C2_Flag attachTo [(_this select 0 ),[-0.6,-1,-2]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
+							value="[(_this select 0),1] call respawnMHQ;C2_Flag attachTo [(_this select 0 ),[-0.8,0.1,-1.3]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
 						};
 					};
 				};
@@ -4292,8 +4299,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={21996.41,30.074938,21064.535};
-				angles[]={0,1.6631765,0};
+				position[]={21996.41,30.377028,21064.535};
+				angles[]={6.2631893,1.6631765,0.02399601};
 			};
 			side="Empty";
 			flags=4;
@@ -4306,8 +4313,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=359;
-			type="I_C_Offroad_02_unarmed_F";
-			atlOffset=-1.9073486e-006;
+			type="B_G_Van_01_transport_F";
 		};
 		class Item152
 		{
@@ -5411,7 +5417,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="C2_Flag attachTo [C2,[-0.6,-1,-2]];";
+				init="C2_Flag attachTo [C2,[-0.8,0.1,-1.3]];";
 				name="C2_Flag";
 				dynamicSimulation=1;
 			};
@@ -9366,6 +9372,7 @@ class Mission
 			};
 			id=703;
 			type="VirtualReammoBox_F";
+			atlOffset=0.035552979;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12674,6 +12681,7 @@ class Mission
 			};
 			id=746;
 			type="VirtualReammoBox_F";
+			atlOffset=0.035535812;
 			class CustomAttributes
 			{
 				class Attribute0
