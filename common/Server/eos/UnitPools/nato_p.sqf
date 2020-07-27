@@ -84,6 +84,6 @@ nato_p_boxPool = [
 	"Box_T_NATO_WpsSpecial_F", .1,
 	"Box_NATO_WpsLaunch_F", .2,
 	"Box_NATO_Support_F", .1,
-	"Box_NATO_AmmoVeh_F", /.2
+	"Box_NATO_AmmoVeh_F", .2,
 	"B_supplyCrate_F", .1
 ];
