@@ -49,7 +49,6 @@ if (!_saveTestsPass) then {
   ] call BIS_fnc_holdActionAdd;
 } forEach MasterBoxes;
 
-
 player createDiaryRecord ["Diary", ["Welcome to resistance",
 "Your mission is to clear out the surrounding towns and scavenge arms and equipment for the resistance.<br/>
 All you have is what you start with only the starter vehicles respawn when destroyed. Secure vehicles and equipment by bringing it back to a base.<br/>
@@ -112,3 +111,8 @@ player addEventHandler ["Respawn", {
 		_display displayAddEventHandler ["keydown", "_this select 3"];
 		{(_display displayCtrl _x) ctrlShow false} forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
 	}] call BIS_fnc_addScriptedEventHandler;
+
+
+if(isClass(configFile>>"cfgPatches">>"ace_common")) then {
+  player setVariable["BIS_revive_disableRevive",true];
+};
