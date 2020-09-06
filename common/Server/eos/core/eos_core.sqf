@@ -178,7 +178,7 @@ sleep 0.25;
 										_bm setMarkerShape "ICON";
 										_bm setMarkerType "mil_triangle";
 										_bm setMarkerAlpha 0;
-										_boxMarkers set [count _boxMarkers,_bm];
+										_boxMarkers set [count _boxMarkers,[_bm,(_gGroup select 0)]];
 										_gGrp set [count _gGrp,_gGroup];
 
 			if (_debug) then {diag_log format ["Box:%1",_counter];0= [_mkr,_counter,"Box",(getpos leader (_gGroup select 2))] call EOS_debug};
@@ -281,6 +281,7 @@ while {sleep 5; _eosAct} do {
 				if (!alive _vehicle) then {_gGrps = _gGrps - 1;};
 				if ((!(vehicle player == _vehicle)) && _vehicle in list _eosActivated) then {{deleteVehicle _x} forEach[_vehicle];};
 			}foreach _gGrp;
+			_boxMarkers = [];
 		};
 		_eosAct=false;
 		_mkr setmarkerAlpha _mAN;
@@ -292,7 +293,9 @@ while {sleep 5; _eosAct} do {
 			[]	execVM "Server\Zone_Complete.sqf";
 			_mkr setmarkercolor VictoryColor;
 			{
-				_x setMarkerAlpha 1;
+				if(alive (_x select 1)) then {
+					(_x select 0) setMarkerAlpha 1;
+				}
 			} forEach _boxMarkers;
 		} else {
 			if (!triggeractivated _clear && getmarkercolor _mkr  != hostileColor) then {
@@ -300,7 +303,7 @@ while {sleep 5; _eosAct} do {
 				_mkr setmarkercolor hostileColor;
 				_mkr setmarkerAlpha _mAH;
 				{
-					_x setMarkerAlpha 0;
+					(_x select 0) setMarkerAlpha 0;
 				} forEach _boxMarkers;
 			};
 		};
@@ -309,7 +312,7 @@ while {sleep 5; _eosAct} do {
 
 deletevehicle _clear;
 {
-	deleteMarker _x;
+	deleteMarker (_x select 0);
 } forEach _boxMarkers;
 { if (side _x == _side) then { deletevehicle _x} } forEach list _eosActivated;
 
