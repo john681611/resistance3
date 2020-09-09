@@ -1,6 +1,10 @@
 waitUntil {time > 2};
 if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
 	[]execVM "R3F_LOG\init.sqf";
+} else {
+	missionNamespace setVariable ["ACE_maxWeightCarry",1000000000];
+	missionNamespace setVariable ["ACE_maxWeightDrag",1000000000];
+	missionNamespace setVariable ["ace_respawn_savePreDeathGear", false];
 };
 waitUntil {!isNull player && !isnil "KeyNumber" };
 if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
