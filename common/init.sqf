@@ -1,7 +1,7 @@
-waitUntil {time > 2;};
+waitUntil {time > 2};
 if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
 	[]execVM "R3F_LOG\init.sqf";
-}
+};
 waitUntil {!isNull player && !isnil "KeyNumber" };
 if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
 	[] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
