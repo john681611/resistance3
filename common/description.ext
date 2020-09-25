@@ -16,7 +16,6 @@ respawnVehicleDelay = 30.000002;
 respawnTemplates[] = {"MenuPosition"};
 respawnOnStart = 0;
 
-reviveMode = 2;
 reviveUnconsciousStateMode = 1;
 reviveRequiredItems = 2;
 reviveDelay = 10;
@@ -73,5 +72,21 @@ class Params
 		texts[] = {"False","True"}; // Description of each selectable item
 		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
 							 // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+	};
+	class ReviveMode
+	{
+		title = $STR_A3_ReviveMode;
+		isGlobal = 1;
+
+		values[] = {
+			0,
+			1
+		};
+		texts[] = {
+			$STR_A3_Disabled,
+			$STR_A3_EnabledForAllPlayers
+		};
+		default = 1;
+		function = "bis_fnc_paramReviveMode";
 	};
 };
