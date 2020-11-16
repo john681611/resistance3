@@ -1642,7 +1642,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[(_this select 0),1] call respawnMHQ;C2_Flag attachTo [(_this select 0 ),[-0.8,0.1,-1.3]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
+							value="[(_this select 0),1] call respawnMHQ;C2_Flag attachTo [(_this select 0 ),[0.8,0.1,-1.3]];[(_this select 0),   [""Brown"",1],    true  ] call BIS_fnc_initVehicle;  ";
 						};
 					};
 				};
@@ -3439,7 +3439,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="C2_Flag attachTo [C2,[-0.8,0.1,-1.3]];";
+				init="C2_Flag attachTo [C2,[0.8,0.1,-1.3]];";
 				name="C2_Flag";
 			};
 			id=395;
