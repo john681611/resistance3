@@ -33,6 +33,8 @@ corpseLimit = 300;
 corpseRemovalMinTime = 3600;
 minPlayerDistance = 500;
 
+cba_settings_hasSettingsFile = 1;
+
 class Header
 {
 	gameType = CTI;
