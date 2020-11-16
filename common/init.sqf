@@ -5,6 +5,24 @@ if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
 	missionNamespace setVariable ["ACE_maxWeightCarry",1000000000];
 	missionNamespace setVariable ["ACE_maxWeightDrag",1000000000];
 	missionNamespace setVariable ["ace_respawn_savePreDeathGear", false];
+	_fnc_makeDraggable = {  
+    	params ["_object"]; 
+    	[_object, true, [0,1.5,0], 0] call ace_dragging_fnc_setDraggable;  
+	};
+	//Supply
+	["I_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["O_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["C_T_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["C_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["IG_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["C_IDAP_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["I_EAF_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["B_supplyCrate_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	//vehicleAmmo
+	["Box_East_AmmoVeh_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["Box_IND_AmmoVeh_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["Box_EAF_AmmoVeh_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
+	["Box_NATO_AmmoVeh_F", "init", _fnc_makeDraggable, true, [], true] call CBA_fnc_addClassEventHandler;
 };
 waitUntil {!isNull player && !isnil "KeyNumber" };
 if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
