@@ -196,7 +196,8 @@ sleep 0.25;
 				case (_mkrX >= 250): {_unitCount = 5;};
 				default {_unitCount = 3;};
 			};
-			_condition = format ["count thislist <= %1 AND ('LandVehicle' countType thislist)- (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist)) == 0",_unitCount];
+			_condition = format ["(count thislist - (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist))) <= %1 AND
+								  ('LandVehicle' countType thislist)- (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist)) == 0",_unitCount];
 			_clear setTriggerStatements [_condition,"",""];
 			_eosAct=true;
 			_delay = 300;
