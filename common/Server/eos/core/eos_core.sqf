@@ -189,7 +189,15 @@ sleep 0.25;
 			_clear = createTrigger ["EmptyDetector",_mPos,false];
 			_clear setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE,50];
 			_clear setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
-			_clear setTriggerStatements ["count thislist <= 3 AND ('LandVehicle' countType thislist)-('StaticWeapon' countType thislist) == 0","",""];
+			_unitCount = 3;
+			switch true do {
+				case (_mkrX >= 350): {_unitCount = 10;};
+				case (_mkrX >= 300): {_unitCount = 8;};
+				case (_mkrX >= 250): {_unitCount = 5;};
+				default {_unitCount = 3;};
+			};
+			_condition = format ["count thislist <= %1 AND ('LandVehicle' countType thislist)- (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist)) == 0",_unitCount];
+			_clear setTriggerStatements [_condition,"",""];
 			_eosAct=true;
 			_delay = 300;
 while {sleep 5; _eosAct} do {
