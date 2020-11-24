@@ -90,13 +90,12 @@ _towns = _towns;
       {
         _m setMarkerSize [300,300];
       };
-
+      case "Airport":{
+        _m setMarkerSize [350,350];
+      };
       case "NameCityCapital":
       {
         _m setMarkerSize [400,400];
-      };
-      case "Airport":{
-        _m setMarkerSize [300,300];
       };
       default {
       _m setMarkerSize [400,400];
