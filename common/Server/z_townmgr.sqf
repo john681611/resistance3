@@ -62,6 +62,7 @@ _towns = _towns;
           ztowna = ztowna + [_m];
         };
     		default {
+          systemChat format["Warn unknown group $1", (_x select 0)];
     		};
     	};
       _m setMarkerColor "ColorYellow";
