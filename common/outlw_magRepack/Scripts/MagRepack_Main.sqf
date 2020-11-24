@@ -241,14 +241,11 @@ outlw_MR_filter =
 	_magAmmoCaps = _this select 2;
 
 	_ammoType = (getText(configFile >> "cfgMagazines" >> outlw_MR_sourceType >> "ammo"));
-	_ammoTracer = 0;
-	_ammoTracer = (getNumber(configFile >> "cfgMagazines" >> outlw_MR_sourceType >> "tracersEvery"));
 	_userfilter = false;
 	
 	if (_ammoType == "") then
 	{
 		_ammoType = (getText(configFile >> "cfgMagazines" >> outlw_MR_targetType >> "ammo"));
-		_ammoTracer = (getNumber(configFile >> "cfgMagazines" >> outlw_MR_targetType >> "tracersEvery"));
 	};
 
 	if (_ammoType == "") then
@@ -263,7 +260,7 @@ outlw_MR_filter =
 
 	for "_n" from 0 to ((count _magTypes) - 1) do
 	{
-		if (((getText (configFile >> "cfgMagazines" >> _magTypes select _n >> "ammo")) == _ammoType) ) then
+		if (((getText (configFile >> "cfgMagazines" >> _magTypes select _n >> "ammo")) call purge_colours == _ammoType call purge_colours) ) then
 		{
 			_returnTypes set [count _returnTypes, _magTypes select _n];
 			_returnCounts set [count _returnCounts, _magAmmoCounts select _n];
