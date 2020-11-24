@@ -263,7 +263,7 @@ outlw_MR_filter =
 
 	for "_n" from 0 to ((count _magTypes) - 1) do
 	{
-		if (((getText (configFile >> "cfgMagazines" >> _magTypes select _n >> "ammo")) == _ammoType) && (((getNumber (configFile >> "cfgMagazines" >> _magTypes select _n >> "tracersEvery")) == _ammoTracer) || {_userFilter}  )) then
+		if (((getText (configFile >> "cfgMagazines" >> _magTypes select _n >> "ammo")) == _ammoType) ) then
 		{
 			_returnTypes set [count _returnTypes, _magTypes select _n];
 			_returnCounts set [count _returnCounts, _magAmmoCounts select _n];
