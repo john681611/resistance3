@@ -225,7 +225,25 @@ R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "true";
 #include "addons_config\A3_vanilla.sqf"
 //#include "addons_config\YOUR_ADDITIONAL_ADDON.sqf"
 
+/****** TOW WITH VEHICLE / REMORQUER AVEC VEHICULE ******/
 
+/**
+ * List of class names of ground vehicles which can tow objects.
+ * Liste des noms de classes des véhicules terrestres pouvant remorquer des objets.
+ */
+R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
+[
+	"Tank","Ship","LandVehicle"
+];
+
+/**
+ * List of class names of objects which can be towed.
+ * Liste des noms de classes des objets remorquables.
+ */
+R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
+[
+	"LandVehicle","Plane","Helicopter","Tank","Ship"
+];
 
 /****** LIFT WITH VEHICLE / HELIPORTER AVEC VEHICULE ******/
 

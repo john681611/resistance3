@@ -10,5 +10,3 @@
 #include "A3_vanilla\Building.sqf"
 #include "A3_vanilla\ReammoBox_F.sqf"
 #include "A3_vanilla\Others.sqf"
-
-#include "A3_vanilla\delta_A3_1.32_to_1.35.sqf"

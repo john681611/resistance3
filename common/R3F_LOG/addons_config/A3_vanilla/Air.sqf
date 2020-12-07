@@ -1,10 +1,19 @@
+R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
+[
+];
 
+R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
+[
+	"plane"
+];
 
 R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 [
 	"heli_light_02_base_f",
 	"heli_transport_01_base_f",
-	"heli_transport_02_base_f"
+	"heli_transport_02_base_f",
+	"b_heli_transport_03_base_f",
+	"heli_transport_04_base_f"
 ];
 
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
@@ -22,7 +31,14 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["i_heli_light_03_base_f", 25],
 	["uav_01_base_f", 0],
 	["plane", 3],
-	["uav", 0]
+	["uav", 0],
+	["b_heli_transport_03_base_f", 70],
+	["o_heli_transport_04_ammo_f", 40],
+	["o_heli_transport_04_box_f", 40],
+	["heli_transport_04_base_f", 40],
+	["o_heli_transport_04_bench_f", 5],
+	["o_heli_transport_04_f", 5],
+	["o_heli_transport_04_fuel_f", 5]
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +

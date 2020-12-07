@@ -21,7 +21,13 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["box_east_ammoveh_f", 14],
 	["ig_supplycrate_f", 9],
 	["box_ind_ammoveh_f", 14],
-	["box_nato_ammoveh_f", 14]
+	["box_nato_ammoveh_f", 14],
+	["cargo10_base_f", 40],
+	["metalcase_01_base_f", 4],
+	["plasticcase_01_base_f", 4],
+	["cargonet_01_base_f", 14],
+	["b_slingload_01_cargo_f", 110],
+	["b_slingload_01_ammo_f", 90]
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
