@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21991.617,41.498875,21080.186};
-		dir[]={0.050448075,-0.7635783,-0.64378268};
-		up[]={0.059654035,0.64568305,-0.76126742};
-		aside[]={-0.99696732,3.8935104e-007,-0.078123219};
+		pos[]={6604.0479,190.92914,20054.318};
+		dir[]={-0.45802015,-0.77286041,0.4392128};
+		up[]={-0.55782872,0.63457328,0.53492296};
+		aside[]={0.69213384,-9.0098183e-008,0.72177148};
 	};
 };
 binarizationWanted=0;
@@ -273,7 +273,7 @@ class AddonsMetaData
 		class Item27
 		{
 			className="A3_Missions_F_Oldman";
-			name="Arma 3 Oldman - Playable Content";
+			name="Arma 3 Old Man - Playable Content";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -333,7 +333,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance 3.6.1";
+		briefingName="Resistance 3.7.0";
 		resistanceWest=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -12651,7 +12651,7 @@ class Mission
 		class Item246
 		{
 			dataType="Trigger";
-			position[]={6584.1797,165.64426,20076.928};
+			position[]={6594.4365,165.92761,20069.047};
 			class Attributes
 			{
 				name="mz";
@@ -12668,8 +12668,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={21983.031,29.293978,21053.105};
-				angles[]={0.0066671576,3.2175844,6.249867};
+				position[]={21983.145,29.251179,21053.627};
+				angles[]={0.0066682254,3.2175844,6.2498641};
 			};
 			side="Empty";
 			flags=4;
@@ -12681,7 +12681,6 @@ class Mission
 			};
 			id=746;
 			type="VirtualReammoBox_F";
-			atlOffset=0.035535812;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12730,8 +12729,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6584.106,165.64651,20076.998};
-				angles[]={6.2378845,0,0.011995304};
+				position[]={6594.3628,165.92126,20069.117};
+				angles[]={0.033321146,0,0.05461248};
 			};
 			side="Empty";
 			flags=4;
@@ -12744,7 +12743,7 @@ class Mission
 		class Item249
 		{
 			dataType="Trigger";
-			position[]={21970.363,28.279173,21066.92};
+			position[]={21981.217,28.450451,21057.15};
 			class Attributes
 			{
 				name="mz2";
@@ -12762,8 +12761,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={21970.26,28.282448,21066.645};
-				angles[]={0.013332055,0,0.0039967569};
+				position[]={21981.113,28.451584,21056.875};
+				angles[]={0.0066682254,0,0.0066682254};
 			};
 			side="Empty";
 			flags=4;

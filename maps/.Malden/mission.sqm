@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6807.3721,36.15802,11422.623};
-		dir[]={-0.025468329,-0.75242114,0.65820324};
-		up[]={-0.029092818,0.65867609,0.75186509};
-		aside[]={0.99926025,1.1002703e-007,0.038665414};
+		pos[]={5177.1465,47.955421,1207.5615};
+		dir[]={-0.61485565,-0.76097447,-0.20707025};
+		up[]={-0.72117645,0.64877874,-0.24287666};
+		aside[]={-0.31916571,-2.6047928e-008,0.94770151};
 	};
 };
 binarizationWanted=0;
@@ -279,7 +279,7 @@ class AddonsMetaData
 		class Item29
 		{
 			className="A3_Missions_F_Oldman";
-			name="Arma 3 Oldman - Playable Content";
+			name="Arma 3 Old Man - Playable Content";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -312,7 +312,7 @@ class Mission
 	appId=639600;
 	class Intel
 	{
-		briefingName="Resistance 3.6.1";
+		briefingName="Resistance 3.7.0";
 		resistanceWest=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -7715,7 +7715,7 @@ class Mission
 			};
 			id=931;
 			type="Land_FieldToilet_F";
-			atlOffset=0.00070381165;
+			atlOffset=-0.00015640259;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9314,7 +9314,7 @@ class Mission
 		class Item140
 		{
 			dataType="Trigger";
-			position[]={6773.583,21.199406,11429.503};
+			position[]={6795.9395,21.580002,11431.506};
 			class Attributes
 			{
 				name="mz";
@@ -9325,14 +9325,15 @@ class Mission
 			};
 			id=1036;
 			type="EmptyDetectorArea10x10";
+			atlOffset=1.9073486e-006;
 		};
 		class Item141
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6773.5093,21.189175,11429.573};
-				angles[]={0.064709939,0,0.076649368};
+				position[]={6795.8657,21.575113,11431.576};
+				angles[]={0.038379833,0,0.029589472};
 			};
 			side="Empty";
 			flags=4;
@@ -9407,7 +9408,7 @@ class Mission
 		class Item143
 		{
 			dataType="Trigger";
-			position[]={5192.5303,22.50433,1208.9751};
+			position[]={5162.8926,23.021208,1197.0391};
 			class Attributes
 			{
 				name="mz2";
@@ -9424,8 +9425,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5192.4565,22.505798,1209.0453};
-				angles[]={6.2480001,0,0.013597663};
+				position[]={5162.8188,23.024147,1197.1093};
+				angles[]={6.2472029,0,6.277597};
 			};
 			side="Empty";
 			flags=4;

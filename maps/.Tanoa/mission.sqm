@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7040.8848,219.6385,9722.6758};
-		dir[]={-0.53612471,-0.74697971,-0.39320841};
-		up[]={-0.60234809,0.66483521,-0.44177854};
-		aside[]={-0.59141773,-2.1141022e-007,0.80637461};
+		pos[]={1726.2778,25,12082.128};
+		dir[]={0.098835893,-0.81378484,0.57270294};
+		up[]={0.13839553,0.58116412,0.80193043};
+		aside[]={0.985434,-7.043127e-008,-0.17006402};
 	};
 };
 binarizationWanted=0;
@@ -76,13 +76,13 @@ addons[]=
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Orange_Humanitarian_Flags",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Supplies_F_Heli_CargoNets"
+	"A3_Missions_F_Oldman"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=35;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -321,6 +321,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item34
+		{
+			className="A3_Missions_F_Oldman";
+			name="Arma 3 Old Man - Playable Content";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=11149701;
@@ -334,7 +341,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance 3.6.1";
+		briefingName="Resistance 3.7.0";
 		resistanceWest=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -10862,8 +10869,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1730.5408,4.6580467,12099.15};
-				angles[]={6.2671871,0,0.039979152};
+				position[]={1717.7717,3.7889359,12090.932};
+				angles[]={6.253859,0,0.042640556};
 			};
 			side="Empty";
 			flags=4;
@@ -10872,11 +10879,12 @@ class Mission
 			};
 			id=888;
 			type="Land_JumpTarget_F";
+			atlOffset=4.7683716e-007;
 		};
 		class Item247
 		{
 			dataType="Trigger";
-			position[]={1730.6145,4.6598749,12099.08};
+			position[]={1717.8455,3.7900064,12090.861};
 			class Attributes
 			{
 				name="mz";
@@ -10887,7 +10895,7 @@ class Mission
 			};
 			id=889;
 			type="EmptyDetectorArea10x10";
-			atlOffset=-6.1988831e-006;
+			atlOffset=-5.7220459e-006;
 		};
 		class Item248
 		{
@@ -10907,7 +10915,7 @@ class Mission
 			};
 			id=890;
 			type="VirtualReammoBox_F";
-			atlOffset=-7.1525574e-006;
+			atlOffset=0.035357475;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10999,6 +11007,7 @@ class Mission
 			};
 			id=893;
 			type="VirtualReammoBox_F";
+			atlOffset=0.035491943;
 			class CustomAttributes
 			{
 				class Attribute0
