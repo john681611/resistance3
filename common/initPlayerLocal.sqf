@@ -32,7 +32,7 @@ if (!_saveTestsPass) then {
 {
   [
     (_x select 0),
-    "Send to Masterbox",
+    "Fill with Captured Boxes",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa",
     "true",
