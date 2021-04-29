@@ -1,8 +1,8 @@
 #include "R3F_LOG\desc_include.h"
 #include "outlw_magRepack\MagRepack_config.hpp"
 #include "CHVD\dialog.hpp"
-briefingName = "Resistance 3.7.0";
-onLoadName = "Resistance 3.7.0";
+briefingName = "Resistance 3.7.1";
+onLoadName = "Resistance 3.7.1";
 overviewText = "Resistance, gather what you can to take back your land";
 author = "INF_Mike64 Inspired by Kitch";
 onLoadMission = "Resistance, gather what you can to take back your land";

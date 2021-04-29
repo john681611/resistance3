@@ -2,7 +2,7 @@ _marker = createMarker [ format["%1",getPlayerUID player], position player ];
 _marker setMarkerColor "ColorBLUFOR";
 _marker setMarkerType  "mil_triangle";
 _marker setMarkerText profileName;
-
+addMissionEventHandler ["HandleDisconnect",{deleteMarker format["%1",(_this select 2)]; deletevehicle (_this select 0)}];
 call {while {true} do
         {
           if ((vehicle player) != player) then {
