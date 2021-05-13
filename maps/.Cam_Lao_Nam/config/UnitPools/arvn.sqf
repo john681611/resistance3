@@ -82,13 +82,6 @@ arvn_heliCrew = [
 	"vn_i_men_aircrew_02", .5
 ];
 arvn_boxPool = [
-	"Box_EAF_Wps_F", .5,
-	"Box_EAF_Equip_F", .5,
-	"Box_EAF_AmmoOrd_F", .5,
-	"Box_EAF_WpsLaunch_F", .3,
-	"Box_EAF_WpsSpecial_F", .1,
-	"I_EAF_supplyCrate_F", .2,
-	"Box_EAF_Support_F", .2,
-	"Box_EAF_AmmoVeh_F",.2,
-	"I_E_CargoNet_01_ammo_F", .1
+	"vn_o_ammobox_kit_nva", .5,
+	"vn_o_ammobox_full_06", .5
 ];

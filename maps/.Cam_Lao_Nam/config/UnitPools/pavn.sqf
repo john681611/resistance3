@@ -100,11 +100,9 @@ pavn_heliCrew = [
 	"vn_o_men_aircrew_06", .5
 ];
 pavn_boxPool = [
-	"Box_East_Support_F", .2,
-	"Box_East_WpsSpecial_F", .3,
-	"O_supplyCrate_F", .2,
-	"Box_East_WpsLaunch_F", .6,
-	"Box_East_Wps_F", .5,
-	"Box_East_AmmoVeh_F",.2,
-	"Box_pavn_Equip_F", .2
+	"vn_o_ammobox_full_08", .1,
+	"vn_o_ammobox_full_01", .5,
+	"vn_o_ammobox_full_03", .5,
+	"vn_o_ammobox_full_02", .5,
+	"vn_o_ammobox_full_04", .5
 ];

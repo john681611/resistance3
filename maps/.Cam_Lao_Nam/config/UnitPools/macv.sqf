@@ -103,10 +103,11 @@ macv_heliCrew = [
 	"vn_b_men_aircrew_26", .5
 ];
 macv_boxPool = [
-	"Box_T_NATO_Wps_F", .2,
-	"Box_T_NATO_WpsSpecial_F", .1,
-	"Box_NATO_WpsLaunch_F", .2,
-	"Box_NATO_Support_F", .1,
-	"Box_NATO_AmmoVeh_F", .2,
-	"B_supplyCrate_F", .1
+	"vn_b_ammobox_supply_01", .5,
+	"vn_b_ammobox_full_05", .5,
+	"vn_b_ammobox_full_10", .5,
+	"vn_b_ammobox_full_03", .5,
+	"vn_b_ammobox_full_02", .5,
+	"vn_b_ammobox_full_13", .5,
+	"vn_b_ammobox_full_04", .5
 ];

@@ -8,8 +8,8 @@ Hostiles = [
 ];
 //Both
 saveName = "Nam";//ENTER CUSTOM SERVER NAME HERE
-MHQs =[[FLG, C1,"MHQ"]];
-Bases =[['respawn_west', Main_Zone, "Factory"]]; //[marker, trigger, name]
+MHQs =[[FLG, C1,"MHQ"], [FLG2, C2,"MHQ2"]];
+Bases =[['respawn_west', Main_Zone, "Village"], ['respawn_west_cove', Cove_Zone, "Cove"]]; //[marker, trigger, name]
 MasterBoxes = [[mb, mz]];//[box,zone]
 /////////////////////////////////////
 publicVariable "MHQs";
