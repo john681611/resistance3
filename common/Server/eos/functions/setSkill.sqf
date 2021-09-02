@@ -10,3 +10,5 @@ _grp=(_this select 0);
 	//performance crap
  _unit triggerDynamicSimulation false;
 } forEach (units _grp);
+
+[units _grp] remoteExec ["RES_fnc_addToAllCurators", 2];

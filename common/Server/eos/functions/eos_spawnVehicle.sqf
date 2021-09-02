@@ -11,7 +11,7 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	_vehicle = createVehicle [(_vehicleType select 0), _position, [], 0, _special];
 	_vehicle setVariable ["ResistVeh", true, false];
 	_vehicle setVehicleLock "UNLOCKED";
-
+	[[_vehicle]] remoteExec ["RES_fnc_addToAllCurators", 2];
 _vehCrew=[];
 
 		{

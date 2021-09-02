@@ -137,3 +137,5 @@ player addEventHandler ["Respawn", {
 if(isClass(configFile>>"cfgPatches">>"ace_common")) then {
   player setVariable["BIS_revive_disableRevive",true];
 };
+
+[[player]] remoteExec ["RES_fnc_addToAllCurators", 2];
