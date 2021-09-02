@@ -73,7 +73,7 @@ class Params
 		title = "Allow Teleporting holding box"; // Param name visible in the list
 		values[] = {false,true}; // Values; must be integers; has to have the same number of elements as 'texts'
 		texts[] = {"False","True"}; // Description of each selectable item
-		default = false; // Default value; must be listed in 'values' array, otherwise 0 is used
+		default = true; // Default value; must be listed in 'values' array, otherwise 0 is used
 							 // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
 	};
 	class ReviveMode
