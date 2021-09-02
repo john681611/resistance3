@@ -9,6 +9,10 @@ _grp=(_this select 0);
 	// ADD CUSTOM SCRIPTS TO UNIT HERE
 	//performance crap
  _unit triggerDynamicSimulation false;
+ if((_this select 1) == "AIRskill") then {
+	 _x setSkill ["spotDistance", .9];
+	 _x setSkill ["courage", .9];
+ }
 } forEach (units _grp);
 
 [units _grp] remoteExec ["RES_fnc_addToAllCurators", 2];

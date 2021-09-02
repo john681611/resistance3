@@ -134,30 +134,21 @@ sleep 0.25;
 		};
 
 //SPAWN CHOPPER
-	for "_counter" from 1 to _fGrps do {
+for "_counter" from 1 to _fGrps do {
 	if (isnil "_fGrp") then {_fGrp=[];};
-		if ((_fSize select 0) > 0) then {_vehType=4}else{_vehType=3};
-				_newpos = [(markerpos _mkr), 1500, random 360] call BIS_fnc_relPos;
-						_fGroup=[_newpos,_side,_faction,_vehType,"fly"]call EOS_fnc_spawnvehicle;
-						_fGrp set [count _fGrp,_fGroup];
+	_vehType=3;
+	_newpos=[_mkr,50] call EOS_fnc_findSafePos;
+	_fGroup=[_newpos,_side,_faction,_vehType,"fly"]call EOS_fnc_spawnvehicle;
+	_fGrp set [count _fGrp,_fGroup];
 
+	_wp1 = (_fGroup select 2) addWaypoint [(markerpos _mkr), 0];
+	_wp1 setWaypointSpeed "FULL";
+	_wp1 setWaypointType "SAD";
+	0=[(_fGroup select 2),"AIRskill"] call eos_fnc_grouphandlers;
 
-if ((_fSize select 0) > 0) then {
-	_cargoGrp = createGroup _side;
-		0=[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
-			0=[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
-		_fGroup set [count _fGroup,_cargoGrp];
-			null = [_mkr,_fGroup,_counter] execvm "Server\eos\functions\TransportUnload_fnc.sqf";
-				}else{
-					_wp1 = (_fGroup select 2) addWaypoint [(markerpos _mkr), 0];
-					_wp1 setWaypointSpeed "FULL";
-					_wp1 setWaypointType "SAD";};
-
-						0=[(_fGroup select 2),"AIRskill"] call eos_fnc_grouphandlers;
-
-if (_debug) then {diag_log format ["Chopper:%1",_counter];0= [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug};
-sleep 0.25;
-			};
+	if (_debug) then {diag_log format ["Chopper:%1",_counter];0= [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug};
+	sleep 0.25;
+};
 
 			//SPAWN BOXS
 				_boxMarkers = [];

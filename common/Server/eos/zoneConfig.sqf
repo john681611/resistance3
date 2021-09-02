@@ -33,25 +33,25 @@ _sel = selectrandomweighted Hostiles;
 
 {
 _sel = selectrandomweighted Hostiles;
-[[_x],[3,2],[3,1],[2,3,75],[0,0],[0],[0,0],[2],[(_sel select 1),0,500,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[3,2],[3,1],[2,3,75],[0,0],[0],[1,1,40],[2],[(_sel select 1),0,500,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztowns;
 
 {
 _sel = selectrandomweighted Hostiles;
-[[_x],[5,2],[4,2],[4,3],[1],[2],[1,1,20],[4],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[5,2],[4,2],[4,3],[1],[2],[2,1,60],[4],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownm;
 
 {
 _sel = selectrandomweighted Hostiles;
-[[_x],[8,3],[8,2],[6,3],[2],[3],[2,1,40],[8],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[8,3],[8,2],[6,3],[2],[3],[3,1,80],[8],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownl;
 
 {
 _sel = selectrandomweighted Hostiles;
-[[_x],[8,3],[8,2],[6,3],[2],[3],[2,1,40],[8],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[8,3],[8,2],[6,3],[2],[3],[4,2,100],[8],[(_sel select 1),0,600,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztowna;
 
 {
 _sel = selectrandomweighted Hostiles;
-[[_x],[10,3],[6,3],[8,3],[4],[4],[3,2],[16],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
+[[_x],[10,3],[6,3],[8,3],[4],[4],[5,3,100],[16],[(_sel select 1),0,800,(_sel select 0),TRUE]] call EOS_Spawn;
 } forEach ztownc;

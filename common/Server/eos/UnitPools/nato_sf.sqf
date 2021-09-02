@@ -74,7 +74,8 @@ nato_sf_MotPool = [
 ];
 nato_sf_ACHPool = [
 	"B_Heli_Attack_01_F", .5,
-	"B_Heli_Light_01_armed_F", .2
+	"B_Heli_Light_01_armed_F", .2,
+	"B_T_UAV_03_F", .5
 ];
 nato_sf_CHPool = [
 	"B_CTRG_Heli_Transport_01_sand_F", .5,
