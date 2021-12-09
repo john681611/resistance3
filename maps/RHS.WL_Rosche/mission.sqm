@@ -190,7 +190,7 @@ class Mission
 {
 	class Intel
 	{
-        briefingName="Resistance 3.8.0";
+        briefingName="Resistance 3.8.1";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.1;

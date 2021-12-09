@@ -28,7 +28,8 @@ nato_p_ArmPool = [
 	"B_T_AFV_Wheeled_01_up_cannon_F", .1,
 	"B_T_MBT_01_arty_F", .2,
 	"B_T_MBT_01_mlrs_F", .1,
-	"B_T_MBT_01_cannon_F", .3, "B_T_MBT_01_TUSK_F", .2
+	"B_T_MBT_01_cannon_F", .3,
+	"B_T_MBT_01_TUSK_F", .2
 ];
 nato_p_MotPool = [
 	"B_T_Truck_01_covered_F", .3,
@@ -46,7 +47,7 @@ nato_p_MotPool = [
 nato_p_ACHPool = [
 	"B_Heli_Attack_01_F", .5,
 	"B_Heli_Light_01_armed_F", .2,
-	"B_T_UAV_03_F", .5,
+	"B_T_UAV_03_F", .5
 ];
 nato_p_CHPool = [
 	"B_Heli_Light_01_F", .5,
