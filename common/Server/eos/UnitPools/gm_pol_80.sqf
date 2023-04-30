@@ -14,17 +14,18 @@ gm_pol_80_InfPool = [
 	"gm_pl_army_squadleader_akm_80_moro", .2,
 	"gm_pl_army_medic_akm_80_moro", .5
 ];
+
 gm_pol_80_ArmPool = [
-	"gm_pl_army_zsu234v1", . 3,
-	"gm_pl_army_brdm2", . 8,
-	"gm_pl_army_bmp1sp2", . 5,
-	"gm_pl_army_ot64a", . 6,
-	"gm_pl_army_2p16", . 1,
-	"gm_pl_army_2s1", . 3,
-	"gm_pl_army_pt76b", . 4,
-	"gm_pl_army_t55", . 3,
-	"gm_pl_army_t55a", . 2,
-	"gm_pl_army_t55ak", . 1
+	"gm_pl_army_zsu234v1", .3,
+	"gm_pl_army_brdm2", .8,
+	"gm_pl_army_bmp1sp2", .5,
+	"gm_pl_army_ot64a", .6,
+	"gm_pl_army_2p16", .1,
+	"gm_pl_army_2s1", .3,
+	"gm_pl_army_pt76b", .4,
+	"gm_pl_army_t55", .3,
+	"gm_pl_army_t55a", .2,
+	"gm_pl_army_t55ak", .1
 ];
 gm_pol_80_MotPool = [
 	"gm_pl_army_ural375d_mlrs" , .1,
@@ -60,7 +61,7 @@ gm_pol_80_crewPool = [
 	"gm_pl_army_crew_pm63_80_moro", .5
 ];
 gm_pol_80_heliCrew = [
-	"gm_pl_airforce_pilot_pm_80_gry", .5,
+	"gm_pl_airforce_pilot_pm_80_gry", .5
 ];
 gm_pol_80_boxPool = [
 	"gm_gc_army_ammobox_allmagazines_80", .2,

@@ -46,7 +46,7 @@ gm_eger_border_crewPool = [
 	"gm_gc_bgs_rifleman_mpikm72_80_str", .5
 ];
 gm_eger_border_heliCrew = [
-	"gm_gc_airforce_pilot_pm_80_blu", .5,
+	"gm_gc_airforce_pilot_pm_80_blu", .5
 ];
 gm_eger_border_boxPool = [
 	"gm_gc_army_ammobox_allmagazines_80", .2,

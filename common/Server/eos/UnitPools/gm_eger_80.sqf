@@ -11,7 +11,7 @@ gm_eger_80_InfPool = [
 	"gm_gc_army_engineer_mpiaks74n_80_str", .3,
 	"gm_gc_army_radioman_mpiak74n_80_str", .1,
 	"gm_gc_army_rifleman_mpiak74n_80_str", .7,
-	"gm_gc_army_squadleader_mpiak74n_80_str", .2,
+	"gm_gc_army_squadleader_mpiak74n_80_str", .2
 ];
 gm_eger_80_ArmPool = [
 	"gm_gc_army_zsu234v1", .3,
@@ -65,7 +65,7 @@ gm_eger_80_crewPool = [
 	"gm_gc_army_crew_mpiaks74nk_80_blk", .5
 ];
 gm_eger_80_heliCrew = [
-	"gm_gc_airforce_pilot_pm_80_blu", .5,
+	"gm_gc_airforce_pilot_pm_80_blu", .5
 ];
 gm_eger_80_boxPool = [
 	"gm_gc_army_ammobox_allmagazines_80", .2,

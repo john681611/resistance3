@@ -58,7 +58,7 @@ gm_wger_80_crewPool = [
 	"gm_ge_army_crew_mp2a1_80_oli", .5
 ];
 gm_wger_80_heliCrew = [
-	"gm_ge_army_pilot_p1_80_oli", .5,
+	"gm_ge_army_pilot_p1_80_oli", .5
 ];
 gm_wger_80_boxPool = [
 	"gm_ge_army_ammobox_allmagazines_80", .2,

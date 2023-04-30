@@ -5,181 +5,217 @@ private
 _faction = (_this select 0);
 _type = (_this select 1);
 _tempArray = [];
-#include "..\Server\eos\UnitPools\aaf.sqf";
-#include "..\Server\eos\UnitPools\csat_p.sqf";
-#include "..\Server\eos\UnitPools\csat_sf.sqf";
-#include "..\Server\eos\UnitPools\csat_u.sqf";
-#include "..\Server\eos\UnitPools\csat.sqf";
-#include "..\Server\eos\UnitPools\ldf.sqf";
-#include "..\Server\eos\UnitPools\nato_p.sqf";
-#include "..\Server\eos\UnitPools\nato_sf.sqf";
-#include "..\Server\eos\UnitPools\nato.sqf";
-#include "..\Server\eos\UnitPools\synd.sqf";
+#include "..\Server\eos\UnitPools\gm_dk_80.sqf";
+#include "..\Server\eos\UnitPools\gm_dk_80_sf.sqf";
+#include "..\Server\eos\UnitPools\gm_dk_90.sqf";
+#include "..\Server\eos\UnitPools\gm_dk_90_sf.sqf";
+#include "..\Server\eos\UnitPools\gm_eger_80.sqf";
+#include "..\Server\eos\UnitPools\gm_eger_border.sqf";
+#include "..\Server\eos\UnitPools\gm_pol_80.sqf";
+#include "..\Server\eos\UnitPools\gm_pol_80_sf.sqf";
+#include "..\Server\eos\UnitPools\gm_wger_80.sqf";
+#include "..\Server\eos\UnitPools\gm_wger_80_sf.sqf";
+#include "..\Server\eos\UnitPools\gm_wger_90.sqf";
+#include "..\Server\eos\UnitPools\gm_wger_border.sqf";
 switch (_faction)
 	do {
-	// EAST CSAT FACTION
+	// EAST E GER FACTION
 	case 0:
 	{
-		_InfPool = csat_InfPool + [];
-		_ArmPool = csat_ArmPool + [];
-		_MotPool = csat_MotPool + [];
-		_ACHPool =csat_ACHPool + [];
-		_CHPool = csat_CHPool + [];
-		_uavPool = csat_uavPool + [];
-		_stPool = csat_stPool + [];
-		_shipPool = csat_shipPool + [];
-		_diverPool = csat_diverPool + [];
-		_crewPool = csat_crewPool + [];
-		_heliCrew = csat_heliCrew + [];
-		_boxPool = csat_boxPool + [];
+		_InfPool = gm_eger_80_InfPool + [];
+		_ArmPool = gm_eger_80_ArmPool + [];
+		_MotPool = gm_eger_80_MotPool + [];
+		_ACHPool =gm_eger_80_ACHPool + [];
+		_CHPool = gm_eger_80_CHPool + [];
+		_uavPool = gm_eger_80_uavPool + [];
+		_stPool = gm_eger_80_stPool + [];
+		_shipPool = gm_eger_80_shipPool + [];
+		_diverPool = gm_eger_80_diverPool + [];
+		_crewPool = gm_eger_80_crewPool + [];
+		_heliCrew = gm_eger_80_heliCrew + [];
+		_boxPool = gm_eger_80_boxPool + [];
 	};
-	// WEST NATO FACTION
+	// EAST E GER BORDER FACTION
 	case 1:
 	{
-		_InfPool = nato_InfPool + [];
-		_ArmPool = nato_ArmPool + [];
-		_MotPool = nato_MotPool + [];
-		_ACHPool =nato_ACHPool + [];
-		_CHPool = nato_CHPool + [];
-		_uavPool = nato_uavPool + [];
-		_stPool = nato_stPool + [];
-		_shipPool = nato_shipPool + [];
-		_diverPool = nato_diverPool + [];
-		_crewPool = nato_crewPool + [];
-		_heliCrew = nato_heliCrew + [];
-		_boxPool = nato_boxPool + [];
+		_InfPool = gm_eger_border_InfPool + [];
+		_ArmPool = gm_eger_border_ArmPool + [];
+		_MotPool = gm_eger_border_MotPool + [];
+		_ACHPool =gm_eger_border_ACHPool + [];
+		_CHPool = gm_eger_border_CHPool + [];
+		_uavPool = gm_eger_border_uavPool + [];
+		_stPool = gm_eger_border_stPool + [];
+		_shipPool = gm_eger_border_shipPool + [];
+		_diverPool = gm_eger_border_diverPool + [];
+		_crewPool = gm_eger_border_crewPool + [];
+		_heliCrew = gm_eger_border_heliCrew + [];
+		_boxPool = gm_eger_border_boxPool + [];
 	};
-	// INDEPENDENT AAF FACTION
+	// EAST POL 80s FACTION
 	case 2:
 	{
-		_InfPool = aaf_InfPool + [];
-		_ArmPool = aaf_ArmPool + [];
-		_MotPool = aaf_MotPool + [];
-		_ACHPool =aaf_ACHPool + [];
-		_CHPool = aaf_CHPool + [];
-		_uavPool = aaf_uavPool + [];
-		_stPool = aaf_stPool + [];
-		_shipPool = aaf_shipPool + [];
-		_diverPool = aaf_diverPool + [];
-		_crewPool = aaf_crewPool + [];
-		_heliCrew = aaf_heliCrew + [];
-		_boxPool = aaf_boxPool + [];
+		_InfPool = gm_pol_80_InfPool + [];
+		_ArmPool = gm_pol_80_ArmPool + [];
+		_MotPool = gm_pol_80_MotPool + [];
+		_ACHPool =gm_pol_80_ACHPool + [];
+		_CHPool = gm_pol_80_CHPool + [];
+		_uavPool = gm_pol_80_uavPool + [];
+		_stPool = gm_pol_80_stPool + [];
+		_shipPool = gm_pol_80_shipPool + [];
+		_diverPool = gm_pol_80_diverPool + [];
+		_crewPool = gm_pol_80_crewPool + [];
+		_heliCrew = gm_pol_80_heliCrew + [];
+		_boxPool = gm_pol_80_boxPool + [];
 	};
-	// NATO PACIFIC
+	// EAST POL 80 SF
 	case 3:
 	{
-		_InfPool = nato_p_InfPool + [];
-		_ArmPool = nato_p_ArmPool + [];
-		_MotPool = nato_p_MotPool + [];
-		_ACHPool =nato_p_ACHPool + [];
-		_CHPool = nato_p_CHPool + [];
-		_uavPool = nato_p_uavPool + [];
-		_stPool = nato_p_stPool + [];
-		_shipPool = nato_p_shipPool + [];
-		_diverPool = nato_p_diverPool + [];
-		_crewPool = nato_p_crewPool + [];
-		_heliCrew = nato_p_heliCrew + [];
-		_boxPool = nato_p_boxPool + [];
+		_InfPool = gm_pol_80_sf_InfPool + [];
+		_ArmPool = gm_pol_80_sf_ArmPool + [];
+		_MotPool = gm_pol_80_sf_MotPool + [];
+		_ACHPool =gm_pol_80_sf_ACHPool + [];
+		_CHPool = gm_pol_80_sf_CHPool + [];
+		_uavPool = gm_pol_80_sf_uavPool + [];
+		_stPool = gm_pol_80_sf_stPool + [];
+		_shipPool = gm_pol_80_sf_shipPool + [];
+		_diverPool = gm_pol_80_sf_diverPool + [];
+		_crewPool = gm_pol_80_sf_crewPool + [];
+		_heliCrew = gm_pol_80_sf_heliCrew + [];
+		_boxPool = gm_pol_80_sf_boxPool + [];
 	};
-	// INDEPENDENT SYNDIKAT FACTION
+	// INDEPENDENT DENMARK 80 FACTION
 	case 4:
 	{
-		_InfPool = synd_InfPool + [];
-		_ArmPool = synd_ArmPool + [];
-		_MotPool = synd_MotPool + [];
-		_ACHPool =synd_ACHPool + [];
-		_CHPool = synd_CHPool + [];
-		_uavPool = synd_uavPool + [];
-		_stPool = synd_stPool + [];
-		_shipPool = synd_shipPool + [];
-		_diverPool = synd_diverPool + [];
-		_crewPool = synd_crewPool + [];
-		_heliCrew = synd_heliCrew + [];
-		_boxPool = synd_boxPool + [];
+		_InfPool = gm_dk_80_InfPool + [];
+		_ArmPool = gm_dk_80_ArmPool + [];
+		_MotPool = gm_dk_80_MotPool + [];
+		_ACHPool =gm_dk_80_ACHPool + [];
+		_CHPool = gm_dk_80_CHPool + [];
+		_uavPool = gm_dk_80_uavPool + [];
+		_stPool = gm_dk_80_stPool + [];
+		_shipPool = gm_dk_80_shipPool + [];
+		_diverPool = gm_dk_80_diverPool + [];
+		_crewPool = gm_dk_80_crewPool + [];
+		_heliCrew = gm_dk_80_heliCrew + [];
+		_boxPool = gm_dk_80_boxPool + [];
 	};
-	// EAST CSAT URBAN UNITS
+	// INDEPENDENT DENMARK 80 SF
 	case 5:
 	{
-		_InfPool = csat_u_InfPool + [];
-		_ArmPool = csat_u_ArmPool + [];
-		_MotPool = csat_u_MotPool + [];
-		_ACHPool =csat_u_ACHPool + [];
-		_CHPool = csat_u_CHPool + [];
-		_uavPool = csat_u_uavPool + [];
-		_stPool = csat_u_stPool + [];
-		_shipPool = csat_u_shipPool + [];
-		_diverPool = csat_u_diverPool + [];
-		_crewPool = csat_u_crewPool + [];
-		_heliCrew = csat_u_heliCrew + [];
-		_boxPool = csat_u_boxPool + [];	
+		_InfPool = gm_dk_80_sf_InfPool + [];
+		_ArmPool = gm_dk_80_sf_ArmPool + [];
+		_MotPool = gm_dk_80_sf_MotPool + [];
+		_ACHPool =gm_dk_80_sf_ACHPool + [];
+		_CHPool = gm_dk_80_sf_CHPool + [];
+		_uavPool = gm_dk_80_sf_uavPool + [];
+		_stPool = gm_dk_80_sf_stPool + [];
+		_shipPool = gm_dk_80_sf_shipPool + [];
+		_diverPool = gm_dk_80_sf_diverPool + [];
+		_crewPool = gm_dk_80_sf_crewPool + [];
+		_heliCrew = gm_dk_80_sf_heliCrew + [];
+		_boxPool = gm_dk_80_sf_boxPool + [];	
 	};
 
-	// EAST CSAT SPECOPS UNITS
+	// INDEPENDENT DENMARK 90
 	case 6:
 	{
-		_InfPool = csat_sf_InfPool + [];
-		_ArmPool = csat_sf_ArmPool + [];
-		_MotPool = csat_sf_MotPool + [];
-		_ACHPool =csat_sf_ACHPool + [];
-		_CHPool = csat_sf_CHPool + [];
-		_uavPool = csat_sf_uavPool + [];
-		_stPool = csat_sf_stPool + [];
-		_shipPool = csat_sf_shipPool + [];
-		_diverPool = csat_sf_diverPool + [];
-		_crewPool = csat_sf_crewPool + [];
-		_heliCrew = csat_sf_heliCrew + [];
-		_boxPool = csat_sf_boxPool + [];	
+		_InfPool = gm_dk_90_InfPool + [];
+		_ArmPool = gm_dk_90_ArmPool + [];
+		_MotPool = gm_dk_90_MotPool + [];
+		_ACHPool =gm_dk_90_ACHPool + [];
+		_CHPool = gm_dk_90_CHPool + [];
+		_uavPool = gm_dk_90_uavPool + [];
+		_stPool = gm_dk_90_stPool + [];
+		_shipPool = gm_dk_90_shipPool + [];
+		_diverPool = gm_dk_90_diverPool + [];
+		_crewPool = gm_dk_90_crewPool + [];
+		_heliCrew = gm_dk_90_heliCrew + [];
+		_boxPool = gm_dk_90_boxPool + [];	
 	};
 
-	// EAST TANOA CSAT FACTION
+	// INDEPENDENT DENMARK 90 SF
 	case 7:
 	{
-		_InfPool = csat_p_InfPool + [];
-		_ArmPool = csat_p_ArmPool + [];
-		_MotPool = csat_p_MotPool + [];
-		_ACHPool =csat_p_ACHPool + [];
-		_CHPool = csat_p_CHPool + [];
-		_uavPool = csat_p_uavPool + [];
-		_stPool = csat_p_stPool + [];
-		_shipPool = csat_p_shipPool + [];
-		_diverPool = csat_p_diverPool + [];
-		_crewPool = csat_p_crewPool + [];
-		_heliCrew = csat_p_heliCrew + [];
-		_boxPool = csat_p_boxPool + [];	
+		_InfPool = gm_dk_90_sf_InfPool + [];
+		_ArmPool = gm_dk_90_sf_ArmPool + [];
+		_MotPool = gm_dk_90_sf_MotPool + [];
+		_ACHPool =gm_dk_90_sf_ACHPool + [];
+		_CHPool = gm_dk_90_sf_CHPool + [];
+		_uavPool = gm_dk_90_sf_uavPool + [];
+		_stPool = gm_dk_90_sf_stPool + [];
+		_shipPool = gm_dk_90_sf_shipPool + [];
+		_diverPool = gm_dk_90_sf_diverPool + [];
+		_crewPool = gm_dk_90_sf_crewPool + [];
+		_heliCrew = gm_dk_90_sf_heliCrew + [];
+		_boxPool = gm_dk_90_sf_boxPool + [];	
 	};
 
-	//CTRG & NATO SF & NATO Woodland
+	// INDEPENDENT W GER 80
 	case 8:
 	{
-		_InfPool = nato_sf_InfPool + [];
-		_ArmPool = nato_sf_ArmPool + [];
-		_MotPool = nato_sf_MotPool + [];
-		_ACHPool =nato_sf_ACHPool + [];
-		_CHPool = nato_sf_CHPool + [];
-		_uavPool = nato_sf_uavPool + [];
-		_stPool = nato_sf_stPool + [];
-		_shipPool = nato_sf_shipPool + [];
-		_diverPool = nato_sf_diverPool + [];
-		_crewPool = nato_sf_crewPool + [];
-		_heliCrew = nato_sf_heliCrew + [];
-		_boxPool = nato_sf_boxPool + [];	
+		_InfPool = gm_wger_80_InfPool + [];
+		_ArmPool = gm_wger_80_ArmPool + [];
+		_MotPool = gm_wger_80_MotPool + [];
+		_ACHPool =gm_wger_80_ACHPool + [];
+		_CHPool = gm_wger_80_CHPool + [];
+		_uavPool = gm_wger_80_uavPool + [];
+		_stPool = gm_wger_80_stPool + [];
+		_shipPool = gm_wger_80_shipPool + [];
+		_diverPool = gm_wger_80_diverPool + [];
+		_crewPool = gm_wger_80_crewPool + [];
+		_heliCrew = gm_wger_80_heliCrew + [];
+		_boxPool = gm_wger_80_boxPool + [];	
 	};
 
-	//LDF
+	// INDEPENDENT W GER 80 SF
 	case 9:
 	{
-		_InfPool = ldf_InfPool + [];
-		_ArmPool = ldf_ArmPool + [];
-		_MotPool = ldf_MotPool + [];
-		_ACHPool =ldf_ACHPool + [];
-		_CHPool = ldf_CHPool + [];
-		_uavPool = ldf_uavPool + [];
-		_stPool = ldf_stPool + [];
-		_shipPool = ldf_shipPool + [];
-		_diverPool = ldf_diverPool + [];
-		_crewPool = ldf_crewPool + [];
-		_heliCrew = ldf_heliCrew + [];
-		_boxPool = ldf_boxPool + [];
+		_InfPool = gm_wger_80_sf_InfPool + [];
+		_ArmPool = gm_wger_80_sf_ArmPool + [];
+		_MotPool = gm_wger_80_sf_MotPool + [];
+		_ACHPool =gm_wger_80_sf_ACHPool + [];
+		_CHPool = gm_wger_80_sf_CHPool + [];
+		_uavPool = gm_wger_80_sf_uavPool + [];
+		_stPool = gm_wger_80_sf_stPool + [];
+		_shipPool = gm_wger_80_sf_shipPool + [];
+		_diverPool = gm_wger_80_sf_diverPool + [];
+		_crewPool = gm_wger_80_sf_crewPool + [];
+		_heliCrew = gm_wger_80_sf_heliCrew + [];
+		_boxPool = gm_wger_80_sf_boxPool + [];
+	};
+
+	// INDEPENDENT W GER 90
+	case 10:
+	{
+		_InfPool = gm_wger_90_InfPool + [];
+		_ArmPool = gm_wger_90_ArmPool + [];
+		_MotPool = gm_wger_90_MotPool + [];
+		_ACHPool =gm_wger_90_ACHPool + [];
+		_CHPool = gm_wger_90_CHPool + [];
+		_uavPool = gm_wger_90_uavPool + [];
+		_stPool = gm_wger_90_stPool + [];
+		_shipPool = gm_wger_90_shipPool + [];
+		_diverPool = gm_wger_90_diverPool + [];
+		_crewPool = gm_wger_90_crewPool + [];
+		_heliCrew = gm_wger_90_heliCrew + [];
+		_boxPool = gm_wger_90_boxPool + [];
+	};
+
+	// INDEPENDENT W GER BORDER
+	case 10:
+	{
+		_InfPool = gm_wger_border_InfPool + [];
+		_ArmPool = gm_wger_border_ArmPool + [];
+		_MotPool = gm_wger_border_MotPool + [];
+		_ACHPool =gm_wger_border_ACHPool + [];
+		_CHPool = gm_wger_border_CHPool + [];
+		_uavPool = gm_wger_border_uavPool + [];
+		_stPool = gm_wger_border_stPool + [];
+		_shipPool = gm_wger_border_shipPool + [];
+		_diverPool = gm_wger_border_diverPool + [];
+		_crewPool = gm_wger_border_crewPool + [];
+		_heliCrew = gm_wger_border_heliCrew + [];
+		_boxPool = gm_wger_border_boxPool + [];
 	};
 };
 
