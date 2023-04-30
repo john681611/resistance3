@@ -26,7 +26,7 @@ _vehCrew=[];
 			_vehCrew set [count _vehCrew,_unit];
 			};
 
-	if (_currentPosition select 0 == "turret")then {
+	if (_currentPosition select 0 == "turret" and _vehicle emptyPositions "Turret" > 0)then {
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
 			[_unit] join _grp;
 			_unit assignAsGunner _vehicle;

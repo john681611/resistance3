@@ -202,7 +202,7 @@ switch (_faction)
 	};
 
 	// INDEPENDENT W GER BORDER
-	case 10:
+	case 11:
 	{
 		_InfPool = gm_wger_border_InfPool + [];
 		_ArmPool = gm_wger_border_ArmPool + [];
