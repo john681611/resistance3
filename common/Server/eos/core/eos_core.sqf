@@ -109,6 +109,7 @@ sleep 0.25;
 			if (surfaceiswater _newpos) then {_vehType=8;}else{_vehType=2;};
 
 					_dGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
+					0=[(_dGroup select 0),[4, 10],(_dGroup select 2),_faction,9] call eos_fnc_setcargo;
 
 						0=[(_dGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
 						0 = [(_dGroup select 2),_mkr] call EOS_fnc_taskpatrol;
