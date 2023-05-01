@@ -60,7 +60,12 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["c_van_01_box_f", 40],
 	["c_van_01_transport_f", 25],
 	["i_g_van_01_transport_f", 25],
-	["wheeled_apc_f", 10]
+	["wheeled_apc_f", 10],
+	["gm_wheeled_truck_base", 100],
+	["gm_u1300l_base", 50],
+	["gm_typ2_base", 10],
+	["gm_tracked_APC_base", 10],
+	["gm_wheeled_APC_base", 10]
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +

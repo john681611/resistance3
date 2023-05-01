@@ -38,7 +38,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["heli_transport_04_base_f", 40],
 	["o_heli_transport_04_bench_f", 5],
 	["o_heli_transport_04_f", 5],
-	["o_heli_transport_04_fuel_f", 5]
+	["o_heli_transport_04_fuel_f", 5],
+	["gm_ch53_base", 50]
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
