@@ -1,6 +1,6 @@
 takenTowns  = (_this select 0);
 {
-  _veh = createVehicle [(_x select 0), (_x select 1), [], 0, "NONE"];
+  _veh = createVehicle [(_x select 0), (_x select 1), [], 25, "NONE"];
   _veh setDir (_x select 2);
   _veh setDamage (_x select 3);
   _veh setFuel (_x select 4);
