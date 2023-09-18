@@ -81,19 +81,11 @@ csat_heliCrew = [
 	"O_helipilot_F", .5
 ];
 csat_boxPool = [
-	// "Box_East_Support_F", .2,
-	// "Box_East_WpsSpecial_F", .3,
-	// "O_supplyCrate_F", .2,
-	// "Box_East_WpsLaunch_F", .6,
-	// "Box_East_Wps_F", .5,
-	// "Box_East_AmmoVeh_F",.2,
-	// "Box_CSAT_Equip_F", .2
-	["Box_East_Support_F",[
-		["acc_flashlight",2],
-		["bipod_03_F_oli",2],
-		["ACE_Chemlight_Shield", 12],
-		["ACE_EarPlugs", 12],
-		["V_Chestrig_oli", 4],
-		["V_TacVest_blk", 4]
-	]],.1
+	"Box_East_Support_F", .2,
+	"Box_East_WpsSpecial_F", .3,
+	"O_supplyCrate_F", .2,
+	"Box_East_WpsLaunch_F", .6,
+	"Box_East_Wps_F", .5,
+	"Box_East_AmmoVeh_F",.2,
+	"Box_CSAT_Equip_F", .2
 ];

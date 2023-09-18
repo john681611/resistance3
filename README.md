@@ -53,3 +53,75 @@ Otherwise the main form is here [Wiki](https://github.com/john681611/co_36_resis
 ## ACE + TFAR  Notes:
 This is a hack solution many of the original features such as mag repeacking vehicle cargo are still running vanilla style but boxes are supported
 
+
+## Custom Reward boxes
+
+Format
+```
+ [
+  "IG_supplyCrate_F",
+  [
+    ["launch_RPG32_F",1],
+    ["arifle_TRG20_F",1]
+  ],
+  [
+    ["30Rnd_556x45_Stanag",24],
+    ["200Rnd_65x39_cased_Box",6]
+  ],
+  [
+    ["acc_flashlight",2],
+    ["bipod_03_F_oli",2],
+  ],
+  [
+    ["B_TacticalPack_blk",2],
+    ["B_AssaultPack_mcamo_Ammo",1]
+  ]
+],.1
+```
+
+Get script (box being object)
+```
+_box = box;
+
+_weaponsRaw = getWeaponCargo _box;
+_weapons = [];
+
+{
+ _weapons pushBack [_x, (_weaponsRaw select 1) select _forEachIndex];
+} forEach (_weaponsRaw select 0);
+
+
+_magazinesRaw = getMagazineCargo  _box;
+_magazines = [];
+
+{
+ _magazines pushBack [_x, (_magazinesRaw select 1) select _forEachIndex];
+} forEach (_magazinesRaw select 0);
+
+
+_itemsRaw = getItemCargo _box;
+_items = [];
+
+{
+ _items pushBack [_x, (_itemsRaw select 1) select _forEachIndex];
+} forEach (_itemsRaw select 0);
+
+
+_backpacksRaw = getBackpackCargo _box;
+_backpacks = [];
+
+{
+ _backpacks pushBack [_x, (_backpacksRaw select 1) select _forEachIndex];
+} forEach (_backpacksRaw select 0);
+
+_local = [ 
+        (typeOf _box),
+        _weapons, 
+        _magazines, 
+        _items,
+        _backpacks
+    ];
+
+_local
+
+```

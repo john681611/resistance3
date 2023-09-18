@@ -6,9 +6,15 @@ _special = if (count _this > 4) then {_this select 4} else {"CAN_COLLIDE"};
 
 _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	_grp = createGroup _side;
-	_cargoData = [];
+	_cargoWeaponData = [];
+	_cargoMagazineData = [];
+	_cargoItemData = [];
+	_cargoBackpackData = [];
 	if(typeName (_vehicleType select 0) == "ARRAY") then {
-		_cargoData = (_vehicleType select 0) select 1;
+		_cargoWeaponData = (_vehicleType select 0) select 1;
+		_cargoMagazineData = (_vehicleType select 0) select 2;
+		_cargoItemData = (_vehicleType select 0) select 3;
+		_cargoBackpackData = (_vehicleType select 0) select 4;
 		_vehicleType = [(_vehicleType select 0) select 0];
 	};
 
@@ -19,14 +25,23 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	[[_vehicle]] remoteExec ["RES_fnc_addToAllCurators", 2];
 _vehCrew=[];
 	
-	if((count _cargoData) > 0) then {	
+	if((count _cargoItemData) > 0) then {	
 		clearMagazineCargoGlobal _vehicle;
 		clearWeaponCargoGlobal  _vehicle;
 		clearItemCargoGlobal _vehicle;
 		clearBackpackCargoGlobal _vehicle;
 		{
+			_vehicle addWeaponCargoGlobal _x;
+		} forEach  _cargoWeaponData;
+		{
+			_vehicle addMagazineCargoGlobal _x;
+		} forEach  _cargoMagazineData;
+		{
 			_vehicle addItemCargoGlobal _x;
-		} forEach  _cargoData;
+		} forEach  _cargoItemData;
+		{
+			_vehicle addBackpackCargoGlobal _x;
+		} forEach  _cargoBackpackData;
 	};
 		{
 	_currentPosition=_x;
