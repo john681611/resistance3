@@ -1,4 +1,5 @@
 if (!isServer) exitWith {};
+Bastion_Spawn = compile preprocessfilelinenumbers "Server\eos\core\b_launch.sqf";
 private ["_newpos","_cargoType","_vehType","_dGrp","_gGrp","_gGrps","_mkrAgl","_side","_bGroup","_civZone","_fGrp","_fSize","_fGrps","_eGrp","_eGrps","_dGrps","_aMin","_aSize","_aGrps","_aGrp","_bMin","_units","_bSize","_bGrps","_bGrp","_trig","_cache","_grp","_crew","_vehicle","_actCond","_mAN","_mAH","_distance","_mA","_settings","_cGrp","_cSize","_cGrps","_taken","_clear","_enemyFaction","_faction","_n","_eosAct","_eosActivated","_debug","_mkr","_mPos","_mkrX","_mkrY","_delay"];
 
 _mkr=(_this select 0);_mPos=markerpos(_this select 0);
@@ -14,6 +15,7 @@ _heightLimit=if (count _settings > 4) then {_settings select 4} else {false};
 _debug=if (count _settings > 5) then {_settings select 5} else {false};
 _cache= if (count _this > 6) then {_this select 6} else {false};
 
+_renforced = false;
 
 
 
@@ -191,6 +193,21 @@ for "_counter" from 1 to _fGrps do {
 			_condition = format ["(count thislist - (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist))) <= %1 AND
 								  ('LandVehicle' countType thislist)- (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist)) == 0",_unitCount];
 			_clear setTriggerStatements [_condition,"",""];
+
+
+			__renforcement = createTrigger ["EmptyDetector",_mPos,false];
+			__renforcement setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE,50];
+			__renforcement setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
+			_unitCount = 12;
+			switch true do {
+				case (_mkrX >= 350): {_unitCount = 40;};
+				case (_mkrX >= 300): {_unitCount = 32;};
+				case (_mkrX >= 250): {_unitCount = 12;};
+				default {_unitCount = 12;};
+			};
+			_condition = format ["(count thislist - (('StaticWeapon' countType thislist) + ('UGV_02_Base_F' countType thislist))) <= %1",_unitCount];
+			__renforcement setTriggerStatements [_condition,"",""];
+
 			_eosAct=true;
 			_delay = 300;
 while {sleep 5; _eosAct} do {
@@ -297,6 +314,38 @@ while {sleep 5; _eosAct} do {
 				{
 					(_x select 0) setMarkerAlpha 0;
 				} forEach _boxMarkers;
+			};
+			if (!_renforced && !triggeractivated _clear && triggeractivated __renforcement && !_civZone && getmarkercolor _mkr  != VictoryColor && (count (allPlayers inAreaArray _eosActivated) > 0)) then {
+				_occures = 0;
+				_rounds = 0;
+				_rate = [180, 360] call BIS_fnc_randomInt;
+				_vehicles = 0;
+				_armour = 0;
+				_helos = 0;
+				
+				switch true do {
+					case (_mkrX >= 350): {
+						_occures = [0, 1] call BIS_fnc_randomInt;
+						_rounds = [1, 2] call BIS_fnc_randomInt;
+						_vehicles = [2, 3] call BIS_fnc_randomInt;
+						_armour = [0, 2] call BIS_fnc_randomInt;
+						_helos = [0, 2] call BIS_fnc_randomInt;
+					};
+					case (_mkrX >= 300): {
+						_occures = [0, 3] call BIS_fnc_randomInt;
+						_rounds = [1, 2] call BIS_fnc_randomInt;
+						_vehicles = [1, 2] call BIS_fnc_randomInt;
+						_armour = [0, 1] call BIS_fnc_randomInt;
+						_helos = [0, 1] call BIS_fnc_randomInt;
+					};
+					case (_mkrX >= 250): {};
+					default {};
+				};
+
+				if(_occures == 1) then {
+					null = [[_mkr],[0,0],[2,2],[2],[2,2],[_faction,0,_side],[30,_rounds,_rate,FALSE,true]] call Bastion_Spawn;
+				};
+				_renforced = true;
 			};
 		};
 	};

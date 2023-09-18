@@ -44,23 +44,23 @@ _Placement=(_mkrX + 500);
 				_basActivated setTriggerActivation ["ANY","PRESENT",true];
 				_basActivated setTriggerStatements [_actCond,"",""];
 
-	_mkr setmarkercolor bastionColor;
-	_mkr setmarkeralpha _mAN;
+	// _mkr setmarkercolor bastionColor;
+	// _mkr setmarkeralpha _mAN;
 
-waituntil {triggeractivated _basActivated};
-	_mkr setmarkercolor bastionColor;
-	_mkr setmarkeralpha _mAH;
+// waituntil {triggeractivated _basActivated};
+// 	_mkr setmarkercolor bastionColor;
+// 	_mkr setmarkeralpha _mAH;
 
-						_bastActive = createTrigger ["EmptyDetector",_mPos];
-						_bastActive setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE];
-						_bastActive setTriggerActivation ["any","PRESENT",true];
-						_bastActive setTriggerTimeout [1, 1, 1, true];
-						_bastActive setTriggerStatements [_actCond,"",""];
+						// _bastActive = createTrigger ["EmptyDetector",_mPos];
+						// _bastActive setTriggerArea [_mkrX,_mkrY,_mkrAgl,FALSE];
+						// _bastActive setTriggerActivation ["any","PRESENT",true];
+						// _bastActive setTriggerTimeout [1, 1, 1, true];
+						// _bastActive setTriggerStatements [_actCond,"",""];
 
-							_bastClear = createTrigger ["EmptyDetector",_mPos];
-							_bastClear setTriggerArea [(_mkrX+(_Placement*0.3)),(_mkrY+(_Placement*0.3)),_mkrAgl,FALSE];
-							_bastClear setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
-							_bastClear setTriggerStatements ["this","",""];
+							// _bastClear = createTrigger ["EmptyDetector",_mPos];
+							// _bastClear setTriggerArea [(_mkrX+(_Placement*0.3)),(_mkrY+(_Placement*0.3)),_mkrAgl,FALSE];
+							// _bastClear setTriggerActivation [_enemyFaction,"NOT PRESENT",true];
+							// _bastClear setTriggerStatements ["this","",""];
 
 // PAUSE IF REQUESTED
 if (_pause > 0 and !_initialLaunch) then {
@@ -166,82 +166,83 @@ if (_debug) then {diag_log  format ["Armoured:%1 - r%2",_counter,_AVehGroups];0=
 	}foreach _bGrp;
 
 
-waituntil {triggeractivated _bastActive};
+// waituntil {triggeractivated _bastActive};
 
 	for "_counter" from 1 to _timeout do {
 	if (_hints) then  {
 	if (_waves > 1) then {hint format ["Next wave ETA : %1",(_timeout - _counter)];};};
 	sleep 1;
-			if (!triggeractivated _bastActive || getmarkercolor _mkr == "colorblack") exitwith
-			{
-					hint "Zone lost. You must re-capture it";
-					_mkr setmarkercolor hostileColor;
-					_mkr setmarkeralpha _mAN;
+// 			if (!triggeractivated _bastActive || getmarkercolor _mkr == "colorblack") exitwith
+// 			{
+// 					hint "Zone lost. You must re-capture it";
+// 					_mkr setmarkercolor hostileColor;
+// 					_mkr setmarkeralpha _mAN;
 
-						if (_eosZone) then {
-null = [_mkr,[_PApatrols,_PAgroupSize],[_PApatrols,_PAgroupSize],[_LVehGroups,_LVgroupSize],[_AVehGroups,0,0,0],[_faction,_mA,350,_CHside]] execVM "Server\eos\core\EOS_Core.sqf";
+// 						if (_eosZone) then {
+// null = [_mkr,[_PApatrols,_PAgroupSize],[_PApatrols,_PAgroupSize],[_LVehGroups,_LVgroupSize],[_AVehGroups,0,0,0],[_faction,_mA,350,_CHside]] execVM "Server\eos\core\EOS_Core.sqf";
 
-										};
-							_waves=0;
-			};
+// 										};
+// 							_waves=0;
+// 			};
 									};
 
 	_waves=(_waves - 1);
 
-	if (triggeractivated _bastActive and triggeractivated _bastClear and (_waves < 1) ) then
-			{
-			if (_hints) then  {hint "Waves complete";};
-					_mkr setmarkercolor VictoryColor;
-					_mkr setmarkeralpha _mAN;
+	// if (triggeractivated _bastActive and triggeractivated _bastClear and (_waves < 1) ) then
+	// 		{
+	// 		if (_hints) then  {hint "Waves complete";};
+	// 				_mkr setmarkercolor VictoryColor;
+	// 				_mkr setmarkeralpha _mAN;
 
-					}else{
+	// 				}else{
 					if (_waves >= 1) then {
 						if (_hints) then  {hint "Reinforcements inbound";};
 null = [_mkr,[_PApatrols,_PAgroupSize],[_LVehGroups,_LVgroupSize],[_AVehGroups],[_CHGroups,_fSize],_settings,[_pause,_waves,_timeout,_eosZone,_hints],true] execVM "Server\eos\core\b_core.sqf";
-						};};
+						};
+						//};
 
-waituntil {getmarkercolor _mkr == "colorblack" OR getmarkercolor _mkr == VictoryColor OR getmarkercolor _mkr == hostileColor or !triggeractivated  _bastActive};
-	if (_debug) then {diag_log  "delete units";};
-					{
-					{deleteVehicle _x} foreach units _x;
-					}foreach _aGroup;
+// waituntil {getmarkercolor _mkr == "colorblack" OR getmarkercolor _mkr == VictoryColor OR getmarkercolor _mkr == hostileColor or !triggeractivated  _bastActive};
+// 	if (_debug) then {diag_log  "delete units";};
+// 					{
+// 					{deleteVehicle _x} foreach units _x;
+// 					}foreach _aGroup;
 
-					if (count _cGrp > 0) then
-					{
-						{				_vehicle = _x select 0;
-										_crew = _x select 1;
-										_grp = _x select 2;
-													{deleteVehicle _x} forEach (_crew);
-													if (!(vehicle player == _vehicle)) then
-													{{deleteVehicle _x} forEach[_vehicle];};
-													{deleteVehicle _x} foreach units _grp;
-													deleteGroup _grp;
-						}foreach _cGrp;
-					};
+// 					if (count _cGrp > 0) then
+// 					{
+// 						{				_vehicle = _x select 0;
+// 										_crew = _x select 1;
+// 										_grp = _x select 2;
+// 													{deleteVehicle _x} forEach (_crew);
+// 													if (!(vehicle player == _vehicle)) then
+// 													{{deleteVehicle _x} forEach[_vehicle];};
+// 													{deleteVehicle _x} foreach units _grp;
+// 													deleteGroup _grp;
+// 						}foreach _cGrp;
+// 					};
 
-					if (count _bGrp > 0) then
-					{
-							{			_vehicle = _x select 0;
-										_crew = _x select 1;
-										_grp = _x select 2;
-											{deleteVehicle _x} forEach (_crew);
-											if (!(vehicle player == _vehicle)) then
-											{{deleteVehicle _x} forEach[_vehicle];};
-											{deleteVehicle _x} foreach units _grp;
-											deleteGroup _grp;
-								}foreach _bGrp;
-					};
+// 					if (count _bGrp > 0) then
+// 					{
+// 							{			_vehicle = _x select 0;
+// 										_crew = _x select 1;
+// 										_grp = _x select 2;
+// 											{deleteVehicle _x} forEach (_crew);
+// 											if (!(vehicle player == _vehicle)) then
+// 											{{deleteVehicle _x} forEach[_vehicle];};
+// 											{deleteVehicle _x} foreach units _grp;
+// 											deleteGroup _grp;
+// 								}foreach _bGrp;
+// 					};
 
-// CACHE HELICOPTER TRANSPORT
-	if (count _fGrp > 0) then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2; _cargoGrp = _x select 3;
-															{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-																	{deleteVehicle _x} foreach units _cargoGrp;deleteGroup _cargoGrp;
+// // CACHE HELICOPTER TRANSPORT
+// 	if (count _fGrp > 0) then
+// 				{
+// 						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2; _cargoGrp = _x select 3;
+// 															{deleteVehicle _x} forEach (_crew);
+// 															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+// 																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+// 																	{deleteVehicle _x} foreach units _cargoGrp;deleteGroup _cargoGrp;
 
-						}foreach _fGrp;};
+// 						}foreach _fGrp;};
 
-	deletevehicle _bastActive;deletevehicle _bastClear;deletevehicle _basActivated;
-if (getmarkercolor _mkr == "colorblack") then {_mkr setmarkeralpha 0;};
+// 	deletevehicle _bastActive;deletevehicle _bastClear;deletevehicle _basActivated;
+// if (getmarkercolor _mkr == "colorblack") then {_mkr setmarkeralpha 0;};
