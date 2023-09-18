@@ -19,7 +19,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="co_36_resistance3-8-1";
+sourceName="co_36_resistance3-9-0";
 addons[]=
 {
 	"A3_Ui_F",
