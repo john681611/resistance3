@@ -70,7 +70,7 @@ Format
   ],
   [
     ["acc_flashlight",2],
-    ["bipod_03_F_oli",2],
+    ["bipod_03_F_oli",2]
   ],
   [
     ["B_TacticalPack_blk",2],
@@ -116,6 +116,52 @@ _backpacks = [];
 
 _local = [ 
         (typeOf _box),
+        _weapons, 
+        _magazines, 
+        _items,
+        _backpacks
+    ];
+
+_local
+
+```
+
+Get arsenal data
+```
+_box = box;
+
+_weaponsRaw = getWeaponCargo _box;
+_weapons = [];
+
+{
+ _weapons pushBack _x;
+} forEach (_weaponsRaw select 0);
+
+
+_magazinesRaw = getMagazineCargo  _box;
+_magazines = [];
+
+{
+ _magazines pushBack _x;
+} forEach (_magazinesRaw select 0);
+
+
+_itemsRaw = getItemCargo _box;
+_items = [];
+
+{
+ _items pushBack _x;
+} forEach (_itemsRaw select 0);
+
+
+_backpacksRaw = getBackpackCargo _box;
+_backpacks = [];
+
+{
+ _backpacks pushBack _x;
+} forEach (_backpacksRaw select 0);
+
+_local = [ 
         _weapons, 
         _magazines, 
         _items,

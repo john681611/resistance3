@@ -6,6 +6,7 @@ class IA
 		file = "Functions";
 		
 		class addToAllCurators {};
-		
+		class fillBox {};
+		class setArsenal {};
 	};
 }

@@ -32,8 +32,8 @@ sendToMasterBox = compile preprocessFileLineNumbers 'Server\sendToMasterBox.sqf'
 [] execVM "Server\mhq\marker.sqf";
 [] execVM "Server\VehicleMarker.sqf";
 waitUntil {ztowninit==1};
-[]	execVM "Server\eos\zoneConfig.sqf";
-[]	execVM "Server\cleanupAuto.sqf";
+[] execVM "Server\eos\zoneConfig.sqf";
+[] execVM "Server\cleanupAuto.sqf";
 
  //Fog limiter
  while {true} do
