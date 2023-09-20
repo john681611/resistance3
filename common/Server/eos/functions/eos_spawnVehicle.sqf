@@ -11,7 +11,11 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	_cargoItemData = [];
 	_cargoBackpackData = [];
 	if(typeName (_vehicleType select 0) == "ARRAY") then {
-		
+		_cargoWeaponData = (_vehicleType select 0) select 1;
+		_cargoMagazineData = (_vehicleType select 0) select 2;
+		_cargoItemData = (_vehicleType select 0) select 3;
+		_cargoBackpackData = (_vehicleType select 0) select 4;
+		_vehicleType = [(_vehicleType select 0) select 0];
 	};
 
 	_vehPositions=[(_vehicleType select 0)] call BIS_fnc_vehicleRoles;
@@ -21,7 +25,7 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 	[[_vehicle]] remoteExec ["RES_fnc_addToAllCurators", 2];
 _vehCrew=[];
 	
-	if((count _cargoItemData) > 0) then {	
+	if((count _cargoWeaponData) > 0 OR (count _cargoMagazineData) > 0 OR (count _cargoItemData) > 0 OR (count _cargoBackpackData) > 0) then {	
 		[_vehicle,_cargoWeaponData,_cargoMagazineData,_cargoItemData,_cargoBackpackData] call RES_fnc_fillBox;
 	};
 		{
