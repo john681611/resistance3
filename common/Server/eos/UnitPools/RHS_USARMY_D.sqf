@@ -81,11 +81,47 @@ RHS_USARMY_D_heliCrew = [
 	"rhsusf_army_ocp_helicrew", .5,
 	"rhsusf_army_ocp_helipilot", .5
 ];
+
+
+//US Army Weapon box
+RHS_USARMY_D_Box_Weapon = ["Box_NATO_Wps_F",[["rhs_weap_m4a1_grip3",4],["rhs_weap_m4a1_m203",1],["rhs_weap_M590_8RD",1],["rhs_weap_m249_light_S_vfg2",1],["rhs_weap_m240B",1],["rhs_weap_M136",2],["rhsusf_weap_m9",5],["rhs_weap_m14ebrri",1]],[["rhsusf_100Rnd_556x45_soft_pouch_coyote",4],["rhsusf_50Rnd_762x51",4],["rhsusf_mag_15Rnd_9x19_FMJ",8],["rhs_mag_m67",6],["rhs_mag_an_m8hc",10],["rhs_mag_M433_HEDP",12],["rhs_mag_30Rnd_556x45_M855A1_Stanag",16],["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",5],["rhsusf_8Rnd_00Buck",8],["rhsusf_8Rnd_Slug",8],["rhsusf_20Rnd_762x51_m118_special_Mag",6]],[["rhsusf_acc_ACOG",2],["rhsusf_acc_ELCAN_ard",1],["rhsusf_acc_anpeq15_top",2],["rhsusf_acc_grip3",2],["rhsusf_acc_LEUPOLDMK4",1]],[]];
+
+//US Army Ammo
+RHS_USARMY_D_Box_Ammo = ["Box_NATO_Ammo_F",[],[["rhsusf_100Rnd_556x45_soft_pouch_coyote",8],["rhsusf_50Rnd_762x51",8],["rhsusf_mag_15Rnd_9x19_FMJ",14],["rhs_mag_m67",6],["rhs_mag_an_m8hc",6],["rhs_mag_M433_HEDP",12],["rhs_mag_30Rnd_556x45_M855A1_Stanag",24],["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10],["rhsusf_8Rnd_00Buck",8],["rhsusf_8Rnd_Slug",8]],[],[]];
+
+//US Army Grenade box
+RHS_USARMY_D_Box_Grenade = ["Box_NATO_Ammo_F",[],[["rhsusf_100Rnd_556x45_soft_pouch_coyote",8],["rhsusf_50Rnd_762x51",8],["rhsusf_mag_15Rnd_9x19_FMJ",14],["rhs_mag_m67",6],["rhs_mag_an_m8hc",6],["rhs_mag_M433_HEDP",12],["rhs_mag_30Rnd_556x45_M855A1_Stanag",24],["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10],["rhsusf_8Rnd_00Buck",8],["rhsusf_8Rnd_Slug",8]],[],[]];
+
+//US Army Explosives box
+RHS_USARMY_D_Box_Explosive = ["Box_NATO_AmmoOrd_F",[],[["rhs_mag_m67",12],["DemoCharge_Remote_Mag",10],["SatchelCharge_Remote_Mag",6],["ATMine_Range_Mag",8],["ClaymoreDirectionalMine_Remote_Mag",12],["SLAMDirectionalMine_Wire_Mag",4],["rhs_mine_m3_pressure_mag",24]],[["ACE_Clacker",4],["ACE_M26_Clacker",4],["ACE_DefusalKit",4]],[]];
+
+//US Army Launchers box
+RHS_USARMY_D_Box_Launchers = ["Box_NATO_WpsLaunch_F",[["rhs_weap_M136",12],["rhs_weap_fim92",2],["rhs_weap_fgm148",2]],[["rhs_fim92_mag",2],["rhs_fgm148_magazine_AT",2]],[],[]];
+
+//US Army Special Weapons box
+RHS_USARMY_D_Box_Special = ["Box_NATO_WpsSpecial_F",[["rhs_weap_m249_light_S_vfg2",1],["rhs_weap_m240B",1],["rhs_weap_M136",2],["rhsusf_weap_m9",5],["rhs_weap_m14ebrri",1],["rhs_weap_m4a1_blockII_KAC",4],["rhs_weap_m4a1_blockII_M203",1],["rhs_weap_M590_5RD",1],["rhs_weap_mk17_STD",2],["rhs_weap_M107_d_leu",1]],[["rhsusf_100Rnd_556x45_soft_pouch_coyote",4],["rhsusf_50Rnd_762x51",4],["rhsusf_mag_15Rnd_9x19_FMJ",8],["rhs_mag_m67",6],["rhs_mag_an_m8hc",10],["rhs_mag_M433_HEDP",12],["rhs_mag_30Rnd_556x45_M855A1_Stanag",16],["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",5],["rhsusf_8Rnd_00Buck",8],["rhsusf_8Rnd_Slug",8],["rhsusf_20Rnd_762x51_m118_special_Mag",6],["rhs_mag_20Rnd_SCAR_762x51_m61_ap",8],["rhsusf_mag_10Rnd_STD_50BMG_M33",6]],[["rhsusf_acc_ACOG",2],["rhsusf_acc_ELCAN_ard",1],["rhsusf_acc_anpeq15_top",2],["rhsusf_acc_grip3",2],["rhsusf_acc_LEUPOLDMK4",1],["rhsusf_acc_rotex5_grey",5]],[]];
+
+//US Army Support box
+RHS_USARMY_D_Box_Support = ["Box_NATO_Support_F",[["Binocular",6]],[],[["ToolKit",2],["ItemGPS",4],["acc_flashlight",6],["muzzle_snds_B",4],["ACE_MapTools",4],["muzzle_snds_M",4],["optic_Nightstalker",1],["muzzle_snds_H_MG_blk_F",4],["rhsusf_acc_harris_bipod",4],["rhsusf_acc_grip1",4],["rhsusf_acc_anpeq15_bk",4],["rhsusf_acc_anpeq15_bk_light",4],["rhsusf_acc_rotex5_grey",10],["rhsusf_acc_compm4",4],["rhsusf_acc_eotech_552",4],["rhsusf_acc_LEUPOLDMK4",4],["rhsusf_acc_ELCAN",4],["rhsusf_acc_ACOG",4],["ACE_microDAGR",4],["ACE_Clacker",2],["ACE_Kestrel4500",1],["ItemCompass",6],["ItemRadio",6],["rhsusf_ANPVS_14",12]],[]];
+
+//US Army Equipment box
+RHS_USARMY_D_Box_Equipment = ["Box_NATO_Equip_F",[],[],[["rhs_uniform_cu_ocp_101st",2],["rhsusf_spcs_ocp_squadleader",2],["rhsusf_spcs_ocp_teamleader",2],["rhsusf_spcs_ocp_teamleader_alt",2],["rhsusf_spcs_ocp_saw",2],["rhsusf_spcs_ocp_grenadier",2],["rhsusf_spcs_ocp_rifleman",2],["rhsusf_spcs_ocp_rifleman_alt",2],["rhsusf_spcs_ocp_medic",2],["rhsusf_spcs_ocp_machinegunner",2],["rhsusf_spcs_ocp_sniper",2],["rhsusf_ach_helmet_ocp",2],["rhsusf_ach_helmet_ocp_alt",2],["rhsusf_ach_helmet_ocp_norotos",2],["rhsusf_ach_helmet_camo_ocp",2],["rhsusf_ach_helmet_headset_ocp",2],["rhsusf_ach_helmet_headset_ocp_alt",2],["rhsusf_ach_helmet_ESS_ocp",2],["rhsusf_ach_helmet_ESS_ocp_alt",2],["rhsusf_ach_helmet_headset_ess_ocp",2],["rhsusf_ach_helmet_headset_ess_ocp_alt",2]],[["rhsusf_assault_eagleaiii_ocp",8],["rhsusf_assault_eagleaiii_ocp_ar",2],["rhsusf_falconii_breach",2]]];
+
+//US Army Uniform
+RHS_USARMY_D_Box_Uniform = ["Box_NATO_Uniforms_F",[],[],[["rhs_uniform_cu_ocp_101st",24]],[]];
+
+//US Supply box
+RHS_USARMY_D_Box_Supply = ["B_supplyCrate_F",[["rhs_weap_m4a1_grip3",2],["rhs_weap_m249_light_S_vfg2",1],["rhs_weap_M136",2],["rhsusf_weap_m9",2],["ACE_VectorDay",2],["ACE_Yardage450",2]],[["rhsusf_100Rnd_556x45_soft_pouch_coyote",12],["rhsusf_50Rnd_762x51",12],["rhsusf_mag_15Rnd_9x19_FMJ",14],["rhs_mag_m67",6],["rhs_mag_an_m8hc",10],["rhs_mag_M433_HEDP",12],["rhs_mag_30Rnd_556x45_M855A1_Stanag",36],["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",12],["rhsusf_8Rnd_00Buck",8],["rhsusf_8Rnd_Slug",8],["rhsusf_20Rnd_762x51_m118_special_Mag",11],["DemoCharge_Remote_Mag",4],["SatchelCharge_Remote_Mag",1]],[["rhsusf_acc_ACOG",8],["rhsusf_acc_ELCAN_ard",4],["rhsusf_acc_anpeq15_top",2],["rhsusf_acc_grip3",2],["rhsusf_acc_rotex5_grey",2],["ACE_rope6",2],["ACE_EntrenchingTool",6],["ACE_CableTie",6],["ACE_Clacker",2],["ACE_M26_Clacker",2],["ACE_EarPlugs",6],["ACE_packingBandage",20],["ACE_tourniquet",13],["ACE_splint",16],["ACE_morphine",20],["ACE_epinephrine",12],["ACE_salineIV_500",10],["ACE_personalAidKit",2],["ItemCompass",2],["ItemGPS",2],["ItemRadio",2],["ItemMap",2],["ToolKit",1],["Medikit",1],["rhsusf_ANPVS_14",4]],[]];
+
 RHS_USARMY_D_boxPool = [
-	"rhsusf_weapon_crate", .2,
-	"rhsusf_spec_weapons_crate", .1,
-	"rhsusf_launcher_crate", .2,
-	"rhsusf_gear_crate", .1,
-	"rhsusf_mags_crate", .2,
-	"B_supplyCrate_F", .1
+	RHS_USARMY_D_Box_Weapon, .5,
+	RHS_USARMY_D_Box_Ammo, .3,
+	RHS_USARMY_D_Box_Grenade, .1,
+	RHS_USARMY_D_Box_Explosive, .1,
+	RHS_USARMY_D_Box_Launchers, .6,
+	RHS_USARMY_D_Box_Special, .2,
+	RHS_USARMY_D_Box_Support, .2,
+	RHS_USARMY_D_Box_Equipment, .2,
+	RHS_USARMY_D_Box_Uniform, .2,
+	RHS_USARMY_D_Box_Supply, .1
 ];
