@@ -101,14 +101,18 @@ player createDiaryRecord ["teamspeak", ["IRON FISTS", "
 <br/> Visitors and guests welcome!
 "]];
 
-player createDiarySubject ["Settings & Keybinds", "Settings & Keybinds"];
-player createDiaryRecord ["Settings & Keybinds", ["Settings & Keybinds", "
-<br/>Click <execute expression = '[] spawn CHVD_fnc_openDialog;'>View Distance Settings.</execute>
-<br/>Click <execute expression = '[] call outlw_MR_createDialog;'>Mag Repack</execute> (Ctrl+R)
-<br/>Click <execute expression = '[] call toggle_earplugs;'>Toggle Earplugs</execute> (Pause/Break)
-"]];
+if(isClass(configFile>>"cfgPatches">>"ace_common")) then {
+	player createDiarySubject ["Settings & Keybinds", "Settings & Keybinds"];
+	player createDiaryRecord ["Settings & Keybinds", ["Settings & Keybinds","ACE3 was detected, Repacking mags, View distance and Earplugs are handled by that.<br/><br/>These can be found in you Self interaction menu.<br/><br/>View distance settings are set via your options > Addons options > ACE View Distance Limiter"]];
+} else {
+	player createDiarySubject ["Settings & Keybinds", "Settings & Keybinds"];
+	player createDiaryRecord ["Settings & Keybinds", ["Settings & Keybinds", "
+	<br/>Click <execute expression = '[] spawn CHVD_fnc_openDialog;'>View Distance Settings.</execute>
+	<br/>Click <execute expression = '[] call outlw_MR_createDialog;'>Mag Repack</execute> (Ctrl+R)
+	<br/>Click <execute expression = '[] call toggle_earplugs;'>Toggle Earplugs</execute> (Pause/Break)"]];
+	[] execVM "Client\earplugs.sqf";
+};
 
-[] execVM "Client\earplugs.sqf";
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "Client\Player_Marker.sqf";
 [] execVM "Client\Revive_marker.sqf";
