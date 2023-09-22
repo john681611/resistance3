@@ -8,7 +8,7 @@ Hostiles = [
 	[INDEPENDENT,4],.4,
 	[INDEPENDENT,5],.3,
 	[INDEPENDENT,6],.3,
-  [INDEPENDENT,8],.3,
+	[INDEPENDENT,8],.3,
 	[INDEPENDENT,7],.1
 ];
 //Both
@@ -41,7 +41,7 @@ MasterBoxArsernalContent = [
     "RPG7_F"
   ],
   [
-      "Binocular",
+    "Binocular",
     "MineDetector",
     "acc_flashlight",
     "bipod_01_F_khk",
@@ -201,6 +201,7 @@ MasterBoxArsernalContent = [
     "B_TacticalPack_rgr"
   ]
 ];
+
 /////////////////////////////////////
 publicVariable "MHQs";
 publicVariable "Bases";

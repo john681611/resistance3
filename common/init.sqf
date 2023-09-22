@@ -37,7 +37,7 @@ if(!isClass(configFile>>"cfgPatches">>"ace_common")) then {
 	] call RES_fnc_setArsenal;
 	if(isClass(configFile>>"cfgPatches">>"ace_common")) then {
 			[_box, 
-			["ACE_fieldDressing","ACE_packingBandage","ACE_elasticBandage","ACE_tourniquet","ACE_splint","ACE_morphine","ACE_adenosine","ACE_epinephrine","ACE_plasmaIV","ACE_plasmaIV_500","ACE_plasmaIV_250","ACE_salineIV","ACE_salineIV_500","ACE_salineIV_250","ACE_bloodIV","ACE_bloodIV_500","ACE_bloodIV_250","ACE_quikclot","ACE_personalAidKit","ACE_surgicalKit","ACE_bodyBag","ACE_EarPlugs"],
+			["ACE_fieldDressing","ACE_packingBandage","ACE_elasticBandage","ACE_tourniquet","ACE_splint","ACE_morphine","ACE_adenosine","ACE_epinephrine","ACE_plasmaIV","ACE_plasmaIV_500","ACE_plasmaIV_250","ACE_salineIV","ACE_salineIV_500","ACE_salineIV_250","ACE_bloodIV","ACE_bloodIV_500","ACE_bloodIV_250","ACE_quikclot","ACE_personalAidKit","ACE_surgicalKit","ACE_bodyBag","ACE_EarPlugs","ACE_EntrenchingTool","ACE_Flashlight_KSF1","ACE_MapTools"],
 			 true] call BIS_fnc_addVirtualItemCargo;
 		};
 	if(isClass(configFile >> "CfgPatches" >> "tfar_core")) then {
