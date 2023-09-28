@@ -10,6 +10,7 @@ _tempArray = [];
 #include "..\Server\eos\UnitPools\3CB_BAF_MTP.sqf";
 #include "..\Server\eos\UnitPools\3CB_Ch_Red.sqf";
 #include "..\Server\eos\UnitPools\3CB_ME_EXTREMIST.sqf";
+#include "..\Server\eos\UnitPools\3CB_Spetsnaz.sqf";
 #include "..\Server\eos\UnitPools\RHS_AFRF.sqf";
 #include "..\Server\eos\UnitPools\RHS_PMC_D.sqf";
 #include "..\Server\eos\UnitPools\RHS_USARMY_D.sqf";
@@ -181,6 +182,23 @@ switch (_faction)
 		_crewPool = UK3CB_ME_EXTREMISTS_crewPool + [];
 		_heliCrew = UK3CB_ME_EXTREMISTS_heliCrew + [];
 		_boxPool = UK3CB_ME_EXTREMISTS_boxPool + [];	
+	};
+	
+	//3cb Spetsnaz
+	case 10:
+	{
+		_InfPool = UK3CB_Spetsnaz_InfPool + [];
+		_ArmPool = UK3CB_Spetsnaz_ArmPool + [];
+		_MotPool = UK3CB_Spetsnaz_MotPool + [];
+		_ACHPool = UK3CB_Spetsnaz_ACHPool + [];
+		_CHPool = UK3CB_Spetsnaz_CHPool + [];
+		_uavPool = UK3CB_Spetsnaz_uavPool + [];
+		_stPool = UK3CB_Spetsnaz_stPool + [];
+		_shipPool = UK3CB_Spetsnaz_shipPool + [];
+		_diverPool = UK3CB_Spetsnaz_diverPool + [];
+		_crewPool = UK3CB_Spetsnaz_crewPool + [];
+		_heliCrew = UK3CB_Spetsnaz_heliCrew + [];
+		_boxPool = UK3CB_Spetsnaz_boxPool + [];	
 	};
 };
 
