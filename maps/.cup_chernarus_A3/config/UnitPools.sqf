@@ -169,18 +169,18 @@ switch (_faction)
 	//Middle East Extremists
 	case 9:
 	{
-		_InfPool = 3CB_ME_EXTREMISTS_InfPool + [];
-		_ArmPool = 3CB_ME_EXTREMISTS_ArmPool + [];
-		_MotPool = 3CB_ME_EXTREMISTS_MotPool + [];
-		_ACHPool =3CB_ME_EXTREMISTS_ACHPool + [];
-		_CHPool = 3CB_ME_EXTREMISTS_CHPool + [];
-		_uavPool = 3CB_ME_EXTREMISTS_uavPool + [];
-		_stPool = 3CB_ME_EXTREMISTS_stPool + [];
-		_shipPool = 3CB_ME_EXTREMISTS_shipPool + [];
-		_diverPool = 3CB_ME_EXTREMISTS_diverPool + [];
-		_crewPool = 3CB_ME_EXTREMISTS_crewPool + [];
-		_heliCrew = 3CB_ME_EXTREMISTS_heliCrew + [];
-		_boxPool = 3CB_ME_EXTREMISTS_boxPool + [];	
+		_InfPool = UK3CB_ME_EXTREMISTS_InfPool + [];
+		_ArmPool = UK3CB_ME_EXTREMISTS_ArmPool + [];
+		_MotPool = UK3CB_ME_EXTREMISTS_MotPool + [];
+		_ACHPool = UK3CB_ME_EXTREMISTS_ACHPool + [];
+		_CHPool = UK3CB_ME_EXTREMISTS_CHPool + [];
+		_uavPool = UK3CB_ME_EXTREMISTS_uavPool + [];
+		_stPool = UK3CB_ME_EXTREMISTS_stPool + [];
+		_shipPool = UK3CB_ME_EXTREMISTS_shipPool + [];
+		_diverPool = UK3CB_ME_EXTREMISTS_diverPool + [];
+		_crewPool = UK3CB_ME_EXTREMISTS_crewPool + [];
+		_heliCrew = UK3CB_ME_EXTREMISTS_heliCrew + [];
+		_boxPool = UK3CB_ME_EXTREMISTS_boxPool + [];	
 	};
 };
 
