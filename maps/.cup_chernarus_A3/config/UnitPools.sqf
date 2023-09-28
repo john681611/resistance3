@@ -9,11 +9,13 @@ _tempArray = [];
 #include "..\Server\eos\UnitPools\3CB_Ard_SF.sqf";
 #include "..\Server\eos\UnitPools\3CB_BAF_MTP.sqf";
 #include "..\Server\eos\UnitPools\3CB_Ch_Red.sqf";
+#include "..\Server\eos\UnitPools\3CB_ME_EXTREMIST.sqf";
 #include "..\Server\eos\UnitPools\RHS_AFRF.sqf";
 #include "..\Server\eos\UnitPools\RHS_PMC_D.sqf";
 #include "..\Server\eos\UnitPools\RHS_USARMY_D.sqf";
 #include "..\Server\eos\UnitPools\RHS_USARMY_W.sqf";
 #include "..\Server\eos\UnitPools\RHS_USARMY_SF.sqf";
+
 switch (_faction)
 	do {
 	// EAST CSAT FACTION
@@ -146,6 +148,7 @@ switch (_faction)
 		_heliCrew = RHS_USARMY_SF_heliCrew + [];
 		_boxPool = RHS_USARMY_SF_boxPool + [];	
 	};
+	
 	// EAST TANOA CSAT FACTION
 	case 8:
 	{
@@ -161,6 +164,23 @@ switch (_faction)
 		_crewPool = RHS_USARMY_W_crewPool + [];
 		_heliCrew = RHS_USARMY_W_heliCrew + [];
 		_boxPool = RHS_USARMY_W_boxPool + [];	
+	};
+	
+	//Middle East Extremists
+	case 9:
+	{
+		_InfPool = 3CB_ME_EXTREMISTS_InfPool + [];
+		_ArmPool = 3CB_ME_EXTREMISTS_ArmPool + [];
+		_MotPool = 3CB_ME_EXTREMISTS_MotPool + [];
+		_ACHPool =3CB_ME_EXTREMISTS_ACHPool + [];
+		_CHPool = 3CB_ME_EXTREMISTS_CHPool + [];
+		_uavPool = 3CB_ME_EXTREMISTS_uavPool + [];
+		_stPool = 3CB_ME_EXTREMISTS_stPool + [];
+		_shipPool = 3CB_ME_EXTREMISTS_shipPool + [];
+		_diverPool = 3CB_ME_EXTREMISTS_diverPool + [];
+		_crewPool = 3CB_ME_EXTREMISTS_crewPool + [];
+		_heliCrew = 3CB_ME_EXTREMISTS_heliCrew + [];
+		_boxPool = 3CB_ME_EXTREMISTS_boxPool + [];	
 	};
 };
 

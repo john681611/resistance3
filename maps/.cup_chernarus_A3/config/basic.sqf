@@ -5,6 +5,7 @@ Hostiles = [
 	[EAST,1],.2,
 	[EAST,2],.3,
 	[EAST,3],.3,
+	[EAST,9],.1,
 	[INDEPENDENT,4],.4,
 	[INDEPENDENT,5],.3,
 	[INDEPENDENT,6],.3,
