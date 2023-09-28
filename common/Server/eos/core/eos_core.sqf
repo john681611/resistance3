@@ -60,8 +60,12 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 										if (!surfaceiswater _mPos) then {
 											0=[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
 												}else{
-												0 = [_aGroup,_mkr] call EOS_fnc_taskpatrol;
+													if(isClass(configfile >> "lambs_main_Display")) then {
+														[_bGroup, _mkr, 250] call lambs_wp_fnc_taskPatrol;
+													} else {										
+														0 = [_aGroup,_mkr] call EOS_fnc_taskpatrol;
 													};
+												};
 												_aGrp set [count _aGrp,_aGroup];
 												0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
 if (_debug) then {diag_log (format ["Spawned House Patrol: %1",_counter]);0= [_mkr,_counter,"House Patrol",getpos (leader _aGroup)] call EOS_debug};
@@ -74,7 +78,11 @@ if (_debug) then {diag_log (format ["Spawned House Patrol: %1",_counter]);0= [_m
 							if (_bMin > 0) then {
 								  _pos=[_mkr,50] call EOS_fnc_findSafePos;
 									_bGroup=[_pos,_bSize,_faction,_side,true] call EOS_fnc_spawngroup;
-										0 = [_bGroup,_mkr] call EOS_fnc_taskpatrol;
+										if(isClass(configfile >> "lambs_main_Display")) then {
+												[_bGroup, _mkr, 250] call lambs_wp_fnc_taskPatrol;
+											} else {										
+												0 = [_bGroup,_mkr] call EOS_fnc_taskpatrol;
+											};
 										_bGrp set [count _bGrp,_bGroup];
 
 										0=[_bGroup,"INFskill"] call eos_fnc_grouphandlers;
@@ -96,7 +104,11 @@ if (_debug) then {diag_log (format ["Spawned Patrol: %1",_counter]);0= [_mkr,_co
 						};
 
 							0=[(_cGroup select 2),"LIGskill"] call eos_fnc_grouphandlers;
-								0 = [(_cGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+							if(isClass(configfile >> "lambs_main_Display")) then {
+														[_cGroup select 2, _mkr, 400] call lambs_wp_fnc_taskPatrol;
+													} else {										
+														0 = [(_cGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+													};
 								_cGrp set [count _cGrp,_cGroup];
 
 if (_debug) then {diag_log format ["Light Vehicle:%1 - r%2",_counter,_cGrps];0= [_mkr,_counter,"Light Veh",(getpos leader (_cGroup select 2))] call EOS_debug};
@@ -107,14 +119,21 @@ sleep 0.25;
 	for "_counter" from 1 to _dGrps do {
 	if (isnil "_dGrp") then {_dGrp=[];};
 
-		_newpos=[_mkr,50] call EOS_fnc_findSafePos;
+		_newpos=[_mkr,100] call EOS_fnc_findSafePos;
 			if (surfaceiswater _newpos) then {_vehType=8;}else{_vehType=2;};
 
 					_dGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
 					0=[(_dGroup select 0),[4, 10],(_dGroup select 2),_faction,9] call eos_fnc_setcargo;
 
 						0=[(_dGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
-						0 = [(_dGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+						
+						
+						if(isClass(configfile >> "lambs_main_Display")) then {
+														[_dGroup select 2, _mkr, 250] call lambs_wp_fnc_taskPatrol;
+													} else {										
+														0 = [(_dGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+													};
+						
 							_dGrp set [count _dGrp,_dGroup];
 
 if (_debug) then {diag_log format ["Armoured:%1 - r%2",_counter,_dGrps];0= [_mkr,_counter,"Armour",(getpos leader (_dGroup select 2))] call EOS_debug};
@@ -140,7 +159,7 @@ sleep 0.25;
 for "_counter" from 1 to _fGrps do {
 	if (isnil "_fGrp") then {_fGrp=[];};
 	_vehType=3;
-	_newpos=[_mkr,50] call EOS_fnc_findSafePos;
+	_newpos=[_mkr,200] call EOS_fnc_findSafePos;
 	_fGroup=[_newpos,_side,_faction,_vehType,"fly"]call EOS_fnc_spawnvehicle;
 	_fGrp set [count _fGrp,_fGroup];
 
