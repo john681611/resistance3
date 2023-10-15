@@ -26,5 +26,9 @@ _index = 0;
 _index = 0;
 {
 	[(_x select 0), ((_this select 3) select _index)] spawn setContent;
+	[
+		(_x select 0),
+		((_this select 4) select _index)
+	] call RES_fnc_setArsenal;
 	_index = _index + 1;
 } forEach MasterBoxes;
