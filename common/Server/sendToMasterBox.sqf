@@ -81,10 +81,38 @@ private _backpacksFinal = [];
 {
 	if (_y >= _clothingLimit) then {
 		_backpacksFinal pushBack _x;
-		_masterBox addBackpackCargoGlobal [_x, -1 * _y];
 		_promoNames pushBack (gettext (configfile >> "CfgVehicles" >> _x >> "displayName"));
 	};
 } forEach _backpacksAgg;
 [_masterBox, _itemsFinal, true] call BIS_fnc_addVirtualBackpackCargo;
+
+
+private _arsernalExistingWeapons = _masterBox call BIS_fnc_getVirtualWeaponCargo;
+{
+	if(_x in _arsernalExistingWeapons) then {
+		_masterBox addWeaponCargoGlobal [_x, -1 * _y];
+	};
+} forEach _weaponsAgg;
+
+private _arsernalExistingMagazines = _masterBox call BIS_fnc_getVirtualMagazineCargo;
+{
+	if(_x in _arsernalExistingMagazines) then {
+		_masterBox addMagazineCargoGlobal [_x, -1 * _y];
+	};
+} forEach _magsAgg;
+
+private _arsernalExistingItems = _masterBox call BIS_fnc_getVirtualItemCargo;
+{
+	if(_x in _arsernalExistingItems) then {
+		_masterBox addItemCargoGlobal [_x, -1 * _y];
+	};
+} forEach _itemsAgg;
+
+private _arsernalExistingBackpacks = _masterBox call BIS_fnc_getVirtualBackpackCargo;
+{
+	if(_x in _arsernalExistingBackpacks) then {
+		_masterBox addBackpackCargoGlobal [_x, -1 * _y];
+	};
+} forEach _backpacksAgg;
 
 hint format ["Arsernal Promotions: %1", _promoNames];
