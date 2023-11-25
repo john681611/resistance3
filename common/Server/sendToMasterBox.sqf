@@ -16,10 +16,10 @@ params ["_masterBox", "_masterZone"];
 } forEach list _masterZone;
 
 private _promoNames = [];
-private _magLimit = 100;
-private _weaponLimit = 75;
-private _itemLimit = 50;
-private _clothingLimit = 10;
+private _magLimit = 40;
+private _weaponLimit = 25;
+private _itemLimit = 20;
+private _clothingLimit = 5;
 private _masterContent = _masterBox call getContent;
 
 private _weapons = (_masterContent select 0);
@@ -61,7 +61,14 @@ private _itemsAgg = createHashMap;
 private _itemsFinal = [];
 {
 	private _limit = _itemLimit;
-	if (_x isKindOf ["Uniform_Base", configFile >> "CfgWeapons"] || _x isKindOf ["Vest_Camo_Base", configFile >> "CfgWeapons"] || _x isKindOf ["VestItem", configFile >> "CfgWeapons"]) then {
+	if (
+		_x isKindOf ["Uniform_Base", configFile >> "CfgWeapons"] ||
+		_x isKindOf ["Vest_Camo_Base", configFile >> "CfgWeapons"] ||
+		_x isKindOf ["Vest_NoCamo_Base", configFile >> "CfgWeapons"] ||
+		_x isKindOf ["VestItem", configFile >> "CfgWeapons"] ||
+		_x isKindOf ["H_HelmetB", configFile >> "CfgWeapons"] ||
+		_x isKindOf ["HelmetBase", configFile >> "CfgWeapons"] 
+		) then {
 		_limit = _clothingLimit;
 	};
 	if (_y >= _limit) then {
@@ -84,7 +91,7 @@ private _backpacksFinal = [];
 		_promoNames pushBack (gettext (configfile >> "CfgVehicles" >> _x >> "displayName"));
 	};
 } forEach _backpacksAgg;
-[_masterBox, _itemsFinal, true] call BIS_fnc_addVirtualBackpackCargo;
+[_masterBox, _backpacksFinal, true] call BIS_fnc_addVirtualBackpackCargo;
 
 
 private _arsernalExistingWeapons = _masterBox call BIS_fnc_getVirtualWeaponCargo;
@@ -115,4 +122,4 @@ private _arsernalExistingBackpacks = _masterBox call BIS_fnc_getVirtualBackpackC
 	};
 } forEach _backpacksAgg;
 
-hint format ["Arsernal Promotions: %1", _promoNames];
+(format ["Arsernal Promotions: %1", _promoNames]) remoteExecCall ["systemChat", 0];
