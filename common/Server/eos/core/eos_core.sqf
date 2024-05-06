@@ -525,6 +525,7 @@ if (!(getmarkercolor _mkr == "colorblack")) then {
 					} forEach _boxMarkers;
 				};
 				if (!_renforced && !triggerActivated _clear && triggerActivated __renforcement && !_civZone && getMarkerColor _mkr != VictoryColor && (count (allPlayers inAreaArray _eosActivated) > 0)) then {
+					_renforced = true;
 					_occures = 0;
 					_rounds = 0;
 					_rate = [180, 360] call BIS_fnc_randomInt;
@@ -552,9 +553,8 @@ if (!(getmarkercolor _mkr == "colorblack")) then {
 					};
 
 					if (_occures == 1) then {
-						null = [[_mkr], [0, 0], [2, 2], [2], [2, 2], [_faction, 0, _side], [30, _rounds, _rate, false, true]] call Bastion_Spawn;
+						null = [[_mkr], [0, 0], [2, 2], [2], [2, 2], [_faction, 0, _side], [30, _rounds, _rate, false, true]] spawn Bastion_Spawn;
 					};
-					_renforced = true;
 				};
 			};
 		};
