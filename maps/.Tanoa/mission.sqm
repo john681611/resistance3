@@ -23,7 +23,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="co_36_resistance3-9-6";
+sourceName="co_36_resistance3-9-7";
 addons[]=
 {
 	"A3_Ui_F",
@@ -376,7 +376,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Resistance 3.9.6";
+		briefingName="Resistance 3.9.7";
 		resistanceWest=0;
 		startWeather=0.099999994;
 		startWind=0.099999994;
