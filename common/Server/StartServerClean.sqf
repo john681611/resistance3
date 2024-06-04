@@ -19,7 +19,7 @@ if (_uid in _AllowedUid) then {
 	_result = ["Are you sure? <br/> <t color='#ff0000'>This will delete eveything left on the ground.</t>", "Confirm", true, true] call BIS_fnc_guiMessage;
 
 	if(_result) then {
-		[[], "cleanServer", false, false, false] call BIS_fnc_MP;
+		[] remoteExec ["cleanServer", 2];
 	};
 } else {
 	hintsilent "Not Authorised!";
