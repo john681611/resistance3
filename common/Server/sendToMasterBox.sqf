@@ -5,7 +5,7 @@ params ["_masterBox", "_masterZone"];
 	})) then {
 		[_masterBox, (_x call getContent), false] call setContent;
 		if (_x isKindOf "ReammoBox_F" OR _x isKindOf "ReammoBox") then {
-			deleteVehicle _x
+			deleteVehicle _x;
 		} else {
 			clearMagazineCargoGlobal _x;
 			clearWeaponCargoGlobal _x;
@@ -87,8 +87,11 @@ private _backpacksAgg = createHashMap;
 private _backpacksFinal = [];
 {
 	if (_y >= _clothingLimit) then {
-		_backpacksFinal pushBack _x;
-		_promoNames pushBack (gettext (configfile >> "CfgVehicles" >> _x >> "displayName"));
+		private _clothing_name = (gettext (configfile >> "CfgVehicles" >> _x >> "displayName"));
+		if(_clothing_name != "Ground") then {
+			_backpacksFinal pushBack _promoNames pushBack (gettext (configfile >> "CfgVehicles" >> _x >> "displayName"));;
+			_promoNames pushBack _clothing_name;
+		};
 	};
 } forEach _backpacksAgg;
 [_masterBox, _backpacksFinal, true] call BIS_fnc_addVirtualBackpackCargo;
