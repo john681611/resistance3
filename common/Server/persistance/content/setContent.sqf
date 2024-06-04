@@ -36,7 +36,10 @@ TAG_fnc_baseWeapon = {
   if(count (_x select 4) > 0) then {
     _box addMagazineAmmoCargo [((_x select 4) select 0),1,((_x select 4) select 1)];
    };
-  _box additemcargoGlobal [(_x select 5),1];
+   if(count (_x select 5) > 0) then {
+    _box addMagazineAmmoCargo [((_x select 5) select 0),1,((_x select 5) select 1)];
+   };
+  _box additemcargoGlobal [(_x select 6),1];
 } foreach _weapons;
 //mags
 {
