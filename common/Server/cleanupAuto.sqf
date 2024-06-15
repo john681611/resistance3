@@ -1,6 +1,6 @@
 postData = {
 	_output = format ["Cleaning Process. Server FPS: = %1. Groups: %2. Dead: %3", str diag_fps, count allgroups, count alldead];
-	[_output, "SystemChat", true, false, true] call BIS_fnc_MP;
+	[_output] remoteExec ["SystemChat", -2];
 	diag_log _output;
 };
 cleanServer = {
@@ -16,10 +16,13 @@ cleanServer = {
 };
 publicVariable "cleanServer";
 
-while {true} do {
-	sleep 3600;
-	Playercount = Count playableUnits;
-	if (Playercount == 0) then {
+
+addMissionEventHandler ["PlayerDisconnected", {
+	params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+	private _playercount = Count playableUnits;
+	if (_playercount == 0) then {
 		[] spawn cleanServer;
+		_cleanServerBlocker = true;
 	};
-};
+}];
+
