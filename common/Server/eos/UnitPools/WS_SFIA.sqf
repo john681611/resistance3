@@ -1,38 +1,38 @@
 wsSFIA_InfPool = [
-	"O_SFIA_Soldier_AR_lxWS", .5,
+	"O_SFIA_Soldier_AR_lxWS", .4,
 	"O_SFIA_medic_lxWS", .5,
-	"O_SFIA_exp_lxWS", .5,
-	"O_SFIA_Soldier_GL_lxWS", .5,
-	"O_SFIA_HeavyGunner_lxWS", .5,
-	"O_SFIA_soldier_aa_lxWS", .5,
-	"O_SFIA_soldier_at_lxWS", .5,
-	"O_SFIA_officer_lxWS", .5,
-	"O_SFIA_repair_lxWS", .5,
+	"O_SFIA_exp_lxWS", .3,
+	"O_SFIA_Soldier_GL_lxWS", .4,
+	"O_SFIA_HeavyGunner_lxWS", .2,
+	"O_SFIA_soldier_aa_lxWS", .2,
+	"O_SFIA_soldier_at_lxWS", .3,
+	"O_SFIA_officer_lxWS", .2,
+	"O_SFIA_repair_lxWS", .3,
 	"O_SFIA_soldier_lxWS", .5,
 	"O_SFIA_soldier_lite_lxWS", .5,
-	"O_SFIA_sharpshooter_lxWS", .5,
-	"O_SFIA_Soldier_TL_lxWS", .5
+	"O_SFIA_sharpshooter_lxWS", .2,
+	"O_SFIA_Soldier_TL_lxWS", .3
 ];
 wsSFIA_ArmPool = [
-	"O_SFIA_APC_Tracked_02_AA_lxWS", .5,
-	"O_SFIA_APC_Tracked_02_cannon_lxWS", .5,
+	"O_SFIA_APC_Tracked_02_AA_lxWS", .2,
+	"O_SFIA_APC_Tracked_02_cannon_lxWS", .3,
 	"O_SFIA_APC_Tracked_02_30mm_lxWS", .5,
-	"O_SFIA_MBT_02_cannon_lxWS", .5,
-	"O_SFIA_APC_Wheeled_02_hmg_lxWS", .5,
-	"O_SFIA_APC_Wheeled_02_unarmed_lxWS", .5
+	"O_SFIA_MBT_02_cannon_lxWS", .1,
+	"O_SFIA_APC_Wheeled_02_hmg_lxWS", .4,
+	"O_SFIA_APC_Wheeled_02_unarmed_lxWS", .2
 ];
 wsSFIA_MotPool = [
-	"O_SFIA_Truck_02_aa_lxWS", .5,
-	"O_SFIA_Truck_02_MRL_lxWS", .5,
-	"O_SFIA_Offroad_lxWS", .5,
-	"O_SFIA_Offroad_AT_lxWS", .5,
-	"O_SFIA_Offroad_armed_lxWS", .5,
-	"O_SFIA_Truck_02_Ammo_lxWS", .5,
-	"O_SFIA_Truck_02_cargo_lxWS", .5,
-	"O_SFIA_Truck_02_flatbed_lxWS", .5,
-	"O_SFIA_Truck_02_fuel_lxWS", .5,
-	"O_SFIA_Truck_02_transport_lxWS", .5,
-	"O_SFIA_Truck_02_covered_lxWS", .5
+	"O_SFIA_Truck_02_aa_lxWS", .3,
+	"O_SFIA_Truck_02_MRL_lxWS", .1,
+	"O_SFIA_Offroad_lxWS", .3,
+	"O_SFIA_Offroad_AT_lxWS", .4,
+	"O_SFIA_Offroad_armed_lxWS", .6,
+	"O_SFIA_Truck_02_Ammo_lxWS", .3,
+	"O_SFIA_Truck_02_cargo_lxWS", .2,
+	"O_SFIA_Truck_02_flatbed_lxWS", .1,
+	"O_SFIA_Truck_02_fuel_lxWS", .3,
+	"O_SFIA_Truck_02_transport_lxWS", .3,
+	"O_SFIA_Truck_02_covered_lxWS", .3
 ];
 wsSFIA_ACHPool = [
 	"O_SFIA_Heli_Attack_02_dynamicLoadout_lxWS", .5
