@@ -1,21 +1,28 @@
 //server
+private _hasWS = isClass(configFile>>"cfgPatches">>"vehicles_F_lxWS");
 blacklistLocations = [""];
 Hostiles = [
-	// [INDEPENDENT,2],.2,
-	// [INDEPENDENT,4],.2,
-	// [INDEPENDENT,1],.2,
-	// [INDEPENDENT,3],.2,
-	// [INDEPENDENT,8],.1,
-	// [INDEPENDENT,9],.2,
-  [INDEPENDENT,10],.3,
-  [INDEPENDENT,13],.5,
-	// [EAST,0],.2,
-	// [EAST,5],.2,
-	// [EAST,7],.2,
-	// [EAST,6],.1,
-  [EAST,11],.3,
-  [EAST,12],.5
+	[INDEPENDENT,1],.2, // NATO
+	[INDEPENDENT,2],.2, // AAF
+	[INDEPENDENT,3],.2, // NATO P
+	[INDEPENDENT,4],.2, // SYNDIKAT
+	[INDEPENDENT,8],.1, // NATO SF & CTRG
+	[INDEPENDENT,9],.2, // LDF
+	[EAST,0],.2, //CSAT
+	[EAST,5],.2, //CSAT Urban
+	[EAST,6],.1, //CSAT SF
+	[EAST,7],.2 //CSAT TANOA
 ];
+
+if(_hasWS) then {
+  Hostiles = Hostiles + [
+  [INDEPENDENT,10],.3, // ION (WS)
+  [INDEPENDENT,13],.5, // UNA (WS)
+  [INDEPENDENT,14],.5, // NATO D (WS)
+  [EAST,11],.3, // SFIA (WS)
+  [EAST,12],.5 // TURA (WS)
+  ];
+};
 //Both
 saveName = "SefrouRamal";//ENTER CUSTOM SERVER NAME HERE
 MHQs =[[FLG, C1,"MHQ"],[FLG2,C2,"MHQ2"]];

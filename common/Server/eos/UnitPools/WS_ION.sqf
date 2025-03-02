@@ -37,7 +37,7 @@ wsION_stPool = [
 wsION_shipPool = [];
 wsION_diverPool = [];
 wsION_crewPool = [
-		"B_ION_crew_lxWS", .5
+	"B_ION_crew_lxWS", .5
 ];
 wsION_heliCrew = [
 	"B_ION_Helipilot_lxWS", .5

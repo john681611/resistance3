@@ -209,10 +209,32 @@ class ScenarioData
 {
 	author="Mike64";
 };
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
 class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -239,6 +261,7 @@ class Mission
 			type="respawn_motor";
 			colorName="ColorWEST";
 			id=0;
+			atlOffset=3.8146973e-06;
 		};
 		class Item1
 		{
@@ -298,6 +321,7 @@ class Mission
 			type="respawn_motor";
 			colorName="ColorWEST";
 			id=6;
+			atlOffset=-3.8146973e-06;
 		};
 		class Item7
 		{
@@ -1934,6 +1958,7 @@ class Mission
 			};
 			id=54;
 			type="B_G_Mortar_01_F";
+			atlOffset=-0.0048294067;
 		};
 		class Item33
 		{
@@ -1951,6 +1976,7 @@ class Mission
 			};
 			id=55;
 			type="I_GMG_01_high_F";
+			atlOffset=-0.011322021;
 		};
 		class Item34
 		{
@@ -1968,6 +1994,7 @@ class Mission
 			};
 			id=56;
 			type="I_HMG_01_high_F";
+			atlOffset=-0.011299133;
 		};
 		class Item35
 		{
@@ -1985,7 +2012,7 @@ class Mission
 			};
 			id=57;
 			type="B_HMG_01_high_F";
-			atlOffset=7.6293945e-06;
+			atlOffset=-0.0098495483;
 		};
 		class Item36
 		{
@@ -2003,6 +2030,7 @@ class Mission
 			};
 			id=58;
 			type="B_G_Van_01_transport_F";
+			atlOffset=-0.016387939;
 		};
 		class Item37
 		{
@@ -2020,6 +2048,7 @@ class Mission
 			};
 			id=59;
 			type="C_Offroad_01_repair_F";
+			atlOffset=-0.0021820068;
 		};
 		class Item38
 		{
@@ -2037,6 +2066,7 @@ class Mission
 			};
 			id=60;
 			type="B_G_Van_01_fuel_F";
+			atlOffset=-0.00052642822;
 		};
 		class Item39
 		{
@@ -2054,6 +2084,7 @@ class Mission
 			};
 			id=61;
 			type="B_G_Quadbike_01_F";
+			atlOffset=-0.0050430298;
 		};
 		class Item40
 		{
@@ -2071,6 +2102,7 @@ class Mission
 			};
 			id=62;
 			type="B_G_Quadbike_01_F";
+			atlOffset=-0.0066070557;
 		};
 		class Item41
 		{
@@ -2091,7 +2123,7 @@ class Mission
 			};
 			id=63;
 			type="B_G_Van_01_transport_F";
-			atlOffset=-7.6293945e-06;
+			atlOffset=-0.00094604492;
 		};
 		class Item42
 		{
@@ -2245,7 +2277,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6764.1821,66.289635,9614.9707};
-				angles[]={-0,0,6.2591896};
+				angles[]={0,0,6.2591896};
 			};
 			id=65;
 			type="ModuleRespawnVehicle_F";
@@ -2719,6 +2751,7 @@ class Mission
 			};
 			id=69;
 			type="Flag_FIA_F";
+			atlOffset=-3.8146973e-06;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2754,6 +2787,7 @@ class Mission
 			};
 			id=70;
 			type="B_G_Offroad_01_armed_F";
+			atlOffset=-0.012367249;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3981,6 +4015,7 @@ class Mission
 			};
 			id=127;
 			type="O_G_Van_02_transport_F";
+			atlOffset=-0.0057296753;
 		};
 		class Item70
 		{
@@ -4196,6 +4231,7 @@ class Mission
 			};
 			id=134;
 			type="Land_Camping_Light_F";
+			atlOffset=-0.0001373291;
 		};
 		class Item77
 		{
@@ -4214,6 +4250,7 @@ class Mission
 			};
 			id=135;
 			type="Land_Camping_Light_F";
+			atlOffset=-0.00023651123;
 		};
 		class Item78
 		{
@@ -4232,7 +4269,7 @@ class Mission
 			};
 			id=136;
 			type="Land_Camping_Light_F";
-			atlOffset=7.6293945e-06;
+			atlOffset=-0.00018310547;
 		};
 		class Item79
 		{
@@ -4250,6 +4287,7 @@ class Mission
 			};
 			id=137;
 			type="Land_RepairDepot_01_green_F";
+			atlOffset=-0.0010528564;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4297,6 +4335,7 @@ class Mission
 			};
 			id=138;
 			type="B_Slingload_01_Fuel_F";
+			atlOffset=-0.0046386719;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4344,6 +4383,7 @@ class Mission
 			};
 			id=139;
 			type="B_Slingload_01_Ammo_F";
+			atlOffset=-0.003616333;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4872,7 +4912,7 @@ class Mission
 			};
 			id=151;
 			type="Land_FieldToilet_F";
-			atlOffset=7.6293945e-06;
+			atlOffset=-0.0076522827;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5079,7 +5119,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6730.0874,67.048607,9616.3359};
-				angles[]={-0,0,6.2671871};
+				angles[]={0,0,6.2671871};
 			};
 			areaSize[]={1,-1,1};
 			id=155;
@@ -5576,7 +5616,7 @@ class Mission
 			};
 			id=171;
 			type="VirtualReammoBox_F";
-			atlOffset=7.6293945e-06;
+			atlOffset=-0.0043106079;
 			class CustomAttributes
 			{
 				class Attribute0

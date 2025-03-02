@@ -5,6 +5,9 @@ private
 _faction = (_this select 0);
 _type = (_this select 1);
 _tempArray = [];
+private _hasRF = isClass(configFile>>"cfgPatches">>"RF_Vehicles");
+private _hasWS = isClass(configFile>>"cfgPatches">>"vehicles_F_lxWS");
+
 #include "..\Server\eos\UnitPools\aaf.sqf";
 #include "..\Server\eos\UnitPools\csat_p.sqf";
 #include "..\Server\eos\UnitPools\csat_sf.sqf";
@@ -15,13 +18,23 @@ _tempArray = [];
 #include "..\Server\eos\UnitPools\nato_sf.sqf";
 #include "..\Server\eos\UnitPools\nato.sqf";
 #include "..\Server\eos\UnitPools\synd.sqf";
-#include "..\Server\eos\UnitPools\WS_ION.sqf";
-#include "..\Server\eos\UnitPools\WS_SFIA.sqf";
-#include "..\Server\eos\UnitPools\WS_TURA.sqf";
-#include "..\Server\eos\UnitPools\WS_UNA.sqf";
-if(isClass(configFile>>"cfgPatches">>"RF_Vehicles")) then {
-	#include "..\Server\eos\UnitPools\RF_WS.sqf";
+
+if(_hasWS) then {
+	#include "..\Server\eos\UnitPools\WS_Vanilla.sqf";
+	#include "..\Server\eos\UnitPools\WS_ION.sqf";
+	#include "..\Server\eos\UnitPools\WS_SFIA.sqf";
+	#include "..\Server\eos\UnitPools\WS_TURA.sqf";
+	#include "..\Server\eos\UnitPools\WS_UNA.sqf";
+	#include "..\Server\eos\UnitPools\WS_nato_d.sqf";
 };
+
+if(_hasRF) then {
+	#include "..\Server\eos\UnitPools\RF_Vanilla.sqf";
+	if(_hasWS) then {
+		#include "..\Server\eos\UnitPools\RF_WS.sqf";
+	};
+};
+
 switch (_faction)
 	do {
 	// EAST CSAT FACTION
@@ -255,6 +268,22 @@ switch (_faction)
 		_crewPool = wsUNA_crewPool + [];
 		_heliCrew = wsUNA_heliCrew + [];
 		_boxPool = wsUNA_boxPool + [];
+	};
+
+	case 14: // Nato D
+	{
+		_InfPool = wsNato_d_InfPool + [];
+		_ArmPool = wsNato_d_ArmPool + [];
+		_MotPool = wsNato_d_MotPool + [];
+		_ACHPool =wsNato_d_ACHPool + [];
+		_CHPool = wsNato_d_CHPool + [];
+		_uavPool = wsNato_d_uavPool + [];
+		_stPool = wsNato_d_stPool + [];
+		_shipPool = wsNato_d_shipPool + [];
+		_diverPool = wsNato_d_diverPool + [];
+		_crewPool = wsNato_d_crewPool + [];
+		_heliCrew = wsNato_d_heliCrew + [];
+		_boxPool = wsNato_d_boxPool + [];
 	};
 };
 
