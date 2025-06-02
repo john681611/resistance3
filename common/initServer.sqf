@@ -35,11 +35,4 @@ waitUntil {ztowninit==1};
 [] execVM "Server\eos\zoneConfig.sqf";
 [] execVM "Server\cleanupAuto.sqf";
 
- //Fog limiter
- while {true} do
- {
-	if(fog > 0.5) then {
-		120 setFog 0;
-	};
-	sleep 1800;
- };
+["Server\FogFix.sqf"] remoteExecCall ["execVM", 0, true];
