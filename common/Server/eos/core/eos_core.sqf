@@ -560,7 +560,6 @@ if (!(getmarkercolor _mkr == "colorblack")) then {
 						if(!(_x == grpNull) && isClass(configfile >> "CfgPatches" >> "lambs_wp")) then {
 							[_x] call lambs_wp_fnc_taskReset;
 							[_x, _mkrX, 15, [], _mPos] spawn lambs_wp_fnc_taskHunt;
-							hint "HUNT HAS BEGUN";
 						};
 						
 					} forEach _aGrp;
