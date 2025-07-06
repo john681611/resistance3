@@ -35,11 +35,14 @@ waitUntil {ztowninit==1};
 [] execVM "Server\eos\zoneConfig.sqf";
 [] execVM "Server\cleanupAuto.sqf";
 
- //Fog limiter
+ //Fog & Rain limiter
  while {true} do
  {
-	if(fog > 0.5) then {
+	if(fog >= 0.25) then {
 		120 setFog 0;
 	};
-	sleep 1800;
+	if(rain >= 0.5) then {
+		120 setRain 0;
+	};
+	sleep 600;
  };
