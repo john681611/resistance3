@@ -44,5 +44,15 @@ waitUntil {ztowninit==1};
 	if(rain >= 0.5) then {
 		120 setRain 0;
 	};
+	
+
+	// MHQ stuck in corner fix
+	{
+		_pos =  getPos (_x select 1);
+		if((_pos select 0) < 5 and (_pos select 1) < 5) then {
+			(_x select 1) setDamage 1;
+		};
+	} forEach MHQs;
+
 	sleep 600;
  };
