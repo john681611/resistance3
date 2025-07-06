@@ -555,6 +555,15 @@ if (!(getmarkercolor _mkr == "colorblack")) then {
 					if (_occures == 1) then {
 						null = [[_mkr], [0, 0], [2, 2], [2], [2, 2], [_faction, 0, _side], [30, _rounds, _rate, false, true]] spawn Bastion_Spawn;
 					};
+
+					{
+						if(!(_x == grpNull) && isClass(configfile >> "CfgPatches" >> "lambs_wp")) then {
+							[_x] call lambs_wp_fnc_taskReset;
+							[_x, _mkrX, 15, [], _mPos] spawn lambs_wp_fnc_taskHunt;
+							hint "HUNT HAS BEGUN";
+						};
+						
+					} forEach _aGrp;
 				};
 			};
 		};
